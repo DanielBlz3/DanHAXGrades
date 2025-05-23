@@ -1,0 +1,1048 @@
+/*UNIVERSAL*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*BODY*/
+
+.theme-light {
+  --container-background-color: rgb(240, 240, 240);
+  --font-default-color: black;
+  --header-font-hover-color: rgb(70, 70, 70);
+  --font-pitch-color: rgb(255, 255, 255);
+  --card-bg-main: rgb(250, 250, 250);
+  --card-bg-second: white;
+  --container-settings-color: white;
+  --container-team-formation-color: rgb(10, 160, 105);
+  --container-football-pitch-color: rgb(10, 150, 90);
+  --player-event-background-color: white;
+  --player-event-outline-color: white;
+  --background-player-manager-color: rgb(230, 230, 230);
+  --border-bottom-header-color: rgb(200, 200, 200);
+  --parts-of-the-pitch: sepia(1) hue-rotate(100deg) saturate(3) brightness(1.3);
+  --subsitutes-border-color: rgb(225, 225, 225);
+  --player-ui-background-color: white;
+  --player-ui-player-facts-background-color: rgb(240, 240, 240);
+  --settings-button-color: 0
+}
+
+
+.theme-dark {
+  --container-background-color: black;
+  --font-default-color: white;
+  --header-font-hover-color: rgb(180, 180, 180);
+  --font-pitch-color: black;
+  --card-bg-main: rgb(29, 29, 29);
+  --card-bg-second: rgb(29, 29, 29);
+  --container-settings-color: rgb(49, 49, 49);
+  --container-team-formation-color: rgb(49, 49, 49);
+  --container-football-pitch-color: rgb(44, 44, 44);
+  --player-event-background-color: rgb(44, 44, 44);
+  --player-event-outline-color: grey;
+  --background-player-manager-color: rgb(74, 74, 74);
+  --border-bottom-header-color: black;
+  --parts-of-the-pitch: none;
+  --subsitutes-border-color: grey;
+  --player-ui-background-color: rgb(34, 34, 34);
+  --player-ui-player-facts-background-color: rgb(24, 24, 24);
+  --settings-button-color: 100
+}
+
+.theme-blue {
+  --container-background-color: rgb(43, 109, 242);
+  --font-default-color: white;
+  --header-font-hover-color: rgb(180, 180, 180);
+  --font-pitch-color: white;
+  --card-bg-main: rgb(30, 60, 190);
+  --card-bg-second: rgb(30, 60, 190);
+  --container-settings-color: rgb(30, 60, 210);
+  --container-team-formation-color: rgb(30, 60, 190);
+  --container-football-pitch-color: rgb(41, 63, 227);
+  --player-event-background-color: rgb(41, 63, 227);
+  --player-event-outline-color: grey;
+  --background-player-manager-color: rgb(194, 194, 194);
+  --border-bottom-header-color: black;
+  --parts-of-the-pitch: sepia(1) hue-rotate(203deg) saturate(30) brightness(.9);
+  --subsitutes-border-color: rgb(128, 128, 128);
+  --player-ui-background-color: rgb(30, 60, 200);
+  --settings-button-color: 100
+}
+
+
+body {
+  background-color: var(--container-background-color);
+  color: var(--font-default-color);
+  font-family: "Segoe UI", Arial, sans-serif;
+  overflow-x: hidden;
+
+}
+
+header a {
+  color: var(--font-default-color);
+  text-decoration: none;
+}
+
+.title {
+  width: 40%;
+}
+
+.title :hover {
+  color: var(--header-font-hover-color)
+}
+
+.section {
+  width: 76.9%;
+  max-width: 1000px;
+  justify-self: center;
+}
+
+.headingandsettings {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 45vw;
+  font-size: 1.5rem;
+  width: 100%;
+  min-height: 75px;
+  padding: 1rem;
+  position: fixed;
+  top: 0%;
+  border-bottom: 0.25px solid var(--border-bottom-header-color);
+  z-index: 10;
+}
+
+.settings-button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  filter: brightness(var(--settings-button-color));
+  user-select: none;
+}
+
+.settings-button:hover {
+  transform: scale(1.3);
+  transform-origin: center;
+  transition: transform 150ms ease-in-out;
+}
+
+.settings-menu {
+  width: 20%;
+  display: none;
+  background-color: var(--container-settings-color);
+  border-radius: .5rem;
+  position: fixed;
+  top: 100px;
+  left: 87%;
+  transform: translateX(-50%);
+  z-index: 20;
+  min-width: 150px;
+  box-shadow: 3px 6px 10px rgba(0, 0, 0, .25);
+  padding-inline: 1rem;
+}
+
+.settings-menu details {
+  text-align: center;
+  cursor: pointer;
+}
+
+details summary {
+  text-align: start;
+  list-style: none;
+  font-size: .9rem;
+  margin-bottom: .5rem;
+  padding: 0;
+  text-wrap: nowrap;
+  width: 100%;
+}
+
+details summary::after {
+  position: absolute;
+  content: "▶";
+  font-size: .75rem;
+  left: 90%;
+  display: inline-block;
+  transform: rotate(90deg);
+
+}
+
+details[open] summary::after {
+  transform: rotate(-90deg);
+}
+
+.settings-menu .settings-menu-button {
+  width: 100%;
+  background-color: var(--container-settings-color);
+  color: var(--font-default-color);
+  border: none;
+  cursor: pointer;
+  text-align: start;
+}
+
+.settings-menu .settings-menu-button:hover {
+  text-decoration: underline;
+}
+
+
+
+.settings-menu li {
+  background-color: var(--container-settings-color);
+  border: none;
+  list-style: none;
+  margin-block: 1rem;
+}
+
+.settings-menu-element-divider {
+  width: 100%;
+  border-bottom: solid .75px var(--container-background-color);
+}
+
+.headingandsettings,
+.match-league-container,
+.scoreboard-container,
+.containerthree,
+.manager-container,
+.subsitutes-container,
+.match-nav,
+.match-nav button {
+  background-color: var(--card-bg-main);
+}
+
+
+.lineups {
+  display: flex;
+  background-color: var(--container-football-pitch-color);
+  color: white;
+}
+
+.hometeam {
+  width: 50%;
+  height: 100%;
+}
+
+.awayteam {
+  width: 50%;
+  height: 100%;
+}
+
+.containerfour {
+  color: white;
+  background-color: var(--container-team-formation-color);
+  border-radius: 2rem 2rem 0 0;
+}
+
+.subsitutestitle {
+  background-color: var(--card-bg-second);
+}
+
+.managericon,
+.player {
+  background-color: var(--background-player-manager-color);
+}
+
+
+.match {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: minmax(1fr 0.3fr);
+  gap: 50px;
+}
+
+.columnleft {
+  display: flex;
+  flex-flow: column;
+}
+
+.columnright {
+  display: flex;
+  flex-flow: column;
+}
+
+/*Area 1 = SCOREBOARD*/
+
+.match-league-container {
+  margin-top: 4.7rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  border-bottom: 0.33px solid grey;
+}
+
+.league-display-info {
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.leaguelogo {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.scoreboard-container {
+  font-weight: bold;
+  padding-block: 1.5rem;
+  padding-inline: 5rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 0.5fr 1fr;
+}
+
+.scoreboard-container a {
+  color: var(--font-default-color);
+  text-decoration: none;
+}
+
+.scoreboard-container a:hover {
+  text-decoration: underline;
+}
+
+
+.team-scoreboard {
+  display: flex;
+  flex-flow: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  overflow: wrap;
+}
+
+@media (max-width: 1000px) {
+  .team-scoreboard {
+    flex-flow: column;
+  }
+}
+
+.scoreboard {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.scoreline {
+  font-size: 1.5rem;
+}
+
+.pens {
+  color: rgb(175, 175, 175);
+  font-size: 1rem;
+}
+
+.fulltime {
+  align-items: center;
+  color: rgb(175, 175, 175);
+}
+
+.scoreboardandnav-container {
+  width: 76.9%;
+  max-width: 1000px;
+  justify-self: center;
+  margin-bottom: 2rem;
+}
+
+
+/*Goalscorers Shower*/
+
+.containerthree {
+  padding-block: 1rem;
+  padding-inline: 10rem;
+  color: rgb(175, 175, 175);
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: none;
+}
+
+.GoalscorersHome {
+  text-align: right;
+}
+
+.GoalscorersAway {
+  text-align: left;
+}
+
+.ball {
+  justify-self: center;
+}
+
+/*LINEUP AREA*/
+
+.containerfour {
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hometeamformation,
+.awayteamformation {
+  display: flex;
+  flex-flow: row;
+  gap: 2vw;
+  align-items: center;
+}
+
+.hometeamformation {
+  flex-flow: row;
+}
+
+.awayteamformation {
+  flex-flow: row-reverse;
+}
+
+
+.hometeamlogoandnameinlineup,
+.awayteamlogoandnameinlineup {
+  display: flex;
+  flex-flow: row;
+  gap: .5vw;
+  align-items: center;
+}
+
+
+.lineups {
+  height: 500px;
+  position: relative;
+}
+
+
+.teamonebox,
+.teamtwobox,
+.centercircle {
+  user-select: none;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  position: absolute;
+  filter: var(--parts-of-the-pitch);
+
+}
+
+.teamonebox {
+  left: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.teamtwobox {
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.centercircle {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+/*THIS SECTION HAS STUFF THAT YOU WILL SEE ON THE PLAYER
+LIKE MATCHRATING, GOALS ICON, ASSIST, ICON, AND OWN GOALS*/
+
+/*THIS IS THE ICON AND THE GRAY CIRCLE AROUND IT*/
+
+.player {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 40px;
+  min-height: 40px;
+  max-width: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+}
+
+.player-hover:hover {
+  opacity: .7;
+}
+
+/*THE MATCHRATING OF THE PLAYER*/
+
+.matchratingOnPlayer {
+  position: absolute;
+  top: 0%;
+  right: 25%;
+  transform: translate(50%, -50%);
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-weight: bold;
+  font-size: 0.75rem;
+  border-radius: 1rem;
+  padding: 0.025rem 0.3rem 0.025rem 0.3rem;
+  cursor: default;
+}
+
+.player img {
+  bottom: 50%;
+  right: 50%;
+  width: 70%;
+  height: 70%;
+}
+
+
+/*EVEN ICONS*/
+
+/*THE GOAL ICON THAT WILL BE ON THE PLAYER*/
+.goal1OnPlayer,
+.goal2OnPlayer,
+.goal3OnPlayer,
+.goal4OnPlayer,
+.goal5OnPlayer,
+.assist1OnPlayer,
+.assist2OnPlayer,
+.assist3OnPlayer,
+.assist4OnPlayer,
+.assist5OnPlayer {
+  border: 0.5px solid var(--player-event-outline-color);
+  background-color: var(--player-event-background-color);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 27.5%;
+  display: flex;
+  cursor: default;
+
+}
+
+.player-event {
+  border: 0.5px solid var(--player-event-outline-color);
+  background-color: var(--player-event-background-color);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  position: absolute;
+  display: flex;
+  cursor: default;
+
+}
+
+ 
+/*THE ASSIST ICON THAT WILL BE ON THE PLAYER*/
+
+.assist1OnPlayer {
+  left: 5px;
+  z-index: 6;
+  transform: scaleX(-1);
+}
+
+.assist2OnPlayer {
+  left: -5px;
+  z-index: 5;
+  transform: scaleX(-1);
+}
+
+.assist3OnPlayer {
+  left: -15px;
+  z-index: 4;
+  transform: scaleX(-1);
+}
+
+.assist4OnPlayer {
+  left: -25px;
+  z-index: 3;
+  transform: scaleX(-1);
+}
+
+.assist5OnPlayer {
+  left: -35px;
+  z-index: 2;
+  transform: scaleX(-1);
+}
+
+.subicon {
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: center;
+  /* Aligns text and image */
+  position: absolute;
+  font-size: 0.8rem;
+  bottom: 32px;
+  right: 30px;
+  gap: 5px;
+}
+
+.subsitutedin {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(51, 199, 113);
+  color: black;
+  border-radius: 50%;
+  width: 16px;
+  /* Adjust to match the image */
+  height: 16px;
+}
+
+.subsitutedinoutline {
+  background-color: rgb(44, 44, 44);
+  border: 0.5px solid grey;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.minutesubed {
+  color: rgb(51, 199, 113);
+  z-index: 6;
+}
+
+.player-name, .bench-player-name {
+  width: 300%;
+  text-align: center;
+  cursor: default;
+  font-size: .8rem;
+  font-weight: bold;
+  box-shadow: inset;
+  text-decoration: none;
+}
+
+.player-name {
+color: white;
+}
+
+.bench-player-name  {
+  color: var(--font-default-color);
+  text-decoration: none;
+}
+
+.player-name::first-letter {
+  text-transform: uppercase;
+}
+
+
+.player-container {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 3.5px;
+  flex-direction: column;
+  position: absolute;
+  height: 65px;
+  width: 65px;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  color: var(--font-default-color);
+}
+
+/*POSITIONS FOR THE AWAY'S TEAM PLAYERS*/
+
+.player-ui,
+.player-ui2 {
+  position: fixed;
+  display: none;
+  flex-flow: column;
+  border-radius: 1rem;
+  width: 400px;
+  bottom: 45%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  z-index: 1000;
+  color: var(--font-default-color);
+  background-color: var(--player-ui-background-color);
+}
+
+.player-ui-header {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+  min-height: 67.5px;
+  max-height: 100px;
+  gap: 15px;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  z-index: 111111;
+  background-color: var(--card-bg-main);
+}
+
+.header-metrics {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  border-bottom: solid 0.25px rgb(75, 75, 75);
+  background-color: var(--card-bg-main);
+  padding-bottom: 1rem;
+}
+
+.header-metric-item {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.player-ui-nationality {
+  display: flex;
+  flex-flow: row;
+  gap: 3px;
+  align-items: center;
+  justify-content: center;
+}
+
+.playerui-bio-metric {
+  color: grey;
+}
+
+.playerui-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--font-default-color);
+  text-decoration: none;
+}
+
+.playerui-name:hover {
+  text-decoration: underline;
+}
+
+.player-ui-main {
+  max-height: 350px;
+  overflow-y: scroll;
+  padding-top: 1rem;
+}
+
+.player-ui-stats {
+  display: flex;
+  flex-flow: column;
+  padding-left: 10px;
+}
+
+.player-ui-overlay {
+  display: none;
+  /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* Semi-transparent black */
+  z-index: 1000;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.player-ui-stats span,
+.player-ui2 span {
+  line-height: 2;
+
+}
+
+.player-ui h3,
+.player-ui2 h3 {
+  color: rgb(175, 175, 175);
+  padding-block: 1rem;
+}
+
+div .stats {
+  padding-bottom: 0.5rem;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.player-ui p,
+.player-ui2 p {
+  line-height: 1.5rem;
+}
+
+.goalsdisplay {
+  justify-content: right;
+}
+
+.player-fact-title {
+  font-size: .9rem;
+  color: var(--header-font-hover-color);
+}
+
+.player-fact {
+  margin-top: 1rem;
+  background-color: var(--player-ui-player-facts-background-color);
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  font-weight: bold;
+}
+
+.player-fact-item {
+  background-color: var(--player-ui-background-color);
+  border-radius: .5rem;
+  padding: .5rem;
+  font-size: .8rem;
+}
+
+
+
+
+
+
+.teamrating {
+  font-weight: bold;
+  font-size: 0.75rem;
+  border-radius: 1rem;
+  padding: 0.025rem 0.3rem 0.025rem 0.3rem;
+  display: inline;
+  align-self: center;
+}
+
+.manager-container {
+  max-width: 100%;
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding-block: 2rem 1.5rem;
+  padding-inline: 2rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 2rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.homemanager,
+.awaymanager {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+}
+
+.homemanager {
+  flex-flow: row;
+
+}
+
+.awaymanager {
+  flex-flow: row-reverse;
+}
+
+.managerdivider {
+  align-self: center;
+  justify-self: center;
+  font-size: 1rem;
+}
+
+.managericon {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.managericon img,
+.managericon img {
+  translate: 5.5px 3px;
+}
+
+.ratingdisplayonplayerui {
+  font-weight: bold;
+}
+
+
+/*SUBSITUTES-------------------------------------------------------*/
+
+.subsitutes-container {
+  text-align: center;
+  border-radius: 2rem;
+}
+
+.subsitutestitle {
+  font-size: 1.25rem;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  font-weight: 700;
+}
+
+.subsitutes-container section {
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+
+.subsitutes-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10vw;
+  padding-bottom: 1rem;
+}
+
+.subsitutes-container li {
+  list-style-type: none;
+  border-bottom: 0.25px solid var(--subsitutes-border-color);
+  margin-top: 5vw;
+}
+
+.subsitute {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  position: relative;
+  margin-bottom: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5px;
+  flex-direction: column;
+  height: 65px;
+  width: 65px;
+  text-decoration: none;
+}
+
+.subsitute a {
+  width: 65px;
+  height: 65px;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  position: absolute;
+}
+
+
+
+
+
+
+
+
+.red,
+.orange,
+.green {
+  color: var(--font-pitch-color);
+  border-radius: 1rem;
+  padding: 0.025rem 0.3rem 0.025rem 0.3rem;
+}
+
+/*COLOR CODES DEPENDING ON THE RATING VALUE*/
+
+
+/*For Ratings Below 5.5*/
+.red {
+  background-color: rgb(229 94 91);
+}
+
+/* Orange for ratings between 5.5 and 6.9 */
+
+.orange {
+  background-color: rgb(240 128 34);
+}
+
+/* Green for ratings 7.0 and above */
+.green {
+  background-color: rgb(51 199 113);
+}
+
+/*BLUE RATINGS ARE FOR THE MVP*/
+.blue {
+  background-color: rgb(14 135 224);
+  border-radius: 40px;
+  padding: 0.025rem 0.1rem 0.025rem 0.3rem;
+  color: white;
+  max-width: 44px;
+}
+
+.blue::after {
+  content: " ★";
+}
+
+.match-nav {
+  height: 7.5vh;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 3rem;
+  padding-inline: 3rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  width: 100%;
+}
+
+
+.match-nav button {
+  color: rgb(139, 139, 139);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  height: 100%;
+  width: 20%;
+}
+
+.match-nav-toggle-on {
+  border-bottom: solid 2.5px rgb(46, 204, 113);
+}
+
+.match-nav button:hover {
+  color: var(--font-default-color)
+}
+
+.statssection {
+  background-color: var(--card-bg-second);
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.statssection h3 {
+  text-align: center;
+  height: 10vh;
+}
+
+.gamestats {
+  width: 100%;
+  height: 100%;
+
+}
+
+
+.top-stats-item {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  justify-items: center;
+  align-items: center;
+  height: 4vw;
+}
+
+.top-stats-value {
+  border-radius: 1rem;
+  padding-inline: .5vw;
+  text-align: center;
+  text-align: middle;
+}
+
+
+/*Scrollbar changes!*/
+
+::-webkit-scrollbar {
+  background-color: var(--player-ui-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(100, 100, 100);
+  border-radius: 0.5rem;
+  height: 3vw;
+}
+
+.player-ui::-webkit-scrollbar {
+  height: 3vw;
+  border-radius: 0 1rem 1rem 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #adb5bd;
+}
+
+::selection {
+  background-color: rgb(46, 204, 113);
+  color: black;
+}

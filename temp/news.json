@@ -1,0 +1,133 @@
+{
+    "news": [
+        {
+        "title": "Resumen del 20 de abril: Un Inicio de Temporada Decepcionante",
+        "author": "EXANEWS",
+        "date": "2025-04-20T00:00:00",
+        "thumbnail": "https://i.imgur.com/Gnc6P2F.png",
+        "type": "img",
+        "href": "https://i.imgur.com/Gnc6P2F.png",
+        "locations" : {
+            "league" : [
+                3,2
+            ],
+            "teams" : [
+                
+            ],
+            "games" : [
+
+            ]
+        }
+      },
+      {
+        "title": "Quien es este desgraciado 4",
+        "author": "EXANEWS",
+        "date": "2025-04-15T00:00:00",
+        "thumbnail": "https://i.imgur.com/wQniSoP.png",
+        "type": "img",
+        "href": "https://i.imgur.com/wQniSoP.png",
+        "locations" : {
+            "league" : [
+                3,2
+            ],
+            "teams" : [
+            ],
+            "games" : [
+
+            ]
+        }
+      },
+      {
+        "title": "Quien es este desgraciado 3",
+        "author": "EXANEWS",
+        "date": "2025-04-15T00:00:00",
+        "thumbnail": "https://i.imgur.com/NcFOG80.png",
+        "type": "img",
+        "href": "https://i.imgur.com/NcFOG80.png",
+        "locations" : {
+            "league" : [
+                3,2
+            ],
+            "teams" : [
+            ],
+            "games" : [
+
+            ]
+        }
+      },
+      {
+        "title": "Quien es este desgraciado 2",
+        "author": "EXANEWS",
+        "date": "2025-04-15T00:00:00",
+        "thumbnail": "https://i.imgur.com/5BSvZCK.png",
+        "type": "img",
+        "href": "https://i.imgur.com/5BSvZCK.png",
+        "locations" : {
+            "league" : [
+                3,2
+            ],
+            "teams" : [
+            ],
+            "games" : [
+
+            ]
+        }
+      },
+      {
+        "title": "Quien es este desgraciado 1",
+        "author": "EXANEWS",
+        "date": "2025-04-15T00:00:00",
+        "thumbnail": "https://i.imgur.com/toFiiI4.png",
+        "type": "img",
+        "href": "https://i.imgur.com/toFiiI4.png",
+        "locations" : {
+            "league" : [
+                3,2
+            ],
+            "teams" : [
+            ],
+            "games" : [
+
+            ]
+        }
+      },
+      {
+        "title": "Resumen del 14 de abril: La Muerta de Boston United",
+        "author": "EXANEWS",
+        "date": "2025-04-14T00:00:00",
+        "thumbnail": "https://i.imgur.com/aR4PyCL.png",
+        "type": "img",
+        "href": "https://i.imgur.com/aR4PyCL.png",
+        "locations" : {
+            "league" : [
+                3,2
+            ],
+            "teams" : [
+                6
+            ],
+            "games" : [
+
+            ]
+        }
+      },
+      {
+        "title": "Resumen pretemporada: Palmerias proclama campeon de la 3ER PreSeason",
+        "author": "EXANEWS",
+        "date": "2025-04-12T00:00:00",
+        "thumbnail": "https://i.imgur.com/9EWrz1o.png",
+        "type": "img",
+        "href": "https://i.imgur.com/9EWrz1o.png",
+        "locations" : {
+            "league" : [
+                3,2,1
+            ],
+            "teams" : [
+                
+            ],
+            "games" : [
+
+            ]
+        }
+      }
+    ]
+}

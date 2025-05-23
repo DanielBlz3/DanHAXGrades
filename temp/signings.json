@@ -1,0 +1,415 @@
+[
+    {
+        "playerId": 109,
+        "to": 3,
+        "from": 12,
+        "nation": "mx",
+        "timestamp": "2025-05-20T00:00:00"
+    },
+    {
+        "playerId": 296,
+        "to": 9,
+        "from": 0,
+        "nation": "mx",
+        "timestamp": "2025-05-19T00:00:00"
+    },
+    {
+        "playerId": 48,
+        "to": 0,
+        "from": 1,
+        "nation": "mx",
+        "timestamp": "2025-05-19T00:00:00"
+    },
+    {
+        "playerId": 137,
+        "to": 2,
+        "from": 10,
+        "nation": "mx",
+        "timestamp": "2025-05-19T00:00:00"
+    },
+    {
+        "playerId": 215,
+        "to": 4,
+        "from": 1,
+        "nation": "mx",
+        "timestamp": "2025-05-18T00:00:00"
+    },
+    {
+        "playerId": 204,
+        "to": 12,
+        "from": 9,
+        "nation": "mx",
+        "timestamp": "2025-05-18T00:00:00"
+    },
+    {
+        "playerId": 183,
+        "to": 0,
+        "from": 4,
+        "nation": "mx",
+        "timestamp": "2025-05-18T00:00:00"
+    },
+    {
+        "playerId": 278,
+        "to": 0,
+        "from": 4,
+        "nation": "mx",
+        "timestamp": "2025-05-18T00:00:00"
+    },
+    {
+        "playerId": 24,
+        "to": 0,
+        "from": 1,
+        "nation": "us",
+        "timestamp": "2025-05-18T00:00:00"
+    },
+    {
+        "playerId": 28,
+        "to": 0,
+        "from": 1,
+        "nation": "us",
+        "timestamp": "2025-05-18T00:00:00"
+    },
+    {
+        "playerId": 253,
+        "to": 0,
+        "from": 5,
+        "nation": "us",
+        "timestamp": "2025-05-17T00:00:00"
+    },
+    {
+        "playerId": 283,
+        "to": 8,
+        "from": 12,
+        "nation": "us",
+        "timestamp": "2025-05-17T00:00:00"
+    },
+    {
+        "playerId": 295,
+        "to": 3,
+        "from": 0,
+        "nation": "us",
+        "timestamp": "2025-05-16T00:00:00"
+    },
+    {
+        "playerId": 274,
+        "to": 0,
+        "from": 9,
+        "nation": "mx",
+        "timestamp": "2025-05-16T00:00:00"
+    },
+    {
+        "playerId": 263,
+        "to": 0,
+        "from": 9,
+        "nation": "mx",
+        "timestamp": "2025-05-16T00:00:00"
+    },
+    {
+        "playerId": 294,
+        "to": 3,
+        "from": 0,
+        "nation": "mx",
+        "timestamp": "2025-05-16T00:00:00"
+    },
+    {
+        "playerId": 293,
+        "to": 12,
+        "from": 0,
+        "nation": "mx",
+        "timestamp": "2025-05-16T00:00:00"
+    },
+    {
+        "playerId": 260,
+        "to": 8,
+        "from": 5,
+        "nation": "mx",
+        "timestamp": "2025-05-16T00:00:00"
+    },
+    {
+        "playerId": 230,
+        "to": 5,
+        "from": 9,
+        "nation": "mx",
+        "timestamp": "2025-05-15T00:00:00"
+    },
+    {
+        "playerId": 205,
+        "to": 0,
+        "from": 5,
+        "nation": "mx",
+        "timestamp": "2025-05-15T00:00:00"
+    },
+    {
+        "playerId": 257,
+        "to": 9,
+        "from": 8,
+        "nation": "mx",
+        "timestamp": "2025-05-15T00:00:00"
+    },
+    {
+        "playerId": 36,
+        "to": 2,
+        "from": 12,
+        "nation": "mx",
+        "timestamp": "2025-05-14T00:00:00"
+    },
+    {
+        "playerId": 239,
+        "to": 3,
+        "from": 12,
+        "nation": "mx",
+        "timestamp": "2025-05-14T00:00:00"
+    },
+    {
+        "playerId": 282,
+        "to": 3,
+        "from": 0,
+        "nation": "mx",
+        "timestamp": "2025-05-13T00:00:00"
+    },
+    {
+        "playerId": 281,
+        "to": 5,
+        "from": 0,
+        "nation": "mx",
+        "timestamp": "2025-05-13T00:00:00"
+    },
+    {
+        "playerId": 280,
+        "to": 1,
+        "from": 0,
+        "nation": "mx",
+        "timestamp": "2025-05-13T00:00:00"
+    },
+    {
+        "playerId": 40,
+        "to": 4,
+        "from": 1,
+        "nation": "mx",
+        "timestamp": "2025-05-12T00:00:00"
+    },
+    {
+        "playerId": 277,
+        "to": 4,
+        "from": 0,
+        "nation": "mx",
+        "timestamp": "2025-05-11T00:00:00"
+    },
+    {
+        "playerId": 191,
+        "to": 0,
+        "from": 9,
+        "nation": "mx",
+        "timestamp": "2025-05-11T00:00:00"
+    },
+    {
+        "playerId": 44,
+        "to": 8,
+        "from": 2,
+        "nation": "mx",
+        "timestamp": "2025-05-10T00:00:00"
+    },
+    {
+        "playerId": 34,
+        "to": 1,
+        "from": 3,
+        "nation": "mx",
+        "timestamp": "2025-05-09T00:00:00"
+    },
+    {
+        "playerId": 260,
+        "to": 5,
+        "from": 3,
+        "nation": "mx",
+        "timestamp": "2025-05-08T00:00:00"
+    },
+    {
+        "playerId": 13,
+        "to": 9,
+        "from": 8,
+        "nation": "mx",
+        "timestamp": "2025-05-08T00:00:00"
+    },
+    {
+        "playerId": 106,
+        "to": 0,
+        "from": 9,
+        "nation": "mx",
+        "timestamp": "2025-05-08T00:00:00"
+    },
+    {
+        "playerId": 262,
+        "to": 3,
+        "from": 0,
+        "nation": "gt",
+        "timestamp": "2025-05-08T00:00:00"
+    },
+    {
+        "playerId": 191,
+        "to": 9,
+        "from": 0,
+        "nation": "us",
+        "timestamp": "2025-05-07T00:00:00"
+    },
+    {
+        "playerId": 263,
+        "to": 9,
+        "from": 0,
+        "nation": "co",
+        "timestamp": "2025-05-07T00:00:00"
+    },
+    {
+        "playerId": 260,
+        "to": 3,
+        "from": 12,
+        "nation": "co",
+        "timestamp": "2025-05-07T00:00:00"
+    },
+    {
+        "playerId": 200,
+        "to": 12,
+        "from": 0,
+        "nation": "co",
+        "timestamp": "2025-05-06T00:00:00"
+    },
+    {
+        "playerId": 31,
+        "to": 11,
+        "from": 3,
+        "nation": "co",
+        "timestamp": "2025-05-06T00:00:00"
+    },
+    {
+        "playerId": 105,
+        "to": 5,
+        "from": 3,
+        "nation": "co",
+        "timestamp": "2025-05-05T00:00:00"
+    },
+    {
+        "playerId": 199,
+        "to": 5,
+        "from": 2,
+        "nation": "co",
+        "timestamp": "2025-05-05T00:00:00"
+    },
+    {
+        "playerId": 185,
+        "to": 9,
+        "from": 0,
+        "nation": "co",
+        "timestamp": "2025-05-05T00:00:00"
+    },
+    {
+        "playerId": 171,
+        "to": 0,
+        "from": 5,
+        "nation": "co",
+        "timestamp": "2025-05-04T00:00:00"
+    },
+    {
+        "playerId": 259,
+        "to": 3,
+        "from": 0,
+        "nation": "co",
+        "timestamp": "2025-05-03T00:00:00"
+    },
+    {
+        "playerId": 264,
+        "to": 3,
+        "from": 0,
+        "nation": "co",
+        "timestamp": "2025-05-03T00:00:00"
+    },
+    {
+        "playerId": 125,
+        "to": 0,
+        "from": 5,
+        "nation": "co",
+        "timestamp": "2025-05-03T00:00:00"
+    },
+    {
+        "playerId": 244,
+        "to": 10,
+        "from": 0,
+        "nation": "co",
+        "timestamp": "2025-05-02T00:00:00"
+    },
+    {
+        "playerId": 54,
+        "to": 12,
+        "from": 1,
+        "nation": "co",
+        "timestamp": "2025-05-02T00:00:00"
+    },
+    {
+        "playerId": 265,
+        "to": 12,
+        "from": 0,
+        "nation": "co",
+        "timestamp": "2025-05-02T00:00:00"
+    },
+    {
+        "playerId": 38,
+        "to": 5,
+        "from": 0,
+        "nation": "co",
+        "timestamp": "2025-05-01T00:00:00"
+    },
+    {
+        "playerId": 227,
+        "to": 9,
+        "from": 3,
+        "nation": "co",
+        "timestamp": "2025-05-01T00:00:00"
+    },
+    {
+        "playerId": 123,
+        "to": 0,
+        "from": 9,
+        "nation": "co",
+        "timestamp": "2025-05-01T00:00:00"
+    },
+    {
+        "playerId": 44,
+        "to": 2,
+        "from": 1,
+        "nation": "mx",
+        "timestamp": "2025-04-30T00:00:00"
+    },
+    {
+        "playerId": 278,
+        "to": 4,
+        "from": 2,
+        "nation": "mx",
+        "timestamp": "2025-04-29T00:00:00"
+    },
+    {
+        "playerId": 278,
+        "to": 4,
+        "from": 2,
+        "nation": "mx",
+        "timestamp": "2025-04-29T00:00:00"
+    },
+    {
+        "playerId": 110,
+        "to": 8,
+        "from": 9,
+        "nation": "pn",
+        "timestamp": "2025-04-20T00:00:00"
+    },
+    {
+        "playerId": 67,
+        "to": 3,
+        "from": 0,
+        "nation": "co",
+        "timestamp": "2025-04-19T00:00:00"
+    },
+    {
+        "playerId": 162,
+        "to": 2,
+        "from": 3,
+        "nation": "mx",
+        "timestamp": "2025-04-19T00:00:00"
+    }
+]

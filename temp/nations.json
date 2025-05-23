@@ -1,0 +1,57 @@
+{
+    "mx": {
+        "name": "México",
+        "flag": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/Mexico.png?v=1741506917631",
+        "continent": "North America"
+    },
+    "gt": {
+        "name": "Guatemala",
+        "flag": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/gu.png?v=1744417152576",
+        "continent": "North America"
+    },
+    "us": {
+        "name": "United States",
+        "flag": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/USA?v=1741472669239",
+        "continent": "North America"
+    },
+    "co": {
+        "name": "Colombia",
+        "flag": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/Colombia.png?v=1741635293834",
+        "continent": "South America"
+    },
+    "ec": {
+        "name": "Ecuador",
+        "flag": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/ec?v=1744417191217",
+        "continent": "South America"
+    },
+    "ca": {
+        "name": "Canada",
+        "flag": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/ca?v=1744434665197",
+        "continent": "North America"
+    },
+    "pn": {
+        "name": "Panamá",
+        "flag": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/pn?v=1744462135680",
+        "continent": "North America"
+    },
+    "ve": {
+        "name": "Venezuela",
+        "flag": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/ve?v=1744468925061",
+        "continent": "South America"
+    },
+    "cl": {
+        "name": "Chile",
+        "flag": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/cl?v=1744552208467",
+        "continent": "South America"
+    },
+    "ar": {
+        "name": "Argentina",
+        "flag": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/ag?v=1744608466671",
+        "continent": "South America"
+    },
+    "ug": {
+        "name": "Uruguay",
+        "flag": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/ug?v=1746369045711",
+        "continent": "South America"
+    }
+}

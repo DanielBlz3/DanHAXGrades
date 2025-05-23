@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Danielblz" />
+    <link rel="icon"
+        href="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/MatchRatingLogo?v=1741925050278y"
+        type="image/x-icon" />
+    <link rel="stylesheet" href="/games.css" type="text/css" />
+    <title id="tabtitle">Loading...</title>
+</head>
+
+<body>
+    <main>
+        <div class="scoreboardandnav-container">
+            <div class="match-league-container">
+                <div class="league-display-info">
+                    <div class="leaguelogo">
+                        <div class="logoexanon">
+                            <img src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/leaguelogo.png?v=1740718276716"
+                                alt="Exnaon Liga Logo" width="18px" height="18px" />
+                        </div>
+                        <div data-lang-es="Exanon Liga S3" data-lang-en="Exanon League S3" class="league">Exanon Round
+                            1
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scoreboard-container">
+                <span href="" class="team-scoreboard">
+                    <div class="team1logo">
+                        <img data-team-logo="home"
+                            src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/logoless?v=1742054547120"
+                            width="24px" />
+                    </div>
+                    <a data-team-name="home" id="homeTeamLink" class="team1name">No Info</a>
+                </span>
+                <div class="scoreboard">
+                    <div class="scoreline" id="scoreline">0-0</div>
+                    <div class="fulltime" id="gamestatus">Full Time</div>
+                </div>
+                <span href="" class="team-scoreboard">
+                    <div class="team2logo">
+                        <img data-team-logo="away"
+                            src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/logoless?v=1742054547120"
+                            width="24" />
+                    </div>
+                    <a data-team-name="away" id="awayTeamLink" class="team2name">No Info</a>
+                </span>
+            </div>
+            <div class="containerthree">
+                <div id="goalscorershome" class="GoalscorersHome"></div>
+                <div class="ball">⚽</div>
+                <div id="goalscorersaway" class="GoalscorersAway"></div>
+            </div>
+            <nav class="match-nav">
+                <button data-lang-es="Estadísticas" data-lang-en="Stats" onclick="showSection('stats')">Stats</button>
+                <button data-lang-es="Alineación" data-lang-en="Lineups"
+                    onclick="showSection('lineups')">Lineups</button>
+            </nav>
+        </div>
+        <div id="lineups" class="section">
+            <div class="match">
+                <div class="columnleft">
+                    <div class="containerfour">
+                        <div class="hometeamlineupinfo">
+                            <div class="hometeamformation">
+                                <div class="teamrating">
+                                    <div id="homerating" class="">0</div>
+                                </div>
+                                <div class="hometeamlogoandnameinlineup">
+                                    <div class="homelogolineup">
+                                        <img data-team-logo="home"
+                                            src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/logoless?v=1742054547120"
+                                            width="20px" />
+                                    </div>
+                                    <div data-team-name="home" class="awayteamnamelineup">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="homeFormation">0</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="awayteamlineupinfo">
+                            <div class="awayteamformation">
+                                <div class="teamrating">
+                                    <div id="awayrating" class="">0</div>
+                                </div>
+                                <div class="awayteamlogoandnameinlineup">
+                                    <div class="awaylogolineup">
+                                        <img data-team-logo="away"
+                                            src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/logoless?v=1742054547120"
+                                            alt="Manchester United" width="20" />
+                                    </div>
+                                    <div data-team-name="away" class="awayteamnamelineup">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="awayFormation">0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lineups">
+                        <div class="teamonebox">
+                            <img src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/Team1box.svg?v=1740718271606"
+                                alt="Box one" />
+                        </div>
+                        <div class="teamtwobox">
+                            <img src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/Team2box.svg?v=1740718264199"
+                                alt="Box two" />
+                        </div>
+                        <div class="centercircle">
+                            <img src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/Centercircle.svg?v=1740718475712"
+                                alt="Center Circle" />
+                        </div>
+                        <div id="hometeam" class="hometeam">
+                            <div id="hometeamformationis" class="fourfourtwo">
+
+                            </div>
+                        </div>
+                        <div id="awayteam" class="awayteam">
+                            <div id="awayteamformationis" class="fourfourtwo">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="manager-container">
+                        <div class="homemanager">
+                            <div class="managericon">
+                                <img src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/noicon.png?v=1740716552808"
+                                    alt="managerhomeicon" width="30" height="30" />
+                            </div>
+                            <div id="manager1" class="managername">Pep Guardiola</div>
+                        </div>
+                        <div data-lang-es="Entrenador" data-lang-en="Manager" class="managerdivider">Managers</div>
+                        <div class="awaymanager">
+                            <div class="managericon">
+                                <img src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/noicon.png?v=1740716552808"
+                                    alt="managerawayicon" width="30" height="30" />
+                            </div>
+                            <div id="manager2" class="managername">Sir Alex Fergusson</div>
+                        </div>
+                    </div>
+                    <div id="subsitutescontainer" class="subsitutes-container">
+                        <div data-lang-es="Suplentes" data-lang-en="Subsitutes" class="subsitutestitle">Subsitutes</div>
+                        <div class="subsitutes-details">
+                            <div class="container-subsitutes">
+                                <section data-team-name="home">No Info</section>
+                                <ul id="homeSubs"></ul>
+                            </div>
+                            <div class="container-awaysubsitutes">
+                                <section data-team-name="away">No Info</section>
+                                <ul id="awaySubs"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="player-ui-overlay" id="player-ui-overlay"></div>
+        <div id="ui" class="player-ui">
+            <header class="player-ui-header">
+                <a id="playeruiname" class="playerui-name">No Info</a>
+                <div class="header-metrics">
+                    <div class="header-metric-item">
+                        <span id="positionplayerui"></span>
+                        <span class="playerui-bio-metric" data-lang-es="Posición"
+                            data-lang-en="Position">Position</span>
+                    </div>
+                    <div class="header-metric-item">
+                        <div class="ratingdisplayonplayerui">
+                            <span id="ratingdisplay">6.0</span>
+                        </div>
+                        <span class="playerui-bio-metric" data-lang-es="Puntuación" data-lang-en="Rating">Rating</span>
+                    </div>
+                    <div class="header-metric-item">
+                        <div class="player-ui-nationality">
+                            <img id="countryplayeruiimg" height="17" width="17" src=""></img>
+                            <span id="countryplayeruitext"></span>
+                        </div>
+                        <span class="playerui-bio-metric" data-lang-es="Pais" data-lang-en="Country">Country</span>
+                    </div>
+                </div>
+            </header>
+            <div class="player-ui-main">
+                <div id="playerfactholder"></div>
+                <div class="player-ui-stats">
+                    <h3 data-lang-es="Estadísticas" data-lang-en="Stats" class="stats">Stats</h3>
+                </div>
+            </div>
+        </div>
+        <div id="stats" class="section statssection" style="display: none;">
+            <h3>Main Stats</h3>
+            <ul id="gamestats" class="gamestats">
+            </ul>
+        </div>
+    </main>
+
+    <script src="/lang.js"></script>
+      <script src="/theme.js"></script>
+    <script src="/header.js"></script>
+    <script src="/games.js"></script>
+</body>
+
+</html>
