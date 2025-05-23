@@ -1,0 +1,2367 @@
+{
+  "teams": [
+    {
+      "teamname": "Free Agents",
+      "teamId": 0,
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/logoless?v=1742054547120",
+      "color": "rgb(39, 39, 39)"
+    },
+    {
+      "teamname": "Aguilas Cementeras",
+      "teamId": 1,
+      "currentLeagues": [2,3],
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-aguilas-cementeras-logo?v=1742944322207",
+      "color": "rgb(225, 170, 10)",
+      "colorAlternate": "rgb(31, 48, 137)",
+      "teamdescription": {
+        "manager": "Angry",
+        "colors": "Yellow",
+        "jerseys": [
+          "/colors red 0 00163f FEF000 1F30s89 FEF000",
+          "/colors blue 0 FFFFFF 1F3089 FEF000 1F3089",
+          "/colors blue 0 FEF000 FFFFFF 1F3089"
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Antuna Raiders",
+      "teamId": 2,
+      "currentLeagues": [2,3],
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-antuna-raiders-logo?v=1742944347063",
+      "color": "rgb(39, 39, 39)",
+      "colorAlternate": "rgb(121, 24, 27)",
+      "teamdescription": {
+        "manager": "Matteo Mbappe",
+        "colors": "Black, White, Gold",
+        "jerseys": [
+          "/colors red 26 000000 FFFFFF 9E8D20 F5FFF7",
+          "/colors blue 26 000000 FFFFFF 9E8D20 F5FFF7",
+          "None"
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        null,
+        4,
+        null
+      ]
+    },
+    {
+      "teamname": "Arsenal",
+      "teamId": 3,
+      "currentLeagues": [2,3],
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-arsenal-logo?v=1742944317076",
+      "color": "rgb(239, 1, 7)",
+      "colorAlternate": "rgb(39, 39, 39)",
+      "teamdescription": {
+        "manager": "Kai Havertz",
+        "colors": "Red, White",
+        "jerseys": [
+          "/colors red 30 FFFFFF FF0027 F00025 DB0022",
+          "/colors blue 44 FF0000 000000 1F1F1F 2A2B2B",
+          "/colors blue 220 162040 C5E4F0 BBCBF0 B1AFF0"
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Atletico Madrid",
+      "teamId": 4,
+      "currentLeagues": [2,3],
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-atletico-madrid-logo?v=1742944324809",
+      "color": "rgb(203,53,36)",
+      "colorAlternate": "rgb(144, 183, 186)",
+      "teamdescription": {
+        "manager": "Bran",
+        "colors": "Red, Blue, White",
+        "jerseys": [
+          "/colors red 0 001AFF FF0000 FFFFFF FF0000",
+          "/colors blue 45 FF2E2E CECFE0 BCC0E6 A9AECF",
+          "/colors blue 125 D9FFFB 386263 419B9E 5AD7DB"
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": [
+              2
+            ]
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": [
+              2
+            ]
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": [
+              2
+            ]
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": [
+              3
+            ]
+          }
+        }
+      },
+      "previoustablefinishes": [
+        4,
+        2,
+        null
+      ]
+    },
+    {
+      "teamname": "Inter de Barcelona",
+      "teamId": 5,
+      "currentLeagues": [2,3],
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-inter-de-barcelona-logo?v=1743977661431",
+      "color": "rgb(151 30 72)",
+      "colorAlternate": "rgb(36, 50, 220)",
+      "teamdescription": {
+        "manager": "nano1109",
+        "colors": "Red, Blue",
+        "jerseys": [
+          "/colors red 180 D1BD38 004D98 DB0030 004D98",
+          "/colors blue 180 004D98 000000",
+          "/colors blue 180 004D98 FFCD78 CF002D FFCD78"
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        5,
+        5,
+        null
+      ]
+    },
+    {
+      "teamname": "Boston United",
+      "teamId": 6,
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-boston-united-logo?v=1742944336040",
+      "color": "rgb(255, 197, 38)",
+      "colorAlternate": "rgb(0, 0, 0)",
+      "teamdescription": {
+        "manager": "All-Terrain",
+        "colors": "Yellow",
+        "jerseys": [
+          "/colors red 60 FFFFFF BCC904",
+          "/colors red 60 FFFFFF 0D0404 004077 ",
+          "None"
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Comediantes",
+      "teamId": 7,
+      "currentLeagues": [2,3],
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/Comediantes?v=1742007782982",
+      "color": "rgb(59, 59, 59)",
+      "colorAlternate": "rgb(0, 0, 0)",
+      "teamdescription": {
+        "manager": "Uay Masto",
+        "colors": "Black, Gold",
+        "jerseys": [
+          "None",
+          "None",
+          "None"
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "K9army",
+      "teamId": 8,
+      "currentLeagues": [2,3],
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-k9army-logo?v=1742944341982",
+      "color": "rgb(42, 71, 161)",
+      "colorAlternate": "rgb(39, 39, 39)",
+      "teamdescription": {
+        "manager": "Lata",
+        "colors": "White, Blue",
+        "jerseys": [
+          "/colors red 60 0051ba FFFFFF",
+          "/colors blue 60 DAF5F4 1E1F1F",
+          "/colors blue 60 FFC90D 372182 341F7A 301C70"
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": [
+              1
+            ]
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": [
+              1
+            ]
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": [
+              1
+            ]
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        1,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Liverpool",
+      "teamId": 9,
+      "currentLeagues": [2,3],
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-liverpool-logo?v=1742944344358",
+      "color": "rgb(145, 23, 18)",
+      "colorAlternate": "rgb(79, 179, 217)",
+      "teamdescription": {
+        "manager": "Sniper",
+        "colors": "Red",
+        "jerseys": [
+          "None",
+          "None",
+          "None"
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Palmerias",
+      "teamId": 10,
+      "currentLeagues": [2,3],
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-palmerias-logo?v=1742944349673",
+      "color": "rgb(61, 120, 61)",
+      "colorAlternate": "rgb(0, 0, 0)",
+      "teamdescription": {
+        "manager": "Davis",
+        "colors": "Green",
+        "jerseys": [
+          "None",
+          "None",
+          "None"
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": [
+              3
+            ]
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Pelabolas",
+      "teamId": 11,
+      "currentLeagues": [2,3],
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-pelabolas-logo?v=1742944290526",
+      "color": "rgb(39, 39, 39)",
+      "colorAlternate": "rgb(218, 165, 32)",
+      "teamdescription": {
+        "manager": "ImDqvid",
+        "colors": "Black, Gold",
+        "jerseys": [
+          "/colors red 55 FFFFFF 000000 F0B000 000000",
+          "/colors blue 55 FFFFFF F0B000 0D0900 F0B000",
+          "/colors red 55 000000 DE9C00 FFBB00 DE9C00"
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Paris Saint Germain",
+      "teamId": 12,
+      "currentLeagues": [2,3],
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-paris-saint-germain-logo?v=1743977050347",
+      "color": "rgb(1, 66, 106)",
+      "colorAlternate": "rgb(153, 114, 111)",
+      "teamdescription": {
+        "manager": "Max",
+        "colors": "Blue, Red",
+        "jerseys": [
+          "/colors red 0 000000 2B2891 F5051C 2B2891",
+          "/colors blue 0 000000 E8E8E8 C90000 E8E8E8",
+          null
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Manchester United",
+      "teamId": 13,
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-manchester-united-logo?v=1744588712661",
+      "color": "rgb(218, 41, 28)",
+      "teamdescription": {
+        "manager": "",
+        "colors": "Red",
+        "jerseys": [
+          null,
+          null,
+          null
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": [
+              1
+            ]
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": [
+              1
+            ]
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": [
+              1
+            ]
+          }
+        }
+      },
+      "previoustablefinishes": [
+        2,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Real Madrid",
+      "teamId": 14,
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-real-madrid-logo?v=1744588743127",
+      "color": "rgb(1, 66, 106)",
+      "teamdescription": {
+        "manager": "",
+        "colors": "White, Blue",
+        "jerseys": [
+          null,
+          null,
+          null
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        3,
+        6,
+        null
+      ]
+    },
+    {
+      "teamname": "Club Leon",
+      "teamId": 15,
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-leon-logo?v=1740850547882",
+      "color": "green",
+      "teamdescription": {
+        "manager": "",
+        "colors": "Green",
+        "jerseys": [
+          null,
+          null,
+          null
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": [
+              1
+            ]
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": [
+              1
+            ]
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        6,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Sporting",
+      "teamId": 16,
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-sporting-lisbon-logo?v=1744601272695",
+      "color": "rgb(16, 104, 64)",
+      "teamdescription": {
+        "manager": "",
+        "colors": "Green, White",
+        "jerseys": [
+          null,
+          null,
+          null
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        7,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Inter Milan",
+      "teamId": 17,
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/InterMilan?v=1740899898130",
+      "color": "rgb(1, 14, 128)",
+      "teamdescription": {
+        "manager": "",
+        "colors": "Blue, Black",
+        "jerseys": [
+          null,
+          null,
+          null
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        8,
+        3,
+        null
+      ]
+    },
+    {
+      "teamname": "Ajax",
+      "teamId": 18,
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/Ajax?v=1740967566736",
+      "color": "rgb(194, 0, 47)",
+      "teamdescription": {
+        "manager": "",
+        "colors": "White, Red",
+        "jerseys": [
+          null,
+          null,
+          null
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        9,
+        11,
+        null
+      ]
+    },
+    {
+      "teamname": "Athletic Bilbao",
+      "teamId": 19,
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-athletic-club-logo?v=1740787340585",
+      "color": "rgb(226, 0, 26)",
+      "teamdescription": {
+        "manager": "",
+        "colors": "White, Red",
+        "jerseys": [
+          null,
+          null,
+          null
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": [
+              2
+            ]
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        null,
+        1,
+        null
+      ]
+    },
+    {
+      "teamname": "AC Milan",
+      "teamId": 20,
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-ac-milan-logo?v=1744641360553",
+      "color": "rgb(207, 44, 39)",
+      "teamdescription": {
+        "manager": "",
+        "colors": "Red, Black",
+        "jerseys": [
+          null,
+          null,
+          null
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        10,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Bayer Leverkusen",
+      "teamId": 21,
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-bayer-leverkusen-logo?v=1744641629804",
+      "color": "rgb(207, 44, 39)",
+      "teamdescription": {
+        "manager": "",
+        "colors": "Red, Black",
+        "jerseys": [
+          null,
+          null,
+          null
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        11,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Bitikler",
+      "teamId": 22,
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/logoless?v=1742054547120",
+      "color": "rgb(121, 178, 242)",
+      "teamdescription": {
+        "manager": "",
+        "colors": "Sky Blue",
+        "jerseys": [
+          null,
+          null,
+          null
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        12,
+        null,
+        null
+      ]
+    }
+  ],
+  "fixturesPreTemp3": {
+    "leagueDesc": {
+      "leaguename": "Exanon Pretemporada Season 3",
+      "leagueabbr": "EXL Pre-Temp S3",
+      "color": "black",
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-exanon-league-s3-logo?v=1744754340707",
+      "leagueStatus": "finished",
+      "leagueId": 1,
+      "leagueJSON": "exanonpts3.json",
+      "leagueMatchdaysLength": 5,
+      "currentMatchday": 8,
+      "minforPer20Stats": 59,
+      "participants" : [[  "Liverpool", "Antuna Raiders", "Palmerias", "Comediantes", "Pelabolas"],  [ "K9army", "Atletico Madrid", "Aguilas Cementeras", "Inter de Barcelona", "Boston United", "Arsenal"]],
+      "legend": [
+        {
+          "key": "knockouts",
+          "color": "rgb(46, 204, 113)",
+          "indices": [1,2]
+        }
+      ]
+  },
+    "matchday1": {
+      "game1": {
+        "teams": [
+          "Arsenal",
+          "K9army"
+        ],
+        "matchtime": {
+          "date": "March 15",
+          "time": "7:00 CDMX"
+        },
+        "scoreline": "0-3",
+        "id": 8
+      },
+      "game2": {
+        "teams": [
+          "Boston United",
+          "Aguilas Cementeras"
+        ],
+        "matchtime": {
+          "date": "March 14",
+          "time": "8:30 CDMX"
+        },
+        "scoreline": "2-4",
+        "id": 5
+      },
+      "game3": {
+        "teams": [
+          "Inter de Barcelona",
+          "Atletico Madrid"
+        ],
+        "matchtime": {
+          "date": "March 14",
+          "time": "9:00 PM CDMX"
+        },
+        "scoreline": "0-8",
+        "id": 9
+      },
+      "game4": {
+        "teams": [
+          "Liverpool",
+          "Pelabolas"
+        ],
+        "matchtime": {
+          "date": "March 15",
+          "time": "8:00 CDMX"
+        },
+        "scoreline": "3-0",
+        "id": 7
+      },
+      "game5": {
+        "teams": [
+          "Antuna Raiders",
+          "Palmerias"
+        ],
+        "matchtime": {
+          "date": "March 15",
+          "time": "8:30 CDMX"
+        },
+        "scoreline": "0-1",
+        "id": 6
+      }
+    },
+    "matchday2": {
+      "game1": {
+        "teams": [
+          "K9army",
+          "Aguilas Cementeras"
+        ],
+        "matchtime": {
+          "date": "March 18",
+          "time": "9:00 CDMX"
+        },
+        "scoreline": "1-2",
+        "id": 10
+      },
+      "game2": {
+        "teams": [
+          "Arsenal",
+          "Inter de Barcelona"
+        ],
+        "matchtime": {
+          "date": "March 18",
+          "time": "9:30 CDMX"
+        },
+        "scoreline": "0-3",
+        "id": 11
+      },
+      "game3": {
+        "teams": [
+          "Atletico Madrid",
+          "Boston United"
+        ],
+        "matchtime": {
+          "date": "March 19",
+          "time": "8:00 CDMX"
+        },
+        "scoreline": "4-0",
+        "id": 12
+      },
+      "game4": {
+        "teams": [
+          "Comediantes",
+          "Palmerias"
+        ],
+        "matchtime": {
+          "date": "March 19",
+          "time": "9:30 CDMX"
+        },
+        "scoreline": "0-3",
+        "id": 13
+      },
+      "game5": {
+        "teams": [
+          "Antuna Raiders",
+          "Liverpool"
+        ],
+        "matchtime": {
+          "date": "March 19",
+          "time": "9:00 CDMX"
+        },
+        "scoreline": "1-0",
+        "id": 14
+      }
+    },
+    "matchday3": {
+      "game1": {
+        "teams": [
+          "Inter de Barcelona",
+          "K9army"
+        ],
+        "matchtime": {
+          "date": "March 21",
+          "time": "8:00 CDMX"
+        },
+        "scoreline": "0-2",
+        "id": 15
+      },
+      "game2": {
+        "teams": [
+          "Aguilas Cementeras",
+          "Atletico Madrid"
+        ],
+        "matchtime": {
+          "date": "March 21",
+          "time": "8:30 CDMX"
+        },
+        "scoreline": "0-1",
+        "id": 16
+      },
+      "game3": {
+        "teams": [
+          "Boston United",
+          "Arsenal"
+        ],
+        "matchtime": {
+          "date": "March 21",
+          "time": "9:00 CDMX"
+        },
+        "scoreline": "1-1",
+        "id": 17
+      },
+      "game4": {
+        "teams": [
+          "Antuna Raiders",
+          "Pelabolas"
+        ],
+        "matchtime": {
+          "date": "March 22",
+          "time": "8:00 CDMX"
+        },
+        "scoreline": "5-1",
+        "id": 18
+      },
+      "game5": {
+        "teams": [
+          "Liverpool",
+          "Comediantes"
+        ],
+        "matchtime": {
+          "date": "March 22",
+          "time": "8:30 CDMX"
+        },
+        "scoreline": "3-0",
+        "id": 19
+      }
+    },
+    "matchday4": {
+      "game1": {
+        "teams": [
+          "K9army",
+          "Atletico Madrid"
+        ],
+        "matchtime": {
+          "date": "March 25",
+          "time": "8:00 CDMX"
+        },
+        "scoreline": "0-1",
+        "id": 20
+      },
+      "game2": {
+        "teams": [
+          "Inter de Barcelona",
+          "Boston United"
+        ],
+        "matchtime": {
+          "date": "March 25",
+          "time": "8:30 CDMX"
+        },
+        "scoreline": "1-3",
+        "id": 21
+      },
+      "game3": {
+        "teams": [
+          "Arsenal",
+          "Aguilas Cementeras"
+        ],
+        "matchtime": {
+          "date": "March 25",
+          "time": "9:00 CDMX"
+        },
+        "scoreline": "2-3",
+        "id": 22
+      },
+      "game4": {
+        "teams": [
+          "Palmerias",
+          "Liverpool"
+        ],
+        "matchtime": {
+          "date": "March 26",
+          "time": "8:00 CDMX"
+        },
+        "scoreline": "4-1",
+        "id": 23
+      },
+      "game5": {
+        "teams": [
+          "Comediantes",
+          "Pelabolas"
+        ],
+        "matchtime": {
+          "date": "CANCELADO",
+          "time": "CANCELADO"
+        },
+        "scoreline": "0-3",
+        "id": 24
+      }
+    },
+    "matchday5": {
+      "game1": {
+        "teams": [
+          "Boston United",
+          "K9army"
+        ],
+        "matchtime": {
+          "date": "March 28",
+          "time": "8:00 CDMX"
+        },
+        "scoreline": "1-3",
+        "id": 25
+      },
+      "game2": {
+        "teams": [
+          "Atletico Madrid",
+          "Arsenal"
+        ],
+        "matchtime": {
+          "date": "March 28",
+          "time": "8:30 CDMX"
+        },
+        "scoreline": "9-0",
+        "id": 26
+      },
+      "game3": {
+        "teams": [
+          "Aguilas Cementeras",
+          "Inter de Barcelona"
+        ],
+        "matchtime": {
+          "date": "March 28",
+          "time": "9:00 CDMX"
+        },
+        "scoreline": "3-0",
+        "id": 27
+      },
+      "game4": {
+        "teams": [
+          "Antuna Raiders",
+          "Comediantes"
+        ],
+        "matchtime": {
+          "date": "CANCELADO",
+          "time": "CANCELADO"
+        },
+        "scoreline": "3-0",
+        "id": 28
+      },
+      "game5": {
+        "teams": [
+          "Pelabolas",
+          "Palmerias"
+        ],
+        "matchtime": {
+          "date": "March 29",
+          "time": "8:00 CDMX"
+        },
+        "scoreline": "1-8",
+        "id": 29
+      }
+    },
+    "matchday6": {
+      "game1": {
+        "teams": [
+          "Aguilas Cementeras",
+          "Palmerias"
+        ],
+        "matchtime": {
+          "date": "April 2nd",
+          "time": "8:00 CDMX"
+        },
+        "scoreline": "1-4",
+        "id": 30
+      },
+      "game2": {
+        "teams": [
+          "Antuna Raiders",
+          "Atletico Madrid"
+        ],
+        "matchtime": {
+          "date": "April 2nd",
+          "time": "8:00 CDMX"
+        },
+        "scoreline": "1-1",
+        "id": 31
+      }
+    },
+    "matchday7": {
+      "game1": {
+        "teams": [
+          "Palmerias",
+          "Aguilas Cementeras"
+        ],
+        "matchtime": {
+          "date": "April 4th",
+          "time": "8:00 CDMX"
+        },
+        "scoreline": "4-0",
+        "id": 32
+      },
+      "game2": {
+        "teams": [
+          "Atletico Madrid",
+          "Antuna Raiders"
+        ],
+        "matchtime": {
+          "date": "April 4th",
+          "time": "8:00 CDMX"
+        },
+        "scoreline": "2-0",
+        "id": 33
+      }
+    },
+    "matchday8": {
+      "game1": {
+        "teams": [
+          "Palmerias",
+          "Atletico Madrid"
+        ],
+        "matchtime": {
+          "date": "April 5th",
+          "time": "9:00 CDMX"
+        },
+        "scoreline": "2-1",
+        "id": 34
+      }
+    }
+  },
+  "fixturesLiga3": {
+    "leagueDesc": {
+      "leaguename": "Exanon League Season 3",
+      "leagueabbr": "EXL",
+      "color": "black",
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-exanon-league-s3-logo?v=1744754340707",
+      "leagueStatus": "ongoing",
+      "leagueId": 2,
+      "leagueJSON": "exanonls3.json",
+      "leagueMatchdaysLength": 9,
+      "currentMatchday": 4,
+      "minforPer20Stats": 5,
+    "participants":  [["Liverpool", "Pelabolas", "Atletico Madrid", "Aguilas Cementeras", "Palmerias", "K9army", "Antuna Raiders", "Arsenal", "Inter de Barcelona", "Paris Saint Germain"]],
+    "legend": [
+      ]
+    },
+    "matchday1": {
+      "game1": {
+        "teams": [
+          "Aguilas Cementeras",
+          "K9army"
+        ],
+        "matchtime": {
+          "timestamp": "2025-04-18T08:30:00-06:00"
+        },
+        "scoreline": "0-3",
+        "id": 35
+      },
+      "game2": {
+        "teams": [
+          "Atletico Madrid",
+          "Inter de Barcelona"
+        ],
+        "matchtime": {
+          "timestamp": "2025-04-18T09:00:00-06:00"
+        },
+        "scoreline": "7-2",
+        "id": 36
+      },
+      "game3": {
+        "teams": [
+          "Palmerias",
+          "Pelabolas"
+        ],
+        "matchtime": {
+          "timestamp": "2025-04-19T08:00:00-06:00"
+        },
+        "id": 37
+      },
+      "game4": {
+        "teams": [
+          "Arsenal",
+          "Liverpool"
+        ],
+        "matchtime": {
+          "timestamp": "2025-04-19T08:30:00-06:00"
+        },
+        "scoreline": "1-0",
+        "id": 38
+      },
+      "game5": {
+        "teams": [
+          "Antuna Raiders",
+          "Paris Saint Germain"
+        ],
+        "matchtime": {
+          "timestamp": "2025-04-19T09:00:00-06:00"
+        },
+        "scoreline": "0-0",
+        "id": 39
+      }
+    },
+    "matchday2": {
+      "game1": {
+        "teams": [
+          "K9army",
+          "Inter de Barcelona"
+        ],
+        "matchtime": {
+          "timestamp": "2024-04-26T01:30:00Z"
+        },
+        "scoreline": "0-2",
+        "id": 40
+      },
+      "game2": {
+        "teams": [
+          "Aguilas Cementeras",
+          "Palmerias"
+        ],
+        "matchtime": {
+          "timestamp": "2024-04-26T02:00:00Z"
+        },
+        "scoreline": "0-0",
+        "id": 41
+      },
+      "game3": {
+        "teams": [
+          "Arsenal",
+          "Atletico Madrid"
+        ],
+        "matchtime": {
+          "timestamp": "2024-04-27T01:00:00Z"
+        },
+        "scoreline": "0-3",
+        "id": 42
+      },
+      "game4": {
+        "teams": [
+          "Pelabolas",
+          "Antuna Raiders"
+        ],
+        "matchtime": {
+          "timestamp": "2024-04-27T01:30:00Z"
+        },
+        "scoreline": "0-2",
+        "id": 43
+      },
+      "game5": {
+        "teams": [
+          "Paris Saint Germain",
+          "Liverpool"
+        ],
+        "matchtime": {
+          "timestamp": "2024-04-27T02:00:00Z"
+        },
+        "scoreline": "3-1",
+        "id": 44
+      }
+    },
+    "matchday3": {
+      "game1": {
+        "teams": [
+          "Palmerias",
+          "K9army"
+        ],
+        "matchtime": {},
+        "scoreline": "1-0",
+        "id": 45
+      },
+      "game2": {
+        "teams": [
+          "Inter de Barcelona",
+          "Arsenal"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "scoreline": "3-0",
+        "id": 46
+      },
+      "game3": {
+        "teams": [
+          "Antuna Raiders",
+          "Aguilas Cementeras"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "scoreline": "3-0",
+        "id": 47
+      },
+      "game4": {
+        "teams": [
+          "Atletico Madrid",
+          "Paris Saint Germain"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "scoreline": "1-0",
+        "id": 48
+      },
+      "game5": {
+        "teams": [
+          "Liverpool",
+          "Pelabolas"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "scoreline": "1-1",
+        "id": 49
+      }
+    },
+    "matchday4": {
+      "game1": {
+        "teams": [
+          "K9army",
+          "Arsenal"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 50
+      },
+      "game2": {
+        "teams": [
+          "Palmerias",
+          "Antuna Raiders"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 51
+      },
+      "game3": {
+        "teams": [
+          "Paris Saint Germain",
+          "Inter de Barcelona"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 52
+      },
+      "game4": {
+        "teams": [
+          "Aguilas Cementeras",
+          "Liverpool"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 53
+      },
+      "game5": {
+        "teams": [
+          "Pelabolas",
+          "Atletico Madrid"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 54
+      }
+    },
+    "matchday5": {
+      "game1": {
+        "teams": [
+          "Antuna Raiders",
+          "K9army"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 55
+      },
+      "game2": {
+        "teams": [
+          "Arsenal",
+          "Paris Saint Germain"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 56
+      },
+      "game3": {
+        "teams": [
+          "Liverpool",
+          "Palmerias"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 57
+      },
+      "game4": {
+        "teams": [
+          "Inter de Barcelona",
+          "Pelabolas"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 58
+      },
+      "game5": {
+        "teams": [
+          "Atletico Madrid",
+          "Aguilas Cementeras"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 59
+      }
+    },
+    "matchday6": {
+      "game1": {
+        "teams": [
+          "K9army",
+          "Paris Saint Germain"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 60
+      },
+      "game2": {
+        "teams": [
+          "Antuna Raiders",
+          "Liverpool"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 61
+      },
+      "game3": {
+        "teams": [
+          "Pelabolas",
+          "Arsenal"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 62
+      },
+      "game4": {
+        "teams": [
+          "Palmerias",
+          "Atletico Madrid"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 63
+      },
+      "game5": {
+        "teams": [
+          "Aguilas Cementeras",
+          "Inter de Barcelona"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 64
+      }
+    },
+    "matchday7": {
+      "game1": {
+        "teams": [
+          "Liverpool",
+          "K9army"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 65
+      },
+      "game2": {
+        "teams": [
+          "Paris Saint Germain",
+          "Pelabolas"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 66
+      },
+      "game3": {
+        "teams": [
+          "Atletico Madrid",
+          "Antuna Raiders"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 67
+      },
+      "game4": {
+        "teams": [
+          "Arsenal",
+          "Aguilas Cementeras"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 68
+      },
+      "game5": {
+        "teams": [
+          "Inter de Barcelona",
+          "Palmerias"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 69
+      }
+    },
+    "matchday8": {
+      "game1": {
+        "teams": [
+          "K9army",
+          "Pelabolas"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 70
+      },
+      "game2": {
+        "teams": [
+          "Liverpool",
+          "Atletico Madrid"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 71
+      },
+      "game3": {
+        "teams": [
+          "Aguilas Cementeras",
+          "Paris Saint Germain"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 72
+      },
+      "game4": {
+        "teams": [
+          "Antuna Raiders",
+          "Inter de Barcelona"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 73
+      },
+      "game5": {
+        "teams": [
+          "Palmerias",
+          "Arsenal"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 74
+      }
+    },
+    "matchday9": {
+      "game1": {
+        "teams": [
+          "Atletico Madrid",
+          "K9army"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 75
+      },
+      "game2": {
+        "teams": [
+          "Pelabolas",
+          "Antuna Raiders"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 76
+      },
+      "game3": {
+        "teams": [
+          "Inter de Barcelona",
+          "Liverpool"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 77
+      },
+      "game4": {
+        "teams": [
+          "Paris Saint Germain",
+          "Palmerias"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 78
+      },
+      "game5": {
+        "teams": [
+          "Arsenal",
+          "Antuna Raiders"
+        ],
+        "matchtime": {
+          "timestamp": "null"
+        },
+        "id": 79
+      }
+    }
+  },
+  "fixturesCopa3": {
+    "leagueDesc": {
+      "leaguename": "Exanon Copa Season 3",
+      "leagueabbr": "EXL Copa",
+      "color": "red",
+      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-exanon-league-s3-logo?v=1744754340707",
+      "leagueStatus": "ongoing",
+      "leagueId": 3,
+      "leagueJSON": "exanoncs3.json",
+      "leagueMatchdaysLength": 5,
+      "currentMatchday": 4,
+      "minforPer20Stats": 25,
+        "participants": [
+          [ "Liverpool", "Pelabolas", "Atletico Madrid", "Aguilas Cementeras", "Palmerias" ],
+          [ "K9army", "Antuna Raiders", "Arsenal", "Inter de Barcelona", "Paris Saint Germain" ]
+        ],
+        "legend": [
+        {
+          "key": "knockouts",
+          "color": "rgb(46, 204, 113)",
+          "indices": [1,2]
+        }
+      ]
+    },
+    "matchday1": {
+      "game1": {
+        "teams": [
+          "Liverpool",
+          "Atletico Madrid"
+        ],
+        "matchtime": {
+          "timestamp": "2025-04-15T08:00:00-06:00"
+        },
+        "scoreline": "0-0",
+        "id": 100
+      },
+      "game2": {
+        "teams": [
+          "Pelabolas",
+          "Aguilas Cementeras"
+        ],
+        "matchtime": {
+          "timestamp": "2025-04-15T08:30:00-06:00"
+        },
+        "scoreline": "0-3",
+        "id": 101
+      },
+      "game3": {
+        "teams": [
+          "Arsenal",
+          "K9army"
+        ],
+        "matchtime": {
+          "timestamp": "2025-04-16T08:00:00-06:00"
+        },
+        "scoreline": "0-3",
+        "id": 102
+      },
+      "game4": {
+        "teams": [
+          "Antuna Raiders",
+          "Inter de Barcelona"
+        ],
+        "matchtime": {
+          "timestamp": "2025-04-16T08:30:00-06:00"
+        },
+        "scoreline": "2-0",
+        "id": 103
+      }
+    },
+    "matchday2": {
+      "game1": {
+        "teams": [
+          "Palmerias",
+          "Pelabolas"
+        ],
+        "matchtime": {
+          "timestamp": "2024-04-23T01:30:00.000Z"
+        },
+        "scoreline": "6-1",
+        "id": 104
+      },
+      "game2": {
+        "teams": [
+          "Aguilas Cementeras",
+          "Liverpool"
+        ],
+        "matchtime": {
+          "timestamp": "2024-04-23T02:00:00.000Z"
+        },
+        "scoreline": "0-1",
+        "id": 105
+      },
+      "game3": {
+        "teams": [
+          "Paris Saint Germain",
+          "Antuna Raiders"
+        ],
+        "matchtime": {
+          "timestamp": "2024-04-24T01:30:00.000Z"
+        },
+        "scoreline": "0-2",
+        "id": 106
+      },
+      "game4": {
+        "teams": [
+          "Inter de Barcelona",
+          "Arsenal"
+        ],
+        "matchtime": {
+          "timestamp": "2024-04-24T02:00:00.000Z"
+        },
+        "scoreline": "0-1",
+        "id": 107
+      }
+    },
+    "matchday3": {
+      "game1": {
+        "teams": [
+          "Atletico Madrid",
+          "Aguilas Cementeras"
+        ],
+        "matchtime": {},
+        "scoreline": "2-0",
+        "id": 108
+      },
+      "game2": {
+        "teams": [
+          "Liverpool",
+          "Palmerias"
+        ],
+        "matchtime": {},
+        "scoreline": "1-1",
+        "id": 109
+      },
+      "game3": {
+        "teams": [
+          "K9army",
+          "Inter de Barcelona"
+        ],
+        "matchtime": {},
+        "scoreline": "1-1",
+        "id": 110
+      },
+      "game4": {
+        "teams": [
+          "Arsenal",
+          "Paris Saint Germain"
+        ],
+        "matchtime": {},
+        "scoreline": "2-2",
+        "id": 111
+      }
+    },
+    "matchday4": {
+      "game1": {
+        "teams": [
+          "Pelabolas",
+          "Liverpool"
+        ],
+        "matchtime": {},
+        "id": 112
+      },
+      "game2": {
+        "teams": [
+          "Palmerias",
+          "Atletico Madrid"
+        ],
+        "matchtime": {},
+        "id": 113
+      },
+      "game3": {
+        "teams": [
+          "Antuna Raiders",
+          "Arsenal"
+        ],
+        "matchtime": {},
+        "id": 114
+      },
+      "game4": {
+        "teams": [
+          "Paris Saint Germain",
+          "K9army"
+        ],
+        "matchtime": {},
+        "id": 115
+      }
+    },
+    "matchday5": {
+      "game1": {
+        "teams": [
+          "Aguilas Cementeras",
+          "Palmerias"
+        ],
+        "matchtime": {},
+        "id": 114
+      },
+      "game2": {
+        "teams": [
+          "Atletico Madrid",
+          "Pelabolas"
+        ],
+        "matchtime": {},
+        "id": 115
+      },
+      "game3": {
+        "teams": [
+          "Inter de Barcelona",
+          "Paris Saint Germain"
+        ],
+        "matchtime": {},
+        "id": 116
+      },
+      "game4": {
+        "teams": [
+          "K9army",
+          "Antuna Raiders"
+        ],
+        "matchtime": {},
+        "id": 117
+      }
+    }
+  }
+}
