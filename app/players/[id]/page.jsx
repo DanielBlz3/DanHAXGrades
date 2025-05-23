@@ -6,6 +6,8 @@
 
 export default async function PlayerPage({ params }) {
   const player = await getPlayer(params.id);
+  console.log(player);
+
 
   return (
     <div className="p-6">
