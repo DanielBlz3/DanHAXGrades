@@ -1,0 +1,55 @@
+:root {
+    --DIVIDE: .25px;
+    --GLOBAL-FONT-COLOR-GREY: grey;
+    --GLOBAL-FONT-COLOR-WHITE: white;
+    --GLOBAL-FONT-COLOR-BLACK: black;
+    --RATING-BLUE: rgb(14 135 224);
+    --RATING-GREEN: rgb(51 199 113);
+    --RATING-ORANGE: rgb(240 128 34);
+    --RATING-RED: rgb(229 94 91);
+    --RESULT-WIN: rgb(0, 125, 0);
+    --RESULT-DRAW: rgb(128 128 128);
+    --RESULT-LOSS: rgb(220, 30, 30);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.theme-light {
+    --page-background-color: rgb(240, 240, 240);
+    --card-bg-main: rgb(250, 250, 250);
+    --card-bg-second: rgb(235, 235, 235);
+    --card-bg-third: rgb(225, 225, 225);
+
+    --divide-bg-primary: rgb(235, 235, 235);
+    --divide-bg-secondary: rgb(220, 220, 220);
+    --divide-bg-third: rgb(210, 210, 210);
+
+    --primary-font-color: black;
+}
+
+.theme-dark {
+    --page-background-color: black;
+    --card-bg-main: rgb(34, 34, 34);
+    --card-bg-second: rgb(49, 49, 49);
+
+    --divide-bg-primary: rgb(50, 50, 50);
+    --divide-bg-secondary: rgb(65, 65, 65);
+    --divide-bg-third: rgb(75, 75, 75);
+
+    --primary-font-color: white;
+}
+
+body {
+    background-color: var(--page-background-color);
+    color: var(--primary-font-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+::selection {
+    background-color: rgb(46, 204, 113);
+    color: var(--GLOBAL-FONT-COLOR-BLACK);
+}
