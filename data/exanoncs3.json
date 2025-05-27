@@ -477,9 +477,9 @@
                 ]
             },
             "timestamp": "2025-04-15T02:00:00Z",
-            "teamnames": [
-                "Liverpool",
-                "Atletico Madrid"
+            "teamIds": [
+                9,
+                4
             ],
             "scoreline": "0-0",
             "formation": [
@@ -1015,9 +1015,9 @@
                 ]
             },
             "timestamp": "2025-04-15T02:30:00Z",
-            "teamnames": [
-                "Pelabolas",
-                "Aguilas Cementeras"
+            "teamIds": [
+                11,
+                1
             ],
             "scoreline": "0-3",
             "formation": [
@@ -1047,9 +1047,9 @@
                 "awayplayers": []
             },
             "timestamp": "2025-04-16T02:00:00Z",
-            "teamnames": [
-                "Arsenal",
-                "K9army"
+            "teamIds": [
+                3,
+                8
             ],
             "scoreline": "0-3",
             "formation": [
@@ -1604,9 +1604,9 @@
                 ]
             },
             "timestamp": "2025-04-16T02:30:00Z",
-            "teamnames": [
-                "Antuna Raiders",
-                "Inter de Barcelona"
+            "teamIds": [
+                2,
+                5
             ],
             "scoreline": "2-0",
             "formation": [
@@ -2130,9 +2130,9 @@
                     }
                 ]
             },
-            "teamnames": [
-                "Palmerias",
-                "Pelabolas"
+            "teamIds": [
+                10,
+                11
             ],
             "scoreline": "6-1",
             "formation": [
@@ -2592,9 +2592,9 @@
                 ]
             },
             "timestamp": "2025-04-23T02:00:00.000Z",
-            "teamnames": [
-                "Aguilas Cementeras",
-                "Liverpool"
+            "teamIds": [
+                1,
+                9
             ],
             "scoreline": "0-1",
             "formation": [
@@ -2624,9 +2624,9 @@
                 "awayplayers": []
             },
             "timestamp": "2025-04-24T01:30:00.000Z",
-            "teamnames": [
-                "AS Roma",
-                "Antuna Raiders"
+            "teamIds": [
+                12,
+                2
             ],
             "scoreline": "0-2",
             "formation": [
@@ -2654,9 +2654,9 @@
                 "awayplayers": []
             },
             "timestamp": "2025-04-24T02:00:00.000Z",
-            "teamnames": [
-                "Inter de Barcelona",
-                "Arsenal"
+            "teamIds": [
+                5,
+                3
             ],
             "scoreline": "0-1",
             "formation": [
@@ -2684,9 +2684,9 @@
                 "awayplayers": []
             },
             "timestamp": "2025-04-29T02:00:00Z",
-            "teamnames": [
-                "Atletico Madrid",
-                "Aguilas Cementeras"
+            "teamIds": [
+                4,
+                1
             ],
             "scoreline": "2-0",
             "formation": [
@@ -2714,9 +2714,9 @@
                 "awayplayers": []
             },
             "timestamp": "2025-04-29T02:30:00Z",
-            "teamnames": [
-                "Liverpool",
-                "Palmerias"
+            "teamIds": [
+                9,
+                10
             ],
             "scoreline": "1-1",
             "formation": [
@@ -3215,9 +3215,9 @@
                 ]
             },
             "timestamp": "2025-05-01T02:00:00Z",
-            "teamnames": [
-                "K9army",
-                "Inter de Barcelona"
+            "teamIds": [
+                8,
+                5
             ],
             "scoreline": "1-1",
             "formation": [
@@ -3249,9 +3249,9 @@
                 "awayplayers": []
             },
             "timestamp": "2025-05-01T02:30:00Z",
-            "teamnames": [
-                "Arsenal",
-                "AS Roma"
+            "teamIds": [
+                3,
+                12
             ],
             "scoreline": "2-2",
             "formation": [
@@ -3279,9 +3279,9 @@
                 "awayplayers": []
             },
             "timestamp": "2025-05-06T22:00:00Z",
-            "teamnames": [
-                "Pelabolas",
-                "Liverpool"
+            "teamIds": [
+                11,
+                9
             ],
             "scoreline": "0-4",
             "formation": [
@@ -3309,9 +3309,9 @@
                 "awayplayers": []
             },
             "timestamp": "2025-05-06T22:30:00Z",
-            "teamnames": [
-                "Atletico Madrid",
-                "Palmerias"
+            "teamIds": [
+                4,
+                10
             ],
             "scoreline": "4-0",
             "formation": [
@@ -3828,9 +3828,9 @@
                 ]
             },
             "timestamp": "2025-05-07T22:00:00Z",
-            "teamnames": [
-                "Antuna Raiders",
-                "Arsenal"
+            "teamIds": [
+                2,
+                3
             ],
             "scoreline": "0-0",
             "formation": [
@@ -4385,9 +4385,9 @@
                 ]
             },
             "timestamp": "2025-05-07T22:30:00Z",
-            "teamnames": [
-                "AS Roma",
-                "K9army"
+            "teamIds": [
+                12,
+                8
             ],
             "scoreline": "3-0",
             "formation": [
@@ -4415,9 +4415,9 @@
                 "awayplayers": []
             },
             "timestamp": "2025-05-14T02:00:00Z",
-            "teamnames": [
-                "Aguilas Cementeras",
-                "Palmerias"
+            "teamIds": [
+                1,
+                10
             ],
             "scoreline": "3-0",
             "formation": [
@@ -4445,9 +4445,9 @@
                 "awayplayers": []
             },
             "timestamp": "2025-05-14T02:40:00Z",
-            "teamnames": [
-                "Atletico Madrid",
-                "Pelabolas"
+            "teamIds": [
+                4,
+                11
             ],
             "scoreline": "2-0",
             "formation": [
@@ -4475,9 +4475,9 @@
                 "awayplayers": []
             },
             "timestamp": "2025-05-15T02:00:00Z",
-            "teamnames": [
-                "Inter de Barcelona",
-                "AS Roma"
+            "teamIds": [
+                5,
+                12
             ],
             "scoreline": "3-0",
             "formation": [
@@ -4995,9 +4995,9 @@
                 ]
             },
             "timestamp": "2025-05-15T02:40:00Z",
-            "teamnames": [
-                "K9army",
-                "Antuna Raiders"
+            "teamIds": [
+                8,
+                2
             ],
             "scoreline": "0-2",
             "formation": [
@@ -5577,9 +5577,9 @@
                 ]
             },
             "timestamp": "2025-05-21T03:00:00Z",
-            "teamnames": [
-                "Antuna Raiders",
-                "K9army"
+            "teamIds": [
+                2,
+                8
             ],
             "scoreline": "0-1",
             "formation": [
@@ -5607,9 +5607,9 @@
                 "awayplayers": []
             },
             "timestamp": "2025-05-21T03:00:00Z",
-            "teamnames": [
-                "AS Roma",
-                "Inter de Barcelona"
+            "teamIds": [
+                12,
+                5
             ],
             "scoreline": "1-5",
             "formation": [
@@ -5637,9 +5637,9 @@
                 "awayplayers": []
             },
             "timestamp": "2025-05-22T03:00:00Z",
-            "teamnames": [
-                "Palmerias",
-                "Aguilas Cementeras"
+            "teamIds": [
+                10,
+                1
             ],
             "formation": [
                 null,
@@ -5666,9 +5666,9 @@
                 "awayplayers": []
             },
             "timestamp": "2025-05-22T03:40:00Z",
-            "teamnames": [
-                "Pelabolas",
-                "Atletico Madrid"
+            "teamIds": [
+                11,
+                4
             ],
             "formation": [
                 null,

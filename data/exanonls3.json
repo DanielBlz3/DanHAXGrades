@@ -7,9 +7,9 @@
         "awayplayers": []
       },
       "timestamp": "2025-04-19T08:00:00Z",
-      "teamnames": [
-        "Aguilas Cementeras",
-        "K9army"
+      "teamIds": [
+        1,
+        8
       ],
       "scoreline": "0-3",
       "formation": [
@@ -491,9 +491,9 @@
         ]
       },
       "timestamp": "2025-04-19T02:30:00Z",
-      "teamnames": [
-        "Atletico Madrid",
-        "Inter de Barcelona"
+      "teamIds": [
+        4,
+        5
       ],
       "scoreline": "7-2",
       "formation": [
@@ -528,9 +528,9 @@
         "awayplayers": []
       },
       "timestamp": "2025-04-19T08:00:00Z",
-      "teamnames": [
-        "Palmerias",
-        "Pelabolas"
+      "teamIds": [
+        10,
+        11
       ],
       "scoreline": "0-3",
       "formation": [
@@ -1066,9 +1066,9 @@
         ]
       },
       "timestamp": "2025-04-20T08:00:00Z",
-      "teamnames": [
-        "Arsenal",
-        "Liverpool"
+      "teamIds": [
+        3,
+        9
       ],
       "scoreline": "1-0",
       "formation": [
@@ -1585,9 +1585,9 @@
         ]
       },
       "timestamp": "2025-04-20T08:00:00Z",
-      "teamnames": [
-        "Antuna Raiders",
-        "AS Roma"
+      "teamIds": [
+        2,
+        12
       ],
       "scoreline": "0-0",
       "formation": [
@@ -1615,9 +1615,9 @@
         "awayplayers": []
       },
       "timestamp": "2025-04-26T01:30:00Z",
-      "teamnames": [
-        "K9army",
-        "Inter de Barcelona"
+      "teamIds": [
+        8,
+        5
       ],
       "scoreline": "0-2",
       "formation": [
@@ -1645,9 +1645,9 @@
         "awayplayers": []
       },
       "timestamp": "2025-04-26T02:00:00Z",
-      "teamnames": [
-        "Aguilas Cementeras",
-        "Palmerias"
+      "teamIds": [
+        1,
+        10
       ],
       "scoreline": "0-0",
       "formation": [
@@ -1675,9 +1675,9 @@
         "awayplayers": []
       },
       "timestamp": "2025-04-27T01:00:00Z",
-      "teamnames": [
-        "Arsenal",
-        "Atletico Madrid"
+      "teamIds": [
+        3,
+        4
       ],
       "scoreline": "0-3",
       "formation": [
@@ -1705,9 +1705,9 @@
         "awayplayers": []
       },
       "timestamp": "2025-04-27T01:30:00Z",
-      "teamnames": [
-        "Pelabolas",
-        "Antuna Raiders"
+      "teamIds": [
+        11,
+        2
       ],
       "scoreline": "0-2",
       "formation": [
@@ -2168,9 +2168,9 @@
         ]
       },
       "timestamp": "2025-04-27T02:00:00Z",
-      "teamnames": [
-        "AS Roma",
-        "Liverpool"
+      "teamIds": [
+        12,
+        9
       ],
       "scoreline": "3-1",
       "formation": [
@@ -2630,9 +2630,9 @@
         ]
       },
       "timestamp": "2025-05-03T22:30:00Z",
-      "teamnames": [
-        "Palmerias",
-        "K9army"
+      "teamIds": [
+        10,
+        8
       ],
       "scoreline": "1-0",
       "formation": [
@@ -2662,9 +2662,9 @@
         "awayplayers": []
       },
       "timestamp": "2025-05-03T23:00:00Z",
-      "teamnames": [
-        "Inter de Barcelona",
-        "Arsenal"
+      "teamIds": [
+        5,
+        3
       ],
       "scoreline": "3-0",
       "formation": [
@@ -2692,9 +2692,9 @@
         "awayplayers": []
       },
       "timestamp": "2025-05-03T23:30:00Z",
-      "teamnames": [
-        "Antuna Raiders",
-        "Aguilas Cementeras"
+      "teamIds": [
+        2,
+        1
       ],
       "scoreline": "3-0",
       "formation": [
@@ -2722,9 +2722,9 @@
         "awayplayers": []
       },
       "timestamp": "2025-05-04T00:00:00Z",
-      "teamnames": [
-        "Atletico Madrid",
-        "AS Roma"
+      "teamIds": [
+        4,
+        12
       ],
       "scoreline": "1-0",
       "formation": [
@@ -2752,9 +2752,9 @@
         "awayplayers": []
       },
       "timestamp": "2025-05-02T23:00:00Z",
-      "teamnames": [
-        "Liverpool",
-        "Pelabolas"
+      "teamIds": [
+        9,
+        11
       ],
       "scoreline": "1-1",
       "formation": [
@@ -3254,9 +3254,9 @@
         ]
       },
       "timestamp": "2025-05-09T03:00:00Z",
-      "teamnames": [
-        "K9army",
-        "Arsenal"
+      "teamIds": [
+        8,
+        3
       ],
       "scoreline": "0-0",
       "formation": [
@@ -3284,9 +3284,9 @@
         "awayplayers": []
       },
       "timestamp": "2025-05-10T03:00:00Z",
-      "teamnames": [
-        "Pelabolas",
-        "Atletico Madrid"
+      "teamIds": [
+        11,
+        4
       ],
       "scoreline": "3-0",
       "formation": [
@@ -3785,9 +3785,9 @@
         ]
       },
       "timestamp": "2025-05-10T03:30:00Z",
-      "teamnames": [
-        "Aguilas Cementeras",
-        "Liverpool"
+      "teamIds": [
+        1,
+        9
       ],
             "scoreline": "2-0",
       "formation": [
@@ -3815,9 +3815,9 @@
         "awayplayers": []
       },
       "timestamp": "2025-05-11T03:30:00Z",
-      "teamnames": [
-        "Palmerias",
-        "Antuna Raiders"
+      "teamIds": [
+        10,
+        2
       ],
       "scoreline": "1-1",
       "formation": [
@@ -4372,9 +4372,9 @@
         ]
       },
       "timestamp": "2025-05-11T03:30:00Z",
-      "teamnames": [
-        "AS Roma",
-        "Inter de Barcelona"
+      "teamIds": [
+        12,
+        5
       ],
       "scoreline": "1-1",
       "formation": [
@@ -4873,9 +4873,9 @@
           ]
         },
           "timestamp": "2025-05-17T03:00:00Z",
-        "teamnames": [
-          "Antuna Raiders",
-          "K9army"
+        "teamIds": [
+          2,
+          8
         ],
         "scoreline": "0-0",
         "formation": ["threetwotwothree", "threefivetwo"],
@@ -5440,9 +5440,9 @@
           ]
         },
                       "timestamp": "2025-05-17T03:40:00Z",
-        "teamnames": [
-          "Arsenal",
-          "AS Roma"
+        "teamIds": [
+          3,
+          12
         ],
         "scoreline": "1-1",
         "formation": ["fourthreethree", "threefourthree"],
@@ -5462,9 +5462,9 @@
         },
         "timestamp": "2025-05-18T03:00:00Z",
                 "scoreline": "3-0",
-        "teamnames": [
-          "Liverpool",
-          "Palmerias"
+        "teamIds": [
+          9,
+          10
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -5483,9 +5483,9 @@
         },
                 "timestamp": "2025-05-18T03:40:00Z",
                 "scoreline": "2-0",
-        "teamnames": [
-          "Inter de Barcelona",
-          "Pelabolas"
+        "teamIds": [
+          5,
+          11
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -5504,9 +5504,9 @@
         },
                         "timestamp": "2025-05-18T04:20:00Z",
         "scoreline": "2-1",
-        "teamnames": [
-          "Atletico Madrid",
-          "Aguilas Cementeras"
+        "teamIds": [
+          4,
+          1
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -5520,19 +5520,471 @@
       {
         "gameId": 60,
         "playerslist": {
-          "homeplayers": [],
-          "awayplayers": []
+          "homeplayers": [
+            {
+                        "playerId": 41,
+                        "isGoalkeeper": true,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 0,
+                        "duelsLost": 0,
+                        "passesC": 3,
+                        "touches": 6,
+                        "bonus": 0,
+                        "saves": 1,
+                        "goalsConceded": 1,
+                        "gkPunches": 0,
+                        "gkRecovery": 0,
+                        "actedAsSweeper": 0
+                    },
+                    {
+                        "playerId": 160,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 1,
+                        "keyPasses": 0,
+                        "defensiveActions": 2,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 1,
+                        "duelsLost": 0,
+                        "passesC": 6,
+                        "touches": 13,
+                        "bonus": 1
+                    },
+                    {
+                        "playerId": 113,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 4,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 2,
+                        "duelsLost": 1,
+                        "passesC": 10,
+                        "touches": 35,
+                        "bonus": 2
+                    },
+                    {
+                        "playerId": 260,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 1,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 1,
+                        "duelsLost": 0,
+                        "passesC": 7,
+                        "touches": 26,
+                        "bonus": 0.5
+                    },
+                    {
+                        "playerId": 115,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 1,
+                        "duelsLost": 0,
+                        "passesC": 13,
+                        "touches": 32,
+                        "bonus": 0
+                    },
+                    {
+                        "playerId": 2,
+                        "minutes": 8,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 1,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 0,
+                        "duelsLost": 0,
+                        "passesC": 2,
+                        "touches": 11,
+                        "bonus": 0.5
+                    },
+                    {
+                        "playerId": 5,
+                        "minutes": 20,
+                        "goals": 1,
+                        "shots": 2,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 2,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 0,
+                        "duelsLost": 0,
+                        "passesC": 10,
+                        "touches": 30,
+                        "bonus": 0
+                    },
+                    {
+                        "playerId": 111,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 2,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 0,
+                        "duelsLost": 0,
+                        "passesC": 11,
+                        "touches": 28,
+                        "bonus": 0
+                    },
+                    {
+                        "playerId": 1,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 2,
+                        "assists": 0,
+                        "secondassists": 1,
+                        "keyPasses": 0,
+                        "defensiveActions": 1,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 1,
+                        "duelsLost": 1,
+                        "passesC": 12,
+                        "touches": 45,
+                        "bonus": 0.5
+                    },
+                    {
+                        "playerId": 245,
+                        "minutes": 20,
+                        "goals": 1,
+                        "shots": 1,
+                        "assists": 1,
+                        "secondassists": 0,
+                        "keyPasses": 1,
+                        "defensiveActions": 1,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 1,
+                        "duelsLost": 2,
+                        "passesC": 15,
+                        "touches": 46,
+                        "bonus": 0.5
+                    },
+                    {
+                        "playerId": 118,
+                        "minutes": 20,
+                        "goals": 2,
+                        "shots": 5,
+                        "assists": 1,
+                        "secondassists": 1,
+                        "keyPasses": 1,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 1,
+                        "duelsLost": 1,
+                        "passesC": 5,
+                        "touches": 22,
+                        "bonus": 0
+                    },
+             {
+                        "playerId": 283,
+                        "minutes": 12,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 4,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 1,
+                        "duelsLost": 2,
+                        "passesC": 5,
+                        "touches": 23,
+                        "bonus": 2
+                    }
+          ],
+          "awayplayers": [
+            {
+                        "playerId": 54,
+                        "isGoalkeeper": true,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 2,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 0,
+                        "duelsLost": 1,
+                        "passesC": 11,
+                        "touches": 19,
+                        "bonus": 0,
+                        "saves": 2,
+                        "goalsConceded": 4,
+                        "gkPunches": 0,
+                        "gkRecovery": 4,
+                        "actedAsSweeper": 0
+                    },
+                    {
+                        "playerId": 0,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 0,
+                        "duelsLost": 0,
+                        "passesC": 0,
+                        "touches": 0,
+                        "bonus": 0
+                    },
+                    {
+                        "playerId": 0,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 0,
+                        "duelsLost": 0,
+                        "passesC": 0,
+                        "touches": 0,
+                        "bonus": 0
+                    },
+                    {
+                        "playerId": 0,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 0,
+                        "duelsLost": 0,
+                        "passesC": 0,
+                        "touches": 0,
+                        "bonus": 0
+                    },
+                    {
+                        "playerId": 0,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 0,
+                        "duelsLost": 0,
+                        "passesC": 0,
+                        "touches": 0,
+                        "bonus": 0
+                    },
+                    {
+                        "playerId": 0,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 0,
+                        "duelsLost": 0,
+                        "passesC": 0,
+                        "touches": 0,
+                        "bonus": 0
+                    },
+                    {
+                        "playerId": 0,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 0,
+                        "duelsLost": 0,
+                        "passesC": 0,
+                        "touches": 0,
+                        "bonus": 0
+                    },
+                    {
+                        "playerId": 0,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 0,
+                        "duelsLost": 0,
+                        "passesC": 0,
+                        "touches": 0,
+                        "bonus": 0
+                    },
+                    {
+                        "playerId": 0,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 0,
+                        "duelsLost": 0,
+                        "passesC": 0,
+                        "touches": 0,
+                        "bonus": 0
+                    },
+                    {
+                        "playerId": 0,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 0,
+                        "duelsLost": 0,
+                        "passesC": 0,
+                        "touches": 0,
+                        "bonus": 0
+                    },
+                    {
+                        "playerId": 0,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 0,
+                        "duelsLost": 0,
+                        "passesC": 0,
+                        "touches": 0,
+                        "bonus": 0
+                    }
+          ]
         },
-        "teamnames": [
-          "K9army",
-          "AS Roma"
+        "teamIds": [
+          8,
+          12
         ],
-        "formation": [null, null],
-        "goalscorers": [[], []],
+        "scoreline": "4-1",
+        "formation": ["threefouronetwo", null],
+        "goalscorers": [["Dxngxrz 6', 22'", "Foden 9'", "Dani 18'"], ["Nazario 15'"]],
         "managers": ["", ""],
         "leagueRound": 6,
-        "started": false,
-        "finished": false,
+        "started": true,
+        "finished": true,
         "cancelled": false,
         "awarded": false
       },
@@ -5542,9 +5994,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
-        "teamnames": [
-          "Antuna Raiders",
-          "Liverpool"
+        "teamIds": [
+          2,
+          9
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -6032,9 +6484,9 @@
                     }
           ]
         },
-        "teamnames": [
-          "Pelabolas",
-          "Arsenal"
+        "teamIds": [
+          11,
+          3
         ],
         "scoreline": "0-8",
         "formation": ["fourtwofour", "fourthreethree"],
@@ -6052,9 +6504,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
-        "teamnames": [
-          "Palmerias",
-          "Atletico Madrid"
+        "teamIds": [
+          10,
+          4
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -6071,9 +6523,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
-        "teamnames": [
-          "Aguilas Cementeras",
-          "Inter de Barcelona"
+        "teamIds": [
+          1,
+          5
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -6090,9 +6542,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
-        "teamnames": [
-          "Liverpool",
-          "K9army"
+        "teamIds": [
+          9,
+          8
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -6109,9 +6561,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
-        "teamnames": [
-          "AS Roma",
-          "Pelabolas"
+        "teamIds": [
+          12,
+          11
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -6128,9 +6580,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
-        "teamnames": [
-          "Atletico Madrid",
-          "Antuna Raiders"
+        "teamIds": [
+          4,
+          2
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -6147,9 +6599,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
-        "teamnames": [
-          "Arsenal",
-          "Aguilas Cementeras"
+        "teamIds": [
+          3,
+          1
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -6166,9 +6618,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
-        "teamnames": [
-          "Inter de Barcelona",
-          "Palmerias"
+        "teamIds": [
+          5,
+          10
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -6185,9 +6637,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
-        "teamnames": [
-          "K9army",
-          "Pelabolas"
+        "teamIds": [
+          8,
+          11
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -6204,9 +6656,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
-        "teamnames": [
-          "Liverpool",
-          "Atletico Madrid"
+        "teamIds": [
+          9,
+          4
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -6223,9 +6675,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
-        "teamnames": [
-          "Aguilas Cementeras",
-          "AS Roma"
+        "teamIds": [
+          1,
+          12
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -6242,9 +6694,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
-        "teamnames": [
-          "Antuna Raiders",
-          "Inter de Barcelona"
+        "teamIds": [
+          2,
+          5
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -6261,9 +6713,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
-        "teamnames": [
-          "Palmerias",
-          "Arsenal"
+        "teamIds": [
+          10,
+          3
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -6280,9 +6732,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
-        "teamnames": [
-          "Atletico Madrid",
-          "K9army"
+        "teamIds": [
+          4,
+          8
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -6299,9 +6751,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
-        "teamnames": [
-          "Pelabolas",
-          "Antuna Raiders"
+        "teamIds": [
+          11,
+          2
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -6318,9 +6770,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
-        "teamnames": [
-          "Inter de Barcelona",
-          "Liverpool"
+        "teamIds": [
+          5,
+          9
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -6337,9 +6789,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
-        "teamnames": [
-          "AS Roma",
-          "Palmerias"
+        "teamIds": [
+          12,
+          10
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -6356,9 +6808,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
-        "teamnames": [
-          "Arsenal",
-          "Antuna Raiders"
+        "teamIds": [
+          3,
+          2
         ],
         "formation": [null, null],
         "goalscorers": [[], []],

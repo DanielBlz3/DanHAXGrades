@@ -5,7 +5,7 @@ import '../styles/global.css';
 import '../styles/theme.js'
 import { useState } from 'react';
 
-let pageTheme = localStorage.getItem("theme") || "theme-light"; //Defualt theme is light mode
+let pageTheme = typeof window !== 'undefined' ? localStorage.getItem("theme") || "theme-light" : 'theme-light' //Defualt theme is light mode
 function theme() {
     if (pageTheme === "theme-light") {
         document.body.classList.add("theme-dark");
@@ -25,7 +25,7 @@ function setLanguage(lang) {
     const currentLang = localStorage.getItem('language');
     // Reload only if lang is changing
     if (currentLang !== lang) {
-        localStorage.setItem('language', lang);
+        typeof window !== 'undefined' ? localStorage.setItem('language', lang) : localStorage.setItem('language', 'es')
         location.reload(); // reload the website
         return; // stop here so it doesn’t apply translation before reload
     }
@@ -134,9 +134,7 @@ export default function RootLayout({ children }) {
             <head>
                 <meta charSet="UTF-8" />
                 <meta name="author" content="Danielblz" />
-                <link rel="icon"
-                    href="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/MatchRatingLogo?v=1741925050278"
-                    type="image/x-icon" />
+               <link rel="icon" href="/DanHAXGradeFavicon.ico" type="image/x-icon" />
                 <link rel="stylesheet" href="/players.css" type="text/css" />
                 <title id="playerNameTitle">Player</title>
             </head>

@@ -362,7 +362,7 @@ gap: 1rem;
             ))}
 
             <div
-                class="secondary-rating"
+                className="secondary-rating"
                 style={{ backgroundColor: match.matchRating.backgroundColor }}
             >
                 {match.matchRating.value}
@@ -419,15 +419,19 @@ gap: 1rem;
     font-weight: bold;
     border-radius: 2rem;
     padding-top: 1rem;
-    padding-inline: 2.5rem;
     background-color: var(--card-bg-main);
     `;
 
-    const psHeader = css`
+    const pSHeader = css`
     display: flex;
     flex-flow: row;
-    align-Items: end;
+    align-items: end;
+    padding-inline: 1rem
     `;
+
+    const pSHeaderText = css`
+        align-self: center;
+    `
 
     const pSHeaderContent = css`
     flex: 1;
@@ -447,21 +451,38 @@ gap: 1rem;
     `;
 
     const percentileStatsContent = css`
-    padding-block: 1rem;
     `;
 
+    const percentileStatsMetricTitle = css`
+    margin-inline: 1rem;
+    padding-inline: 1rem;
+    `;
     const psButton = css`
     max-width: 200px;
-                border-radius: 1.25rem;
-                padding-inline: 1.5rem;
-                padding-block: .75rem;
-                font-size: 1rem;
-                text-align: center;
-                font-weight: bold;
-                box-shadow: none;
-                border: none;
-                outline: none;
-                cursor: pointer;
+    border-radius: 1.25rem;
+    padding-inline: 1.5rem;
+    padding-block: .75rem;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    `;
+
+    const pSButtonUntoggled = css`
+    background-color: var(--percentile-button-default-bg);
+    color: var(--percentile-button-default-font-color);
+
+    &:hover {
+         background-color: var(--percentile-button-hover-bg);
+    }
+    `;
+
+    const pSButtonToggled = css`
+     background-color: var(--percentile-button-toggled-bg);
+    color: var(--percentile-button-toggled-font-color);
     `;
 
     const minutesPlayed = css`
@@ -470,8 +491,87 @@ gap: 1rem;
             justify-content: end;
     `;
 
+    const percentileStatsMetric = css`
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1.2fr .1fr .2fr;
+    gap: 20px;
+    border-radius: .5rem;
+    margin-inline: 1rem;
+    padding-inline: 1rem;
+    `;
 
-    
+    const percentileStatTitle = css`
+    display: flex;
+    height: 40px;
+    align-items: center;
+    padding-left: .35rem;
+    `;
+
+    const progressBarContianer = css`
+    display: flex;
+    width: 300px;
+    height: 12.5px;
+    background-color: var(--progress-bar-background-color);
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    `;
+
+    const progressBar = css`
+    height: 100%;
+    width: 0%;
+    background-color: var(--PROGRESS-BAR-LOW);
+    border-radius: .5rem;
+    transition: width 0.35s ease-in-out;
+    `;
+
+    const [mode, setMode] = useState('per20');
+    const renderbuttons = () => {
+        const per20ButtonStyle = mode === 'total' ? pSButtonUntoggled : pSButtonToggled;
+        const totalButtonStyle = mode === 'per20' ? pSButtonUntoggled : pSButtonToggled;
+        return (
+            <div css={pSButtons}>
+                <button css={[psButton, per20ButtonStyle]} onClick={() => setMode('per20')}>
+                    Per 20
+                </button>
+                <button css={[psButton, totalButtonStyle]} onClick={() => setMode('total')}>
+                    Total
+                </button>
+            </div>
+        );
+    };
+
+    const renderSection = (section) => {
+        const percentileStatsItems = Object.entries(section).map(([metric, metricStats], i) => {
+            const [percentileRankKey, valueKey] = mode === 'total' ? ['precentileRankTotal', 'valueTotal'] : ['precentileRankPer20', 'valuePer20']
+            const metricStatsEl = Object.entries(metricStats).map((stats, i) => {
+                const progressBackgroundColor = stats[1][percentileRankKey] >= 70 ? "var(--PROGRESS-BAR-HIGH)" : stats[1][percentileRankKey] >= 30 ? "var(--PROGRESS-BAR-MIDDLE)" : "var(--PROGRESS-BAR-LOW)"
+                return (
+                    <div
+                        key={stats[0]}
+                        css={percentileStatsMetric}
+                        className='secondary-hover'
+                    >
+                        <span>{stats[1].id}</span>
+                        <span css={percentileStatTitle}>{stats[1][valueKey]}</span>
+                        <div css={progressBarContianer}>
+                            <span css={progressBar} style={{ width: `${stats[1][percentileRankKey]}%`, backgroundColor: progressBackgroundColor }}></span>
+                        </div>
+                    </div>
+                )
+            })
+            return (
+                <div key={i}>
+                    <h2 key={metric} css={percentileStatsMetricTitle}>
+                        {metric}
+                    </h2>
+                    {metricStatsEl}
+                </div>
+            )
+        });
+        return percentileStatsItems
+    };
 
     return (
         <div css={playerContent}>
@@ -501,28 +601,28 @@ gap: 1rem;
                     <div css={playerInfo}>
                         <section css={bio}>
                             <div css={bioValue}>
-                                <div class="value">{player.nationContinent}</div>
+                                <div >{player.nationContinent}</div>
                                 <div data-lang-es="Continente" data-lang-en="Continent" css={bioMetric}>Continent</div>
                             </div>
                             <div css={bioValue}>
-                                <div class="value">{player.shirtNum}</div>
+                                <div >{player.shirtNum}</div>
                                 <div data-lang-es="Camiseta" data-lang-en="Shirt #" css={bioMetric}>Shirt #</div>
                             </div>
                             <div css={bioValue}>
-                                <div class="nationality">
+                                <div>
                                     <img
                                         src={player.nationFlag}
                                         width="14" height="14" />
-                                    <div class="value">{player.nationName}</div>
+                                    <div >{player.nationName}</div>
                                 </div>
                                 <div data-lang-es="País" data-lang-en="Country" css={bioMetric}>Country</div>
                             </div>
                             <div css={bioValue}>
-                                <div class="value">{player.league}</div>
+                                <div >{player.league}</div>
                                 <div data-lang-es="Liga" data-lang-en="League" css={bioMetric}>League</div>
                             </div>
                             <div css={bioValue}>
-                                <div class="value">{player.marketvalue}</div>
+                                <div >{player.marketvalue}</div>
                                 <div data-lang-es="Valor de Mercado" data-lang-en="Market Value" css={bioMetric}>Market value
                                 </div>
                             </div>
@@ -531,14 +631,14 @@ gap: 1rem;
                             <div data-lang-es="Posición" data-lang-en="Position">Position</div>
                             <div css={positionWrapper}>
                                 <div css={primaryPositionEl}>
-                                    <div data-lang-es="Primaria" data-lang-en="Primary" class="primary-positions-title">
+                                    <div data-lang-es="Primaria" data-lang-en="Primary">
                                         Primary</div>
-                                    <div id="primaryposition" class="primary-positions"></div>
+                                    <div id="primaryposition"></div>
                                 </div>
                                 <div css={otherPositionEl}>
-                                    <div data-lang-es="Otros" data-lang-en="Others" class="other-positions-title">Others
+                                    <div data-lang-es="Otros" data-lang-en="Others">Others
                                     </div>
-                                    <div id="otherpositions" class="other-positions"></div>
+                                    <div id="otherpositions"></div>
                                 </div>
                             </div>
                             <div css={positionMapImgWrapper}>
@@ -602,26 +702,43 @@ gap: 1rem;
                             </div>
                         </div>
                     </div>
-                    <div class="player-matches-content">
+                    <div>
                         {playerRecentMatches}
                     </div>
                 </div>
                 <div css={pSCard}>
-                    <div css={psHeader}>
-                        <h2 data-lang-es="Rendimiento de temporada" data-lang-en="Season Performance">Season Performance
+                    <div css={pSHeader}>
+                        <h2 css={pSHeaderText}>Season Performance
                         </h2>
                         <div css={pSHeaderContent}>
-                            <div css={pSButtons}>
-                                <button css={psButton} data-lang-es="Por 20" data-lang-en="Per 20" id="pergameButton">Per 20
-                                </button>
-                                <button css={psButton} id="allgameButton">Total
-                                </button>
-                            </div>
+                            {renderbuttons()}
                             <div css={minutesPlayed}>
                             </div>
                         </div>
                     </div>
-                    <div css={percentileStatsContent}></div>
+                    <div css={percentileStatsContent}>
+                        {renderSection(player.percentileStats)}
+                    </div>
+                </div>
+            </div>
+            <div className='right-grid'>
+                <div class="ratings-chart-container">
+                    <div class="ratings-chart-title">
+                        <h2 data-lang-es="Valoración de Jugadores" data-lang-en="Player Ratings">Player Ratings</h2>
+                        <div class="ratings-chart-stats-compared-to-other">
+                            <span id="whatplayerstatsarecomparedtoo"
+                                class="ratings-chart-stats-compared-to-other-text">Stats compared to other players.</span>
+                            <div class="ratings-chart-stats-compared-to-other-image">
+                                <button onclick="ratingChartStatsComparedToOtherFAQ()">
+                                    <img src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/question-butotn?v=1743878872340"
+                                        width="14px" height="14px"></img>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-chart-content">
+
+                    </div>
                 </div>
             </div>
         </div>

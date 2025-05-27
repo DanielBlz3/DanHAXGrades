@@ -10,6 +10,9 @@
     --RESULT-WIN: rgb(0, 125, 0);
     --RESULT-DRAW: rgb(128 128 128);
     --RESULT-LOSS: rgb(220, 30, 30);
+    --PROGRESS-BAR-HIGH: rgb(51 199 113);
+    --PROGRESS-BAR-MIDDLE: rgb(240 128 34);
+    --PROGRESS-BAR-LOW: rgb(229 94 91);
 }
 
 * {
@@ -29,6 +32,14 @@
     --divide-bg-third: rgb(210, 210, 210);
 
     --primary-font-color: black;
+
+    --percentile-button-default-bg: white;
+    --percentile-button-default-font-color: black;
+    --percentile-button-toggled-bg: black;
+    --percentile-button-toggled-font-color: white;
+    --percentile-button-hover-bg: rgb(235, 235, 235);
+    
+    --progress-bar-background-color: rgb(195, 195, 195);
 }
 
 .theme-dark {
@@ -41,6 +52,15 @@
     --divide-bg-third: rgb(75, 75, 75);
 
     --primary-font-color: white;
+
+    --percentile-button-default-bg: rgb(49, 49, 49);
+    --percentile-button-default-font-color: white;
+    --percentile-button-toggled-bg: white;
+    --percentile-button-toggled-font-color: black;
+    --percentile-button-hover-bg: rgb(69, 69, 69);
+
+
+    --progress-bar-background-color: rgb(59, 59, 59);
 }
 
 body {
@@ -52,4 +72,18 @@ body {
 ::selection {
     background-color: rgb(46, 204, 113);
     color: var(--GLOBAL-FONT-COLOR-BLACK);
+}
+
+.primary-hover:hover {
+    opacity: .7;
+}
+
+.secondary-hover:hover {
+    background-color: var(--card-bg-second);
+}
+
+.secondary-rating {
+    color: var(--GLOBAL-FONT-COLOR-WHITE);
+    border-radius: .5rem;
+    padding: 0.1rem 0.3rem 0.1rem 0.3rem;
 }

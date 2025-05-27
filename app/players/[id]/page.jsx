@@ -1,7 +1,7 @@
 // app/players/[id]/page.jsx
 import PlayerPageClient from './PlayerPageClient';
 async function getPlayerData(id) {
-  const res = await fetch(`http://localhost:3005/api/players/${id}`, {
+  const res = await fetch(`http://localhost:3000/api/players/${id}`, {
     cache: 'no-store'
   });
 
