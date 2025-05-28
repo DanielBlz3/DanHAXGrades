@@ -247,7 +247,7 @@ export default function PlayerPageClient({ player }) {
                 ? { x: positionCoords[pos.id].x - 10, y: positionCoords[pos.id].y }
                 : { x: 0, y: 0 };
 
-            const isLightTheme = storedTheme === "theme-light";
+            const isLightTheme = theme === "theme-light";
 
             return (
                 <div

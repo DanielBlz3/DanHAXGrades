@@ -28,7 +28,7 @@ export default function Error({ error, reset }) {
       <br />
       <p>Page was not found '-'</p>
       <br />
-      <a css={mainPageLink} href="/">Lets Revive!</a>
+      <Link css={mainPageLink} href="/">Lets Revive!</Link>
     </div>
   );
 }

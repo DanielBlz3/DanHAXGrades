@@ -3,42 +3,59 @@
 import { css } from '@emotion/react';
 import '../styles/global.css';
 import '../styles/theme.js'
-import { useState } from 'react';
-
-let pageTheme = typeof window !== 'undefined' ? localStorage.getItem("theme") || "theme-light" : 'theme-light' //Defualt theme is light mode
-function theme() {
-    if (pageTheme === "theme-light") {
-        document.body.classList.add("theme-dark");
-        document.body.classList.remove("theme-light");
-        pageTheme = "theme-dark"
-    } else {
-        document.body.classList.add("theme-light");
-        document.body.classList.remove("theme-dark");
-        pageTheme = "theme-light"
-    }
-    localStorage.setItem("theme", pageTheme);
-    location.reload();
-}
-
-let savedLang = localStorage.getItem("language") || "es";
-function setLanguage(lang) {
-    const currentLang = localStorage.getItem('language');
-    // Reload only if lang is changing
-    if (currentLang !== lang) {
-        typeof window !== 'undefined' ? localStorage.setItem('language', lang) : localStorage.setItem('language', 'es')
-        location.reload(); // reload the website
-        return; // stop here so it doesn’t apply translation before reload
-    }
-    // Apply translations
-    document.documentElement.lang = lang;
-    document.querySelectorAll('[data-lang-es], [data-lang-en]').forEach(element => {
-        const text = element.getAttribute(`data-lang-${lang}`);
-        if (text) element.innerText = text;
-    });
-}
-setLanguage(savedLang);
+import { useState, useEffect } from 'react';
+import { translationsMap } from '/lib/translations.js';
 
 export default function RootLayout({ children }) {
+  // State to hold theme and language
+  const [pageTheme, setPageTheme] = useState('theme-light'); // default light
+  const [savedLang, setSavedLang] = useState('es'); // default Spanish
+
+  // Sync theme & language from localStorage once on client
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedTheme = localStorage.getItem('theme') || 'theme-light';
+      const storedLang = localStorage.getItem('language') || 'es';
+
+      setPageTheme(storedTheme);
+      setSavedLang(storedLang);
+
+      // Apply theme classes on body
+      document.body.classList.remove('theme-light', 'theme-dark');
+      document.body.classList.add(storedTheme);
+
+      // Apply language attribute and translations on document
+      document.documentElement.lang = storedLang;
+      document.querySelectorAll('[data-lang-es], [data-lang-en]').forEach(el => {
+        const text = el.getAttribute(`data-lang-${storedLang}`);
+        if (text) el.innerText = text;
+      });
+    }
+  }, []);
+
+  // Function to toggle theme and save in localStorage
+  function toggleTheme() {
+    const newTheme = pageTheme === 'theme-light' ? 'theme-dark' : 'theme-light';
+    setPageTheme(newTheme);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('theme', newTheme);
+      document.body.classList.remove('theme-light', 'theme-dark');
+      document.body.classList.add(newTheme);
+    }
+  }
+
+  // Function to set language and save in localStorage
+  function setLanguage(lang) {
+    if (lang !== savedLang) {
+      setSavedLang(lang);
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('language', lang);
+        // Reload the page to apply language changes fully if you want
+        location.reload();
+      }
+    }
+  }
+
     const [settingsOpen, setSettingsOpen] = useState(false);
     const toggleSettings = () => {
         setSettingsOpen(prev => !prev);
@@ -150,17 +167,16 @@ export default function RootLayout({ children }) {
                     <div id="settingsmenu" css={settingsMenu}>
                         <ul>
                             <li css={settingsMenuItem}>
-                                <button css={settingsMenuButton} data-lang-es="Tema" data-lang-en="Theme"
-                                    onClick={() => theme()}>Theme</button>
+                                <button css={settingsMenuButton} onClick={() => toggleTheme()}>{translationsMap?.["theme"]?.[savedLang]}</button>
                             </li>
                             <div css={settingsMenuDivider}></div>
                             <li css={settingsMenuItem}>
                                 <details css={langDetails}>
-                                    <summary css={langSummary} data-lang-es="Spanish" data-lang-en="English">Languages</summary>
+                                    <summary css={langSummary}>{translationsMap?.["languages"]?.[savedLang]}</summary>
                                     <button css={settingsMenuButton}
-                                        onClick={() => setLanguage('en')}>English</button>
+                                        onClick={() => setLanguage('en')}>{translationsMap?.["english"]?.[savedLang]}</button>
                                     <button css={settingsMenuButton}
-                                        onClick={() => setLanguage('es')}>Espanol</button>
+                                        onClick={() => setLanguage('es')}>{translationsMap?.["spanish"]?.[savedLang]}</button>
                                 </details>
                             </li>
                         </ul>
