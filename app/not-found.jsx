@@ -2,7 +2,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import '../styles/global.css';
-
+import Link from 'next/link';
 
 export default function Error({ error, reset }) {
   const mainPageLink = css`
