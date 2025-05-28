@@ -10,7 +10,7 @@
       "teamname": "Aguilas Cementeras",
       "teamId": 1,
       "currentLeagues": [2,3],
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-aguilas-cementeras-logo?v=1742944322207",
+      "logo": "/images/teamLogos/1.png",
       "color": "rgb(225, 170, 10)",
       "colorAlternate": "rgb(31, 48, 137)",
       "teamdescription": {
@@ -66,7 +66,7 @@
       "teamname": "Antuna Raiders",
       "teamId": 2,
       "currentLeagues": [2,3],
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-antuna-raiders-logo?v=1742944347063",
+      "logo": "/images/teamLogos/2.png",
       "color": "rgb(39, 39, 39)",
       "colorAlternate": "rgb(121, 24, 27)",
       "teamdescription": {
@@ -122,7 +122,7 @@
       "teamname": "Arsenal",
       "teamId": 3,
       "currentLeagues": [2,3],
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-arsenal-logo?v=1742944317076",
+      "logo": "/images/teamLogos/3.png",
       "color": "rgb(239, 1, 7)",
       "colorAlternate": "rgb(39, 39, 39)",
       "teamdescription": {
@@ -178,7 +178,7 @@
       "teamname": "Atletico Madrid",
       "teamId": 4,
       "currentLeagues": [2,3],
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-atletico-madrid-logo?v=1742944324809",
+      "logo": "/images/teamLogos/4.png",
       "color": "rgb(203,53,36)",
       "colorAlternate": "rgb(144, 183, 186)",
       "teamdescription": {
@@ -242,7 +242,7 @@
       "teamname": "Inter de Barcelona",
       "teamId": 5,
       "currentLeagues": [2,3],
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-inter-de-barcelona-logo?v=1743977661431",
+      "logo": "/images/teamLogos/5.png",
       "color": "rgb(151 30 72)",
       "colorAlternate": "rgb(36, 50, 220)",
       "teamdescription": {
@@ -298,7 +298,7 @@
       "teamname": "Boston United",
       "teamId": 6,
             "currentLeagues": [2,3],
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-boston-united-logo?v=1742944336040",
+      "logo": "/images/teamLogos/6.png",
       "color": "rgb(255, 197, 38)",
       "colorAlternate": "rgb(0, 0, 0)",
       "teamdescription": {
@@ -409,7 +409,7 @@
       "teamname": "K9army",
       "teamId": 8,
       "currentLeagues": [2,3],
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-k9army-logo?v=1742944341982",
+      "logo": "/images/teamLogos/8.png",
       "color": "rgb(42, 71, 161)",
       "colorAlternate": "rgb(39, 39, 39)",
       "teamdescription": {
@@ -471,7 +471,7 @@
       "teamname": "Liverpool",
       "teamId": 9,
       "currentLeagues": [2,3],
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-liverpool-logo?v=1742944344358",
+      "logo": "/images/teamLogos/9.png",
       "color": "rgb(145, 23, 18)",
       "colorAlternate": "rgb(79, 179, 217)",
       "teamdescription": {
@@ -527,7 +527,7 @@
       "teamname": "Palmerias",
       "teamId": 10,
       "currentLeagues": [2,3],
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-palmerias-logo?v=1742944349673",
+      "logo": "/images/teamLogos/10.png",
       "color": "rgb(61, 120, 61)",
       "colorAlternate": "rgb(0, 0, 0)",
       "teamdescription": {
@@ -585,7 +585,7 @@
       "teamname": "Pelabolas",
       "teamId": 11,
       "currentLeagues": [2,3],
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-pelabolas-logo?v=1742944290526",
+      "logo": "/images/teamLogos/11.png",
       "color": "rgb(39, 39, 39)",
       "colorAlternate": "rgb(218, 165, 32)",
       "teamdescription": {
@@ -641,7 +641,7 @@
       "teamname": "Paris Saint Germain",
       "teamId": 12,
       "currentLeagues": [2,3],
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-paris-saint-germain-logo?v=1743977050347",
+      "logo": "/images/teamLogos/12.png",
       "color": "rgb(1, 66, 106)",
       "colorAlternate": "rgb(153, 114, 111)",
       "teamdescription": {

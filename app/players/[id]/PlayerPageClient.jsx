@@ -3,8 +3,10 @@
 import { css } from '@emotion/react';
 import { useState } from "react";
 import React from "react";
+import { translationsMap } from '/lib/translations.js';
 import '/styles/global.css';
 import positionCoords from '/lib/posCoordsPlayerPosMap.json';
+
 function isDark(rgbString) {
     const rgb = rgbString.match(/\d+/g).map(Number);
     const [r, g, b] = rgb;
@@ -17,10 +19,15 @@ function isLight(rgbString) {
     const brightness = 0.299 * r + 0.587 * g + 0.114 * b;
     return brightness >= 200;
 }
-const storedTheme = typeof window !== 'undefined' ? localStorage.getItem('theme') || 'theme-light' : 'theme-light'
+const storedTheme = typeof window !== 'undefined' ? localStorage.getItem('theme') || 'theme-light' : 'theme-light';
+const storedLang = typeof window !== 'undefined' ? localStorage.getItem('language') || 'es' : 'es';
 
 export default function PlayerPageClient({ player }) {
+    //===============================|  THEME-BASED COLORS  | ===============================
+    const teamColor = storedTheme === "theme-light" ? player?.teamColors?.teamColorMain : player?.teamColors?.teamColorAlternate;
+    const teamFontColor = isLight(teamColor) ? "black" : "white";
 
+    //===============================|  LAYOUT  | ===============================
     const playerContent = css`
     display: grid;
     grid-template-columns: minmax(853px, 2fr) minmax(327px, 1fr);
@@ -28,26 +35,41 @@ export default function PlayerPageClient({ player }) {
     max-width: 1280px;
     width: 100%;
     overflow-x: hidden;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr;
+    }
   `;
 
-    const teamColor = storedTheme === "theme-light" ? player?.teamColors?.teamColorMain : player?.teamColors?.teamColorAlternate
-    const teamFontColor = isLight(teamColor) === true ? "black" : "white"
+    const playerContentItem = css`
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+  `;
+
     const playerHeader = css`
     display: flex;
     flex-flow: column;
     width: 100%;
   `;
 
-    const playerContentItem = css`
-display: flex;
-flex-flow: column;
-gap: 1rem;
-`;
+    const playerInfo = css`
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    background-color: var(--card-bg-main);
+    border-radius: 0 0 1.25rem 1.25rem;
 
+    @media (max-width: 800px) {
+      flex-flow: column;
+    }
+  `;
+
+    //===============================|  PLAYER CARD  | ===============================
     const playerCard = css`
     background-color: ${teamColor};
     color: ${teamFontColor};
-    border-radius: 1em 1em 0 0;
+    border-radius: 1.25rem 1.25rem 0 0;
     padding: 1rem;
     max-width: 100%;
     margin: 0;
@@ -56,8 +78,8 @@ gap: 1rem;
     const cardWrapper = css`
     display: flex;
     flex-flow: row nowrap;
-    gap: 10px;
     align-items: flex-end;
+    gap: 10px;
   `;
 
     const cardContent = css`
@@ -73,167 +95,171 @@ gap: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: left;
+    color: ${teamFontColor};
     gap: 8px;
-    color: ${teamFontColor};
-  `;
-
-    const teamLinkHeader = css`
-    color: ${teamFontColor};
-    text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
   `;
 
     const cardLogo = css`
     display: inline;
   `;
 
-    const playerInfo = css`
-    display: flex;
-            flexFlow: row;
-            width: 100%;
-        background-color: var(--card-bg-main);
-    `;
+    const teamLinkHeader = css`
+    color: ${teamFontColor};
+    text-decoration: none;
 
+    &:hover {
+      text-decoration: underline;
+    }
+  `;
+
+    //===============================|  TOOLTIP  | ===============================
     const toolTipWrapper = css`
-  position: relative;
-  display: inline-block;
-`;
+    position: relative;
+    display: inline-block;
+  `;
 
     const toolTip = css`
-  visibility: hidden;
-  opacity: 0;
-  width: max-content;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 6px 10px;
-  border-radius: 4px;
-  position: absolute;
-  z-index: 10;
-  bottom: 125%; /* Position above the element */
-  left: 50%;
-  transform: translateX(-50%);
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-`;
+    visibility: hidden;
+    opacity: 0;
+    width: max-content;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+  `;
 
-
-    //===============================|  BIO  | ===============================
-    //
-    //
+    //===============================|  BIO SECTION  | ===============================
     const bio = css`
     display: grid;
-            height: 250px;
-            max-height: 300px;
-            grid-template-columns: 1fr 1fr;
-            border-right: 1px solid var(--divide-bg-primary);
-            border-radius: 0 0 0 1rem;
-            padding-left: 1rem;
-            flex: 1;
-    `;
+    grid-template-columns: 1fr 1fr;
+    height: 250px;
+    max-height: 300px;
+    border-right: 1px solid var(--divider-bg-primary);
+    padding-left: 1rem;
+    flex: 1;
+     @media (max-width: 800px) {
+    border-right: none;
+    border-bottom: 1px solid var(--divider-bg-primary);
+    }
+  `;
 
-    const bioValue = css`
+    const bioItem = css`
     display: flex;
-                flex-flow: column;
-                width: 150px;
-                height: 75px;
-                flex-direction: column;
-                justify-content: center;
-                border-bottom: 1px solid var(--divide-bg-primary);
-    `;
+    flex-flow: column;
+    justify-content: center;
+    width: 150px;
+    height: 75px;
+    border-bottom: 1px solid var(--divider-bg-primary);
+  `;
+
+    const bioValue = css``
 
     const bioMetric = css`
     font-size: 0.8rem;
-                color: var(--GLOBAL-FONT-COLOR-GREY);
-                padding-top: 0.3rem;
-    `;
+    color: var(--GLOBAL-FONT-COLOR-GREY);
+    padding-top: 0.3rem;
+  `;
 
 
     //===============================|  POSITIONS  | ===============================
-    //
-    //
+
     const positionSection = css`
-     display: flex;
+    display: flex;
     flex: 1;
-            height: 250px;
-            max-height: 300px;
-            flex-flow: column wrap;
-            padding: 1rem;
-            border-radius: 0 0 1em 0;
-            justify-content: center;
-            gap: 10px;
-    `;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 250px;
+    max-height: 300px;
+    padding: 1rem;
+    border-radius: 1.25rem;
+    gap: 10px;
+  `;
 
     const positionMapImgWrapper = css`
     position: relative;
-            width: 169px;
-            height: 218px;
-    `;
+    width: 169px;
+    height: 218px;
+  `;
 
     const positionMapImg = css`
     border-radius: 0.5rem;
     user-select: none;
     ::-webkit-user-drag: none;
     filter: var(--position-pitch-brightness);
-    `;
+  `;
 
     const positionWrapper = css``;
     const primaryPositionEl = css``;
     const otherPositionEl = css``;
 
-    const mainPosition = player?.playerPositions?.positions.find(p => p.isMainPos === true) || null
-    const mainPositionCoords = positionCoords?.[mainPosition?.id]
-    const mainPosOnPosMap = mainPosition ? <div css=
-        {
-            css`
-    position: absolute;
-    left: ${mainPositionCoords.x - 10}%;
-    top: ${mainPositionCoords.y}%;
-    color: ${teamFontColor};
-    background-color: ${teamColor};
-    font-size: .8rem;
-    font-weight: 600;
-    padding: 4px 6.25px;
-    border-radius: 1rem;
-    min-width: 37.5px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    object-fit: cover;
-    `
-        }
-    >{mainPosition?.id}</div> : <div></div>
+    const mainPosition = player?.playerPositions?.positions.find(p => p.isMainPos === true) || null;
+    const mainPositionCoords = positionCoords?.[mainPosition?.id];
 
-    const otherPositions = player?.playerPositions?.positions.filter(p => p.isMainPos === false) || []
+    const mainPosOnPosMap = mainPosition ? (
+        <div
+            css={css`
+        position: absolute;
+        left: ${mainPositionCoords.x - 10}%;
+        top: ${mainPositionCoords.y}%;
+        color: ${teamFontColor};
+        background-color: ${teamColor};
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 4px 6.25px;
+        border-radius: 1.25rem;
+        min-width: 37.5px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        object-fit: cover;
+      `}
+        >
+            {mainPosition?.id}
+        </div>
+    ) : (
+        <div></div>
+    );
+
+    const otherPositions = player?.playerPositions?.positions.filter(p => !p.isMainPos) || [];
+
     const otherPosOnPosMap = otherPositions
-        .filter(pos => !pos.isMainPos && pos.ratio > 0.166)
-        .map((pos, index, arr) => {
-            const posCoords = { x: positionCoords?.[pos.id]?.x - 10, y: positionCoords?.[pos.id]?.y } || { x: 0, y: 0 };
-            console.log(posCoords)
+        .filter(pos => pos.ratio > 0.166)
+        .map((pos) => {
+            const posCoords = positionCoords?.[pos.id]
+                ? { x: positionCoords[pos.id].x - 10, y: positionCoords[pos.id].y }
+                : { x: 0, y: 0 };
+
             const isLightTheme = storedTheme === "theme-light";
+
             return (
                 <div
                     key={pos.id}
                     css={css`
-        display: flex;
-          align-items: center;
-          justify-content: center;
-        min-width: 37.5px;
-          position: absolute;
-          left: ${posCoords.x}%;
-        top: ${posCoords.y}%;
-          background-color: grey;
-          opacity: ${(pos.ratio * 100 + 25) / 100};
-          color: ${isLightTheme ? "white" : "black"};
-          z-index: 8;
-          padding: 4px 6.25px;
-          border-radius: 1rem;
-          font-weight: 600;
-          font-size: 0.8rem;
-          text-align: center;
-         `}
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: ${posCoords.x}%;
+            top: ${posCoords.y}%;
+            min-width: 37.5px;
+            background-color: grey;
+            opacity: ${(pos.ratio * 100 + 25) / 100};
+            color: ${isLightTheme ? "white" : "black"};
+            z-index: 8;
+            padding: 4px 6.25px;
+            border-radius: 1.25rem;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-align: center;
+          `}
                 >
                     {pos.id}
                 </div>
@@ -252,9 +278,9 @@ gap: 1rem;
     const competitionStatsTitleWrapper = css`
     flex-flow: row wrap;
     max-width: 100%;
-    border-radius: 1em 1em 0 0;
+    border-radius: 1.25em 1.25em 0 0;
     border-right: none;
-    border-bottom: 1px solid var(--divide-bg-primary);
+    border-bottom: 1px solid var(--divider-bg-primary);
     color: var(--primary-font-color);
     `;
 
@@ -277,7 +303,7 @@ gap: 1rem;
     height: 200px;
     max-width: 100%;
     padding: 1rem;
-    border-radius: 0 0 1em 1em;
+    border-radius: 0 0 1.25em 1.25em;
     border-right: none;
     `;
 
@@ -302,9 +328,11 @@ gap: 1rem;
     justify-self: start;
     `
 
-    const competitionItems = player.competitionStats.map((i, index) => {
-        return (
-            <div key={index} css={css`
+    const renderCompetitionStats = () => {
+        if (player.totalStats.minutes > 0) {
+            const competitionItems = player.competitionStats.map((i, index) => {
+                return (
+                    <div key={index} css={css`
         min-width: 150px;
     display: flex;
     flex-direction: column;
@@ -312,63 +340,132 @@ gap: 1rem;
     align-items: center;
         color: var(--primary-font-color);
         `}>
-                <span css={css`
+                        <span css={css`
                         font-size: 1.05rem;
                     `}>{i.value}</span>
-                <span css={css`
+                        <span css={css`
                     color: var(--GLOBAL-FONT-COLOR-GREY);
     font-weight: bold;
-                    `}>{i.id}</span>
-            </div>
-        )
-    })
+                    `}>{translationsMap?.[i.id]?.[storedLang]}</span>
+                    </div>
+                )
+            })
+
+            return (
+                <div css={competitionStatsCard}>
+                    <div className="primary-hover" css={competitionStatsTitleWrapper}>
+                        <a css={competitionStatsLink} href="leagues/2">
+                            <h2 css={competitionStatsTitle}>
+                                Exanon T3 (Copa + Liga)
+                            </h2>
+                        </a>
+                    </div>
+                    <div css={competitionStatsContent}>
+                        {competitionItems}
+                    </div>
+                </div>
+            )
+        } else {
+            return null
+        }
+    }
 
 
     //===============================|  PLAYER MATCHES  | ===============================
     //
     //
-    const playerRecentMatches = player.recentGames.map((match, index) => (
-        <a key={index} href={match.pageUrl} className="secondary-hover" css={matchItem}>
-            <div>{match.leagueNameShort}</div>
+    const renderPlayerRecentMatches = () => {
+        if (player.recentGames.length) {
+            const renderPlayerRecentMatchesContent = player.recentGames.map((match, index) => (
+                <a key={index} href={match.pageUrl} className="secondary-hover" css={matchItem}>
+                    <div>{match.leagueNameShort}</div>
 
-            <div css={matchItemTeam}>
-                <img src={match.opponentsLogo} height={20} width={20} alt={match.opponentTeamName} title={match.opponentTeamName} />
-                <span>{match.opponentTeamName}</span>
-            </div>
+                    <div css={matchItemTeam}>
+                        <img src={match.opponentsLogo} height={20} width={20} alt={match.opponentTeamName} title={match.opponentTeamName} />
+                        <span>{match.opponentTeamName}</span>
+                    </div>
 
-            <div style={{ display: "flex", flexFlow: "row", justifySelf: "start", gap: "3px" }}>
-                {match.scoreline.split("").map((char, charIndex) => {
-                    const isBold =
-                        (match.isHome === true && charIndex === 0) ||
-                        (match.isHome === false && charIndex === 2);
-                    return (
-                        <span
-                            key={charIndex}
-                            style={{
-                                fontWeight: isBold ? "bolder" : "bold",
-                                color: isBold ? "inherit" : "grey",
-                            }}
-                        >
-                            {char}
-                        </span>
-                    );
-                })}
-            </div>
+                    <div style={{ display: "flex", flexFlow: "row", justifySelf: "start", gap: "3px" }}>
+                        {match.scoreline.split("").map((char, charIndex) => {
+                            const isBold =
+                                (match.isHome === true && charIndex === 0) ||
+                                (match.isHome === false && charIndex === 2);
+                            return (
+                                <span
+                                    key={charIndex}
+                                    style={{
+                                        fontWeight: isBold ? "bolder" : "bold",
+                                        color: isBold ? "inherit" : "grey",
+                                    }}
+                                >
+                                    {char}
+                                </span>
+                            );
+                        })}
+                    </div>
 
-            <div>{match.minutes || "N/A"}</div>
+                    <div>{match.minutes || "N/A"}</div>
 
-            {["goals", "assists", "touches", "passesC"].map((metric) => (
-                <div key={metric}>{Math.round(match[metric])}</div>
-            ))}
+                    {["goals", "assists", "touches", "passesC"].map((metric) => (
+                        <div key={metric}>{Math.round(match[metric])}</div>
+                    ))}
 
-            <div
-                className="secondary-rating"
-                style={{ backgroundColor: match.matchRating.backgroundColor }}
-            >
-                {match.matchRating.value}
-            </div>
-        </a>
-    ));
+                    <div
+                        className="secondary-rating"
+                        style={{ backgroundColor: match.matchRating.backgroundColor }}
+                    >
+                        {match.matchRating.value}
+                    </div>
+                </a>
+            ));
+
+            return (
+                <div css={playerMatchesCard}>
+                    <div css={playerMatchesHeader}>
+                        <h2>{translationsMap?.["matchStats"]?.[storedLang]}</h2>
+                        <div css={statsIconBar}>
+                            <div id="competition" css={pMCompetition}>
+                                <select css={pMSelect} id="competition-matches">
+                                    <option value="alltheleagues">{translationsMap?.["everyLeague"]?.[storedLang]}</option>
+                                    <option value="fixturesLiga3">EXL Liga Season 3</option>
+                                    <option value="fixturesCopa3">EXL Copa Season 3</option>
+                                </select>
+                            </div>
+                            <div css={toolTipWrapper}>
+                                <div id="minutes">⌚</div>
+                                <span css={toolTip}>Minutes Played</span>
+                            </div>
+                            <div css={toolTipWrapper}>
+                                <div id="goals">⚽</div>
+                                <span css={toolTip}>Goals</span>
+                            </div>
+                            <div css={toolTipWrapper}>
+                                <div id="assists">🅰️</div>
+                                <span css={toolTip}>Assists</span>
+                            </div>
+                            <div css={toolTipWrapper}>
+                                <div id="touches">🐾</div>
+                                <span css={toolTip}>Touches</span>
+                            </div>
+                            <div css={toolTipWrapper}>
+                                <div id="passes">🧩</div>
+                                <span css={toolTip}>Passes Completed</span>
+                            </div>
+                            <div css={toolTipWrapper}>
+                                <div id="matchrating">⭐</div>
+                                <span css={toolTip}>Matchrating</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        {renderPlayerRecentMatchesContent}
+                    </div>
+                </div>
+            )
+        } else {
+            return null
+        }
+    }
 
     const playerMatchesCard = css`
     padding-top: 1rem;
@@ -389,8 +486,8 @@ gap: 1rem;
     justify-items: center;
     align-items: center;
     padding-block: .66rem;
-    border-top: solid 1px var(--divide-bg-primary);
-    border-bottom: solid 1px var(--divide-bg-primary);
+    border-top: solid 1px var(--divider-bg-primary);
+    border-bottom: solid 1px var(--divider-bg-primary);
     cursor: default;
     margin-bottom: .5rem;
     `;
@@ -411,8 +508,6 @@ gap: 1rem;
 
 
     //===============================|  PERCENTILE STATS  | ===============================
-    //
-    //
     const pSCard = css`
     display: flex;
     flex-flow: column;
@@ -454,7 +549,7 @@ gap: 1rem;
     `;
 
     const percentileStatsMetricTitle = css`
-    margin-inline: 1rem;
+    margin: 1rem;
     padding-inline: 1rem;
     `;
     const psButton = css`
@@ -513,9 +608,12 @@ gap: 1rem;
     width: 300px;
     height: 12.5px;
     background-color: var(--progress-bar-background-color);
-    border-radius: 1rem;
+    border-radius: 1.25rem;
     overflow: hidden;
     position: relative;
+     @media (max-width: 800px) {
+    width: 150px;
+    }
     `;
 
     const progressBar = css`
@@ -533,45 +631,331 @@ gap: 1rem;
         return (
             <div css={pSButtons}>
                 <button css={[psButton, per20ButtonStyle]} onClick={() => setMode('per20')}>
-                    Per 20
+                    {translationsMap?.["per20"]?.[storedLang]}
                 </button>
                 <button css={[psButton, totalButtonStyle]} onClick={() => setMode('total')}>
-                    Total
+                    {translationsMap?.["total"]?.[storedLang]}
                 </button>
             </div>
         );
     };
 
-    const renderSection = (section) => {
-        const percentileStatsItems = Object.entries(section).map(([metric, metricStats], i) => {
-            const [percentileRankKey, valueKey] = mode === 'total' ? ['precentileRankTotal', 'valueTotal'] : ['precentileRankPer20', 'valuePer20']
-            const metricStatsEl = Object.entries(metricStats).map((stats, i) => {
-                const progressBackgroundColor = stats[1][percentileRankKey] >= 70 ? "var(--PROGRESS-BAR-HIGH)" : stats[1][percentileRankKey] >= 30 ? "var(--PROGRESS-BAR-MIDDLE)" : "var(--PROGRESS-BAR-LOW)"
-                return (
-                    <div
-                        key={stats[0]}
-                        css={percentileStatsMetric}
-                        className='secondary-hover'
-                    >
-                        <span>{stats[1].id}</span>
-                        <span css={percentileStatTitle}>{stats[1][valueKey]}</span>
-                        <div css={progressBarContianer}>
-                            <span css={progressBar} style={{ width: `${stats[1][percentileRankKey]}%`, backgroundColor: progressBackgroundColor }}></span>
+    const renderPercentileStats = () => {
+        if (player.totalStats.minutes >= 25) {
+            const renderPercentileStatsContent = (section) => {
+                var percentileStatsItems = Object.entries(section).map(([metric, metricStats], i) => {
+                    const [percentileRankKey, valueKey] = mode === 'total' ? ['precentileRankTotal', 'valueTotal'] : ['precentileRankPer20', 'valuePer20']
+                    const metricStatsEl = Object.entries(metricStats).map((stats, i) => {
+                        const progressBackgroundColor = stats[1][percentileRankKey] >= 70 ? "var(--PROGRESS-BAR-HIGH)" : stats[1][percentileRankKey] >= 30 ? "var(--PROGRESS-BAR-MIDDLE)" : "var(--PROGRESS-BAR-LOW)"
+                        return (
+                            <div
+                                key={stats[0]}
+                                css={percentileStatsMetric}
+                                className='secondary-hover'
+                            >
+                                <span>{translationsMap?.[stats[1].id]?.[storedLang]}</span>
+                                <span css={percentileStatTitle}>{stats[1][valueKey]}</span>
+                                <div css={progressBarContianer}>
+                                    <span css={progressBar} style={{ width: `${stats[1][percentileRankKey]}%`, backgroundColor: progressBackgroundColor }}></span>
+                                </div>
+                            </div>
+                        )
+                    })
+                    return (
+                        <div key={i}>
+                            <h3 key={metric} css={percentileStatsMetricTitle}>
+                                {translationsMap?.[metric]?.[storedLang]}
+                            </h3>
+                            {metricStatsEl}
+                        </div>
+                    )
+                });
+
+                return percentileStatsItems
+            }
+            return (
+                <div css={pSCard}>
+                    <div css={pSHeader}>
+                        <h2 css={pSHeaderText}>{translationsMap?.["seasonPerformance"]?.[storedLang]}</h2>
+                        <div css={pSHeaderContent}>
+                            {renderbuttons()}
+                            <div css={minutesPlayed}>
+                            </div>
                         </div>
                     </div>
-                )
-            })
-            return (
-                <div key={i}>
-                    <h2 key={metric} css={percentileStatsMetricTitle}>
-                        {metric}
-                    </h2>
-                    {metricStatsEl}
+                    <div css={percentileStatsContent}>
+                        {renderPercentileStatsContent(player.percentileStats)}
+                    </div>
                 </div>
             )
+        } else {
+            return null
+        }
+    }
+
+
+
+    //===============================|  RATINGS  | ===============================
+    const ratingsCard = css`
+    width: 100%;
+                font-size: 0.8rem;
+                border-radius: 1.25rem;
+                background-color: var(--card-bg-main);
+                display: flex;
+                flex-flow: column;
+                max-height: 500px;
+    `;
+
+    const ratingsChartHeader = css`
+                min-width: 100%;
+                display: flex;
+                flex-flow: column;
+                align-items: start;
+                margin-top: 1rem;
+                margin-left: 1rem;
+                padding-bottom: .2rem;
+                text-align: center;
+                border-bottom: solid 1px var(--divider-bg-primary);
+    `;
+
+    const percentileStatComparison = css`
+     display: flex;
+    flex-flow: row;
+    width: 100%;
+    `;
+
+    const percentileStatComparisonContent = css`
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    `;
+
+    const percentileStatComparisonImg = css`
+    margin-bottom: -3px;
+    align-self: center;
+    `;
+
+    const percentileStatComparisonButton = css`
+    background-color: var(--invisible);
+    filter: brightness(var(--settings-button-color));
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    &:hover {
+     transform: scale(1.3);
+    transform-origin: center;
+    transition: transform 150ms ease-in-out;
+    }
+    `;
+
+    const ratingContent = css`
+    display: flex;
+    align-items: center;
+    margin-inline: 1rem;
+    `;
+
+    const ratingContentLeft = css`
+        display: flex;
+    align-items: flex-end;
+    flex-flow: column-reverse;
+
+    > :first-child {
+    margin-right: -25px;
+  }
+
+  > :last-child {
+      margin-right: -25px;
+  }
+    `
+
+    const ratingContentRight = css`
+        display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+
+
+    > :first-child {
+    margin-left: -25px;
+  }
+
+  > :last-child {
+      margin-left: -25px;
+  }
+    `;
+
+    const ratingContentItem = css`
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 50px;
+    `;
+
+    const ratingChart = css`
+        flex: 2;
+  display: block;
+  max-width: 300px;
+  height: 250px;
+  display: block;
+    `;
+
+    const ratingChartLegendItem = css`
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 5px;
+      @media (max-width: 600px) {
+          flex-flow: column-reverse;
+              gap: 0;
+        }
+    `;
+
+    const ratingLegendLeft = css`
+        flex-flow: row;
+    `;
+
+    const ratingLegendRight = css`
+    flex-flow: row-reverse;
+    `;
+
+    const ratingChartMetric = css`
+        color: var(--GLOBAL-FONT-COLOR-GREY);
+    `;
+
+    const ratingChartValue = css`
+        font-weight: bold;
+    `;
+
+    function generateHexPaths(ratings) {
+        const center = { x: 96, y: 96 };
+        const radius = 80;
+        const angleStep = (2 * Math.PI) / ratings.length;
+        const rotationOffset = -Math.PI / 2; // Rotate -90 degrees for vertical hex
+
+        return ratings.map((rating, i) => {
+            const valueRatio = rating.value / 100;
+            const startAngle = angleStep * (i + 1) + rotationOffset;
+            const endAngle = angleStep * (i) + rotationOffset;
+
+            const x1 = center.x + Math.cos(startAngle) * radius * valueRatio;
+            const y1 = center.y + Math.sin(startAngle) * radius * valueRatio;
+            const x2 = center.x + Math.cos(endAngle) * radius * valueRatio;
+            const y2 = center.y + Math.sin(endAngle) * radius * valueRatio;
+
+            return (
+                <path
+                    key={i}
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d={`M${center.x} ${center.y} L${x1.toFixed(2)} ${y1.toFixed(2)} L${x2.toFixed(2)} ${y2.toFixed(2)} Z`}
+                    fill={teamColor}
+                    fillOpacity={0.3 + 0.6 * valueRatio}
+                    mask="url(#hexagon-mask-right)"
+                />
+            );
         });
-        return percentileStatsItems
-    };
+    }
+
+    const renderRatings = () => {
+        if (player.totalStats.minutes >= 25) {
+            function ratingLegend(side) {
+                const [min, max, css] = side === "left" ? [3, 6, ratingLegendLeft] : [0, 3, ratingLegendRight]
+                const legendItem = player.ratings.slice(min, max).map(s => {
+                    return (
+                        <div
+                            css={[ratingChartLegendItem, css]}
+                            key={s.title}
+                        >
+                            <span css={ratingChartMetric}>
+                                {translationsMap?.[s.title]?.[storedLang]}
+                            </span>
+                            <span css={ratingChartValue}>
+                                {s.value}
+                            </span>
+                        </div>
+                    )
+                })
+                return legendItem
+            }
+            const leftLegend = ratingLegend('left')
+            const rightLegend = ratingLegend('right')
+
+            let ratingsComparison
+            switch (true) {
+                case ["ST"].includes(mainPosition?.id):
+                    if (storedLang == "en") ratingsComparison = "Stats compared to other strikers.";
+                    if (storedLang == "es") ratingsComparison = "Estadísticas comparadas con otros delanteros.";
+                    break;
+                case ["LW", "RW", "AM"].includes(mainPosition?.id):
+                    if (storedLang == "en") ratingsComparison = "Stats compared to other attacking midfielders/wingers.";
+                    if (storedLang == "es") ratingsComparison = "Estadísticas comparadas con otros centrocampistas ofensivos/extremos.";
+                    break;
+                case ["CM", "DM", "LM", "RM"].includes(mainPosition?.id):
+                    if (storedLang == "en") ratingsComparison = "Stats compared to other midfielders.";
+                    if (storedLang == "es") ratingsComparison = "Estadísticas comparadas con otros centrocampistas.";
+                    break;
+                case ["LB", "RB", "LWB", "RWB"].includes(mainPosition?.id):
+                    if (storedLang == "en") ratingsComparison = "Stats compared to other fullbacks.";
+                    if (storedLang == "es") ratingsComparison = "Estadísticas comparadas con otros laterales.";
+                    break;
+                case ["CB"].includes(mainPosition?.id):
+                    if (storedLang == "en") ratingsComparison = "Stats compared to other center-backs.";
+                    if (storedLang == "es") ratingsComparison = "Estadísticas comparadas con otros centrales.";
+                    break;
+                case ["GK"].includes(mainPosition?.id):
+                    if (storedLang == "en") ratingsComparison = "Stats compared to other keepers.";
+                    if (storedLang == "es") ratingsComparison = "Estadísticas comparadas con otros porteros.";
+                    break;
+                default:
+                    if (storedLang == "en") ratingsComparison = "Stats compared to other players.";
+                    if (storedLang == "es") ratingsComparison = "Estadísticas comparadas con otros jugadores.";
+            }
+
+            return (
+                <div css={ratingsCard}>
+                    <div css={ratingsChartHeader}>
+                        <h2>{translationsMap?.["playerRatings"]?.[storedLang]}</h2>
+                        <div css={percentileStatComparison}>
+                            <span id="whatplayerstatsarecomparedtoo"
+                                css={percentileStatComparisonContent}>{ratingsComparison}</span>
+                            <div css={percentileStatComparisonImg}>
+                                <button css={percentileStatComparisonButton}>
+                                    <img src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/question-butotn?v=1743878872340"
+                                        width="14px" height="14px"></img>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div css={ratingContent}>
+                        <div css={[ratingContentItem, ratingContentLeft]}>
+                            {leftLegend}
+                        </div>
+                        <svg css={ratingChart} viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <mask id="hexagon-mask-right">
+                                    <rect width="100%" height="100%" fill="black" />
+                                    <path
+                                        d="M169.174 47.4019L101.5 8.33014C98.0961 6.36518 93.9029 6.36517 90.4995 8.33013L22.8252 47.4019C19.4218 49.3669 17.3252 52.9983 17.3252 56.9282V135.072C17.3252 139.002 19.4218 142.633 22.8252 144.598L90.4995 183.67C93.9029 185.635 98.0961 185.635 101.5 183.67L169.174 144.598C172.577 142.633 174.674 139.002 174.674 135.072V56.9282C174.674 52.9983 172.577 49.3669 169.174 47.4019Z"
+                                        fill="white"
+                                    />
+                                </mask>
+                            </defs>
+                            {generateHexPaths(player.ratings)}
+                            <path fillRule="evenodd" clipRule="evenodd" d="M96.5 6L96.5 186L95.5 186L95.5 6L96.5 6Z" fill="var(--player-radar-bg)"></path>
+                            <path fillRule="evenodd" clipRule="evenodd" d="M173.885 51.5L18 141.5L17.5 140.634L173.385 50.634L173.885 51.5Z" fill="var(--player-radar-bg)"></path>
+                            <path fillRule="evenodd" clipRule="evenodd" d="M18.6311 50.5L174.516 140.5L174.016 141.366L18.1311 51.366L18.6311 50.5Z" fill="var(--player-radar-bg)"></path>
+                            <path fillRule="evenodd" clipRule="evenodd" d="M169.174 47.4019L101.5 8.33014C98.0961 6.36518 93.9029 6.36517 90.4995 8.33013L22.8252 47.4019C19.4218 49.3669 17.3252 52.9983 17.3252 56.9282V135.072C17.3252 139.002 19.4218 142.633 22.8252 144.598L90.4995 183.67C93.9029 185.635 98.0961 185.635 101.5 183.67L169.174 144.598C172.577 142.633 174.674 139.002 174.674 135.072V56.9282C174.674 52.9983 172.577 49.3669 169.174 47.4019ZM102 7.46411C98.2867 5.32052 93.7123 5.32052 89.9995 7.46411L22.3252 46.5359C18.6124 48.6795 16.3252 52.641 16.3252 56.9282V135.072C16.3252 139.359 18.6124 143.321 22.3252 145.464L89.9995 184.536C93.7123 186.68 98.2867 186.68 102 184.536L169.674 145.464C173.387 143.321 175.674 139.359 175.674 135.072V56.9282C175.674 52.641 173.387 48.6795 169.674 46.5359L102 7.46411Z" fill="var(--player-radar-bg)"></path>
+                        </svg>
+                        <div css={[ratingContentItem, ratingContentRight]}>
+                            {rightLegend}
+                        </div>
+                    </div>
+                </div>
+            )
+        } else {
+            return null
+        }
+    }
 
     return (
         <div css={playerContent}>
@@ -600,44 +984,41 @@ gap: 1rem;
                     </div>
                     <div css={playerInfo}>
                         <section css={bio}>
-                            <div css={bioValue}>
-                                <div >{player.nationContinent}</div>
-                                <div data-lang-es="Continente" data-lang-en="Continent" css={bioMetric}>Continent</div>
+                            <div css={bioItem}>
+                                <div css={bioValue} >{player.nationContinent}</div>
+                                <div css={bioMetric}>{translationsMap?.["continent"]?.[storedLang]}</div>
                             </div>
-                            <div css={bioValue}>
-                                <div >{player.shirtNum}</div>
-                                <div data-lang-es="Camiseta" data-lang-en="Shirt #" css={bioMetric}>Shirt #</div>
+                            <div css={bioItem}>
+                                <div css={bioValue} >{player.shirtNum}</div>
+                                <div css={bioMetric}>{translationsMap?.["shirtNum"]?.[storedLang]}</div>
                             </div>
-                            <div css={bioValue}>
+                            <div css={bioItem}>
                                 <div>
                                     <img
                                         src={player.nationFlag}
                                         width="14" height="14" />
-                                    <div >{player.nationName}</div>
+                                    <div css={bioValue} >{player.nationName}</div>
                                 </div>
-                                <div data-lang-es="País" data-lang-en="Country" css={bioMetric}>Country</div>
+                                <div css={bioMetric}>{translationsMap?.["country"]?.[storedLang]}</div>
                             </div>
-                            <div css={bioValue}>
-                                <div >{player.league}</div>
-                                <div data-lang-es="Liga" data-lang-en="League" css={bioMetric}>League</div>
+                            <div css={bioItem}>
+                                <div css={bioValue} >{player.league}</div>
+                                <div css={bioMetric}>{translationsMap?.["league"]?.[storedLang]}</div>
                             </div>
-                            <div css={bioValue}>
-                                <div >{player.marketvalue}</div>
-                                <div data-lang-es="Valor de Mercado" data-lang-en="Market Value" css={bioMetric}>Market value
-                                </div>
+                            <div css={bioItem}>
+                                <div css={bioValue} >{player.marketvalue}</div>
+                                <div css={bioMetric}>{translationsMap?.["marketValue"]?.[storedLang]}</div>
                             </div>
                         </section>
                         <section css={positionSection}>
-                            <div data-lang-es="Posición" data-lang-en="Position">Position</div>
+                            <div>{translationsMap?.["position"]?.[storedLang]}</div>
                             <div css={positionWrapper}>
                                 <div css={primaryPositionEl}>
-                                    <div data-lang-es="Primaria" data-lang-en="Primary">
-                                        Primary</div>
+                                    <div>{translationsMap?.["primary"]?.[storedLang]}</div>
                                     <div id="primaryposition"></div>
                                 </div>
                                 <div css={otherPositionEl}>
-                                    <div data-lang-es="Otros" data-lang-en="Others">Others
-                                    </div>
+                                    <div>{translationsMap?.["others"]?.[storedLang]}</div>
                                     <div id="otherpositions"></div>
                                 </div>
                             </div>
@@ -650,96 +1031,12 @@ gap: 1rem;
                         </section>
                     </div>
                 </div>
-                <div css={competitionStatsCard}>
-                    <div className="primary-hover" css={competitionStatsTitleWrapper}>
-                        <a css={competitionStatsLink} href="leagues/2">
-                            <h2 css={competitionStatsTitle}>
-                                Exanon T3 (Copa + Liga)
-                            </h2>
-                        </a>
-                    </div>
-                    <div css={competitionStatsContent}>
-                        {competitionItems}
-                    </div>
-                </div>
-                <div css={playerMatchesCard}>
-                    <div css={playerMatchesHeader}>
-                        <h2 data-lang-en="Match Stats" data-lang-es="Estadísticas partidos">Match Stats</h2>
-                        <div css={statsIconBar}>
-                            <div id="competition" css={pMCompetition}>
-                                <select css={pMSelect} id="competition-matches">
-                                    <option value="alltheleagues">Todos las ligas</option>
-                                    <option value="fixturesLiga3">EXL Liga Season 3</option>
-                                    <option value="fixturesCopa3">EXL Copa Season 3</option>
-                                </select>
-                            </div>
-                            <div css={toolTipWrapper}>
-                                <div id="minutes">⌚</div>
-                                <span css={toolTip} data-lang-en="Minutes Played"
-                                    data-lang-es="Minutos Jugados">Minutes Played</span>
-                            </div>
-                            <div css={toolTipWrapper}>
-                                <div id="goals">⚽</div>
-                                <span css={toolTip} data-lang-en="Goals" data-lang-es="Goles">Goals</span>
-                            </div>
-                            <div css={toolTipWrapper}>
-                                <div id="assists">🅰️</div>
-                                <span css={toolTip} data-lang-en="Assists" data-lang-es="Asistencias">Assists</span>
-                            </div>
-                            <div css={toolTipWrapper}>
-                                <div id="touches">🐾</div>
-                                <span css={toolTip} data-lang-en="Touches" data-lang-es="Toques">Touches</span>
-                            </div>
-                            <div css={toolTipWrapper}>
-                                <div id="passes">🧩</div>
-                                <span css={toolTip} data-lang-en="Passes Completed" data-lang-es="Pases">Passes
-                                    Completed</span>
-                            </div>
-                            <div css={toolTipWrapper}>
-                                <div id="matchrating">⭐</div>
-                                <span css={toolTip} data-lang-en="Matchrating"
-                                    data-lang-es="Puntuación">Matchrating</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        {playerRecentMatches}
-                    </div>
-                </div>
-                <div css={pSCard}>
-                    <div css={pSHeader}>
-                        <h2 css={pSHeaderText}>Season Performance
-                        </h2>
-                        <div css={pSHeaderContent}>
-                            {renderbuttons()}
-                            <div css={minutesPlayed}>
-                            </div>
-                        </div>
-                    </div>
-                    <div css={percentileStatsContent}>
-                        {renderSection(player.percentileStats)}
-                    </div>
-                </div>
+                {renderCompetitionStats()}
+                {renderPlayerRecentMatches()}
+                {renderPercentileStats()}
             </div>
             <div className='right-grid'>
-                <div class="ratings-chart-container">
-                    <div class="ratings-chart-title">
-                        <h2 data-lang-es="Valoración de Jugadores" data-lang-en="Player Ratings">Player Ratings</h2>
-                        <div class="ratings-chart-stats-compared-to-other">
-                            <span id="whatplayerstatsarecomparedtoo"
-                                class="ratings-chart-stats-compared-to-other-text">Stats compared to other players.</span>
-                            <div class="ratings-chart-stats-compared-to-other-image">
-                                <button onclick="ratingChartStatsComparedToOtherFAQ()">
-                                    <img src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/question-butotn?v=1743878872340"
-                                        width="14px" height="14px"></img>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rating-chart-content">
-
-                    </div>
-                </div>
+                {renderRatings()}
             </div>
         </div>
     );

@@ -55,11 +55,12 @@ export default function RootLayout({ children }) {
     position: fixed;
     top: 0%;
     background-color: var(--card-bg-main);
-    border-bottom: 1px solid var(--divide-bg-primary);
+    border-bottom: 1px solid var(--divider-bg-primary);
     z-index: 10;
         `;
     const main = css`
     margin-top: 5rem;
+    justify-items: center;
     `
     const title = css`
     width: 40%;

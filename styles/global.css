@@ -27,9 +27,9 @@
     --card-bg-second: rgb(235, 235, 235);
     --card-bg-third: rgb(225, 225, 225);
 
-    --divide-bg-primary: rgb(235, 235, 235);
-    --divide-bg-secondary: rgb(220, 220, 220);
-    --divide-bg-third: rgb(210, 210, 210);
+    --divider-bg-primary: rgb(235, 235, 235);
+    --divider-bg-secondary: rgb(220, 220, 220);
+    --divider-bg-third: rgb(210, 210, 210);
 
     --primary-font-color: black;
 
@@ -38,18 +38,20 @@
     --percentile-button-toggled-bg: black;
     --percentile-button-toggled-font-color: white;
     --percentile-button-hover-bg: rgb(235, 235, 235);
-    
+
     --progress-bar-background-color: rgb(195, 195, 195);
+
+    --player-radar-bg: rgb(180, 180, 180);
 }
 
 .theme-dark {
     --page-background-color: black;
-    --card-bg-main: rgb(34, 34, 34);
+    --card-bg-main: rgb(29, 29, 29);
     --card-bg-second: rgb(49, 49, 49);
 
-    --divide-bg-primary: rgb(50, 50, 50);
-    --divide-bg-secondary: rgb(65, 65, 65);
-    --divide-bg-third: rgb(75, 75, 75);
+    --divider-bg-primary: rgb(50, 50, 50);
+    --divider-bg-secondary: rgb(65, 65, 65);
+    --divider-bg-third: rgb(75, 75, 75);
 
     --primary-font-color: white;
 
@@ -59,8 +61,9 @@
     --percentile-button-toggled-font-color: black;
     --percentile-button-hover-bg: rgb(69, 69, 69);
 
-
     --progress-bar-background-color: rgb(59, 59, 59);
+
+    --player-radar-bg: rgb(99, 99, 99);
 }
 
 body {
