@@ -1,7 +1,7 @@
 'use client';
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { useState } from "react";
+import { useEffect, useState } from 'react';
 import React from "react";
 import { translationsMap } from '/lib/translations.js';
 import '/styles/global.css';
@@ -19,19 +19,22 @@ function isLight(rgbString) {
     const brightness = 0.299 * r + 0.587 * g + 0.114 * b;
     return brightness >= 200;
 }
-const [theme, setTheme] = useState('theme-light');
-  const [language, setLanguage] = useState('es');
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem('theme') || 'theme-light';
-    const storedLang = localStorage.getItem('language') || 'es';
-    setTheme(storedTheme);
-    setLanguage(storedLang);
-  })
-
 export default function PlayerPageClient({ player }) {
+
+    const [theme, setTheme] = useState('theme-light');
+    const [language, setLanguage] = useState('es');
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const storedTheme = localStorage.getItem('theme') || 'theme-light';
+            const storedLang = localStorage.getItem('language') || 'es';
+            setTheme(storedTheme);
+            setLanguage(storedLang);
+        }
+    }, []);
+
     //===============================|  THEME-BASED COLORS  | ===============================
-    const teamColor = storedTheme === "theme-light" ? player?.teamColors?.teamColorMain : player?.teamColors?.teamColorAlternate;
+    const teamColor = theme === "theme-light" ? player?.teamColors?.teamColorMain : player?.teamColors?.teamColorAlternate;
     const teamFontColor = isLight(teamColor) ? "black" : "white";
 
     //===============================|  LAYOUT  | ===============================
@@ -353,7 +356,7 @@ export default function PlayerPageClient({ player }) {
                         <span css={css`
                     color: var(--GLOBAL-FONT-COLOR-GREY);
     font-weight: bold;
-                    `}>{translationsMap?.[i.id]?.[storedLang]}</span>
+                    `}>{translationsMap?.[i.id]?.[language]}</span>
                     </div>
                 )
             })
@@ -429,11 +432,11 @@ export default function PlayerPageClient({ player }) {
             return (
                 <div css={playerMatchesCard}>
                     <div css={playerMatchesHeader}>
-                        <h2>{translationsMap?.["matchStats"]?.[storedLang]}</h2>
+                        <h2>{translationsMap?.["matchStats"]?.[language]}</h2>
                         <div css={statsIconBar}>
                             <div id="competition" css={pMCompetition}>
                                 <select css={pMSelect} id="competition-matches">
-                                    <option value="alltheleagues">{translationsMap?.["everyLeague"]?.[storedLang]}</option>
+                                    <option value="alltheleagues">{translationsMap?.["everyLeague"]?.[language]}</option>
                                     <option value="fixturesLiga3">EXL Liga Season 3</option>
                                     <option value="fixturesCopa3">EXL Copa Season 3</option>
                                 </select>
@@ -638,10 +641,10 @@ export default function PlayerPageClient({ player }) {
         return (
             <div css={pSButtons}>
                 <button css={[psButton, per20ButtonStyle]} onClick={() => setMode('per20')}>
-                    {translationsMap?.["per20"]?.[storedLang]}
+                    {translationsMap?.["per20"]?.[language]}
                 </button>
                 <button css={[psButton, totalButtonStyle]} onClick={() => setMode('total')}>
-                    {translationsMap?.["total"]?.[storedLang]}
+                    {translationsMap?.["total"]?.[language]}
                 </button>
             </div>
         );
@@ -660,7 +663,7 @@ export default function PlayerPageClient({ player }) {
                                 css={percentileStatsMetric}
                                 className='secondary-hover'
                             >
-                                <span>{translationsMap?.[stats[1].id]?.[storedLang]}</span>
+                                <span>{translationsMap?.[stats[1].id]?.[language]}</span>
                                 <span css={percentileStatTitle}>{stats[1][valueKey]}</span>
                                 <div css={progressBarContianer}>
                                     <span css={progressBar} style={{ width: `${stats[1][percentileRankKey]}%`, backgroundColor: progressBackgroundColor }}></span>
@@ -671,7 +674,7 @@ export default function PlayerPageClient({ player }) {
                     return (
                         <div key={i}>
                             <h3 key={metric} css={percentileStatsMetricTitle}>
-                                {translationsMap?.[metric]?.[storedLang]}
+                                {translationsMap?.[metric]?.[language]}
                             </h3>
                             {metricStatsEl}
                         </div>
@@ -683,7 +686,7 @@ export default function PlayerPageClient({ player }) {
             return (
                 <div css={pSCard}>
                     <div css={pSHeader}>
-                        <h2 css={pSHeaderText}>{translationsMap?.["seasonPerformance"]?.[storedLang]}</h2>
+                        <h2 css={pSHeaderText}>{translationsMap?.["seasonPerformance"]?.[language]}</h2>
                         <div css={pSHeaderContent}>
                             {renderbuttons()}
                             <div css={minutesPlayed}>
@@ -874,7 +877,7 @@ export default function PlayerPageClient({ player }) {
                             key={s.title}
                         >
                             <span css={ratingChartMetric}>
-                                {translationsMap?.[s.title]?.[storedLang]}
+                                {translationsMap?.[s.title]?.[language]}
                             </span>
                             <span css={ratingChartValue}>
                                 {s.value}
@@ -890,38 +893,38 @@ export default function PlayerPageClient({ player }) {
             let ratingsComparison
             switch (true) {
                 case ["ST"].includes(mainPosition?.id):
-                    if (storedLang == "en") ratingsComparison = "Stats compared to other strikers.";
-                    if (storedLang == "es") ratingsComparison = "Estadísticas comparadas con otros delanteros.";
+                    if (language == "en") ratingsComparison = "Stats compared to other strikers.";
+                    if (language == "es") ratingsComparison = "Estadísticas comparadas con otros delanteros.";
                     break;
                 case ["LW", "RW", "AM"].includes(mainPosition?.id):
-                    if (storedLang == "en") ratingsComparison = "Stats compared to other attacking midfielders/wingers.";
-                    if (storedLang == "es") ratingsComparison = "Estadísticas comparadas con otros centrocampistas ofensivos/extremos.";
+                    if (language == "en") ratingsComparison = "Stats compared to other attacking midfielders/wingers.";
+                    if (language == "es") ratingsComparison = "Estadísticas comparadas con otros centrocampistas ofensivos/extremos.";
                     break;
                 case ["CM", "DM", "LM", "RM"].includes(mainPosition?.id):
-                    if (storedLang == "en") ratingsComparison = "Stats compared to other midfielders.";
-                    if (storedLang == "es") ratingsComparison = "Estadísticas comparadas con otros centrocampistas.";
+                    if (language == "en") ratingsComparison = "Stats compared to other midfielders.";
+                    if (language == "es") ratingsComparison = "Estadísticas comparadas con otros centrocampistas.";
                     break;
                 case ["LB", "RB", "LWB", "RWB"].includes(mainPosition?.id):
-                    if (storedLang == "en") ratingsComparison = "Stats compared to other fullbacks.";
-                    if (storedLang == "es") ratingsComparison = "Estadísticas comparadas con otros laterales.";
+                    if (language == "en") ratingsComparison = "Stats compared to other fullbacks.";
+                    if (language == "es") ratingsComparison = "Estadísticas comparadas con otros laterales.";
                     break;
                 case ["CB"].includes(mainPosition?.id):
-                    if (storedLang == "en") ratingsComparison = "Stats compared to other center-backs.";
-                    if (storedLang == "es") ratingsComparison = "Estadísticas comparadas con otros centrales.";
+                    if (language == "en") ratingsComparison = "Stats compared to other center-backs.";
+                    if (language == "es") ratingsComparison = "Estadísticas comparadas con otros centrales.";
                     break;
                 case ["GK"].includes(mainPosition?.id):
-                    if (storedLang == "en") ratingsComparison = "Stats compared to other keepers.";
-                    if (storedLang == "es") ratingsComparison = "Estadísticas comparadas con otros porteros.";
+                    if (language == "en") ratingsComparison = "Stats compared to other keepers.";
+                    if (language == "es") ratingsComparison = "Estadísticas comparadas con otros porteros.";
                     break;
                 default:
-                    if (storedLang == "en") ratingsComparison = "Stats compared to other players.";
-                    if (storedLang == "es") ratingsComparison = "Estadísticas comparadas con otros jugadores.";
+                    if (language == "en") ratingsComparison = "Stats compared to other players.";
+                    if (language == "es") ratingsComparison = "Estadísticas comparadas con otros jugadores.";
             }
 
             return (
                 <div css={ratingsCard}>
                     <div css={ratingsChartHeader}>
-                        <h2>{translationsMap?.["playerRatings"]?.[storedLang]}</h2>
+                        <h2>{translationsMap?.["playerRatings"]?.[language]}</h2>
                         <div css={percentileStatComparison}>
                             <span id="whatplayerstatsarecomparedtoo"
                                 css={percentileStatComparisonContent}>{ratingsComparison}</span>
@@ -993,11 +996,11 @@ export default function PlayerPageClient({ player }) {
                         <section css={bio}>
                             <div css={bioItem}>
                                 <div css={bioValue} >{player.nationContinent}</div>
-                                <div css={bioMetric}>{translationsMap?.["continent"]?.[storedLang]}</div>
+                                <div css={bioMetric}>{translationsMap?.["continent"]?.[language]}</div>
                             </div>
                             <div css={bioItem}>
                                 <div css={bioValue} >{player.shirtNum}</div>
-                                <div css={bioMetric}>{translationsMap?.["shirtNum"]?.[storedLang]}</div>
+                                <div css={bioMetric}>{translationsMap?.["shirtNum"]?.[language]}</div>
                             </div>
                             <div css={bioItem}>
                                 <div>
@@ -1006,26 +1009,26 @@ export default function PlayerPageClient({ player }) {
                                         width="14" height="14" />
                                     <div css={bioValue} >{player.nationName}</div>
                                 </div>
-                                <div css={bioMetric}>{translationsMap?.["country"]?.[storedLang]}</div>
+                                <div css={bioMetric}>{translationsMap?.["country"]?.[language]}</div>
                             </div>
                             <div css={bioItem}>
                                 <div css={bioValue} >{player.league}</div>
-                                <div css={bioMetric}>{translationsMap?.["league"]?.[storedLang]}</div>
+                                <div css={bioMetric}>{translationsMap?.["league"]?.[language]}</div>
                             </div>
                             <div css={bioItem}>
                                 <div css={bioValue} >{player.marketvalue}</div>
-                                <div css={bioMetric}>{translationsMap?.["marketValue"]?.[storedLang]}</div>
+                                <div css={bioMetric}>{translationsMap?.["marketValue"]?.[language]}</div>
                             </div>
                         </section>
                         <section css={positionSection}>
-                            <div>{translationsMap?.["position"]?.[storedLang]}</div>
+                            <div>{translationsMap?.["position"]?.[language]}</div>
                             <div css={positionWrapper}>
                                 <div css={primaryPositionEl}>
-                                    <div>{translationsMap?.["primary"]?.[storedLang]}</div>
+                                    <div>{translationsMap?.["primary"]?.[language]}</div>
                                     <div id="primaryposition"></div>
                                 </div>
                                 <div css={otherPositionEl}>
-                                    <div>{translationsMap?.["others"]?.[storedLang]}</div>
+                                    <div>{translationsMap?.["others"]?.[language]}</div>
                                     <div id="otherpositions"></div>
                                 </div>
                             </div>
