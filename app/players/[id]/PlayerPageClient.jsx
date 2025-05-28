@@ -19,8 +19,15 @@ function isLight(rgbString) {
     const brightness = 0.299 * r + 0.587 * g + 0.114 * b;
     return brightness >= 200;
 }
-const storedTheme = typeof window !== 'undefined' ? localStorage.getItem('theme') || 'theme-light' : 'theme-light';
-const storedLang = typeof window !== 'undefined' ? localStorage.getItem('language') || 'es' : 'es';
+const [theme, setTheme] = useState('theme-light');
+  const [language, setLanguage] = useState('es');
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme') || 'theme-light';
+    const storedLang = localStorage.getItem('language') || 'es';
+    setTheme(storedTheme);
+    setLanguage(storedLang);
+  })
 
 export default function PlayerPageClient({ player }) {
     //===============================|  THEME-BASED COLORS  | ===============================

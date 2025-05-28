@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 import exanonData from '/data/exanon.json';
 import getLeagueTable from '/lib/getLeagueTable.js';
 import getLeagueFixtures from '/lib/getLeagueFixtures.js';
-import leagueMap from '/lib/leagueMap.json';
+import leagueMap from '/data/leagueMap.json';
 import fs from 'fs';
 import path from 'path';
 
