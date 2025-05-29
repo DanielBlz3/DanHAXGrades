@@ -154,7 +154,6 @@ export default function RootLayout({ children }) {
                 <meta name="author" content="Danielblz" />
                <link rel="icon" href="/DanHAXGradeFavicon.ico" type="image/x-icon" />
                 <link rel="stylesheet" href="/players.css" type="text/css" />
-                <title id="playerNameTitle">Player</title>
             </head>
             <body className={pageTheme}>
                 <header>
