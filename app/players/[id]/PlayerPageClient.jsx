@@ -343,6 +343,8 @@ export default function PlayerPageClient({ player }) {
     const renderCompetitionStats = () => {
         if (player.totalStats.minutes > 0) {
             const competitionItems = player.competitionStats.map((i, index) => {
+                const isMatchRatingEl = (i.id === 'matchRating')
+                console.log(isMatchRatingEl)
                 return (
                     <div key={index} css={css`
         min-width: 150px;
