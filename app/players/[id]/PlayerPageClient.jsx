@@ -33,9 +33,11 @@ export default function PlayerPageClient({ player }) {
         }
     }, []);
 
+
     //===============================|  THEME-BASED COLORS  | ===============================
     const teamColor = theme === "theme-light" ? player?.teamColors?.teamColorMain : player?.teamColors?.teamColorAlternate;
     const teamFontColor = isLight(teamColor) ? "black" : "white";
+
 
     //===============================|  LAYOUT  | ===============================
     const playerContent = css`
@@ -838,7 +840,7 @@ export default function PlayerPageClient({ player }) {
 
     function generateHexPaths(ratings) {
         const center = { x: 96, y: 96 };
-        const radius = 80;
+        const radius = 91;
         const angleStep = (2 * Math.PI) / ratings.length;
         const rotationOffset = -Math.PI / 2; // Rotate -90 degrees for vertical hex
 
