@@ -1,17 +1,15 @@
-'use client'
+'use client';
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import '../styles/global.css';
-import '../styles/theme.js'
+import '../styles/theme.js';
 import { useState, useEffect } from 'react';
 import { translationsMap } from '/lib/translations.js';
 
 export default function RootLayout({ children }) {
-  // State to hold theme and language
-  const [pageTheme, setPageTheme] = useState('theme-light'); // default light
-  const [savedLang, setSavedLang] = useState('es'); // default Spanish
+  const [pageTheme, setPageTheme] = useState('theme-light');
+  const [savedLang, setSavedLang] = useState('es');
 
-  // Sync theme & language from localStorage once on client
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const storedTheme = localStorage.getItem('theme') || 'theme-light';
@@ -20,41 +18,46 @@ export default function RootLayout({ children }) {
       setPageTheme(storedTheme);
       setSavedLang(storedLang);
 
-      // Apply theme classes on body
       document.body.classList.remove('theme-light', 'theme-dark');
       document.body.classList.add(storedTheme);
-
-      // Apply language attribute and translations on document
       document.documentElement.lang = storedLang;
+
+      // Update language text from data-lang-* attributes
       document.querySelectorAll('[data-lang-es], [data-lang-en]').forEach(el => {
         const text = el.getAttribute(`data-lang-${storedLang}`);
         if (text) el.innerText = text;
       });
+
+      // Dispatch theme-applied event for other components to respond
+      window.dispatchEvent(new CustomEvent('theme-applied', { detail: storedTheme }));
     }
   }, []);
 
-  // Function to toggle theme and save in localStorage
   function toggleTheme() {
     const newTheme = pageTheme === 'theme-light' ? 'theme-dark' : 'theme-light';
     setPageTheme(newTheme);
+
     if (typeof window !== 'undefined') {
       localStorage.setItem('theme', newTheme);
       document.body.classList.remove('theme-light', 'theme-dark');
       document.body.classList.add(newTheme);
+
+      // Dispatch theme update for other components
+      window.dispatchEvent(new Event('themechange')); // legacy, optional
+      window.dispatchEvent(new CustomEvent('theme-applied', { detail: newTheme }));
     }
   }
 
-  // Function to set language and save in localStorage
   function setLanguage(lang) {
     if (lang !== savedLang) {
       setSavedLang(lang);
       if (typeof window !== 'undefined') {
         localStorage.setItem('language', lang);
-        // Reload the page to apply language changes fully if you want
-        location.reload();
+        location.reload(); // full reload if you want instant translation switch
       }
     }
   }
+
 
     const [settingsOpen, setSettingsOpen] = useState(false);
     const toggleSettings = () => {
@@ -77,7 +80,9 @@ export default function RootLayout({ children }) {
         `;
     const main = css`
     margin-top: 5rem;
-    justify-items: center;
+     justify-self: center;
+     width: 100%;
+     max-width: 1280px;
     `
     const title = css`
     width: 40%;

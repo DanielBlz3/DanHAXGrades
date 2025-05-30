@@ -6,6 +6,7 @@ import React from "react";
 import { translationsMap } from '/lib/translations.js';
 import '/styles/global.css';
 import positionCoords from '/lib/posCoordsPlayerPosMap.json';
+import SoccerField from '/components/pitchSVGVertical.jsx';
 
 function isDark(rgbString) {
     const rgb = rgbString.match(/\d+/g).map(Number);
@@ -19,19 +20,43 @@ function isLight(rgbString) {
     const brightness = 0.299 * r + 0.587 * g + 0.114 * b;
     return brightness >= 200;
 }
+
 export default function PlayerPageClient({ player }) {
 
     const [theme, setTheme] = useState('theme-light');
     const [language, setLanguage] = useState('es');
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const storedTheme = localStorage.getItem('theme') || 'theme-light';
-            const storedLang = localStorage.getItem('language') || 'es';
-            setTheme(storedTheme);
-            setLanguage(storedLang);
-        }
-    }, []);
+  console.log("useEffect running");
+  
+  const updateThemeColors = () => {
+    console.log("Updating theme colors...");
+    const storedTheme = localStorage.getItem('theme') || 'theme-light';
+    setTheme(storedTheme);
+    
+    // Update CSS vars
+    const root = document.documentElement;
+    if (storedTheme === 'theme-light') {
+      root.style.setProperty('--team-color', player.teamColors.teamColorMain);
+      root.style.setProperty('--team-font-color', isLight(player.teamColors.teamColorMain) ? 'black' : 'white');
+    } else {
+      root.style.setProperty('--team-color', player.teamColors.teamColorAlternate);
+      root.style.setProperty('--team-font-color', isLight(player.teamColors.teamColorAlternate) ? 'black' : 'white');
+    }
+  };
+
+  updateThemeColors();
+
+  window.addEventListener('themechange', updateThemeColors);
+  console.log("Listener added for themechange");
+
+  return () => {
+    window.removeEventListener('themechange', updateThemeColors);
+    console.log("Listener removed for themechange");
+  };
+}, [player]);
+
+
 
 
     //===============================|  THEME-BASED COLORS  | ===============================
@@ -79,8 +104,8 @@ export default function PlayerPageClient({ player }) {
 
     //===============================|  PLAYER CARD  | ===============================
     const playerCard = css`
-    background-color: ${teamColor};
-    color: ${teamFontColor};
+    background-color: var(--team-color);
+    color: var(--team-font-color);
     border-radius: 1.25rem 1.25rem 0 0;
     padding: 1rem;
     max-width: 100%;
@@ -107,7 +132,7 @@ export default function PlayerPageClient({ player }) {
     display: flex;
     flex-direction: row;
     justify-content: left;
-    color: ${teamFontColor};
+    color: var(--team-font-color);
     gap: 8px;
   `;
 
@@ -116,7 +141,7 @@ export default function PlayerPageClient({ player }) {
   `;
 
     const teamLinkHeader = css`
-    color: ${teamFontColor};
+    color: var(--team-font-color);
     text-decoration: none;
 
     &:hover {
@@ -180,6 +205,12 @@ export default function PlayerPageClient({ player }) {
     padding-top: 0.3rem;
   `;
 
+    const bioNation = css`
+    display: flex;
+    flex-flow: row;
+    gap: 5px;
+    align-items: center
+  `
 
     //===============================|  POSITIONS  | ===============================
 
@@ -203,9 +234,6 @@ export default function PlayerPageClient({ player }) {
 
     const positionMapImg = css`
     border-radius: 0.5rem;
-    user-select: none;
-    ::-webkit-user-drag: none;
-    filter: var(--position-pitch-brightness);
   `;
 
     const positionWrapper = css``;
@@ -214,15 +242,17 @@ export default function PlayerPageClient({ player }) {
 
     const mainPosition = player?.playerPositions?.positions.find(p => p.isMainPos === true) || null;
     const mainPositionCoords = positionCoords?.[mainPosition?.id];
+    const label = translationsMap?.[mainPosition?.id]?.[language]
 
     const mainPosOnPosMap = mainPosition ? (
         <div
+            title={label}
             css={css`
         position: absolute;
         left: ${mainPositionCoords.x - 10}%;
         top: ${mainPositionCoords.y}%;
-        color: ${teamFontColor};
-        background-color: ${teamColor};
+        color: var(--team-font-color);
+        background-color: var(--team-color);
         font-size: 0.8rem;
         font-weight: 600;
         padding: 4px 6.25px;
@@ -250,10 +280,12 @@ export default function PlayerPageClient({ player }) {
                 : { x: 0, y: 0 };
 
             const isLightTheme = theme === "theme-light";
+            const label = translationsMap?.[pos.id]?.[language]
 
             return (
                 <div
                     key={pos.id}
+                    title={label}
                     css={css`
             display: flex;
             align-items: center;
@@ -344,7 +376,8 @@ export default function PlayerPageClient({ player }) {
         if (player.totalStats.minutes > 0) {
             const competitionItems = player.competitionStats.map((i, index) => {
                 const isMatchRatingEl = (i.id === 'matchRating')
-                console.log(isMatchRatingEl)
+                const valueCss = isMatchRatingEl ? 'secondary-rating' : null
+                const colorCss = isMatchRatingEl ? i.value > 6.999 ? 'var(--RATING-GREEN)' : i.value > 5.499 ? 'var(--RATING-ORANGE)' : 'var(--RATING-RED)' : null
                 return (
                     <div key={index} css={css`
         min-width: 150px;
@@ -356,11 +389,14 @@ export default function PlayerPageClient({ player }) {
         `}>
                         <span css={css`
                         font-size: 1.05rem;
-                    `}>{i.value}</span>
-                        <span css={css`
-                    color: var(--GLOBAL-FONT-COLOR-GREY);
-    font-weight: bold;
-                    `}>{translationsMap?.[i.id]?.[language]}</span>
+                        background-color: ${colorCss};
+                        `
+                        }
+                            className={valueCss}
+                        >{i.value}</span>
+                        <span css={
+                            css` color: var(--GLOBAL-FONT-COLOR-GREY); font-weight: bold;`}
+                        >{translationsMap?.[i.id]?.[language]}</span>
                     </div>
                 )
             })
@@ -1007,7 +1043,7 @@ export default function PlayerPageClient({ player }) {
                                 <div css={bioMetric}>{translationsMap?.["shirtNum"]?.[language]}</div>
                             </div>
                             <div css={bioItem}>
-                                <div>
+                                <div css={bioNation}>
                                     <img
                                         src={player.nationFlag}
                                         width="14" height="14" />
@@ -1037,8 +1073,7 @@ export default function PlayerPageClient({ player }) {
                                 </div>
                             </div>
                             <div css={positionMapImgWrapper}>
-                                <img css={positionMapImg} src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/positionfield?v=1741506408303"
-                                    alt="Positions" width="169" height="218" />
+                                <SoccerField width={169} height={230} fillColor={'var(--soccer-field-bg)'} strokeColor={'var(--soccer-field-stroke)'} />
                                 {mainPosOnPosMap}
                                 {otherPosOnPosMap}
                             </div>

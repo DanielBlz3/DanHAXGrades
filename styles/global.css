@@ -27,6 +27,9 @@
     --card-bg-second: rgb(235, 235, 235);
     --card-bg-third: rgb(225, 225, 225);
 
+    --soccer-field-bg: rgb(230, 230, 230);
+    --soccer-field-stroke: rgb(250, 250, 250);
+
     --divider-bg-primary: rgb(235, 235, 235);
     --divider-bg-secondary: rgb(220, 220, 220);
     --divider-bg-third: rgb(210, 210, 210);
@@ -49,6 +52,9 @@
     --card-bg-main: rgb(29, 29, 29);
     --card-bg-second: rgb(49, 49, 49);
 
+    --soccer-field-bg: rgb(49, 49, 49);
+    --soccer-field-stroke: rgb(69, 69, 69);
+
     --divider-bg-primary: rgb(50, 50, 50);
     --divider-bg-secondary: rgb(65, 65, 65);
     --divider-bg-third: rgb(75, 75, 75);
@@ -70,6 +76,7 @@ body {
     background-color: var(--page-background-color);
     color: var(--primary-font-color);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      transition: background-color 0.5s ease, color 0.5s ease, fill 0.5s ease, stroke 0.5s ease;
 }
 
 ::selection {
