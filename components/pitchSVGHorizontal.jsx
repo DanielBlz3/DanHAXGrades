@@ -3,23 +3,21 @@ const SoccerField = ({
   height = 169,
   strokeColor = '#fff',
   fillColor = '#eee',
-  lineWidth = 4
+  lineWidth = 2
 }) => {
-  // Field margin
-  const margin = 0.1 * Math.min(width, height); // 10% margin of the smallest dimension
+  const margin = 8; // way smaller than before
   const fieldWidth = width - 2 * margin;
   const fieldHeight = height - 2 * margin;
   const centerX = width / 2;
   const centerY = height / 2;
 
-  // Dimensions based on field size
-  const penaltyAreaWidth = fieldWidth * 0.15; // 15% of field width
-  const penaltyAreaHeight = fieldHeight * 0.5; // 70% of field height
+  const penaltyAreaWidth = fieldWidth * 0.15;
+  const penaltyAreaHeight = fieldHeight * 0.5;
 
-  const goalBoxWidth = fieldWidth * 0.05; // 5% of field width
-  const goalBoxHeight = fieldHeight * 0.3; // 30% of field height
+  const goalBoxWidth = fieldWidth * 0.05;
+  const goalBoxHeight = fieldHeight * 0.3;
 
-  const centerCircleRadius = Math.min(fieldWidth, fieldHeight) * 0.15; // 15% of smallest dimension
+  const centerCircleRadius = Math.min(fieldWidth, fieldHeight) * 0.15;
 
   return (
     <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} xmlns="http://www.w3.org/2000/svg">

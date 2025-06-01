@@ -1,8 +1,8 @@
 :root {
     --DIVIDE: .25px;
-    --GLOBAL-FONT-COLOR-GREY: grey;
-    --GLOBAL-FONT-COLOR-WHITE: white;
-    --GLOBAL-FONT-COLOR-BLACK: black;
+    --GLOBAL-FONT-COLOR-GREY: rgb(128, 128, 128);
+    --GLOBAL-FONT-COLOR-WHITE: rgb(255, 255, 255);
+    --GLOBAL-FONT-COLOR-BLACK: rgb(0, 0, 0);
     --RATING-BLUE: rgb(14 135 224);
     --RATING-GREEN: rgb(51 199 113);
     --RATING-ORANGE: rgb(240 128 34);
@@ -13,6 +13,8 @@
     --PROGRESS-BAR-HIGH: rgb(51 199 113);
     --PROGRESS-BAR-MIDDLE: rgb(240 128 34);
     --PROGRESS-BAR-LOW: rgb(229 94 91);
+    --GLOBAL-HIGLIGHT-BG-COLOR:  rgb(46, 204, 113);
+    --GLOBAL-HIGLIGHT-FONT-COLOR:  rgb(0, 0, 0);
 }
 
 * {
@@ -34,21 +36,32 @@
     --divider-bg-secondary: rgb(220, 220, 220);
     --divider-bg-third: rgb(210, 210, 210);
 
-    --primary-font-color: black;
-
-    --percentile-button-default-bg: white;
-    --percentile-button-default-font-color: black;
-    --percentile-button-toggled-bg: black;
-    --percentile-button-toggled-font-color: white;
+    --primary-font-color: rgb(0, 0, 0);
+    --percentile-button-default-bg: rgb(255, 255, 255);
+    --percentile-button-default-font-color: rgb(0, 0, 0);
+    --percentile-button-toggled-bg: rgb(0, 0, 0);
+    --percentile-button-toggled-font-color: rgb(255, 255, 255);
     --percentile-button-hover-bg: rgb(235, 235, 235);
 
     --progress-bar-background-color: rgb(195, 195, 195);
 
     --player-radar-bg: rgb(180, 180, 180);
+
+--nav-item-font-color: rgb(128,128, 128);
+
+    --team-formation-info--bg-color: rgb(10, 160, 105);
+    --team-formation-info-font-color: rgb(255, 255, 255);
+
+    --primary-player-bg-color: rgb(230, 230, 230);
+    --soccer-field-bg-color-primary: rgb(10, 150, 90);
+    --player-event-bg-color: rgb(255, 255, 255);
+    --player-event-outline-color: rgb(255, 255, 255);
+
+    --player-ui-bg-color: rgb(255, 255, 255);
 }
 
 .theme-dark {
-    --page-background-color: black;
+    --page-background-color: rgb(0, 0, 0);
     --card-bg-main: rgb(29, 29, 29);
     --card-bg-second: rgb(49, 49, 49);
 
@@ -59,29 +72,42 @@
     --divider-bg-secondary: rgb(65, 65, 65);
     --divider-bg-third: rgb(75, 75, 75);
 
-    --primary-font-color: white;
-
+    --primary-font-color: rgb(255, 255, 255);
     --percentile-button-default-bg: rgb(49, 49, 49);
-    --percentile-button-default-font-color: white;
-    --percentile-button-toggled-bg: white;
-    --percentile-button-toggled-font-color: black;
+    --percentile-button-default-font-color: rgb(255, 255, 255);
+    --percentile-button-toggled-bg: rgb(255, 255, 255);
+    --percentile-button-toggled-font-color: rgb(0, 0, 0);
     --percentile-button-hover-bg: rgb(69, 69, 69);
 
     --progress-bar-background-color: rgb(59, 59, 59);
 
     --player-radar-bg: rgb(99, 99, 99);
+
+    --nav-item-font-color: rgb(128,128, 128);
+
+    --team-formation-info--bg-color: rgb(49, 49, 49);
+    --team-formation-info-font-color: rgb(255, 255, 255);
+    --soccer-field-bg-color-primary: rgb(44, 44, 44);
+
+    --primary-player-bg-color: rgb(74, 74, 74);
+    --player-event-bg-color: rgb(44, 44, 44);
+    --player-event-outline-color: rgb(128, 128, 128);
+
+    --player-ui-bg-color: rgb(34, 34, 34);
 }
 
 body {
     background-color: var(--page-background-color);
     color: var(--primary-font-color);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      transition: background-color 0.5s ease, color 0.5s ease, fill 0.5s ease, stroke 0.5s ease;
+    transition: background-color 0.5s ease, color 0.5s ease, fill 0.5s ease, stroke 0.5s ease;
 }
 
-::selection {
-    background-color: rgb(46, 204, 113);
-    color: var(--GLOBAL-FONT-COLOR-BLACK);
+.match-wrapper {
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: .75fr .25fr;
+    gap: 1rem
 }
 
 .primary-hover:hover {
@@ -92,8 +118,37 @@ body {
     background-color: var(--card-bg-second);
 }
 
+.primary-rating {
+    display: inline;
+    font-weight: bold;
+    font-size: 0.75rem;
+    border-radius: 1rem;
+    padding: 0.025rem 0.3rem 0.025rem 0.3rem;
+    align-self: center;
+    color: var(--GLOBAL-FONT-COLOR-WHITE);
+}
+
 .secondary-rating {
     color: var(--GLOBAL-FONT-COLOR-WHITE);
     border-radius: .5rem;
     padding: 0.1rem 0.3rem 0.1rem 0.3rem;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--player-ui-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(100, 100, 100);
+  border-radius: 0.5rem;
+  height: 3vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #adb5bd;
+}
+
+::selection {
+    background-color: var(--GLOBAL-HIGLIGHT-BG-COLOR);
+    color: var(--GLOBAL-HIGLIGHT-FONT-COLOR);
 }
