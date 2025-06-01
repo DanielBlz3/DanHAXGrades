@@ -25,7 +25,7 @@ export default async function MatchLayoutServer({ children, params }) {
     return (
         <div className='match-wrapper'>
             <MatchLayoutClient match={match}>{children}</MatchLayoutClient>
-            <MatchOtherMatchesLayoutClient match={otherFixtures}>{children}</MatchOtherMatchesLayoutClient>
+            <MatchOtherMatchesLayoutClient otherFixtures={otherFixtures}>{children}</MatchOtherMatchesLayoutClient>
         </div>
     )
 }

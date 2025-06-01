@@ -8,8 +8,12 @@
     },
     {
       "teamname": "Aguilas Cementeras",
+      "teamNameShort": "A. Cementeras",
       "teamId": 1,
-      "currentLeagues": [2,3],
+      "currentLeagues": [
+        2,
+        3
+      ],
       "logo": "/images/teamLogos/1.png",
       "color": "rgb(225, 170, 10)",
       "colorAlternate": "rgb(31, 48, 137)",
@@ -64,8 +68,12 @@
     },
     {
       "teamname": "Antuna Raiders",
+      "teamNameShort": "A. Raiders",
       "teamId": 2,
-      "currentLeagues": [2,3],
+      "currentLeagues": [
+        2,
+        3
+      ],
       "logo": "/images/teamLogos/2.png",
       "color": "rgb(39, 39, 39)",
       "colorAlternate": "rgb(121, 24, 27)",
@@ -120,8 +128,12 @@
     },
     {
       "teamname": "Arsenal",
+      "teamNameShort": "Arsenal",
       "teamId": 3,
-      "currentLeagues": [2,3],
+      "currentLeagues": [
+        2,
+        3
+      ],
       "logo": "/images/teamLogos/3.png",
       "color": "rgb(239, 1, 7)",
       "colorAlternate": "rgb(39, 39, 39)",
@@ -176,8 +188,12 @@
     },
     {
       "teamname": "Atletico Madrid",
+      "teamNameShort": "Atletico",
       "teamId": 4,
-      "currentLeagues": [2,3],
+      "currentLeagues": [
+        2,
+        3
+      ],
       "logo": "/images/teamLogos/4.png",
       "color": "rgb(203,53,36)",
       "colorAlternate": "rgb(144, 183, 186)",
@@ -240,8 +256,12 @@
     },
     {
       "teamname": "Inter de Barcelona",
+      "teamNameShort": "Inter Barca",
       "teamId": 5,
-      "currentLeagues": [2,3],
+      "currentLeagues": [
+        2,
+        3
+      ],
       "logo": "/images/teamLogos/5.png",
       "color": "rgb(151 30 72)",
       "colorAlternate": "rgb(36, 50, 220)",
@@ -296,8 +316,12 @@
     },
     {
       "teamname": "Boston United",
+      "teamNameShort": "Boston UTD",
       "teamId": 6,
-            "currentLeagues": [2,3],
+      "currentLeagues": [
+        2,
+        3
+      ],
       "logo": "/images/teamLogos/6.png",
       "color": "rgb(255, 197, 38)",
       "colorAlternate": "rgb(0, 0, 0)",
@@ -352,6 +376,7 @@
     },
     {
       "teamname": "Comediantes",
+      "teamNameShort": "Comediantes",
       "teamId": 7,
       "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/Comediantes?v=1742007782982",
       "color": "rgb(59, 59, 59)",
@@ -406,9 +431,13 @@
       ]
     },
     {
-      "teamname": "K9army",
+      "teamname": "K9ARMY",
+      "teamNameShort": "K9ARMY",
       "teamId": 8,
-      "currentLeagues": [2,3],
+      "currentLeagues": [
+        2,
+        3
+      ],
       "logo": "/images/teamLogos/8.png",
       "color": "rgb(42, 71, 161)",
       "colorAlternate": "rgb(39, 39, 39)",
@@ -468,9 +497,13 @@
       ]
     },
     {
-      "teamname": "Liverpool",
+      "teamname": "Liverpool FC",
+      "teamNameShort": "Liverpool",
       "teamId": 9,
-      "currentLeagues": [2,3],
+      "currentLeagues": [
+        2,
+        3
+      ],
       "logo": "/images/teamLogos/9.png",
       "color": "rgb(145, 23, 18)",
       "colorAlternate": "rgb(79, 179, 217)",
@@ -525,8 +558,12 @@
     },
     {
       "teamname": "Palmerias",
+      "teamNameShort": "Palmerias",
       "teamId": 10,
-      "currentLeagues": [2,3],
+      "currentLeagues": [
+        2,
+        3
+      ],
       "logo": "/images/teamLogos/10.png",
       "color": "rgb(61, 120, 61)",
       "colorAlternate": "rgb(0, 0, 0)",
@@ -583,8 +620,12 @@
     },
     {
       "teamname": "Pelabolas",
+      "teamNameShort": "Pelabolas",
       "teamId": 11,
-      "currentLeagues": [2,3],
+      "currentLeagues": [
+        2,
+        3
+      ],
       "logo": "/images/teamLogos/11.png",
       "color": "rgb(39, 39, 39)",
       "colorAlternate": "rgb(218, 165, 32)",
@@ -639,8 +680,12 @@
     },
     {
       "teamname": "AS Roma",
+      "teamNameShort": "Roma",
       "teamId": 12,
-      "currentLeagues": [2,3],
+      "currentLeagues": [
+        2,
+        3
+      ],
       "logo": "/images/teamLogos/12.png",
       "color": "rgb(156, 9, 34)",
       "colorAlternate": "rgb(255, 172, 133)",
@@ -695,6 +740,7 @@
     },
     {
       "teamname": "Manchester United",
+      "teamNameShort": "Man UTD",
       "teamId": 13,
       "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-manchester-united-logo?v=1744588712661",
       "color": "rgb(218, 41, 28)",
@@ -755,6 +801,7 @@
     },
     {
       "teamname": "Real Madrid",
+      "teamNameShort": "Madrid",
       "teamId": 14,
       "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-real-madrid-logo?v=1744588743127",
       "color": "rgb(1, 66, 106)",
@@ -809,6 +856,7 @@
     },
     {
       "teamname": "Club Leon",
+      "teamNameShort": "Leon",
       "teamId": 15,
       "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-leon-logo?v=1740850547882",
       "color": "green",
@@ -866,7 +914,8 @@
       ]
     },
     {
-      "teamname": "Sporting",
+      "teamname": "Sporting Libson",
+      "teamNameShort": "Sporting",
       "teamId": 16,
       "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-sporting-lisbon-logo?v=1744601272695",
       "color": "rgb(16, 104, 64)",
@@ -921,6 +970,7 @@
     },
     {
       "teamname": "Inter Milan",
+      "teamNameShort": "Inter",
       "teamId": 17,
       "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/InterMilan?v=1740899898130",
       "color": "rgb(1, 14, 128)",
@@ -975,6 +1025,7 @@
     },
     {
       "teamname": "Ajax",
+      "teamNameShort": "Ajax",
       "teamId": 18,
       "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/Ajax?v=1740967566736",
       "color": "rgb(194, 0, 47)",
@@ -1029,6 +1080,7 @@
     },
     {
       "teamname": "Athletic Bilbao",
+      "teamNameShort": "Athletic Club",
       "teamId": 19,
       "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-athletic-club-logo?v=1740787340585",
       "color": "rgb(226, 0, 26)",
@@ -1085,6 +1137,7 @@
     },
     {
       "teamname": "AC Milan",
+      "teamNameShort": "Milan",
       "teamId": 20,
       "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-ac-milan-logo?v=1744641360553",
       "color": "rgb(207, 44, 39)",
@@ -1139,6 +1192,7 @@
     },
     {
       "teamname": "Bayer Leverkusen",
+      "teamNameShort": "Leverkusen",
       "teamId": 21,
       "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-bayer-leverkusen-logo?v=1744641629804",
       "color": "rgb(207, 44, 39)",
@@ -1193,6 +1247,7 @@
     },
     {
       "teamname": "Bitikler",
+      "teamNameShort": "Bitikler",
       "teamId": 22,
       "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/logoless?v=1742054547120",
       "color": "rgb(121, 178, 242)",
@@ -1258,15 +1313,34 @@
       "leagueMatchdaysLength": 5,
       "currentMatchday": 8,
       "minforPer20Stats": 59,
-      "participants" : [[  "Liverpool", "Antuna Raiders", "Palmerias", "Comediantes", "Pelabolas"],  [ "K9army", "Atletico Madrid", "Aguilas Cementeras", "Inter de Barcelona", "Boston United", "Arsenal"]],
+      "participants": [
+        [
+          "Liverpool",
+          "Antuna Raiders",
+          "Palmerias",
+          "Comediantes",
+          "Pelabolas"
+        ],
+        [
+          "K9ARMY",
+          "Atletico Madrid",
+          "Aguilas Cementeras",
+          "Inter de Barcelona",
+          "Boston United",
+          "Arsenal"
+        ]
+      ],
       "legend": [
         {
           "key": "knockouts",
           "color": "rgb(46, 204, 113)",
-          "indices": [1,2]
+          "indices": [
+            1,
+            2
+          ]
         }
       ]
-  },
+    },
     "matchday1": {
       "game1": {
         "teams": [
@@ -1656,9 +1730,21 @@
       "leagueMatchdaysLength": 9,
       "currentMatchday": 4,
       "minforPer20Stats": 5,
-    "participants":  [["Liverpool", "Pelabolas", "Atletico Madrid", "Boston United", "Palmerias", "K9army", "Antuna Raiders", "Arsenal", "Inter de Barcelona", "AS Roma"]],
-    "legend": [
-      ]
+      "participants": [
+        [
+          "Liverpool",
+          "Pelabolas",
+          "Atletico Madrid",
+          "Boston United",
+          "Palmerias",
+          "K9ARMY",
+          "Antuna Raiders",
+          "Arsenal",
+          "Inter de Barcelona",
+          "AS Roma"
+        ]
+      ],
+      "legend": []
     }
   },
   "fixturesCopa3": {
@@ -1673,15 +1759,30 @@
       "leagueMatchdaysLength": 5,
       "currentMatchday": 4,
       "minforPer20Stats": 25,
-        "participants": [
-          [ "Liverpool", "Pelabolas", "Atletico Madrid", "Boston United", "Palmerias" ],
-          [ "K9army", "Antuna Raiders", "Arsenal", "Inter de Barcelona", "AS Roma" ]
+      "participants": [
+        [
+          "Liverpool",
+          "Pelabolas",
+          "Atletico Madrid",
+          "Boston United",
+          "Palmerias"
         ],
-        "legend": [
+        [
+          "K9ARMY",
+          "Antuna Raiders",
+          "Arsenal",
+          "Inter de Barcelona",
+          "AS Roma"
+        ]
+      ],
+      "legend": [
         {
           "key": "knockouts",
           "color": "rgb(46, 204, 113)",
-          "indices": [1,2]
+          "indices": [
+            1,
+            2
+          ]
         }
       ]
     }
