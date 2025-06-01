@@ -5974,6 +5974,7 @@
                     }
           ]
         },
+          "timestamp": "2025-05-25T02:00:00Z",
         "teamIds": [
           8,
           12
@@ -5994,16 +5995,18 @@
           "homeplayers": [],
           "awayplayers": []
         },
+        "timestamp": "2025-05-25T02:40:00Z",
         "teamIds": [
           2,
           9
         ],
+        "scoreline": "2-0",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 6,
-        "started": false,
-        "finished": false,
+        "started": true,
+        "finished": true,
         "cancelled": false,
         "awarded": false
       },
@@ -6484,6 +6487,7 @@
                     }
           ]
         },
+                        "timestamp": "2025-05-25T03:20:00Z",
         "teamIds": [
           11,
           3
@@ -6504,18 +6508,20 @@
           "homeplayers": [],
           "awayplayers": []
         },
+        "timestamp": "2025-05-24T02:00:00Z",
         "teamIds": [
           10,
           4
         ],
+        "scoreline": "0-3",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 6,
-        "started": false,
-        "finished": false,
+        "started": true,
+        "finished": true,
         "cancelled": false,
-        "awarded": false
+        "awarded": true
       },
       {
         "gameId": 64,
@@ -6523,16 +6529,18 @@
           "homeplayers": [],
           "awayplayers": []
         },
+                "timestamp": "2025-05-24T02:40:00Z",
         "teamIds": [
-          1,
+          6,
           5
         ],
+        "scoreline": "1-1",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 6,
-        "started": false,
-        "finished": false,
+        "started": true,
+        "finished": true,
         "cancelled": false,
         "awarded": false
       },
@@ -6542,6 +6550,7 @@
           "homeplayers": [],
           "awayplayers": []
         },
+        "timestamp": "2025-05-31T02:00:00Z",
         "teamIds": [
           9,
           8
@@ -6561,6 +6570,7 @@
           "homeplayers": [],
           "awayplayers": []
         },
+                "timestamp": "2025-05-31T02:40:00Z",
         "teamIds": [
           12,
           11
@@ -6580,6 +6590,7 @@
           "homeplayers": [],
           "awayplayers": []
         },
+                "timestamp": "2025-06-01T02:00:00Z",
         "teamIds": [
           4,
           2
@@ -6599,9 +6610,10 @@
           "homeplayers": [],
           "awayplayers": []
         },
+                "timestamp": "2025-06-01T02:40:00Z",
         "teamIds": [
           3,
-          1
+          6
         ],
         "formation": [null, null],
         "goalscorers": [[], []],
@@ -6618,6 +6630,7 @@
           "homeplayers": [],
           "awayplayers": []
         },
+                "timestamp": "2025-06-01T03:20:00Z",
         "teamIds": [
           5,
           10
