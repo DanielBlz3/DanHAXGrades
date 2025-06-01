@@ -29,24 +29,21 @@ export default function Layout({ otherFixtures, match, children }) {
     display: flex;
     flex-flow: row;
     gap: 10px;
-    height: 4rem;
-    place-items: center
+    height: 4.5rem;
+    place-items: center;
     `;
 
     const otherMatchesMain = css`
 `;;
 
     const matchLink = css`
+background-color: var(--card-bg-main);
 color: var(--primary-font-color);
 text-decoration: none;
-`;
 
-    const matchWrapper = css`
-display: flex;
-flex-flow: row;
-place-items: center;
-height: 8rem;
-     border-top: 1px solid var(--divider-bg-primary);
+&:hover {
+    background-color: var(--card-bg-second);
+  }
 `;
 
     const matchInfo = css`
@@ -89,19 +86,40 @@ height: 8rem;
     flex: 2;
 `;
 
+    const leagueLogo = css`
+border-radius: 53%;
+padding: .3rem;
+border: 1px solid grey;
+`
+
     const leagueText = css`
 display: flex;
 flex-flow: column;
 `
 
-const fixturesRound = css`
+    const fixturesRound = css`
 color: rgb(128, 128, 128);
 `
 
+
     const RenderOtherFixtures = () => {
         const otherFixturesEl = otherFixtures.map(m => {
+            const matchWrapper = css`
+display: flex;
+flex-flow: row;
+place-items: center;
+height: 7rem;
+margin-block: .5rem;
+background-color: var(--card-bg-main);
+     border-top: 1px solid var(--divider-bg-primary);
+
+     &:hover {
+    background-color: var(--card-bg-second);
+    border-radius: 1rem;
+  }
+`;
             return (
-                <a css={matchLink} href={m.pageUrl}>
+                <a css={matchLink} href={m.pageUrl} className='secondary-hover'>
                     <div css={matchWrapper}>
                         <div css={matchInfo}>
                             <div css={matchTeam}>
@@ -130,11 +148,10 @@ color: rgb(128, 128, 128);
                 </a>
             )
         })
-        console.log(match.general.leagueLogo)
         return (
             <div css={otherMatches}>
                 <header css={otherMatchesHeader}>
-                    <img src={match.general.leagueLogo} width={25} height={25} />
+                    <img css={leagueLogo} src={match.general.leagueLogo} width={50} height={50} />
                     <div css={leagueText}>
                         <h3>{match.general.leagueName}</h3>
                         <span css={fixturesRound}>{`${translationsMap?.["round"]?.[language]} ${match.general.roundName}`}</span>
