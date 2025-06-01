@@ -1,6 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true, // helps catch bugs, leave it true
+  async redirects() {
+    return [
+      {
+        source: '/matches',
+        destination: '/matches/lineups',
+        permanent: false,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
