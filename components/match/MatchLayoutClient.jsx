@@ -46,7 +46,6 @@ export default function Layout({ match, children }) {
     const scoreBoardAndNav = css`
   background-color: var(--card-bg-main);
   border-radius: 1.25rem;
-  margin-bottom: 1rem;
   width: 100%;
 `;
 
@@ -66,7 +65,7 @@ export default function Layout({ match, children }) {
 `;
 
     const matchLeagueWrapper = css`
-  border-bottom: 1px solid var(--divider-bg-third);
+  border-bottom: 1px solid var(--third-divider-bg);
   border-radius: 0.5rem 0.5rem 0 0;
   display: flex;
   height: 64px;
@@ -185,12 +184,14 @@ export default function Layout({ match, children }) {
     const renderNav = () => {
         const [canRenderStatsSection, canRenderLineupSection] = ["FT", "Live", "AET"].includes(match.matchStatus.statusShort) ? [true, true] : [false, false]
         const renderForecastSection = match.matchStatus.started ? true : false
+        const overviewSection = <button css={navItem} onClick={() => handleTabClick('overview')}>{translationsMap?.["overview"]?.[language]}</button>
         const statsSection = canRenderStatsSection ? <button css={navItem} onClick={() => handleTabClick('lineup')}>{translationsMap?.["lineup"]?.[language]}</button> : null
         const lineupSection = canRenderLineupSection ? <button css={navItem} onClick={() => handleTabClick('stats')}>{translationsMap?.["stats"]?.[language]}</button> : null
         const forecastSection = !renderForecastSection ? <button css={navItem} onClick={() => handleTabClick('forecast')}>{translationsMap?.["forecast"]?.[language]}</button> : null
 
         return (
             <nav css={matchNav}>
+                {overviewSection}
                 {statsSection}
                 {lineupSection}
                 {forecastSection}
@@ -199,13 +200,13 @@ export default function Layout({ match, children }) {
     }
 
     return (
-        <div>
+        <div className='match-left-grid'>
             <>
                 <div css={scoreBoardAndNav}>
                     <div css={matchLeagueWrapper}>
                         <div css={leagueWrapper}>
-                            <img src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/leaguelogo.png?v=1740718276716"
-                                width="18px" height="18px" />
+                            <img src={match.general.leagueLogo}
+                                width="25px" height="25px" />
                             <span>{`${match.general.leagueName} ${translationsMap?.["round"]?.[language]} ${match.general.roundName}`}</span>
                         </div>
                     </div>

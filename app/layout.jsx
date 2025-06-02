@@ -7,56 +7,56 @@ import { useState, useEffect } from 'react';
 import { translationsMap } from '/lib/translations.js';
 
 export default function RootLayout({ children }) {
-  const [pageTheme, setPageTheme] = useState('theme-light');
-  const [savedLang, setSavedLang] = useState('es');
+    const [pageTheme, setPageTheme] = useState('theme-light');
+    const [savedLang, setSavedLang] = useState('es');
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const storedTheme = localStorage.getItem('theme') || 'theme-light';
-      const storedLang = localStorage.getItem('language') || 'es';
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const storedTheme = localStorage.getItem('theme') || 'theme-light';
+            const storedLang = localStorage.getItem('language') || 'es';
 
-      setPageTheme(storedTheme);
-      setSavedLang(storedLang);
+            setPageTheme(storedTheme);
+            setSavedLang(storedLang);
 
-      document.body.classList.remove('theme-light', 'theme-dark');
-      document.body.classList.add(storedTheme);
-      document.documentElement.lang = storedLang;
+            document.body.classList.remove('theme-light', 'theme-dark');
+            document.body.classList.add(storedTheme);
+            document.documentElement.lang = storedLang;
 
-      // Update language text from data-lang-* attributes
-      document.querySelectorAll('[data-lang-es], [data-lang-en]').forEach(el => {
-        const text = el.getAttribute(`data-lang-${storedLang}`);
-        if (text) el.innerText = text;
-      });
+            // Update language text from data-lang-* attributes
+            document.querySelectorAll('[data-lang-es], [data-lang-en]').forEach(el => {
+                const text = el.getAttribute(`data-lang-${storedLang}`);
+                if (text) el.innerText = text;
+            });
 
-      // Dispatch theme-applied event for other components to respond
-      window.dispatchEvent(new CustomEvent('theme-applied', { detail: storedTheme }));
+            // Dispatch theme-applied event for other components to respond
+            window.dispatchEvent(new CustomEvent('theme-applied', { detail: storedTheme }));
+        }
+    }, []);
+
+    function toggleTheme() {
+        const newTheme = pageTheme === 'theme-light' ? 'theme-dark' : 'theme-light';
+        setPageTheme(newTheme);
+
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('theme', newTheme);
+            document.body.classList.remove('theme-light', 'theme-dark');
+            document.body.classList.add(newTheme);
+
+            // Dispatch theme update for other components
+            window.dispatchEvent(new Event('themechange')); // legacy, optional
+            window.dispatchEvent(new CustomEvent('theme-applied', { detail: newTheme }));
+        }
     }
-  }, []);
 
-  function toggleTheme() {
-    const newTheme = pageTheme === 'theme-light' ? 'theme-dark' : 'theme-light';
-    setPageTheme(newTheme);
-
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('theme', newTheme);
-      document.body.classList.remove('theme-light', 'theme-dark');
-      document.body.classList.add(newTheme);
-
-      // Dispatch theme update for other components
-      window.dispatchEvent(new Event('themechange')); // legacy, optional
-      window.dispatchEvent(new CustomEvent('theme-applied', { detail: newTheme }));
+    function setLanguage(lang) {
+        if (lang !== savedLang) {
+            setSavedLang(lang);
+            if (typeof window !== 'undefined') {
+                localStorage.setItem('language', lang);
+                location.reload(); // full reload if you want instant translation switch
+            }
+        }
     }
-  }
-
-  function setLanguage(lang) {
-    if (lang !== savedLang) {
-      setSavedLang(lang);
-      if (typeof window !== 'undefined') {
-        localStorage.setItem('language', lang);
-        location.reload(); // full reload if you want instant translation switch
-      }
-    }
-  }
 
 
     const [settingsOpen, setSettingsOpen] = useState(false);
@@ -79,11 +79,18 @@ export default function RootLayout({ children }) {
     z-index: 10;
         `;
     const main = css`
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) min(100%, 1280px) minmax(0, 1fr);    
     margin-top: 5rem;
-     justify-self: center;
-     width: 100%;
-     max-width: 1280px;
-    `
+    width: 100%;
+    overflow-x: none;
+    `;
+
+    const aside = css`
+    position: sticky;
+    width: 100%;
+    `;
+
     const title = css`
     width: 40%;
     &:hover {
@@ -157,7 +164,7 @@ export default function RootLayout({ children }) {
             <head>
                 <meta charSet="UTF-8" />
                 <meta name="author" content="Danielblz" />
-               <link rel="icon" href="/DanHAXGradeFavicon.ico" type="image/x-icon" />
+                <link rel="icon" href="/DanHAXGradeFavicon.ico" type="image/x-icon" />
                 <link rel="stylesheet" href="/players.css" type="text/css" />
             </head>
             <body className={pageTheme}>
@@ -187,7 +194,9 @@ export default function RootLayout({ children }) {
                     </div>
                 </header>
                 <main css={main}>
-                    {children}
+                    <aside css={aside}></aside>
+                        {children}
+                    <aside css={aside}></aside>
                 </main>
             </body>
         </html >

@@ -9,7 +9,7 @@ const benchListItem = css`
   justify-content: center;
   align-items: center;
   list-style-type: none;
-  border-bottom: 1px solid var(--divider-bg-secondary);
+  border-bottom: 1px solid var(--secondary-divider-bg);
   width: 100%;
   height: 6rem;
 `;

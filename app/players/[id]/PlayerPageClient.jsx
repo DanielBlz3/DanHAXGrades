@@ -179,12 +179,12 @@ export default function PlayerPageClient({ player }) {
     grid-template-columns: 1fr 1fr;
     height: 250px;
     max-height: 300px;
-    border-right: 1px solid var(--divider-bg-primary);
+    border-right: 1px solid var(--primary-divider-bg);
     padding-left: 1rem;
     flex: 1;
      @media (max-width: 800px) {
     border-right: none;
-    border-bottom: 1px solid var(--divider-bg-primary);
+    border-bottom: 1px solid var(--primary-divider-bg);
     }
   `;
 
@@ -194,7 +194,7 @@ export default function PlayerPageClient({ player }) {
     justify-content: center;
     width: 150px;
     height: 75px;
-    border-bottom: 1px solid var(--divider-bg-primary);
+    border-bottom: 1px solid var(--primary-divider-bg);
   `;
 
     const bioValue = css``
@@ -324,7 +324,7 @@ export default function PlayerPageClient({ player }) {
     max-width: 100%;
     border-radius: 1.25em 1.25em 0 0;
     border-right: none;
-    border-bottom: 1px solid var(--divider-bg-primary);
+    border-bottom: 1px solid var(--primary-divider-bg);
     color: var(--primary-font-color);
     `;
 
@@ -536,8 +536,8 @@ export default function PlayerPageClient({ player }) {
     justify-items: center;
     align-items: center;
     padding-block: .66rem;
-    border-top: solid 1px var(--divider-bg-primary);
-    border-bottom: solid 1px var(--divider-bg-primary);
+    border-top: solid 1px var(--primary-divider-bg);
+    border-bottom: solid 1px var(--primary-divider-bg);
     cursor: default;
     margin-bottom: .5rem;
     `;
@@ -765,7 +765,7 @@ export default function PlayerPageClient({ player }) {
                 margin-left: 1rem;
                 padding-bottom: .2rem;
                 text-align: center;
-                border-bottom: solid 1px var(--divider-bg-primary);
+                border-bottom: solid 1px var(--primary-divider-bg);
     `;
 
     const percentileStatComparison = css`

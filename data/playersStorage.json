@@ -1206,7 +1206,7 @@
     "shirtNum": "17",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 3,
+    "team": 0,
     "playerId": 71
   },
   {
@@ -4456,5 +4456,60 @@
     "marketvalue": "$TBD",
     "team": 11,
     "playerId": 299
+  },
+  {
+      "playername": "Huggie",
+      "isManager": false,
+      "isCoManager": false,
+      "nation": "ar",
+      "shirtNum": "",
+      "league": "Exanon Liga",
+      "marketvalue": "$TBD",
+      "team": 12,
+      "playerId": 300
+    },
+    {
+      "playername": "Reijnders",
+      "isManager": false,
+      "isCoManager": false,
+      "nation": "pe",
+      "shirtNum": "",
+      "league": "Exanon Liga",
+      "marketvalue": "$TBD",
+      "team": 12,
+      "playerId": 301
+    },
+  {
+    "playername": "Nynfix",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "shirtNum": "",
+    "league": "Exanon Liga",
+    "marketvalue": "$TBD",
+    "team": 9,
+    "playerId": 302
+  },
+  {
+    "playername": "AngelMdzz",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "shirtNum": "",
+    "league": "Exanon Liga",
+    "marketvalue": "$TBD",
+    "team": 9,
+    "playerId": 303
+  },
+  {
+    "playername": "Navi",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "shirtNum": "",
+    "league": "Exanon Liga",
+    "marketvalue": "$TBD",
+    "team": 9,
+    "playerId": 304
   }
 ]

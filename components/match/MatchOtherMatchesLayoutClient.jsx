@@ -54,7 +54,7 @@ text-decoration: none;
     justify-content: center;
     gap: 12px;
         width: 100%;
-             border-right: 1px solid var(--divider-bg-primary);
+             border-right: 1px solid var(--primary-divider-bg);
 
 `;
 
@@ -111,7 +111,7 @@ place-items: center;
 height: 7rem;
 margin-block: .5rem;
 background-color: var(--card-bg-main);
-     border-top: 1px solid var(--divider-bg-primary);
+     border-top: 1px solid var(--primary-divider-bg);
 
      &:hover {
     background-color: var(--card-bg-second);
@@ -166,7 +166,7 @@ background-color: var(--card-bg-main);
 
     console.log(otherFixtures)
     return (
-        <div>
+        <div match-right-grid>
             {RenderOtherFixtures()}
         </div>
     )
