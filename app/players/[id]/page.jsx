@@ -2,7 +2,6 @@
 import PlayerPageClient from './PlayerPageClient';
 import { translationsMap } from '/lib/translations.js';
 
-
 export async function generateMetadata({ params }) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/players/${params.id}`);
   const player = await res.json();
