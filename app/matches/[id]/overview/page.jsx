@@ -1,5 +1,7 @@
 // app/matches/[id]/page.jsx
 import MatchOverviewPageClient from './MatchOverviewPageClient.jsx';
+import { translationsMap } from '/lib/translations.js';
+
 async function getMatchData(id) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/matchDetails/${id}`, {
     cache: 'no-store',
