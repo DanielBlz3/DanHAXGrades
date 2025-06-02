@@ -16,8 +16,8 @@ export async function generateMetadata({ params }) {
   const match = await res.json();
   const storedLang = typeof window !== 'undefined' ? localStorage.getItem('language') : 'es';
   return {
-    title: `${match.generateMetadata.matchName} - ${translationsMap?.["liveStatsRatingsLineups"]?.[storedLang]}`,
-    description: `${translationsMap?.["viewAllStatsFor"]?.[storedLang]} ${match.generateMetadata.matchName}.`,
+    title: `${match.general.matchName} - ${translationsMap?.["liveStatsRatingsLineups"]?.[storedLang]}`,
+    description: `${translationsMap?.["viewAllStatsFor"]?.[storedLang]} ${match.general.matchName}.`,
   };
 }
 
