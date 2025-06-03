@@ -1,0 +1,93 @@
+'use client';
+/** @jsxImportSource @emotion/react */
+import React from "react";
+import { css } from '@emotion/react';
+import { useEffect, useState } from 'react';
+import { translationsMap } from '/lib/translations';
+import '/styles/global.css';
+
+const RenderTeamStrenghts = ({ team, teamStats }) => {
+
+    const [theme, setTheme] = useState('theme-light');
+    const [language, setLanguage] = useState('es');
+    useEffect(() => {
+        const storedlanguage = localStorage.getItem('language') || 'es';
+        setLanguage(storedlanguage)
+        const storedTheme = localStorage.getItem('theme') || 'theme-light';
+        setTheme(storedTheme);
+    }, [team]);
+
+    const strengthsContainer = css`
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+    align-items: center;
+`;
+
+const strengthsHeader = css`
+display: flex;
+height: 3rem;
+align-items: center;
+justify-content: center;
+`
+
+    const strengthsItem = css`
+    display: flex;
+    flex-flow: row;
+    height: 3rem;
+    border-top: 1px solid var(--primary-divider-bg);
+    width: 100%;
+    align-items: center;
+        justify-content: flex-end;
+
+`
+
+    const strenghtsTitle = css`
+    flex: 1;
+    color: var(--GLOBAL-FONT-COLOR-GREY);
+    font-weight: bold;
+`;
+
+const focusedTeamStats = teamStats[String(team.id)]
+    const strengths = Object.entries(focusedTeamStats.strengths).filter(s => ["veryStrong", "strong"].includes(s[1])).sort((a, b) => {
+        const priority = { veryStrong: 0, strong: 1 };
+        return priority[a[1]] - priority[b[1]];
+    });
+
+    const strengthsItemsEl = strengths.map(s => {
+            const strengthsBackground = s[1] === "veryStrong" ? 'var(--RATING-BLUE)' : "var(--RATING-GREEN)"
+        const strengthsValue = css`
+    justify-self: flex-end;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    height: 1.5rem;
+    padding-inline: .2rem;
+    background-color: ${strengthsBackground};
+`
+        return (
+
+            <div
+                key={s[0]}
+                css={strengthsItem}
+            >
+                <span css={strenghtsTitle}>
+                    {translationsMap?.[s[0]]?.[language]}
+                </span>
+                <span css={strengthsValue}>
+                    {translationsMap?.[s[1]]?.[language]}
+                </span>
+            </div>
+        )
+    })
+    console.log(strengths)
+    return (
+        <div css={strengthsContainer}>
+            <h3 css={strengthsHeader}>{`${team.name} ${translationsMap?.[s["strenghts"]]?.[language]}`}</h3>
+            {strengthsItemsEl}
+        </div>
+    )
+}
+
+
+export default RenderTeamStrenghts

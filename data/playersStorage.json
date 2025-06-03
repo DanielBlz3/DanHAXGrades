@@ -476,7 +476,7 @@
     "shirtNum": "💎",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 1,
+    "team": 5,
     "career": [
       {
         "team": 2,
@@ -542,14 +542,14 @@
     "playerId": 25
   },
   {
-    "playername": "Int",
+    "playername": "D3",
     "isManager": false,
     "isCoManager": false,
     "nation": "mx",
     "shirtNum": "10",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 1,
+    "team": 5,
     "playerId": 26
   },
   {
@@ -560,7 +560,7 @@
     "shirtNum": "7",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 1,
+    "team": 5,
     "playerId": 27
   },
   {
@@ -655,7 +655,7 @@
     "shirtNum": "6",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 1,
+    "team": 6,
     "playerId": 34
   },
   {
@@ -933,7 +933,7 @@
     "shirtNum": "33",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 1,
+    "team": 6,
     "playerId": 53
   },
   {
@@ -1180,7 +1180,7 @@
     "playername": "Joos",
     "isManager": false,
     "isCoManager": false,
-    "nation": "pn",
+    "nation": "pa",
     "shirtNum": "18",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
@@ -1191,7 +1191,7 @@
     "playername": "Izak",
     "isManager": false,
     "isCoManager": false,
-    "nation": "pn",
+    "nation": "pa",
     "shirtNum": "17",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
@@ -1637,7 +1637,7 @@
     "playername": "Lex",
     "isManager": false,
     "isCoManager": false,
-    "nation": "gt",
+    "nation": "gu",
     "shirtNum": "7",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
@@ -1668,7 +1668,7 @@
     "playername": "Shet",
     "isManager": false,
     "isCoManager": false,
-    "nation": "gt",
+    "nation": "gu",
     "shirtNum": "28",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
@@ -1797,7 +1797,7 @@
     "playername": "Jun",
     "isManager": false,
     "isCoManager": false,
-    "nation": "pn",
+    "nation": "pa",
     "shirtNum": "17",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
@@ -2488,7 +2488,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 6,
     "career": [
       {
         "team": 21,
@@ -2830,7 +2830,7 @@
     "playername": "Denii",
     "isCoach": false,
     "isCaptain": false,
-    "nation": "mx",
+    "nation": "ch",
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
@@ -3144,7 +3144,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 6,
     "career": [
       {
         "team": 13,
@@ -3409,7 +3409,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 12,
+    "team": 2,
     "playerId": 204
   },
   {
@@ -4025,7 +4025,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 8,
+    "team": 9,
     "playerId": 260
   },
   {
@@ -4043,7 +4043,7 @@
     "playername": "Ye",
     "isManager": false,
     "isCoManager": false,
-    "nation": "gt",
+    "nation": "gu",
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
@@ -4087,7 +4087,7 @@
     "playername": "Oblak",
     "isManager": false,
     "isCoManager": false,
-    "nation": "pn",
+    "nation": "pa",
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
@@ -4245,7 +4245,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 1,
+    "team": 5,
     "playerId": 280
   },
   {
@@ -4511,5 +4511,49 @@
     "marketvalue": "$TBD",
     "team": 9,
     "playerId": 304
+  },
+  {
+    "playername": "Leiti",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "shirtNum": "",
+    "league": "Exanon Liga",
+    "marketvalue": "$TBD",
+    "team": 6,
+    "playerId": 305
+  },
+  {
+    "playername": "Rye",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "pa",
+    "shirtNum": "",
+    "league": "Exanon Liga",
+    "marketvalue": "$TBD",
+    "team": 6,
+    "playerId": 306
+  },
+  {
+    "playername": "Mash",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "co",
+    "shirtNum": "",
+    "league": "Exanon Liga",
+    "marketvalue": "$TBD",
+    "team": 6,
+    "playerId": 307
+  },
+  {
+    "playername": "Lux",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "co",
+    "shirtNum": "",
+    "league": "Exanon Liga",
+    "marketvalue": "$TBD",
+    "team": 6,
+    "playerId": 308
   }
 ]

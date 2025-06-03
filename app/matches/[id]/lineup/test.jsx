@@ -8,6 +8,12 @@ import '/styles/global.css';
 import positionCoords from '/lib/posCoordsPlayerPosMap.json';
 import SoccerField from '/components/pitchSVGVertical.jsx';
 
+function isDark(rgbString) {
+    const rgb = rgbString.match(/\d+/g).map(Number);
+    const [r, g, b] = rgb;
+    const brightness = 0.299 * r + 0.587 * g + 0.114 * b;
+    return brightness < 50;
+}
 function isLight(rgbString) {
     const rgb = rgbString.match(/\d+/g).map(Number);
     const [r, g, b] = rgb;
@@ -19,35 +25,44 @@ export default function PlayerPageClient({ player }) {
 
     const [theme, setTheme] = useState('theme-light');
     const [language, setLanguage] = useState('es');
+
     useEffect(() => {
-        const updateThemeColors = () => {
-            const storedTheme = localStorage.getItem('theme') || 'theme-light';
-            setTheme(storedTheme);
+  console.log("useEffect running");
+  
+  const updateThemeColors = () => {
+    console.log("Updating theme colors...");
+    const storedTheme = localStorage.getItem('theme') || 'theme-light';
+    setTheme(storedTheme);
+    
+    // Update CSS vars
+    const root = document.documentElement;
+    if (storedTheme === 'theme-light') {
+      root.style.setProperty('--team-color', player.teamColors.teamColorMain);
+      root.style.setProperty('--team-font-color', isLight(player.teamColors.teamColorMain) ? 'black' : 'white');
+    } else {
+      root.style.setProperty('--team-color', player.teamColors.teamColorAlternate);
+      root.style.setProperty('--team-font-color', isLight(player.teamColors.teamColorAlternate) ? 'black' : 'white');
+    }
+  };
 
-            const root = document.documentElement;
-            if (storedTheme === 'theme-light') {
-                root.style.setProperty('--team-color', player.teamColors.teamColorMain);
-                root.style.setProperty('--team-font-color', isLight(player.teamColors.teamColorMain) ? 'black' : 'white');
-            } else {
-                root.style.setProperty('--team-color', player.teamColors.teamColorAlternate);
-                root.style.setProperty('--team-font-color', isLight(player.teamColors.teamColorAlternate) ? 'black' : 'white');
-            }
-        };
+  updateThemeColors();
 
-        updateThemeColors();
+  window.addEventListener('themechange', updateThemeColors);
+  console.log("Listener added for themechange");
 
-        window.addEventListener('themechange', updateThemeColors);
+  return () => {
+    window.removeEventListener('themechange', updateThemeColors);
+    console.log("Listener removed for themechange");
+  };
+}, [player]);
 
-        return () => {
-            window.removeEventListener('themechange', updateThemeColors);
-        };
-    }, [player]);
 
+
+
+    //===============================|  THEME-BASED COLORS  | ===============================
     const teamColor = theme === "theme-light" ? player?.teamColors?.teamColorMain : player?.teamColors?.teamColorAlternate;
-    const mainPosition = player?.playerPositions?.positions.find(p => p.isMainPos === true) || null;
-    const otherPositions =  player?.playerPositions?.positions.filter(p => !p.isMainPos && (p.ratio >= 0.166 || p.occurences >= 2)) || []; 
-    const otherPositionsStr = otherPositions.length ? otherPositions.map(p => translationsMap?.[p.id]?.[language]).reduce((acc, curr) => acc + ", " + curr) : ""
-    const minutes = player.totalStats.minutes
+    const teamFontColor = isLight(teamColor) ? "black" : "white";
+
 
     //===============================|  LAYOUT  | ===============================
     const playerContent = css`
@@ -67,7 +82,6 @@ export default function PlayerPageClient({ player }) {
     display: flex;
     flex-flow: column;
     gap: 1rem;
-    width: 100%
   `;
 
     const playerHeader = css`
@@ -217,17 +231,16 @@ export default function PlayerPageClient({ player }) {
     width: 169px;
     height: 218px;
   `;
-    const positionsContainer = css``;
-    const positionsWrapper = css`
-    display: flex;
-    flex-flow: column;
-    gap: .25rem;
-    max-width: 200px
-    `;
-    const playerPositionStr = css`
-    font-size: 14px;
-    `
 
+    const positionMapImg = css`
+    border-radius: 0.5rem;
+  `;
+
+    const positionWrapper = css``;
+    const primaryPositionEl = css``;
+    const otherPositionEl = css``;
+
+    const mainPosition = player?.playerPositions?.positions.find(p => p.isMainPos === true) || null;
     const mainPositionCoords = positionCoords?.[mainPosition?.id];
     const label = translationsMap?.[mainPosition?.id]?.[language]
 
@@ -254,10 +267,13 @@ export default function PlayerPageClient({ player }) {
             {mainPosition?.id}
         </div>
     ) : (
-        null
+        <div></div>
     );
 
+    const otherPositions = player?.playerPositions?.positions.filter(p => !p.isMainPos) || [];
+
     const otherPosOnPosMap = otherPositions
+        .filter(pos => pos.ratio > 0.166)
         .map((pos) => {
             const posCoords = positionCoords?.[pos.id]
                 ? { x: positionCoords[pos.id].x - 10, y: positionCoords[pos.id].y }
@@ -356,9 +372,9 @@ export default function PlayerPageClient({ player }) {
     justify-self: start;
     `
 
-    const RenderCompetitionStats = ({stats, minutes}) => {
-        if (minutes > 0) {
-            const competitionItems = stats.map((i, index) => {
+    const renderCompetitionStats = () => {
+        if (player.totalStats.minutes > 0) {
+            const competitionItems = player.competitionStats.map((i, index) => {
                 const isMatchRatingEl = (i.id === 'matchRating')
                 const valueCss = isMatchRatingEl ? 'secondary-rating' : null
                 const colorCss = isMatchRatingEl ? i.value > 6.999 ? 'var(--RATING-GREEN)' : i.value > 5.499 ? 'var(--RATING-ORANGE)' : 'var(--RATING-RED)' : null
@@ -408,9 +424,9 @@ export default function PlayerPageClient({ player }) {
     //===============================|  PLAYER MATCHES  | ===============================
     //
     //
-    const RenderPlayerRecentMatches = ({matches}) => {
-        if (matches.length) {
-            const RenderPlayerRecentMatchesContent = matches.map((match, index) => (
+    const renderPlayerRecentMatches = () => {
+        if (player.recentGames.length) {
+            const renderPlayerRecentMatchesContent = player.recentGames.map((match, index) => (
                 <a key={index} href={match.pageUrl} className="secondary-hover" css={matchItem}>
                     <div>{match.leagueNameShort}</div>
 
@@ -492,7 +508,7 @@ export default function PlayerPageClient({ player }) {
                         </div>
                     </div>
                     <div>
-                        {RenderPlayerRecentMatchesContent}
+                        {renderPlayerRecentMatchesContent}
                     </div>
                 </div>
             )
@@ -659,7 +675,7 @@ export default function PlayerPageClient({ player }) {
     `;
 
     const [mode, setMode] = useState('per20');
-    const Renderbuttons = () => {
+    const renderbuttons = () => {
         const per20ButtonStyle = mode === 'total' ? pSButtonUntoggled : pSButtonToggled;
         const totalButtonStyle = mode === 'per20' ? pSButtonUntoggled : pSButtonToggled;
         return (
@@ -674,10 +690,10 @@ export default function PlayerPageClient({ player }) {
         );
     };
 
-    const RenderPercentileStats = (stats, minutes) => {
-        if (minutes >= 25) {
-            const RenderPercentileStatsContent = () => {
-                var percentileStatsItems = Object.entries(stats).map(([metric, metricStats], i) => {
+    const renderPercentileStats = () => {
+        if (player.totalStats.minutes >= 25) {
+            const renderPercentileStatsContent = (section) => {
+                var percentileStatsItems = Object.entries(section).map(([metric, metricStats], i) => {
                     const [percentileRankKey, valueKey] = mode === 'total' ? ['precentileRankTotal', 'valueTotal'] : ['precentileRankPer20', 'valuePer20']
                     const metricStatsEl = Object.entries(metricStats).map((stats, i) => {
                         const progressBackgroundColor = stats[1][percentileRankKey] >= 70 ? "var(--PROGRESS-BAR-HIGH)" : stats[1][percentileRankKey] >= 30 ? "var(--PROGRESS-BAR-MIDDLE)" : "var(--PROGRESS-BAR-LOW)"
@@ -689,7 +705,7 @@ export default function PlayerPageClient({ player }) {
                             >
                                 <span>{translationsMap?.[stats[1].id]?.[language]}</span>
                                 <span css={percentileStatTitle}>{stats[1][valueKey]}</span>
-                                <div title={`${stats[1][percentileRankKey]}%`} css={progressBarContianer}>
+                                <div css={progressBarContianer}>
                                     <span css={progressBar} style={{ width: `${stats[1][percentileRankKey]}%`, backgroundColor: progressBackgroundColor }}></span>
                                 </div>
                             </div>
@@ -712,14 +728,13 @@ export default function PlayerPageClient({ player }) {
                     <div css={pSHeader}>
                         <h2 css={pSHeaderText}>{translationsMap?.["seasonPerformance"]?.[language]}</h2>
                         <div css={pSHeaderContent}>
-                            {Renderbuttons()}
+                            {renderbuttons()}
                             <div css={minutesPlayed}>
-                                {`${translationsMap?.["minutes"]?.[language]}: ${minutes}`}
                             </div>
                         </div>
                     </div>
                     <div css={percentileStatsContent}>
-                        {RenderPercentileStatsContent()}
+                        {renderPercentileStatsContent(player.percentileStats)}
                     </div>
                 </div>
             )
@@ -891,11 +906,11 @@ export default function PlayerPageClient({ player }) {
         });
     }
 
-    const RenderRatings= ({ratings, minutes}) => {
-        if (minutes >= 25) {
+    const renderRatings = () => {
+        if (player.totalStats.minutes >= 25) {
             function ratingLegend(side) {
                 const [min, max, css] = side === "left" ? [3, 6, ratingLegendLeft] : [0, 3, ratingLegendRight]
-                const legendItem = ratings.slice(min, max).map(s => {
+                const legendItem = player.ratings.slice(min, max).map(s => {
                     return (
                         <div
                             css={[ratingChartLegendItem, css]}
@@ -951,7 +966,8 @@ export default function PlayerPageClient({ player }) {
                     <div css={ratingsChartHeader}>
                         <h2>{translationsMap?.["playerRatings"]?.[language]}</h2>
                         <div css={percentileStatComparison}>
-                            <span  css={percentileStatComparisonContent}>{ratingsComparison}</span>
+                            <span id="whatplayerstatsarecomparedtoo"
+                                css={percentileStatComparisonContent}>{ratingsComparison}</span>
                             <div css={percentileStatComparisonImg}>
                                 <button css={percentileStatComparisonButton}>
                                     <img src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/question-butotn?v=1743878872340"
@@ -1045,15 +1061,15 @@ export default function PlayerPageClient({ player }) {
                             </div>
                         </section>
                         <section css={positionSection}>
-                            <h3>{translationsMap?.["position"]?.[language]}</h3>
-                            <div css={positionsContainer}>
-                                <div css={positionsWrapper}>
-                                    <h4>{translationsMap?.["primary"]?.[language]}</h4>
-                                    <div css={playerPositionStr}>{translationsMap?.[mainPosition?.id]?.[language]}</div>
+                            <div>{translationsMap?.["position"]?.[language]}</div>
+                            <div css={positionWrapper}>
+                                <div css={primaryPositionEl}>
+                                    <div>{translationsMap?.["primary"]?.[language]}</div>
+                                    <div id="primaryposition"></div>
                                 </div>
-                                <div css={positionsWrapper}>
-                                    <h4>{translationsMap?.["others"]?.[language]}</h4>
-                                    <div css={playerPositionStr}>{otherPositionsStr}</div>
+                                <div css={otherPositionEl}>
+                                    <div>{translationsMap?.["others"]?.[language]}</div>
+                                    <div id="otherpositions"></div>
                                 </div>
                             </div>
                             <div css={positionMapImgWrapper}>
@@ -1064,12 +1080,12 @@ export default function PlayerPageClient({ player }) {
                         </section>
                     </div>
                 </div>
-                <RenderCompetitionStats stats={player.competitionStats} minutes={minutes} />
-                <RenderPlayerRecentMatches matches={player.recentGames} />
-                {RenderPercentileStats(player.percentileStats, minutes)}
+                {renderCompetitionStats()}
+                {renderPlayerRecentMatches()}
+                {renderPercentileStats()}
             </div>
-            <div className='right-grid' css={playerContentItem}>
-                <RenderRatings ratings={player.ratings} minutes={minutes}/>
+            <div className='right-grid' >
+                {renderRatings()}
             </div>
         </div>
     );

@@ -183,11 +183,11 @@ export default function Layout({ match, children }) {
 
     const renderNav = () => {
         const [canRenderStatsSection, canRenderLineupSection] = ["FT", "Live", "AET"].includes(match.matchStatus.statusShort) ? [true, true] : [false, false]
-        const renderForecastSection = match.matchStatus.started ? true : false
+        const renderForecastSection = match.matchStatus.started ? false : true
         const overviewSection = <button css={navItem} onClick={() => handleTabClick('overview')}>{translationsMap?.["overview"]?.[language]}</button>
         const statsSection = canRenderStatsSection ? <button css={navItem} onClick={() => handleTabClick('lineup')}>{translationsMap?.["lineup"]?.[language]}</button> : null
         const lineupSection = canRenderLineupSection ? <button css={navItem} onClick={() => handleTabClick('stats')}>{translationsMap?.["stats"]?.[language]}</button> : null
-        const forecastSection = !renderForecastSection ? <button css={navItem} onClick={() => handleTabClick('forecast')}>{translationsMap?.["forecast"]?.[language]}</button> : null
+        const forecastSection = renderForecastSection ? <button css={navItem} onClick={() => handleTabClick('forecast')}>{translationsMap?.["forecast"]?.[language]}</button> : null
 
         return (
             <nav css={matchNav}>
