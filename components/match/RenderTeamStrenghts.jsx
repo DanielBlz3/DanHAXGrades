@@ -42,14 +42,14 @@ justify-content: center;
 
 `
 
-    const strenghtsTitle = css`
+    const strengthsTitle = css`
     flex: 1;
     color: var(--GLOBAL-FONT-COLOR-GREY);
     font-weight: bold;
 `;
 
 const focusedTeamStats = teamStats[String(team.id)]
-    const strengths = Object.entries(focusedTeamStats.strengths).filter(s => ["veryStrong", "strong"].includes(s[1])).sort((a, b) => {
+     const strengths = Object.entries(focusedTeamStats.strengths).filter(s => ["veryStrong", "strong"].includes(s[1])).sort((a, b) => {
         const priority = { veryStrong: 0, strong: 1 };
         return priority[a[1]] - priority[b[1]];
     });
@@ -71,7 +71,7 @@ const focusedTeamStats = teamStats[String(team.id)]
                 key={s[0]}
                 css={strengthsItem}
             >
-                <span css={strenghtsTitle}>
+                <span css={strengthsTitle}>
                     {translationsMap?.[s[0]]?.[language]}
                 </span>
                 <span css={strengthsValue}>
@@ -83,7 +83,7 @@ const focusedTeamStats = teamStats[String(team.id)]
     console.log(strengths)
     return (
         <div css={strengthsContainer}>
-            <h3 css={strengthsHeader}>{`${team.name} ${translationsMap?.[s["strenghts"]]?.[language]}`}</h3>
+            <h3 css={strengthsHeader}>{`${team.name} ${translationsMap?.["strengths"]?.[language]}`}</h3>
             {strengthsItemsEl}
         </div>
     )

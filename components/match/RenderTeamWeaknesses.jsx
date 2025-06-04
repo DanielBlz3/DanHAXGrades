@@ -24,7 +24,7 @@ const RenderTeamWeaknesses = ({ team, teamStats }) => {
     align-items: center;
 `;
 
-const weaknessesHeader = css`
+    const weaknessesHeader = css`
 display: flex;
 height: 3rem;
 align-items: center;
@@ -48,14 +48,16 @@ justify-content: center;
     font-weight: bold;
 `;
 
-const focusedTeamStats = teamStats[String(team.id)]
-    const weaknesses = Object.entries(focusedTeamStats.strengths).filter(s => ["veryWeak", "weak"].includes(s[1])).sort((a, b) => {
-        const priority = { veryStrong: 0, strong: 1 };
-        return priority[a[1]] - priority[b[1]];
-    });
+    const focusedTeamStats = teamStats[String(team.id)]
+    const weaknesses = Object.entries(focusedTeamStats.strengths)
+        .filter(s => ["veryWeak", "weak"].includes(s[1]))
+        .sort((a, b) => {
+            const order = { veryWeak: 0, weak: 1 };
+            return order[a[1]] - order[b[1]];
+        });
 
     const weaknessesItemsEl = weaknesses.map(s => {
-            const weaknessesBackground = s[1] === "veryWeak" ? 'var(--RATING-RED)' : "var(--RATING-ORANGE)"
+        const weaknessesBackground = s[1] === "veryWeak" ? 'var(--RATING-RED)' : "var(--RATING-ORANGE)"
         const weaknessesValue = css`
     justify-self: flex-end;
     border-radius: 0.5rem;
@@ -83,7 +85,7 @@ const focusedTeamStats = teamStats[String(team.id)]
     console.log(weaknesses)
     return (
         <div css={weaknessesContainer}>
-            <h3 css={weaknessesHeader}>{`${team.name} ${translationsMap?.[s["weaknesses"]]?.[language]}`}</h3>
+            <h3 css={weaknessesHeader}>{`${team.name} ${translationsMap?.["weaknesses"]?.[language]}`}</h3>
             {weaknessesItemsEl}
         </div>
     )

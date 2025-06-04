@@ -25,6 +25,11 @@ export default function Layout({ otherFixtures, match, children }) {
       border-radius: 1.25rem;
       padding: 1rem;
     `;
+    const otherMatchesHeaderWrapper = css`
+        color: var(--primary-font-color);
+    text-decoration: none;
+
+    `;
     const otherMatchesHeader = css`
     display: flex;
     flex-flow: row;
@@ -142,7 +147,7 @@ background-color: var(--card-bg-main);
                             </div>
                         </div>
                         <div css={matchStatus}>
-                            <span>FT</span>
+                            <span>{`${translationsMap?.[`${m.status.statusShort}_Short`]?.[language]}`}</span>
                         </div>
                     </div>
                 </a>
@@ -150,13 +155,15 @@ background-color: var(--card-bg-main);
         })
         return (
             <div css={otherMatches}>
-                <header css={otherMatchesHeader}>
-                    <img css={leagueLogo} src={match.general.leagueLogo} width={50} height={50} />
-                    <div css={leagueText}>
-                        <h3>{match.general.leagueName}</h3>
-                        <span css={fixturesRound}>{`${translationsMap?.["round"]?.[language]} ${match.general.roundName}`}</span>
-                    </div>
-                </header>
+                <a css={otherMatchesHeaderWrapper} className="primary-hover" href={"/leagues/" + match.general.leagueId + "/overview"}>
+                    <header css={otherMatchesHeader}>
+                        <img css={leagueLogo} src={match.general.leagueLogo} width={50} height={50} />
+                        <div css={leagueText}>
+                            <h3>{match.general.leagueName}</h3>
+                            <span css={fixturesRound}>{`${translationsMap?.["round"]?.[language]} ${match.general.roundName}`}</span>
+                        </div>
+                    </header>
+                </a>
                 <div css={otherMatchesMain}>
                     {otherFixturesEl}
                 </div>

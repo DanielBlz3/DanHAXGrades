@@ -83,6 +83,11 @@ export default function Layout({ match, children }) {
   gap: 5px;
 `;
 
+const leagueLink = css`
+  color: var(--primary-font-color);
+  text-decoration: none;
+`
+
     const scoreBoardTeam = css`
   color: var(--primary-font-color);
   display: flex;
@@ -92,10 +97,6 @@ export default function Layout({ match, children }) {
   overflow: wrap;
   place-items: center;
   text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
 
   @media (max-width: 800px) {
     flex-flow: column;
@@ -207,11 +208,11 @@ export default function Layout({ match, children }) {
                         <div css={leagueWrapper}>
                             <img src={match.general.leagueLogo}
                                 width="25px" height="25px" />
-                            <span>{`${match.general.leagueName} ${translationsMap?.["round"]?.[language]} ${match.general.roundName}`}</span>
+                            <a href={"/leagues/" + match.general.leagueId + "/overview"} css={leagueLink} className='third-hover'>{`${match.general.leagueName} ${translationsMap?.["round"]?.[language]} ${match.general.roundName}`}</a>
                         </div>
                     </div>
                     <div css={scoreBoardContainer}>
-                        <a href={match.general.home.pageUrl} css={scoreBoardTeam}>
+                        <a href={match.general.home.pageUrl} css={scoreBoardTeam} className='third-hover'>
                             <div>
                                 <img data-team-logo="home"
                                     src={match.general.home.logo}
@@ -220,7 +221,7 @@ export default function Layout({ match, children }) {
                             <span>{match.general.home.name}</span>
                         </a>
                         {renderScoreBoard()}
-                        <a href={match.general.away.pageUrl} css={scoreBoardTeam}>
+                        <a href={match.general.away.pageUrl} css={scoreBoardTeam} className='third-hover'>
                             <div>
                                 <img data-team-logo="away"
                                     src={match.general.away.logo}

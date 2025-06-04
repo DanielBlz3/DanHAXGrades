@@ -134,6 +134,10 @@ body {
     background-color: var(--card-bg-second);
 }
 
+.third-hover:hover {
+    text-decoration: underline;
+}
+
 .primary-rating {
     display: inline;
     font-weight: bold;

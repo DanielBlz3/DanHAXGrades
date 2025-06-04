@@ -4555,5 +4555,38 @@
     "marketvalue": "$TBD",
     "team": 6,
     "playerId": 308
+  },
+  {
+    "playername": "Patrilaufey",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "ve",
+    "shirtNum": "",
+    "league": "Exanon Liga",
+    "marketvalue": "$TBD",
+    "team": 11,
+    "playerId": 309
+  },
+  {
+    "playername": "Solar",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "co",
+    "shirtNum": "",
+    "league": "Exanon Liga",
+    "marketvalue": "$TBD",
+    "team": 9,
+    "playerId": 310
+  },
+  {
+    "playername": "Flour",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "shirtNum": "",
+    "league": "Exanon Liga",
+    "marketvalue": "$TBD",
+    "team": 9,
+    "playerId": 311
   }
 ]

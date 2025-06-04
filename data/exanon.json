@@ -619,8 +619,8 @@
       ]
     },
     {
-      "teamname": "Pelabolas",
-      "teamNameShort": "Pelabolas",
+      "teamname": "Sporting Club de Moai",
+      "teamNameShort": "Sportings Moai",
       "teamId": 11,
       "currentLeagues": [
         2,
@@ -1319,7 +1319,7 @@
           "Antuna Raiders",
           "Palmerias",
           "Comediantes",
-          "Pelabolas"
+          "Sporting Club de Moai"
         ],
         [
           "K9ARMY",
@@ -1381,7 +1381,7 @@
       "game4": {
         "teams": [
           "Liverpool",
-          "Pelabolas"
+          "Sporting Club de Moai"
         ],
         "matchtime": {
           "date": "March 15",
@@ -1505,7 +1505,7 @@
       "game4": {
         "teams": [
           "Antuna Raiders",
-          "Pelabolas"
+          "Sporting Club de Moai"
         ],
         "matchtime": {
           "date": "March 22",
@@ -1579,7 +1579,7 @@
       "game5": {
         "teams": [
           "Comediantes",
-          "Pelabolas"
+          "Sporting Club de Moai"
         ],
         "matchtime": {
           "date": "CANCELADO",
@@ -1640,7 +1640,7 @@
       },
       "game5": {
         "teams": [
-          "Pelabolas",
+          "Sporting Club de Moai",
           "Palmerias"
         ],
         "matchtime": {
@@ -1733,7 +1733,7 @@
       "participants": [
         [
           "Liverpool",
-          "Pelabolas",
+          "Sporting Club de Moai",
           "Atletico Madrid",
           "Boston United",
           "Palmerias",
@@ -1762,7 +1762,7 @@
       "participants": [
         [
           "Liverpool",
-          "Pelabolas",
+          "Sporting Club de Moai",
           "Atletico Madrid",
           "Boston United",
           "Palmerias"

@@ -7558,7 +7558,6 @@
         "timeline": [
           {
           "isGoal": true,
-          "isPenalty": false,
           "isSubstitution": false,
           "type": "openPlay",
           "goalscorerId": 53,
@@ -7567,7 +7566,6 @@
           },
           {
           "isGoal": true,
-          "isPenalty": false,
           "isSubstitution": false,
           "type": "openPlay",
           "goalscorerId": 26,
@@ -7593,12 +7591,13 @@
           9,
           8
         ],
+        "scoreline": "0-1",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 7,
-        "started": false,
-        "finished": false,
+        "started": true,
+        "finished": true,
         "cancelled": false,
         "awarded": false
       },
@@ -7613,12 +7612,13 @@
           12,
           11
         ],
+                "scoreline": "10-1",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 7,
-        "started": false,
-        "finished": false,
+        "started": true,
+        "finished": true,
         "cancelled": false,
         "awarded": false
       },
@@ -7633,12 +7633,13 @@
           4,
           2
         ],
+        "scoreline": "1-0",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 7,
-        "started": false,
-        "finished": false,
+        "started": true,
+        "finished": true,
         "cancelled": false,
         "awarded": false
       },
@@ -7648,19 +7649,20 @@
           "homeplayers": [],
           "awayplayers": []
         },
-                "timestamp": "2025-06-01T02:40:00Z",
+            "timestamp": "2025-06-01T02:40:00Z",
         "teamIds": [
           3,
           6
         ],
+                "scoreline": "3-0",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 7,
-        "started": false,
-        "finished": false,
+        "started": true,
+        "finished": true,
         "cancelled": false,
-        "awarded": false
+        "awarded": true
       },
       {
         "gameId": 69,
@@ -7673,12 +7675,13 @@
           5,
           10
         ],
+        "scoreline": "2-2",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 7,
-        "started": false,
-        "finished": false,
+        "started": true,
+        "finished": true,
         "cancelled": false,
         "awarded": false
       },
