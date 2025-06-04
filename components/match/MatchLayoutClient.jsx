@@ -178,10 +178,6 @@ const leagueLink = css`
         }
     }
 
-    const renderScorers = () => {
-
-    }
-
     const renderNav = () => {
         const [canRenderStatsSection, canRenderLineupSection] = ["FT", "Live", "AET"].includes(match.matchStatus.statusShort) ? [true, true] : [false, false]
         const renderForecastSection = match.matchStatus.started ? false : true
