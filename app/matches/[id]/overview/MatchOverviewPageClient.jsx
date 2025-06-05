@@ -8,8 +8,11 @@ import { translationsMap } from '/lib/translations.js';
 import getPlayerUiStats from '/lib/getPlayerUiStats.js';
 import Lineup from '/components/match/Lineup.jsx';
 import MatchStats from '/components/match/MatchStats.jsx';
+import RenderTeamStrengths from '/components/match/RenderTeamStrengths';
+import RenderTeamWeaknesses from '/components/match/RenderTeamWeaknesses';
+import RenderMatchForecast from '/components/match/RenderMatchForecast';
 
-export default function MatchOverviewPageClient({ match }) {
+export default function MatchOverviewPageClient({ match, teamStats }) {
 
     const matchContent = css`
       display: grid;
@@ -24,7 +27,7 @@ export default function MatchOverviewPageClient({ match }) {
       justify-content: center;
     `;
 
-        const playerUi = css`
+    const playerUi = css`
       background-color: var(--player-ui-bg-color);
       border-radius: 1rem;
       bottom: 45%;
@@ -37,8 +40,8 @@ export default function MatchOverviewPageClient({ match }) {
       width: 400px;
       z-index: 1000;
     `;
-    
-        const playerUiOverlay = css`
+
+    const playerUiOverlay = css`
       background: rgba(0, 0, 0, 0.7);
       display: none;
       height: 100%;
@@ -48,8 +51,8 @@ export default function MatchOverviewPageClient({ match }) {
       width: 100%;
       z-index: 1000;
     `;
-    
-        const playerUiHeader = css`
+
+    const playerUiHeader = css`
       align-items: center;
       background-color: var(--card-bg-main);
       border-radius: 1rem 1rem 0 0;
@@ -63,8 +66,8 @@ export default function MatchOverviewPageClient({ match }) {
       width: 100%;
       z-index: 111111;
     `;
-    
-        const playerUiName = css`
+
+    const playerUiName = css`
       color: var(--font-default-color);
       font-size: 1.5rem;
       font-weight: bold;
@@ -74,28 +77,28 @@ export default function MatchOverviewPageClient({ match }) {
         text-decoration: underline;
       }
     `;
-    
-        const playerUiMain = css`
+
+    const playerUiMain = css`
       max-height: 350px;
       overflow-y: scroll;
       padding-top: 1rem;
     `;
-    
-        const playerUiStats = css`
+
+    const playerUiStats = css`
       display: flex;
       flex-direction: column;
       padding-left: 10px;
     `;
-    
-        const playerUiNationality = css`
+
+    const playerUiNationality = css`
       display: flex;
       flex-flow: row;
     align-items: center;
       gap: 9x;
       justify-content: center;
     `;
-    
-        const headerMetric = css`
+
+    const headerMetric = css`
       background-color: var(--card-bg-main);
       border-bottom: solid 0.25px rgb(75, 75, 75);
       display: flex;
@@ -103,31 +106,65 @@ export default function MatchOverviewPageClient({ match }) {
       padding-bottom: 1rem;
       width: 100%;
     `;
-    
-        const headerMetricItem = css`
+
+    const headerMetricItem = css`
       align-items: center;
       display: flex;
       flex-direction: column;
       flex: 1;
     `;
-    
-        const playerUiBioMetric = css`
+
+    const playerUiBioMetric = css`
       color: grey;
     `;
-    
-        const statGroup = css`
+
+    const statGroup = css`
       display: flex;
       flex-direction: column;
     `;
-    
-        const statGroupTitle = css`
+
+    const statGroupTitle = css`
       height: 2rem;
     `;
-    
-        const statLine = css`
+
+    const statLine = css`
       line-height: 2;
     `;
+
+       const teamTraitsCard = css`
+        display: flex;
+        flex-flow: column;
+          background-color: var(--card-bg-main);
+      border-radius: 1.25rem;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 1rem;
+        `;
+        const teamTraitsHeader = css`
+        display: flex;
+          justify-content: center;
+      align-items: center;
+      height: 4rem;
+        `;
     
+        const teamTraitsWrapper = css`
+        width: 100%;
+        padding: 1rem;
+        `;
+    
+        const teamTraitsContent = css`
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+            grid-gap: 2rem
+        `;
+    
+        const forecastContent = css`
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        padding: .5rem;
+        `
+
     const router = useRouter();
     const searchParams = useSearchParams();
     const defaultTab = searchParams.get('tab') || 'lineup';
@@ -142,15 +179,15 @@ export default function MatchOverviewPageClient({ match }) {
         setLanguage(storedLanguage);
     })
 
-    
-        function getRatingClass(rating, isMvp) {
-            let ratingColor;
-            if (isMvp === true) ratingColor = "var(--RATING-BLUE)";
-            else if (rating < 5.5) ratingColor = "var(--RATING-RED)";
-            else if (rating < 6.949) ratingColor = "var(--RATING-ORANGE)";
-            else ratingColor = "var(--RATING-GREEN)";
-    
-            return css`
+
+    function getRatingClass(rating, isMvp) {
+        let ratingColor;
+        if (isMvp === true) ratingColor = "var(--RATING-BLUE)";
+        else if (rating < 5.5) ratingColor = "var(--RATING-RED)";
+        else if (rating < 6.949) ratingColor = "var(--RATING-ORANGE)";
+        else ratingColor = "var(--RATING-GREEN)";
+
+        return css`
                 background-color: ${ratingColor};
                 color: white;
                 font-weight: bold;
@@ -158,56 +195,56 @@ export default function MatchOverviewPageClient({ match }) {
                 padding: 0.025rem 0.3rem;
                 cursor: default;
               `;
-        }
+    }
 
-     const PlayerStatsDisplay = ({ groupedStats }) => {
-            return (
-                visible && playerData ? (
-                    <>
-                        <div css={playerUiOverlay} className="player-ui-overlay" style={{ display: 'flex' }}></div>
-                        <div css={playerUi} className="player-ui" style={{ display: 'flex' }}>
-                            <div css={playerUiHeader}>
-                                <a css={playerUiName} href={`/players/${playerData.id}`}> {playerData.name} </a>
-                                <div css={headerMetric}>
-                                    <div css={headerMetricItem}>
-                                        <span>{playerData.position}</span>
-                                        <span css={playerUiBioMetric}>{translationsMap?.["position"]?.[language]}</span>
-                                    </div>
-                                    <div css={headerMetricItem}>
-                                        <span css={getRatingClass(playerStats?.["1"].matchRating, playerStats?.["1"].isMvp)}> {playerStats?.["1"].matchRatingRounded} </span>
-                                        <span css={playerUiBioMetric}>{translationsMap?.["matchRating"]?.[language]}</span>
-                                    </div>
-                                    <div css={headerMetricItem}>
-                                        <div css={playerUiNationality}>
-                                            <img height="17" width="17" src={playerData.nationFlag} />
-                                            <span >{playerData.nationName}</span>
-                                        </div>
-                                        <span css={playerUiBioMetric}>{translationsMap?.["country"]?.[language]}</span>
-                                    </div>
+    const PlayerStatsDisplay = ({ groupedStats }) => {
+        return (
+            visible && playerData ? (
+                <>
+                    <div css={playerUiOverlay} className="player-ui-overlay" style={{ display: 'flex' }}></div>
+                    <div css={playerUi} className="player-ui" style={{ display: 'flex' }}>
+                        <div css={playerUiHeader}>
+                            <a css={playerUiName} href={`/players/${playerData.id}`}> {playerData.name} </a>
+                            <div css={headerMetric}>
+                                <div css={headerMetricItem}>
+                                    <span>{playerData.position}</span>
+                                    <span css={playerUiBioMetric}>{translationsMap?.["position"]?.[language]}</span>
                                 </div>
-                            </div>
-                            <div css={playerUiMain}>
-                                <div css={playerUiStats}>
-                                    {Object.entries(groupedStats).map(([section, stats]) => (
-                                        <div key={section} css={statGroup}>
-                                            <h3 css={statGroupTitle}>
-                                                {translationsMap?.[section]?.[language]}
-                                            </h3>
-                                            {stats.map(([label, value], i) => (
-                                                <span key={i} css={statLine}>
-                                                    {label}: {value}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    ))}
+                                <div css={headerMetricItem}>
+                                    <span css={getRatingClass(playerStats?.["1"].matchRating, playerStats?.["1"].isMvp)}> {playerStats?.["1"].matchRatingRounded} </span>
+                                    <span css={playerUiBioMetric}>{translationsMap?.["matchRating"]?.[language]}</span>
+                                </div>
+                                <div css={headerMetricItem}>
+                                    <div css={playerUiNationality}>
+                                        <img height="17" width="17" src={playerData.nationFlag} />
+                                        <span >{playerData.nationName}</span>
+                                    </div>
+                                    <span css={playerUiBioMetric}>{translationsMap?.["country"]?.[language]}</span>
                                 </div>
                             </div>
                         </div>
-                    </>
-                ) : null
-    
-            );
-        };
+                        <div css={playerUiMain}>
+                            <div css={playerUiStats}>
+                                {Object.entries(groupedStats).map(([section, stats]) => (
+                                    <div key={section} css={statGroup}>
+                                        <h3 css={statGroupTitle}>
+                                            {translationsMap?.[section]?.[language]}
+                                        </h3>
+                                        {stats.map(([label, value], i) => (
+                                            <span key={i} css={statLine}>
+                                                {label}: {value}
+                                            </span>
+                                        ))}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </>
+            ) : null
+
+        );
+    };
 
     const playersInMatch = [...Object.entries(match.lineup.home.players), ...Object.entries(match.lineup.away.players)]
 
@@ -269,6 +306,11 @@ export default function MatchOverviewPageClient({ match }) {
                 <div css={matchContentWrapper}>
                     <MatchStats match={match} visible={match.matchStatus.started} acceptedStats={['shots', 'keyPasses', 'possession', 'touches']} />
                     <Lineup match={match} hasSubs={false} hasLineupInfo={true} />
+                    <div css={teamTraitsCard}>
+                        <div css={forecastContent}>
+                            <RenderMatchForecast teams={match.general} teamStats={teamStats} />
+                        </div>
+                    </div>
                 </div>
             </div>
             <PlayerStatsDisplay groupedStats={getPlayerUiStats(playerStats)} />

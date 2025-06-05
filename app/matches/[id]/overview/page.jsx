@@ -11,6 +11,15 @@ if (!res.ok) throw new Error('Failed to fetch player');
 return res.json();
 }
 
+async function getTeamStats() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/teamStats`, {
+    cache: 'no-store',
+  });
+  
+if (!res.ok) throw new Error('Failed to fetch teamStats');
+return res.json();
+}
+
 export async function generateMetadata({ params }) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/matchDetails/${params.id}`);
   const match = await res.json();
@@ -21,7 +30,9 @@ export async function generateMetadata({ params }) {
   };
 }
 
+
 export default async function MatchPage({ params }) {
   const match = await getMatchData(params.id);
-  return <MatchOverviewPageClient match={match} />;
+  const teamStats = await getTeamStats();
+  return <MatchOverviewPageClient match={match} teamStats={teamStats} />;
 }

@@ -6856,6 +6856,7 @@
                 10,
                 9
             ],
+            "scoreline": "4-1",
             "formation": [
                 null,
                 null
@@ -6870,7 +6871,7 @@
             ],
             "leagueRound": 8,
             "started": true,
-            "finished": false,
+            "finished": true,
             "cancelled": false,
             "awarded": false
         },
