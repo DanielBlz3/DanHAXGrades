@@ -26,7 +26,7 @@ const RenderTeamWeaknesses = ({ team, teamStats }) => {
 
     const weaknessesHeader = css`
 display: flex;
-height: 3rem;
+height: 2rem;
 align-items: center;
 justify-content: center;
 `
@@ -34,11 +34,13 @@ justify-content: center;
     const weaknessesItem = css`
     display: flex;
     flex-flow: row;
-    height: 3rem;
+    height: 2.5rem;
     border-top: 1px solid var(--primary-divider-bg);
     width: 100%;
     align-items: center;
         justify-content: flex-end;
+                padding: .5rem;
+        border-radius: .5rem;
 
 `
 
@@ -50,9 +52,9 @@ justify-content: center;
 
     const focusedTeamStats = teamStats[String(team.id)]
     const weaknesses = Object.entries(focusedTeamStats.strengths)
-        .filter(s => ["veryWeak", "weak"].includes(s[1]))
+        .filter(s => ["weak", "veryWeak"].includes(s[1]))
         .sort((a, b) => {
-            const order = { veryWeak: 0, weak: 1 };
+            const order = { weak: 0, veryWeak: 1 };
             return order[a[1]] - order[b[1]];
         });
 
@@ -72,6 +74,7 @@ justify-content: center;
             <div
                 key={s[0]}
                 css={weaknessesItem}
+                                    className="secondary-hover"
             >
                 <span css={strenghtsTitle}>
                     {translationsMap?.[s[0]]?.[language]}
@@ -82,7 +85,6 @@ justify-content: center;
             </div>
         )
     })
-    console.log(weaknesses)
     return (
         <div css={weaknessesContainer}>
             <h3 css={weaknessesHeader}>{`${team.name} ${translationsMap?.["weaknesses"]?.[language]}`}</h3>

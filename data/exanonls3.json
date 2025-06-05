@@ -7612,7 +7612,7 @@
           12,
           11
         ],
-                "scoreline": "10-1",
+        "scoreline": "10-1",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
@@ -7670,7 +7670,7 @@
           "homeplayers": [],
           "awayplayers": []
         },
-                "timestamp": "2025-06-01T03:20:00Z",
+        "timestamp": "2025-06-01T03:20:00Z",
         "teamIds": [
           5,
           10
@@ -7691,6 +7691,7 @@
           "homeplayers": [],
           "awayplayers": []
         },
+        "timestamp": "2025-06-08T02:00:00Z",
         "teamIds": [
           8,
           11
@@ -7710,6 +7711,7 @@
           "homeplayers": [],
           "awayplayers": []
         },
+                "timestamp": "2025-06-08T02:40:00Z",
         "teamIds": [
           9,
           4
@@ -7729,8 +7731,9 @@
           "homeplayers": [],
           "awayplayers": []
         },
+                "timestamp": "2025-06-08T03:20:00Z",
         "teamIds": [
-          1,
+          6,
           12
         ],
         "formation": [null, null],
@@ -7748,6 +7751,7 @@
           "homeplayers": [],
           "awayplayers": []
         },
+              "timestamp": "2025-06-07T02:00:00Z",
         "teamIds": [
           2,
           5
@@ -7767,6 +7771,7 @@
           "homeplayers": [],
           "awayplayers": []
         },
+      "timestamp": "2025-06-06T02:00:00Z",
         "teamIds": [
           10,
           3

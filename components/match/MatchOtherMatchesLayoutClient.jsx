@@ -123,6 +123,9 @@ background-color: var(--card-bg-main);
     border-radius: 1rem;
   }
 `;
+
+const matchDate = typeof m.status.statusShort !== "object" ? `${translationsMap?.[`${m.status.statusShort}_Short`]?.[language]}` : m.status.statusShort.date || ""
+const [homeScore, awayScore] = typeof m.status.statusShort !== "object" ? [m.home.score, m.away.score] : ["", ""]
             return (
                 <a css={matchLink} href={m.pageUrl} className='secondary-hover'>
                     <div css={matchWrapper}>
@@ -133,7 +136,7 @@ background-color: var(--card-bg-main);
                                     <span>{m.home.teamNameShort}</span>
                                 </div>
                                 <div css={matchTeamScore}>
-                                    <span>{m.home.score}</span>
+                                    <span>{homeScore}</span>
                                 </div>
                             </div>
                             <div css={matchTeam}>
@@ -142,12 +145,12 @@ background-color: var(--card-bg-main);
                                     <span>{m.away.teamNameShort}</span>
                                 </div>
                                 <div css={matchTeamScore}>
-                                    <span>{m.away.score}</span>
+                                    <span>{awayScore}</span>
                                 </div>
                             </div>
                         </div>
                         <div css={matchStatus}>
-                            <span>{`${translationsMap?.[`${m.status.statusShort}_Short`]?.[language]}`}</span>
+                            <span>{matchDate}</span>
                         </div>
                     </div>
                 </a>
@@ -171,7 +174,6 @@ background-color: var(--card-bg-main);
         )
     }
 
-    console.log(otherFixtures)
     return (
         <div match-right-grid>
             {RenderOtherFixtures()}

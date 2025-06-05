@@ -4,8 +4,9 @@ import React from "react";
 import { css } from '@emotion/react';
 import { useEffect, useState } from 'react';
 import { translationsMap } from '/lib/translations';
-import RenderTeamStrenghts from '/components/match/RenderTeamStrenghts';
+import RenderTeamStrengths from '/components/match/RenderTeamStrengths';
 import RenderTeamWeaknesses from '/components/match/RenderTeamWeaknesses';
+import RenderMatchForecast from '/components/match/RenderMatchForecast';
 import '/styles/global.css';
 
 export default function MatchLineupPageClient({ match, teamStats }) {
@@ -26,6 +27,7 @@ export default function MatchLineupPageClient({ match, teamStats }) {
   border-radius: 1.25rem;
   justify-content: center;
   align-items: center;
+  padding-bottom: 1rem;
     `;
     const teamTraitsHeader = css`
     display: flex;
@@ -34,26 +36,41 @@ export default function MatchLineupPageClient({ match, teamStats }) {
   height: 4rem;
     `;
 
+    const teamTraitsWrapper = css`
+    width: 100%;
+    padding: 1rem;
+    `;
+
     const teamTraitsContent = css`
     display: grid;
     grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem
+    `;
+
+    const forecastContent = css`
+    display: flex;
+    flex-flow: column;
     width: 100%;
-    padding: 1rem;
-    grid-gap: 2rem
+    padding: .5rem;
     `
-        return (
-            <div>
-                <div css={teamTraitsCard}>
+    return (
+        <div>
+            <div css={teamTraitsCard}>
+                <div css={forecastContent}>
+                    <RenderMatchForecast teams={match.general} teamStats={teamStats} />
+                </div>
+                <div css={teamTraitsWrapper}>
                     <div css={teamTraitsHeader}>
                         <h2>{translationsMap?.["teamTraits"]?.[language]}</h2>
                     </div>
                     <div css={teamTraitsContent}>
-                        <RenderTeamStrenghts team={match.general.home} teamStats={teamStats}/>
-                        <RenderTeamStrenghts team={match.general.away} teamStats={teamStats}/>
-                        <RenderTeamWeaknesses team={match.general.home} teamStats={teamStats}/>
-                        <RenderTeamWeaknesses team={match.general.away} teamStats={teamStats}/>
+                        <RenderTeamStrengths team={match.general.home} teamStats={teamStats} />
+                        <RenderTeamStrengths team={match.general.away} teamStats={teamStats} />
+                        <RenderTeamWeaknesses team={match.general.home} teamStats={teamStats} />
+                        <RenderTeamWeaknesses team={match.general.away} teamStats={teamStats} />
                     </div>
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
+}

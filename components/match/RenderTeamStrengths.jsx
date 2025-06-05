@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { translationsMap } from '/lib/translations';
 import '/styles/global.css';
 
-const RenderTeamStrenghts = ({ team, teamStats }) => {
+const RenderTeamStrengths = ({ team, teamStats }) => {
 
     const [theme, setTheme] = useState('theme-light');
     const [language, setLanguage] = useState('es');
@@ -26,7 +26,7 @@ const RenderTeamStrenghts = ({ team, teamStats }) => {
 
 const strengthsHeader = css`
 display: flex;
-height: 3rem;
+height: 2rem;
 align-items: center;
 justify-content: center;
 `
@@ -34,11 +34,14 @@ justify-content: center;
     const strengthsItem = css`
     display: flex;
     flex-flow: row;
-    height: 3rem;
+    height: 2.5rem;
     border-top: 1px solid var(--primary-divider-bg);
     width: 100%;
     align-items: center;
         justify-content: flex-end;
+                padding: .5rem;
+        border-radius: .5rem;
+
 
 `
 
@@ -70,6 +73,7 @@ const focusedTeamStats = teamStats[String(team.id)]
             <div
                 key={s[0]}
                 css={strengthsItem}
+                                    className="secondary-hover"
             >
                 <span css={strengthsTitle}>
                     {translationsMap?.[s[0]]?.[language]}
@@ -80,7 +84,6 @@ const focusedTeamStats = teamStats[String(team.id)]
             </div>
         )
     })
-    console.log(strengths)
     return (
         <div css={strengthsContainer}>
             <h3 css={strengthsHeader}>{`${team.name} ${translationsMap?.["strengths"]?.[language]}`}</h3>
@@ -90,4 +93,4 @@ const focusedTeamStats = teamStats[String(team.id)]
 }
 
 
-export default RenderTeamStrenghts
+export default RenderTeamStrengths

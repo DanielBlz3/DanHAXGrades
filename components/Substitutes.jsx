@@ -111,7 +111,7 @@ const Substitute = ({ player }) => {
             <a href={`#player=${player.id}`} css={playerContainer} className="primary-hover">
                 <div css={playerWrapper}>
                     <img
-                        src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/noicon.png?v=1740716552808"
+                        src="/images/defaulticon.png"
                         width={30}
                         height={30}
                         alt="player"
