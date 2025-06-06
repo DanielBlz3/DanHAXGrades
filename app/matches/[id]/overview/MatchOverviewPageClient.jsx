@@ -10,7 +10,6 @@ import Lineup from '/components/match/Lineup.jsx';
 import MatchStats from '/components/match/MatchStats.jsx';
 import RenderTeamStrengths from '/components/match/RenderTeamStrengths';
 import RenderTeamWeaknesses from '/components/match/RenderTeamWeaknesses';
-import RenderMatchForecast from '/components/match/RenderMatchForecast';
 
 export default function MatchOverviewPageClient({ match, teamStats }) {
 
@@ -307,8 +306,16 @@ export default function MatchOverviewPageClient({ match, teamStats }) {
                     <MatchStats match={match} visible={match.matchStatus.started} acceptedStats={['shots', 'keyPasses', 'possession', 'touches']} />
                     <Lineup match={match} hasSubs={false} hasLineupInfo={true} />
                     <div css={teamTraitsCard}>
-                        <div css={forecastContent}>
-                            <RenderMatchForecast teams={match.general} teamStats={teamStats} />
+                        <div css={teamTraitsWrapper}>
+                            <div css={teamTraitsHeader}>
+                                <h2>{translationsMap?.["teamTraits"]?.[language]}</h2>
+                            </div>
+                            <div css={teamTraitsContent}>
+                                <RenderTeamStrengths team={match.general.home} teamStats={teamStats} />
+                                <RenderTeamStrengths team={match.general.away} teamStats={teamStats} />
+                                <RenderTeamWeaknesses team={match.general.home} teamStats={teamStats} />
+                                <RenderTeamWeaknesses team={match.general.away} teamStats={teamStats} />
+                            </div>
                         </div>
                     </div>
                 </div>

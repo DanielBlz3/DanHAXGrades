@@ -557,19 +557,15 @@
       ]
     },
     {
-      "teamname": "Palmerias",
-      "teamNameShort": "Palmerias",
+      "teamname": "Manchester United",
+      "teamNameShort": "Man UTD",
       "teamId": 10,
-      "currentLeagues": [
-        2,
-        3
-      ],
       "logo": "/images/teamLogos/10.png",
-      "color": "rgb(61, 120, 61)",
+      "color": "rgb(218, 41, 28)",
       "colorAlternate": "rgb(0, 0, 0)",
       "teamdescription": {
-        "manager": "Davis",
-        "colors": "Green",
+        "manager": "Barita",
+        "colors": "Red",
         "jerseys": [
           "None",
           "None",
@@ -598,7 +594,9 @@
             "seasonswon": []
           },
           "second": {
-            "seasonswon": []
+            "seasonswon": [
+              1
+            ]
           }
         },
         "EXL Pretemporada": {
@@ -613,7 +611,7 @@
         }
       },
       "previoustablefinishes": [
-        null,
+        2,
         null,
         null
       ]
@@ -734,67 +732,6 @@
       },
       "previoustablefinishes": [
         null,
-        null,
-        null
-      ]
-    },
-    {
-      "teamname": "Manchester United",
-      "teamNameShort": "Man UTD",
-      "teamId": 13,
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-manchester-united-logo?v=1744588712661",
-      "color": "rgb(218, 41, 28)",
-      "teamdescription": {
-        "manager": "",
-        "colors": "Red",
-        "jerseys": [
-          null,
-          null,
-          null
-        ]
-      },
-      "trophieswon": {
-        "EXL Liga": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": [
-              1
-            ]
-          }
-        },
-        "Copa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "SuperCopa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": [
-              1
-            ]
-          }
-        },
-        "EXL Pretemporada": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": [
-              1
-            ]
-          }
-        }
-      },
-      "previoustablefinishes": [
-        2,
         null,
         null
       ]
@@ -1315,19 +1252,19 @@
       "minforPer20Stats": 59,
       "participants": [
         [
-          "Liverpool",
-          "Antuna Raiders",
-          "Palmerias",
-          "Comediantes",
-          "Sporting Club de Moai"
+          9,
+          2,
+          10,
+          7,
+          11
         ],
         [
-          "K9ARMY",
-          "Atletico Madrid",
-          "Aguilas Cementeras",
-          "Inter de Barcelona",
-          "Boston United",
-          "Arsenal"
+         9,
+          4,
+          1,
+          5,
+          6,
+          3
         ]
       ],
       "legend": [
@@ -1340,382 +1277,6 @@
           ]
         }
       ]
-    },
-    "matchday1": {
-      "game1": {
-        "teams": [
-          "Arsenal",
-          "K9army"
-        ],
-        "matchtime": {
-          "date": "March 15",
-          "time": "7:00 CDMX"
-        },
-        "scoreline": "0-3",
-        "id": 8
-      },
-      "game2": {
-        "teams": [
-          "Boston United",
-          "Aguilas Cementeras"
-        ],
-        "matchtime": {
-          "date": "March 14",
-          "time": "8:30 CDMX"
-        },
-        "scoreline": "2-4",
-        "id": 5
-      },
-      "game3": {
-        "teams": [
-          "Inter de Barcelona",
-          "Atletico Madrid"
-        ],
-        "matchtime": {
-          "date": "March 14",
-          "time": "9:00 PM CDMX"
-        },
-        "scoreline": "0-8",
-        "id": 9
-      },
-      "game4": {
-        "teams": [
-          "Liverpool",
-          "Sporting Club de Moai"
-        ],
-        "matchtime": {
-          "date": "March 15",
-          "time": "8:00 CDMX"
-        },
-        "scoreline": "3-0",
-        "id": 7
-      },
-      "game5": {
-        "teams": [
-          "Antuna Raiders",
-          "Palmerias"
-        ],
-        "matchtime": {
-          "date": "March 15",
-          "time": "8:30 CDMX"
-        },
-        "scoreline": "0-1",
-        "id": 6
-      }
-    },
-    "matchday2": {
-      "game1": {
-        "teams": [
-          "K9army",
-          "Aguilas Cementeras"
-        ],
-        "matchtime": {
-          "date": "March 18",
-          "time": "9:00 CDMX"
-        },
-        "scoreline": "1-2",
-        "id": 10
-      },
-      "game2": {
-        "teams": [
-          "Arsenal",
-          "Inter de Barcelona"
-        ],
-        "matchtime": {
-          "date": "March 18",
-          "time": "9:30 CDMX"
-        },
-        "scoreline": "0-3",
-        "id": 11
-      },
-      "game3": {
-        "teams": [
-          "Atletico Madrid",
-          "Boston United"
-        ],
-        "matchtime": {
-          "date": "March 19",
-          "time": "8:00 CDMX"
-        },
-        "scoreline": "4-0",
-        "id": 12
-      },
-      "game4": {
-        "teams": [
-          "Comediantes",
-          "Palmerias"
-        ],
-        "matchtime": {
-          "date": "March 19",
-          "time": "9:30 CDMX"
-        },
-        "scoreline": "0-3",
-        "id": 13
-      },
-      "game5": {
-        "teams": [
-          "Antuna Raiders",
-          "Liverpool"
-        ],
-        "matchtime": {
-          "date": "March 19",
-          "time": "9:00 CDMX"
-        },
-        "scoreline": "1-0",
-        "id": 14
-      }
-    },
-    "matchday3": {
-      "game1": {
-        "teams": [
-          "Inter de Barcelona",
-          "K9army"
-        ],
-        "matchtime": {
-          "date": "March 21",
-          "time": "8:00 CDMX"
-        },
-        "scoreline": "0-2",
-        "id": 15
-      },
-      "game2": {
-        "teams": [
-          "Aguilas Cementeras",
-          "Atletico Madrid"
-        ],
-        "matchtime": {
-          "date": "March 21",
-          "time": "8:30 CDMX"
-        },
-        "scoreline": "0-1",
-        "id": 16
-      },
-      "game3": {
-        "teams": [
-          "Boston United",
-          "Arsenal"
-        ],
-        "matchtime": {
-          "date": "March 21",
-          "time": "9:00 CDMX"
-        },
-        "scoreline": "1-1",
-        "id": 17
-      },
-      "game4": {
-        "teams": [
-          "Antuna Raiders",
-          "Sporting Club de Moai"
-        ],
-        "matchtime": {
-          "date": "March 22",
-          "time": "8:00 CDMX"
-        },
-        "scoreline": "5-1",
-        "id": 18
-      },
-      "game5": {
-        "teams": [
-          "Liverpool",
-          "Comediantes"
-        ],
-        "matchtime": {
-          "date": "March 22",
-          "time": "8:30 CDMX"
-        },
-        "scoreline": "3-0",
-        "id": 19
-      }
-    },
-    "matchday4": {
-      "game1": {
-        "teams": [
-          "K9army",
-          "Atletico Madrid"
-        ],
-        "matchtime": {
-          "date": "March 25",
-          "time": "8:00 CDMX"
-        },
-        "scoreline": "0-1",
-        "id": 20
-      },
-      "game2": {
-        "teams": [
-          "Inter de Barcelona",
-          "Boston United"
-        ],
-        "matchtime": {
-          "date": "March 25",
-          "time": "8:30 CDMX"
-        },
-        "scoreline": "1-3",
-        "id": 21
-      },
-      "game3": {
-        "teams": [
-          "Arsenal",
-          "Aguilas Cementeras"
-        ],
-        "matchtime": {
-          "date": "March 25",
-          "time": "9:00 CDMX"
-        },
-        "scoreline": "2-3",
-        "id": 22
-      },
-      "game4": {
-        "teams": [
-          "Palmerias",
-          "Liverpool"
-        ],
-        "matchtime": {
-          "date": "March 26",
-          "time": "8:00 CDMX"
-        },
-        "scoreline": "4-1",
-        "id": 23
-      },
-      "game5": {
-        "teams": [
-          "Comediantes",
-          "Sporting Club de Moai"
-        ],
-        "matchtime": {
-          "date": "CANCELADO",
-          "time": "CANCELADO"
-        },
-        "scoreline": "0-3",
-        "id": 24
-      }
-    },
-    "matchday5": {
-      "game1": {
-        "teams": [
-          "Boston United",
-          "K9army"
-        ],
-        "matchtime": {
-          "date": "March 28",
-          "time": "8:00 CDMX"
-        },
-        "scoreline": "1-3",
-        "id": 25
-      },
-      "game2": {
-        "teams": [
-          "Atletico Madrid",
-          "Arsenal"
-        ],
-        "matchtime": {
-          "date": "March 28",
-          "time": "8:30 CDMX"
-        },
-        "scoreline": "9-0",
-        "id": 26
-      },
-      "game3": {
-        "teams": [
-          "Aguilas Cementeras",
-          "Inter de Barcelona"
-        ],
-        "matchtime": {
-          "date": "March 28",
-          "time": "9:00 CDMX"
-        },
-        "scoreline": "3-0",
-        "id": 27
-      },
-      "game4": {
-        "teams": [
-          "Antuna Raiders",
-          "Comediantes"
-        ],
-        "matchtime": {
-          "date": "CANCELADO",
-          "time": "CANCELADO"
-        },
-        "scoreline": "3-0",
-        "id": 28
-      },
-      "game5": {
-        "teams": [
-          "Sporting Club de Moai",
-          "Palmerias"
-        ],
-        "matchtime": {
-          "date": "March 29",
-          "time": "8:00 CDMX"
-        },
-        "scoreline": "1-8",
-        "id": 29
-      }
-    },
-    "matchday6": {
-      "game1": {
-        "teams": [
-          "Aguilas Cementeras",
-          "Palmerias"
-        ],
-        "matchtime": {
-          "date": "April 2nd",
-          "time": "8:00 CDMX"
-        },
-        "scoreline": "1-4",
-        "id": 30
-      },
-      "game2": {
-        "teams": [
-          "Antuna Raiders",
-          "Atletico Madrid"
-        ],
-        "matchtime": {
-          "date": "April 2nd",
-          "time": "8:00 CDMX"
-        },
-        "scoreline": "1-1",
-        "id": 31
-      }
-    },
-    "matchday7": {
-      "game1": {
-        "teams": [
-          "Palmerias",
-          "Aguilas Cementeras"
-        ],
-        "matchtime": {
-          "date": "April 4th",
-          "time": "8:00 CDMX"
-        },
-        "scoreline": "4-0",
-        "id": 32
-      },
-      "game2": {
-        "teams": [
-          "Atletico Madrid",
-          "Antuna Raiders"
-        ],
-        "matchtime": {
-          "date": "April 4th",
-          "time": "8:00 CDMX"
-        },
-        "scoreline": "2-0",
-        "id": 33
-      }
-    },
-    "matchday8": {
-      "game1": {
-        "teams": [
-          "Palmerias",
-          "Atletico Madrid"
-        ],
-        "matchtime": {
-          "date": "April 5th",
-          "time": "9:00 CDMX"
-        },
-        "scoreline": "2-1",
-        "id": 34
-      }
     }
   },
   "fixturesLiga3": {
@@ -1732,16 +1293,16 @@
       "minforPer20Stats": 5,
       "participants": [
         [
-          "Liverpool",
-          "Sporting Club de Moai",
-          "Atletico Madrid",
-          "Boston United",
-          "Palmerias",
-          "K9ARMY",
-          "Antuna Raiders",
-          "Arsenal",
-          "Inter de Barcelona",
-          "AS Roma"
+          9,
+          11,
+          4,
+          6,
+          10,
+          8,
+          2,
+          3,
+          5,
+          12
         ]
       ],
       "legend": []
@@ -1761,18 +1322,18 @@
       "minforPer20Stats": 25,
       "participants": [
         [
-          "Liverpool",
-          "Sporting Club de Moai",
-          "Atletico Madrid",
-          "Boston United",
-          "Palmerias"
+          9,
+          11,
+          4,
+          6,
+          10
         ],
         [
-          "K9ARMY",
-          "Antuna Raiders",
-          "Arsenal",
-          "Inter de Barcelona",
-          "AS Roma"
+          8,
+          2,
+          3,
+          5,
+          12
         ]
       ],
       "legend": [

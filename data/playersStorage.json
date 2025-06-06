@@ -1898,7 +1898,7 @@
     "shirtNum": "15",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 8,
+    "team": 4,
     "trophies": {
       "team1": {
         "teamId": 8,
@@ -4588,5 +4588,27 @@
     "marketvalue": "$TBD",
     "team": 9,
     "playerId": 311
+  },
+  {
+    "playername": "Moon",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "shirtNum": "",
+    "league": "Exanon Liga",
+    "marketvalue": "$TBD",
+    "team": 4,
+    "playerId": 312
+  },
+  {
+    "playername": "Angel",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "shirtNum": "",
+    "league": "Exanon Liga",
+    "marketvalue": "$TBD",
+    "team": 4,
+    "playerId": 313
   }
 ]
