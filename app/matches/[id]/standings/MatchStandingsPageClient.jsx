@@ -24,18 +24,26 @@ export default function MatchStandingsPageClient({ match, leagueTable }) {
     ` ;
 
     function findGroup(table) {
-        let groupId = 0
+        let groupId = []
         for (let group = 0; group < table.length; group++) {
-            const teamInGorup =table[group].find(t => [match.general.home.id, match.general.away.id].includes(t.teamId))
-                groupId = teamInGorup ? group : 0
+            const teamInGorup = table[group].find(t => [match.general.home.id, match.general.away.id].includes(t.teamId))
+            if (teamInGorup) {
+                groupId.push(group)
+            }
         }
+        console.log(groupId)
         return groupId
     }
     const groupId = findGroup(leagueTable.table)
+    const RenderTables = groupId.map(g => {
+            return (
+                <Table match={match} leagueTable={leagueTable} id={g} />
+            )
+        })
 
     return (
         <div css={tableCard}>
-            <Table match={match} leagueTable={leagueTable} id={groupId} />
+           {RenderTables}
         </div>
     )
 }
