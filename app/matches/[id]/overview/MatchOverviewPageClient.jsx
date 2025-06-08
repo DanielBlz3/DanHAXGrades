@@ -303,7 +303,7 @@ export default function MatchOverviewPageClient({ match, teamStats }) {
         <div>
             <div css={matchContent}>
                 <div css={matchContentWrapper}>
-                    <MatchStats match={match} visible={match.matchStatus.started} acceptedStats={['shots', 'keyPasses', 'possession', 'touches']} />
+                    <MatchStats match={match} visible={match.matchStatus.started && !match.matchStatus.awarded} acceptedStats={['shots', 'keyPasses', 'possession', 'touches']} />
                     <Lineup match={match} hasSubs={false} hasLineupInfo={true} />
                     <div css={teamTraitsCard}>
                         <div css={teamTraitsWrapper}>

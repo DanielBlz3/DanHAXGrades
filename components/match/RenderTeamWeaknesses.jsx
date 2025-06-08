@@ -50,17 +50,18 @@ justify-content: center;
     font-weight: bold;
 `;
 
-    const focusedTeamStats = teamStats[String(team.id)]
-    const weaknesses = Object.entries(focusedTeamStats.strengths)
-        .filter(s => ["weak", "veryWeak"].includes(s[1]))
-        .sort((a, b) => {
-            const order = { weak: 0, veryWeak: 1 };
-            return order[a[1]] - order[b[1]];
-        });
+    const focusedTeamStats = teamStats.teamStats[String(team.id)]
+    if (focusedTeamStats?.strengths) {
+        const weaknesses = Object.entries(focusedTeamStats.strengths)
+            .filter(s => ["weak", "veryWeak"].includes(s[1]))
+            .sort((a, b) => {
+                const order = { weak: 0, veryWeak: 1 };
+                return order[a[1]] - order[b[1]];
+            });
 
-    const weaknessesItemsEl = weaknesses.map(s => {
-        const weaknessesBackground = s[1] === "veryWeak" ? 'var(--RATING-RED)' : "var(--RATING-ORANGE)"
-        const weaknessesValue = css`
+        const weaknessesItemsEl = weaknesses.map(s => {
+            const weaknessesBackground = s[1] === "veryWeak" ? 'var(--RATING-RED)' : "var(--RATING-ORANGE)"
+            const weaknessesValue = css`
     justify-self: flex-end;
     border-radius: 0.5rem;
     display: flex;
@@ -69,28 +70,29 @@ justify-content: center;
     padding-inline: .2rem;
     background-color: ${weaknessesBackground};
 `
-        return (
+            return (
 
-            <div
-                key={s[0]}
-                css={weaknessesItem}
-                                    className="secondary-hover"
-            >
-                <span css={strenghtsTitle}>
-                    {translationsMap?.[s[0]]?.[language]}
-                </span>
-                <span css={weaknessesValue}>
-                    {translationsMap?.[s[1]]?.[language]}
-                </span>
+                <div
+                    key={s[0]}
+                    css={weaknessesItem}
+                    className="secondary-hover"
+                >
+                    <span css={strenghtsTitle}>
+                        {translationsMap?.[s[0]]?.[language]}
+                    </span>
+                    <span css={weaknessesValue}>
+                        {translationsMap?.[s[1]]?.[language]}
+                    </span>
+                </div>
+            )
+        })
+        return (
+            <div css={weaknessesContainer}>
+                <h3 css={weaknessesHeader}>{`${team.name} ${translationsMap?.["weaknesses"]?.[language]}`}</h3>
+                {weaknessesItemsEl}
             </div>
         )
-    })
-    return (
-        <div css={weaknessesContainer}>
-            <h3 css={weaknessesHeader}>{`${team.name} ${translationsMap?.["weaknesses"]?.[language]}`}</h3>
-            {weaknessesItemsEl}
-        </div>
-    )
+    }
 }
 
 

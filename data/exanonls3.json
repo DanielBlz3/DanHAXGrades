@@ -7706,7 +7706,7 @@
                         "duelsLost": 0,
                         "passesC": 12,
                         "touches": 24,
-                        "bonus": 0
+                        "bonus": 1
                     },
                     {
                         "playerId": 312,
@@ -7782,7 +7782,7 @@
                         "duelsLost": 0,
                         "passesC": 15,
                         "touches": 39,
-                        "bonus": 0
+                        "bonus": 1.5
                     },
                     {
                         "playerId": 313,
@@ -7839,7 +7839,7 @@
                         "duelsLost": 2,
                         "passesC": 12,
                         "touches": 29,
-                        "bonus": 0
+                        "bonus": 0.5
                     }
           ],
           "awayplayers": [

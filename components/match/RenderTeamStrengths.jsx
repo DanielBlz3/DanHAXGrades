@@ -24,7 +24,7 @@ const RenderTeamStrengths = ({ team, teamStats }) => {
     align-items: center;
 `;
 
-const strengthsHeader = css`
+    const strengthsHeader = css`
 display: flex;
 height: 2rem;
 align-items: center;
@@ -51,15 +51,16 @@ justify-content: center;
     font-weight: bold;
 `;
 
-const focusedTeamStats = teamStats[String(team.id)]
-     const strengths = Object.entries(focusedTeamStats.strengths).filter(s => ["veryStrong", "strong"].includes(s[1])).sort((a, b) => {
-        const priority = { veryStrong: 0, strong: 1 };
-        return priority[a[1]] - priority[b[1]];
-    });
+    const focusedTeamStats = teamStats.teamStats[String(team.id)]
+    if (focusedTeamStats?.strengths) {
+        const strengths = Object.entries(focusedTeamStats.strengths).filter(s => ["veryStrong", "strong"].includes(s[1])).sort((a, b) => {
+            const priority = { veryStrong: 0, strong: 1 };
+            return priority[a[1]] - priority[b[1]];
+        });
 
-    const strengthsItemsEl = strengths.map(s => {
+        const strengthsItemsEl = strengths.map(s => {
             const strengthsBackground = s[1] === "veryStrong" ? 'var(--RATING-BLUE)' : "var(--RATING-GREEN)"
-        const strengthsValue = css`
+            const strengthsValue = css`
     justify-self: flex-end;
     border-radius: 0.5rem;
     display: flex;
@@ -68,28 +69,29 @@ const focusedTeamStats = teamStats[String(team.id)]
     padding-inline: .2rem;
     background-color: ${strengthsBackground};
 `
-        return (
+            return (
 
-            <div
-                key={s[0]}
-                css={strengthsItem}
-                                    className="secondary-hover"
-            >
-                <span css={strengthsTitle}>
-                    {translationsMap?.[s[0]]?.[language]}
-                </span>
-                <span css={strengthsValue}>
-                    {translationsMap?.[s[1]]?.[language]}
-                </span>
+                <div
+                    key={s[0]}
+                    css={strengthsItem}
+                    className="secondary-hover"
+                >
+                    <span css={strengthsTitle}>
+                        {translationsMap?.[s[0]]?.[language]}
+                    </span>
+                    <span css={strengthsValue}>
+                        {translationsMap?.[s[1]]?.[language]}
+                    </span>
+                </div>
+            )
+        })
+        return (
+            <div css={strengthsContainer}>
+                <h3 css={strengthsHeader}>{`${team.name} ${translationsMap?.["strengths"]?.[language]}`}</h3>
+                {strengthsItemsEl}
             </div>
         )
-    })
-    return (
-        <div css={strengthsContainer}>
-            <h3 css={strengthsHeader}>{`${team.name} ${translationsMap?.["strengths"]?.[language]}`}</h3>
-            {strengthsItemsEl}
-        </div>
-    )
+    }
 }
 
 

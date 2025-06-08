@@ -57,12 +57,12 @@ const RenderForecast = ({ teams, teamStats }) => {
         {
             key: "shotsOnTarget_Forecast",
             forStat: "shotFrequency",
-            againstStat: "defense"
+            againstStat: "defense",
         },
         {
             key: "errors_Forecast",
             forStat: "forcingErrors",
-            againstStat: "errorProneness"
+            againstStat: "errorProneness",
         },
         {
             key: "duelWinning_Forecast",
@@ -85,12 +85,17 @@ const RenderForecast = ({ teams, teamStats }) => {
             const weak = "weak"
             const veryWeak = "veryWeak"
             var probability
-            if ([veryStrong].includes(home[forStat]) && [veryWeak, weak, average].includes(away[againstStat])) {
+            console.log(`home strength for stat ${forStat} ${home[forStat]}`)
+            console.log(`away strength for stat ${forStat} ${away[forStat]}`)
+
+            console.log(`home strength against stat ${againstStat} ${home[againstStat]}`)
+            console.log(`away strength against stat ${againstStat} ${away[againstStat]}`)
+            if ([veryStrong].includes(home[forStat]) && [veryWeak, weak].includes(away[againstStat])) {
                 probability = { team: "home", key: key, likeliness: "veryLikely" }
             } else if ([strong].includes(home[forStat]) && [veryWeak, weak].includes(away[againstStat])) {
                 probability = { team: "home", key: key, likeliness: "likely" }
-            } else if ([average].includes(home[forStat]) && [veryStrong].includes(away[againstStat])) {
-                probability = { team: "away", key: key, likeliness: "likely" }
+            } else if ([veryStrong].includes(home[forStat]) && [average].includes(away[againstStat])) {
+                probability = { team: "home", key: key, likeliness: "likely" }
             } else if ([veryWeak, weak].includes(home[againstStat]) && [veryStrong].includes(away[forStat])) {
                 probability = { team: "away", key: key, likeliness: "veryLikely" }
             } else if ([veryWeak, weak].includes(home[againstStat]) && [strong].includes(away[forStat])) {

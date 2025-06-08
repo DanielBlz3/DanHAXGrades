@@ -17,7 +17,6 @@ export default function Layout({ otherFixtures, match, children }) {
         setLanguage(storedlanguage)
     })
 
-
     const otherMatches = css`
     text-decoration: none;
       background-color: var(--card-bg-main);
@@ -124,7 +123,10 @@ background-color: var(--card-bg-main);
   }
 `;
 
-const matchDate = typeof m.status.statusShort !== "object" ? `${translationsMap?.[`${m.status.statusShort}_Short`]?.[language]}` : m.status.statusShort.date || ""
+const matchDate = 
+  typeof m.status.statusShort !== "object"
+    ? translationsMap?.[`${m.status.statusShort}_Short`]?.[language] || ""
+    : m.status.statusShort?.date || "";
 const [homeScore, awayScore] = typeof m.status.statusShort !== "object" ? [m.home.score, m.away.score] : ["", ""]
             return (
                 <a css={matchLink} href={m.pageUrl} className='secondary-hover'>
