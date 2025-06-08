@@ -31,16 +31,6 @@ export default function ricknigg({ match, leagueTable, id }) {
     margin-bottom: .75rem;
     `;
 
-    const leagueTableItem = css`
-        position: relative;
-    display: grid;
-    grid-template-rows: subgrid;
-    grid-template-columns: 1fr 5fr repeat(7, 1fr);
-    text-align: center;
-    padding-block: .4rem;
-    text-decoration: none;
-    color: var(--primary-font-color);
-    `;
 
     const tableTeam = css`
         display: flex;
@@ -79,17 +69,30 @@ export default function ricknigg({ match, leagueTable, id }) {
 
     const RenderTableItems = () => {
         const tableItems = standings.map(t => {
+        const leagueItemBgColor = [match.general.home.id, match.general.away.id].includes(t.teamId) ? '--card-bg-third' : '--card-bg-main'
 
-            const qualifier = css`
+        const qualifier = css`
       &::before {
-          content: "";
+    content: "";
     position: absolute;
-    background-color: ${t.color};
+    background-color: var(${t.color});
     height: 80%;
     top: 2px;
     width: 2px;
     border-radius: 1rem
 }`
+
+    const leagueTableItem = css`
+        position: relative;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-template-columns: 1fr 5fr repeat(7, 1fr);
+    text-align: center;
+    padding-block: .4rem;
+    text-decoration: none;
+    background-color: var(${leagueItemBgColor});
+    color: var(--primary-font-color);
+    `;
 
             return (
                 <a css={[leagueTableItem, qualifier]} className="secondary-hover" href={"/teams/" + t.teamId + "/overview"}>
