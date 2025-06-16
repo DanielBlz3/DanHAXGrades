@@ -3,12 +3,12 @@
     {
       "teamname": "Free Agents",
       "teamId": 0,
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/logoless?v=1742054547120",
+      "logo": "/images/teamLogos/0.png",
       "color": "rgb(39, 39, 39)"
     },
     {
       "teamname": "Aguilas Cementeras",
-      "teamNameShort": "A. Cementeras",
+      "teamNameShort": "Cementeras",
       "teamId": 1,
       "currentLeagues": [
         2,
@@ -618,7 +618,7 @@
     },
     {
       "teamname": "Sporting Club de Moai",
-      "teamNameShort": "Sportings Moai",
+      "teamNameShort": "SC Moai",
       "teamId": 11,
       "currentLeagues": [
         2,
@@ -740,7 +740,7 @@
       "teamname": "Real Madrid",
       "teamNameShort": "Madrid",
       "teamId": 14,
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-real-madrid-logo?v=1744588743127",
+      "logo": "/images/teamLogos/14.png",
       "color": "rgb(1, 66, 106)",
       "teamdescription": {
         "manager": "",
@@ -795,8 +795,9 @@
       "teamname": "Club Leon",
       "teamNameShort": "Leon",
       "teamId": 15,
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-leon-logo?v=1740850547882",
-      "color": "green",
+      "logo": "/images/teamLogos/15.png",
+      "color": "rgb(19, 101, 40)",
+      "colorAlternate": "rgb(181, 175, 65)",
       "teamdescription": {
         "manager": "",
         "colors": "Green",
@@ -854,7 +855,7 @@
       "teamname": "Sporting Libson",
       "teamNameShort": "Sporting",
       "teamId": 16,
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-sporting-lisbon-logo?v=1744601272695",
+      "logo": "/images/teamLogos/16.png",
       "color": "rgb(16, 104, 64)",
       "teamdescription": {
         "manager": "",
@@ -909,8 +910,9 @@
       "teamname": "Inter Milan",
       "teamNameShort": "Inter",
       "teamId": 17,
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/InterMilan?v=1740899898130",
+      "logo": "/images/teamLogos/17.png",
       "color": "rgb(1, 14, 128)",
+      "colorAlternate": "rgb(242, 255, 172)",
       "teamdescription": {
         "manager": "",
         "colors": "Blue, Black",
@@ -964,7 +966,7 @@
       "teamname": "Ajax",
       "teamNameShort": "Ajax",
       "teamId": 18,
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/Ajax?v=1740967566736",
+      "logo": "/images/teamLogos/18.png",
       "color": "rgb(194, 0, 47)",
       "teamdescription": {
         "manager": "",
@@ -1019,7 +1021,7 @@
       "teamname": "Athletic Bilbao",
       "teamNameShort": "Athletic Club",
       "teamId": 19,
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-athletic-club-logo?v=1740787340585",
+      "logo": "/images/teamLogos/19.png",
       "color": "rgb(226, 0, 26)",
       "teamdescription": {
         "manager": "",
@@ -1076,7 +1078,7 @@
       "teamname": "AC Milan",
       "teamNameShort": "Milan",
       "teamId": 20,
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-ac-milan-logo?v=1744641360553",
+      "logo": "/images/teamLogos/20.png",
       "color": "rgb(207, 44, 39)",
       "teamdescription": {
         "manager": "",
@@ -1131,7 +1133,7 @@
       "teamname": "Bayer Leverkusen",
       "teamNameShort": "Leverkusen",
       "teamId": 21,
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-bayer-leverkusen-logo?v=1744641629804",
+      "logo": "/images/teamLogos/21.png",
       "color": "rgb(207, 44, 39)",
       "teamdescription": {
         "manager": "",
@@ -1236,14 +1238,69 @@
         null,
         null
       ]
+    },
+    {
+      "teamname": "Leicester City",
+      "teamNameShort": "Leicester",
+      "teamId": 23,
+      "logo": "/images/teamLogos/23.png",
+      "color": "rgb(121, 178, 242)",
+      "teamdescription": {
+        "manager": "",
+        "colors": "Sky Blue",
+        "jerseys": [
+          null,
+          null,
+          null
+        ]
+      },
+      "trophieswon": {
+        "EXL Liga": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "Copa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "SuperCopa EXL": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        },
+        "EXL Pretemporada": {
+          "first": {
+            "seasonswon": []
+          },
+          "second": {
+            "seasonswon": []
+          }
+        }
+      },
+      "previoustablefinishes": [
+        null,
+        null,
+        null
+      ]
     }
   ],
   "fixturesPreTemp3": {
     "leagueDesc": {
       "leaguename": "Exanon Pretemporada Season 3",
       "leagueabbr": "EXL Pre-Temp S3",
-      "color": "black",
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-exanon-league-s3-logo?v=1744754340707",
+      "color": "rgb(0, 0, 0)",
+      "logo": "/images/leagueLogos/1.png",
       "leagueStatus": "finished",
       "leagueId": 1,
       "leagueJSON": "exanonpts3.json",
@@ -1259,7 +1316,7 @@
           11
         ],
         [
-         9,
+          9,
           4,
           1,
           5,
@@ -1283,25 +1340,25 @@
     "leagueDesc": {
       "leaguename": "Exanon League Season 3",
       "leagueabbr": "EXL",
-      "color": "black",
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-exanon-league-s3-logo?v=1744754340707",
+      "color": "rgb(0, 0, 0)",
+      "logo": "/images/leagueLogos/2.png",
       "leagueStatus": "ongoing",
       "leagueId": 2,
       "leagueJSON": "exanonls3.json",
       "leagueMatchdaysLength": 9,
-      "currentMatchday": 4,
+      "currentMatchday": 9,
       "minforPer20Stats": 5,
       "participants": [
         [
-          9,
-          11,
-          4,
-          6,
-          10,
-          8,
           2,
           3,
+          4,
           5,
+          6,
+          8,
+          9,
+          11,
+          10,
           12
         ]
       ],
@@ -1312,8 +1369,8 @@
     "leagueDesc": {
       "leaguename": "Exanon Copa Season 3",
       "leagueabbr": "EXL Copa",
-      "color": "red",
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/exanon-league-exanon-league-s3-logo?v=1744754340707",
+      "color": "rgb(225, 0, 0)",
+      "logo": "/images/leagueLogos/3.png",
       "leagueStatus": "ongoing",
       "leagueId": 3,
       "leagueJSON": "exanoncs3.json",
@@ -1346,6 +1403,95 @@
           ]
         }
       ]
+    }
+  },
+  "exanonCopaS1": {
+    "leagueDesc": {
+      "leaguename": "Exanon Copa Season 1",
+      "leagueabbr": "EXL Copa S1",
+      "color": "rgb(0, 0, 0)",
+      "logo": "/images/leagueLogos/4.png",
+      "leagueStatus": "finished",
+      "leagueId": 4,
+      "leagueJSON": "exanoncs1.json",
+      "leagueMatchdaysLength": 5,
+      "currentMatchday": 8,
+      "minforPer20Stats": 0,
+      "participants": [
+        [
+          4,
+          8,
+          10,
+          15
+        ]
+      ],
+      "legend": []
+    }
+  },
+  "exanonLeagueS1": {
+    "leagueDesc": {
+      "leaguename": "Exanon League Season 1",
+      "leagueabbr": "EXL League S1",
+      "color": "rgb(0, 0, 0)",
+      "logo": "/images/leagueLogos/5.png",
+      "leagueStatus": "finished",
+      "leagueId": 5,
+      "leagueJSON": "exanonls1.json",
+      "leagueMatchdaysLength": 0,
+      "currentMatchday": 0,
+      "minforPer20Stats": 0,
+      "participants": [
+        [
+          5,
+          8,
+          10,
+          14,
+          18,
+          19
+        ]
+      ],
+      "legend": []
+    }
+  },
+  "exanonCopaS2": {
+    "leagueDesc": {
+      "leaguename": "Exanon Copa Season 2",
+      "leagueabbr": "EXL Copa S2",
+      "color": "rgb(0, 0, 0)",
+      "logo": "/images/leagueLogos/6.png",
+      "leagueStatus": "finished",
+      "leagueId": 6,
+      "leagueJSON": "exanoncs2.json",
+      "leagueMatchdaysLength": 0,
+      "currentMatchday": 0,
+      "minforPer20Stats": 0,
+      "participants": [
+        []
+      ],
+      "legend": []
+    }
+  },
+  "exanonLeagueS2": {
+    "leagueDesc": {
+      "leaguename": "Exanon League Season 2",
+      "leagueabbr": "EXL League S2",
+      "color": "rgb(0, 0, 0)",
+      "logo": "/images/leagueLogos/7.png",
+      "leagueStatus": "finished",
+      "leagueId": 7,
+      "leagueJSON": "exanonls2.json",
+      "leagueMatchdaysLength": 0,
+      "currentMatchday": 0,
+      "minforPer20Stats": 0,
+      "participants": [
+        [
+          2,
+          8,
+          17,
+          23
+        ]
+      ],
+      "legend": []
     }
   }
 }

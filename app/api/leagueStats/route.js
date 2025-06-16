@@ -10,7 +10,6 @@ export async function GET(req) {
         const individualPlayerData = [...exanonLeagueS3.games, ...exanonCopaS3.games]    
         const stats = await getPlayerStats(individualPlayerData)      
           
-
         return NextResponse.json(stats);
     } catch (err) {
         console.error(err);

@@ -4444,7 +4444,7 @@
                         "bonus": 0.5
                     },
                     {
-                        "playerId": 287,
+                        "playerId": 62,
                         "minutes": 14,
                         "goals": 0,
                         "shots": 0,
@@ -7557,17 +7557,17 @@
         "formation": ["threefourthree", "fourthreethree"],
         "timeline": [
           {
-          "isGoal": true,
-          "isSubstitution": false,
-          "type": "openPlay",
+          "type": "goal",
+          "team": "home",
+          "goalType": "openPlay",
           "goalscorerId": 53,
           "assisterId": 191,
           "minute": "8"
           },
           {
-          "isGoal": true,
-          "isSubstitution": false,
-          "type": "openPlay",
+          "type": "goal",
+          "team": "away",
+          "goalType": "openPlay",
           "goalscorerId": 26,
           "assisterId": 256,
           "minute": "11"
@@ -8068,7 +8068,17 @@
         ],
         "scoreline": "1-0",
         "formation": ["threefouronetwo", "threetwotwothree"],
-        "timeline": [],
+        "timeline": [
+          {
+          "type": "goal",
+          "team": "home",
+          "goalType": "openPlay",
+          "isPen": false,
+          "goalscorerId": 157,
+          "assisterId": 303,
+          "minute": "13"
+          }
+        ],
         "managers": ["", ""],
         "leagueRound": 7,
         "started": true,

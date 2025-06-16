@@ -11,9 +11,6 @@ import '/styles/global.css';
 
 export default function MatchLineupPageClient({ match }) {
 
-    const router = useRouter();
-    const searchParams = useSearchParams();
-    const defaultTab = searchParams.get('tab') || 'lineup';
     const [theme, setTheme] = useState('theme-light');
     const [language, setLanguage] = useState('es');
     useEffect(() => {

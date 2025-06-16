@@ -27,17 +27,15 @@ export default function PlayerPageClient({ player }) {
             const root = document.documentElement;
             if (storedTheme === 'theme-light') {
                 root.style.setProperty('--team-color', player.teamColors.teamColorMain);
-                root.style.setProperty('--team-font-color', isLight(player.teamColors.teamColorMain) ? 'black' : 'white');
+                root.style.setProperty('--team-font-color', isLight(player.teamColors.teamColorMain) ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)');
             } else {
                 root.style.setProperty('--team-color', player.teamColors.teamColorAlternate);
-                root.style.setProperty('--team-font-color', isLight(player.teamColors.teamColorAlternate) ? 'black' : 'white');
+                root.style.setProperty('--team-font-color', isLight(player.teamColors.teamColorAlternate) ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)');
             }
         };
 
         updateThemeColors();
-
         window.addEventListener('themechange', updateThemeColors);
-
         return () => {
             window.removeEventListener('themechange', updateThemeColors);
         };

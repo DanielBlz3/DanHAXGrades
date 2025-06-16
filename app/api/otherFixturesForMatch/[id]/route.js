@@ -8,11 +8,19 @@ import path from 'path';
 export async function GET(req, { params }) {
     try {
         const matchId = Number(params.id);
-        const [filePath, leagueId] = matchId >= 100
-            ? ['exanoncs3.json', 3]
-            : matchId >= 35
-                ? ['exanonls3.json', 2]
-                : ['exanonpts3.json', 1];
+        const [filePath, leagueId] = matchId >= 350
+            ? ['exanonls2.json', 4]
+            : matchId >= 300
+                ? ['exanoncs2.json', 4]
+                : matchId >= 250
+                    ? ['exanonls1.json', 4]
+                    : matchId >= 200
+                        ? ['exanoncs1.json', 4]
+                        : matchId >= 100
+                            ? ['exanoncs3.json', 3]
+                            : matchId >= 35
+                                ? ['exanonls3.json', 2]
+                                : ['exanonpts3.json', 1];
 
         const fullPath = path.join(process.cwd(), 'data', filePath);
         const file = fs.readFileSync(fullPath, 'utf-8');

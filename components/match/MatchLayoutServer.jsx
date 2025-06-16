@@ -1,5 +1,6 @@
 import MatchLayoutClient from './MatchLayoutClient';
 import MatchOtherMatchesLayoutClient from './MatchOtherMatchesLayoutClient';
+import '/styles/global.css';
 
 async function getMatchData(id) {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/matchDetails/${id}`, {
@@ -23,7 +24,7 @@ export default async function MatchLayoutServer({ children, params }) {
     const match = await getMatchData(params.id);
     const otherFixtures = await getOtherFixturesData(params.id);
     return (
-        <div className='match-wrapper'>
+        <div className='global-content-wrapper'>
             <MatchLayoutClient match={match}>{children}</MatchLayoutClient>
             <MatchOtherMatchesLayoutClient otherFixtures={otherFixtures} match={match}>{children}</MatchOtherMatchesLayoutClient>
         </div>

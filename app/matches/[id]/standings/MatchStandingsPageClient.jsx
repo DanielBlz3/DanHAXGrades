@@ -3,7 +3,7 @@
 import React from "react";
 import { css } from '@emotion/react';
 import { useEffect, useState } from 'react';
-import Table from '/components/table';
+import Table from '/components/Table';
 import '/styles/global.css';
 
 export default function MatchStandingsPageClient({ match, leagueTable }) {
@@ -36,14 +36,14 @@ export default function MatchStandingsPageClient({ match, leagueTable }) {
     }
     const groupId = findGroup(leagueTable.table)
     const RenderTables = groupId.map(g => {
-            return (
-                <Table match={match} leagueTable={leagueTable} id={g} />
-            )
-        })
+        return (
+            <Table match={match} leagueTable={leagueTable} id={g} />
+        )
+    })
 
     return (
         <div css={tableCard}>
-           {RenderTables}
+            {RenderTables}
         </div>
     )
 }

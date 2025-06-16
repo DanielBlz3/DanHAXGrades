@@ -4,9 +4,7 @@ import Link from 'next/link';
 import React from "react";
 import { css } from '@emotion/react';
 import { useEffect, useState } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
 import { translationsMap } from '/lib/translations';
-import formatMatchTimestamp from '/lib/timeFormatter';
 import '/styles/global.css';
 
 export default function Layout({ otherFixtures, match, children }) {
@@ -20,7 +18,6 @@ export default function Layout({ otherFixtures, match, children }) {
     const otherMatches = css`
     text-decoration: none;
       background-color: var(--card-bg-main);
-      width: 20rem;
       border-radius: 1.25rem;
       padding: 1rem;
     `;
@@ -36,9 +33,6 @@ export default function Layout({ otherFixtures, match, children }) {
     height: 4.5rem;
     place-items: center;
     `;
-
-    const otherMatchesMain = css`
-`;;
 
     const matchLink = css`
 background-color: var(--card-bg-main);
@@ -57,8 +51,8 @@ text-decoration: none;
     place-items: center;
     justify-content: center;
     gap: 12px;
-        width: 100%;
-             border-right: 1px solid var(--primary-divider-bg);
+    width: 100%;
+    border-right: 1px solid var(--primary-divider-bg);
 
 `;
 
@@ -169,7 +163,7 @@ const [homeScore, awayScore] = typeof m.status.statusShort !== "object" ? [m.hom
                         </div>
                     </header>
                 </a>
-                <div css={otherMatchesMain}>
+                <div >
                     {otherFixturesEl}
                 </div>
             </div>
@@ -177,8 +171,8 @@ const [homeScore, awayScore] = typeof m.status.statusShort !== "object" ? [m.hom
     }
 
     return (
-        <div match-right-grid>
-            {RenderOtherFixtures()}
+        <div className="global-right-grid">
+            <RenderOtherFixtures/>
         </div>
     )
 }

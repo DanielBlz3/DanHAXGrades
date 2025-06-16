@@ -1,5 +1,9 @@
- {
-            "1": "exanonpts3.json",
-            "2": "exanonls3.json",
-            "3": "exanoncs3.json"
+{
+    "1": "exanonpts3.json",
+    "2": "exanonls3.json",
+    "3": "exanoncs3.json",
+    "4": "exanoncs1.json",
+    "5": "exanonls1.json",
+    "6": "exanoncs2.json",
+    "7": "exanonls2.json"
 }

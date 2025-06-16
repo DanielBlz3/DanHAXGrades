@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { translationsMap } from '/lib/translations.js';
 import getPlayerUiStats from '/lib/getPlayerUiStats.js';
+import MatchTimeline from '/components/match/MatchTimeline';
 import Lineup from '/components/match/Lineup.jsx';
 import MatchStats from '/components/match/MatchStats.jsx';
 import RenderTeamStrengths from '/components/match/RenderTeamStrengths';
@@ -304,6 +305,7 @@ export default function MatchOverviewPageClient({ match, teamStats }) {
             <div css={matchContent}>
                 <div css={matchContentWrapper}>
                     <MatchStats match={match} visible={match.matchStatus.started && !match.matchStatus.awarded} acceptedStats={['shots', 'keyPasses', 'possession', 'touches']} />
+                    <MatchTimeline match={match}/>
                     <Lineup match={match} hasSubs={false} hasLineupInfo={true} />
                     <div css={teamTraitsCard}>
                         <div css={teamTraitsWrapper}>

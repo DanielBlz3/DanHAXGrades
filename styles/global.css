@@ -1,4 +1,5 @@
 :root {
+    --GLOBAL-DANHAXGRADES-SCHEME: rgb(46, 204, 113);
     --DIVIDE: .25px;
     --GLOBAL-FONT-COLOR-GREY: grey;
     --GLOBAL-FONT-COLOR-WHITE: #fff;
@@ -33,6 +34,8 @@
     --primary-divider-bg: #ebebeb;
     --secondary-divider-bg: #dcdcdc;
     --third-divider-bg: #d2d2d2;
+    --primary-arrow-bg: rgb(175, 175, 175);
+    --primary-arrow-stroke: rgb(80, 80, 80);
     --primary-font-color: #000;
     --percentile-button-default-bg: #fff;
     --percentile-button-default-font-color: #000;
@@ -61,6 +64,8 @@
     --primary-divider-bg: #323232;
     --secondary-divider-bg: #414141;
     --third-divider-bg: #4b4b4b;
+    --primary-arrow-bg: rgb(80, 80, 80);
+    --primary-arrow-stroke: rgb(175, 175, 175);
     --primary-font-color: #fff;
     --percentile-button-default-bg: #313131;
     --percentile-button-default-font-color: #fff;
@@ -82,31 +87,41 @@
 body {
     background-color: var(--page-background-color);
     color: var(--primary-font-color);
-    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
-    transition: background-color .5s ease,color .5s ease,fill .5s ease,stroke .5s ease
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+    transition: background-color .5s ease, color .5s ease, fill .5s ease, stroke .5s ease
 }
 
-.match-wrapper {
-    max-width: 1280px;
-    width: 100%;
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+}
+
+.global-content-wrapper {
     display: grid;
-    grid-template-columns: .75fr .25fr;
+    width: 1280px;
+    width: 100%;
+    grid-template-columns: 3fr 1fr;
     grid-gap: 1rem;
-    gap: 1rem
 }
 
-.match-left-grid,.right-grid {
+@media (max-width: 1200px) {
+    .global-content-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+.global-left-grid,
+.global-right-grid {
     display: flex;
     flex-flow: column;
-    gap: 1rem
-}
-
-.match-left-grid {
-    width: 960px
-}
-
-.right-grid {
-    width: 320px
+    gap: 1rem;
 }
 
 .primary-hover:hover {
@@ -130,8 +145,39 @@ body {
     align-self: center
 }
 
-.primary-rating,.secondary-rating {
+.primary-rating,
+.secondary-rating {
     color: var(--GLOBAL-FONT-COLOR-WHITE)
+}
+
+.nav-item {
+    flex: 1;
+    background-color: var(--card-bg-main);
+    color: var(--nav-item-font-color);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    height: 100%;
+    position: relative;
+}
+
+.nav-item:hover {
+    color: var(--primary-font-color);
+}
+
+.nav-highlight {
+    color: var(--primary-font-color);
+}
+
+.nav-highlight::after {
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 3px;
+    background-color: var(--GLOBAL-DANHAXGRADES-SCHEME);
+    border-radius: 2.5rem 2.5rem 0 0;
 }
 
 .secondary-rating {

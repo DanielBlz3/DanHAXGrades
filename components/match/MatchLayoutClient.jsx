@@ -6,19 +6,21 @@ import { css } from '@emotion/react';
 import { useEffect, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { translationsMap } from '/lib/translations';
-import formatMatchTimestamp from '/lib/timeFormatter';
+import { usePathname } from 'next/navigation'
 import '/styles/global.css';
 
-
-
 export default function Layout({ match, children }) {
-
+    const pathname = usePathname()
     const router = useRouter();
-    const searchParams = useSearchParams();
-    const defaultTab = searchParams.get('tab') || 'lineup';
+    const path = usePathname();
+    const currentTab = path.split('/').pop(); // gets last segment like 'stats'
+    const [activeTab, setActiveTab] = useState(currentTab);
     const [theme, setTheme] = useState('theme-light');
     const [language, setLanguage] = useState('es');
-    const [activeTab, setActiveTab] = useState(defaultTab);
+
+    useEffect(() => {
+        setActiveTab(currentTab);
+    }, [currentTab]);
 
     const handleTabClick = (tab) => {
         setActiveTab(tab);
@@ -28,20 +30,9 @@ export default function Layout({ match, children }) {
     useEffect(() => {
         const storedlanguage = localStorage.getItem('language') || 'es';
         setLanguage(storedlanguage)
-        const updateThemeColors = () => {
-            const storedTheme = localStorage.getItem('theme') || 'theme-light';
-            setTheme(storedTheme);
-        };
-
-        updateThemeColors();
-
-        window.addEventListener('themechange', updateThemeColors);
-
-        return () => {
-            window.removeEventListener('themechange', updateThemeColors);
-        };
+        const storedTheme = localStorage.getItem('theme') || 'theme-light';
+        setTheme(storedTheme);
     }, [match]);
-
 
     const scoreBoardAndNav = css`
   background-color: var(--card-bg-main);
@@ -83,7 +74,7 @@ export default function Layout({ match, children }) {
   gap: 5px;
 `;
 
-const leagueLink = css`
+    const leagueLink = css`
   color: var(--primary-font-color);
   text-decoration: none;
 `
@@ -108,25 +99,9 @@ const leagueLink = css`
   border-radius: 0 0 1.5rem 1.5rem;
   display: flex;
   flex-flow: row;
-  gap: 3rem;
   height: 7.5vh;
-  padding-inline: 3rem;
   width: 100%;
 `;
-
-    const navItem = css`
-    background-color: var(--card-bg-main);
-    color: var(--nav-item-font-color);
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  height: 100%;
-  width: 20%;
-
-  &:hover {
-  color: var(--primary-font-color)
-  }
-    `
 
     const goalScorersContianer = css`
   display: flex;
@@ -142,14 +117,6 @@ const leagueLink = css`
   font-size: 0.8rem;
   font-weight: bold;
   grid-template-columns: 1fr 1fr 1fr;
-`;
-
-    const goalscorersHome = css`
-  text-align: right;
-`;
-
-    const goalscorersAway = css`
-  text-align: left;
 `;
 
     const goalscorersBall = css`
@@ -178,14 +145,94 @@ const leagueLink = css`
         }
     }
 
+    const GoalScorers = ({ team }) => {
+        const teamGoals = match.timeline.filter(i => (i.type === "goal" && i.team === team))
+        const textAlign = team === "home" ? "right" : "lfet"
+        const goalscorersCSS = css`
+    display: flex;
+    flex-flow: column;
+  text-align: ${textAlign};
+`;
+
+        const goalScorerTextCSS = css`
+color: var(--primary-font-color);
+text-decoration: none;
+`
+        const goalScorersContent = teamGoals.map(i => {
+            const goalScorerText = i.goalType === "ownGoal" ? `${i.goalscorerName} ${i.minute}' (OG)` : `${i.goalscorerName} ${i.minute}'`
+            return (
+                <a
+                    href={i.goalscorerPageUrl}
+                    key={i.goalscorerId}
+                    css={goalScorerTextCSS}
+                    className='third-hover'
+                >{goalScorerText}</a>
+            )
+        })
+        return (
+            <div css={goalscorersCSS}>
+                {goalScorersContent}
+            </div>
+        )
+    }
+
     const renderNav = () => {
-        const [canRenderStatsSection, canRenderLineupSection] = ["FT", "Live", "AET"].includes(match.matchStatus.statusShort) ? [true, true] : [false, false]
-        const renderForecastSection = match.matchStatus.started ? false : true
-        const overviewSection = <button css={navItem} onClick={() => handleTabClick('overview')}>{translationsMap?.["overview"]?.[language]}</button>
-        const standingsSection = <button css={navItem} onClick={() => handleTabClick('standings')}>{translationsMap?.["standings"]?.[language]}</button>
-        const statsSection = canRenderStatsSection ? <button css={navItem} onClick={() => handleTabClick('lineup')}>{translationsMap?.["lineup"]?.[language]}</button> : null
-        const lineupSection = canRenderLineupSection ? <button css={navItem} onClick={() => handleTabClick('stats')}>{translationsMap?.["stats"]?.[language]}</button> : null
-        const forecastSection = renderForecastSection ? <button css={navItem} onClick={() => handleTabClick('forecast')}>{translationsMap?.["forecast"]?.[language]}</button> : null
+        const [canRenderStatsSection, canRenderLineupSection, renderTimelineSection] = ["FT", "Live", "AET"].includes(match.matchStatus.statusShort) ? [true, true, true] : [false, false, false];
+        const renderForecastSection = match.matchStatus.started ? false : true;
+
+        const overviewSection = (
+            <button
+                onClick={() => handleTabClick('overview')}
+                className={`nav-item ${activeTab === 'overview' ? 'nav-highlight' : ''}`}
+            >
+                {translationsMap?.["overview"]?.[language]}
+            </button>
+        );
+
+        const standingsSection = (
+            <button
+                onClick={() => handleTabClick('standings')}
+                className={`nav-item ${activeTab === 'standings' ? 'nav-highlight' : ''}`}
+            >
+                {translationsMap?.["standings"]?.[language]}
+            </button>
+        );
+
+        const statsSection = canRenderStatsSection ? (
+            <button
+                onClick={() => handleTabClick('lineup')}
+                className={`nav-item ${activeTab === 'lineup' ? 'nav-highlight' : ''}`}
+            >
+                {translationsMap?.["lineup"]?.[language]}
+            </button>
+        ) : null;
+
+        const lineupSection = canRenderLineupSection ? (
+            <button
+                onClick={() => handleTabClick('stats')}
+                className={`nav-item ${activeTab === 'stats' ? 'nav-highlight' : ''}`}
+            >
+                {translationsMap?.["stats"]?.[language]}
+            </button>
+        ) : null;
+
+        const forecastSection = renderForecastSection ? (
+            <button
+                onClick={() => handleTabClick('forecast')}
+                className={`nav-item ${activeTab === 'forecast' ? 'nav-highlight' : ''}`}
+            >
+                {translationsMap?.["forecast"]?.[language]}
+            </button>
+        ) : null;
+
+        const timelineSection = renderTimelineSection ? (
+            <button
+                onClick={() => handleTabClick('timeline')}
+                className={`nav-item ${activeTab === 'timeline' ? 'nav-highlight' : ''}`}
+            >
+                {translationsMap?.["timeline"]?.[language]}
+            </button>
+        ) : null;
 
         return (
             <nav css={matchNav}>
@@ -193,54 +240,51 @@ const leagueLink = css`
                 {statsSection}
                 {lineupSection}
                 {forecastSection}
+                {timelineSection}
                 {standingsSection}
             </nav>
-        )
+        );
     }
 
     return (
-        <div className='match-left-grid'>
-            <>
-                <div css={scoreBoardAndNav}>
-                    <div css={matchLeagueWrapper}>
-                        <div css={leagueWrapper}>
-                            <img src={match.general.leagueLogo}
-                                width="25px" height="25px" />
-                            <a href={"/leagues/" + match.general.leagueId + "/overview"} css={leagueLink} className='third-hover'>{`${match.general.leagueName} ${translationsMap?.["round"]?.[language]} ${match.general.roundName}`}</a>
-                        </div>
+        <div className='global-left-grid'>
+            <div css={scoreBoardAndNav}>
+                <div css={matchLeagueWrapper}>
+                    <div css={leagueWrapper}>
+                        <img src={match.general.leagueLogo}
+                            width="25px" height="25px" />
+                        <a href={"/leagues/" + match.general.leagueId + "/overview"} css={leagueLink} className='third-hover'>{`${match.general.leagueName} ${translationsMap?.["round"]?.[language]} ${match.general.roundName}`}</a>
                     </div>
-                    <div css={scoreBoardContainer}>
-                        <a href={match.general.home.pageUrl} css={scoreBoardTeam} className='third-hover'>
-                            <div>
-                                <img data-team-logo="home"
-                                    src={match.general.home.logo}
-                                    width="24px" />
-                            </div>
-                            <span>{match.general.home.name}</span>
-                        </a>
-                        {renderScoreBoard()}
-                        <a href={match.general.away.pageUrl} css={scoreBoardTeam} className='third-hover'>
-                            <div>
-                                <img data-team-logo="away"
-                                    src={match.general.away.logo}
-                                    width="24" />
-                            </div>
-                            <span>{match.general.away.name}</span>
-                        </a>
-                    </div>
-                    <div css={goalScorersContianer}>
-                        <div css={goalScorersWrapper}>
-                            <div css={goalscorersHome}></div>
-                            <div css={goalscorersBall}>⚽</div>
-                            <div css={goalscorersAway}></div>
-                        </div>
-                    </div>
-                    {renderNav()}
                 </div>
-            </>
-            <>
-                {children}
-            </>
+                <div css={scoreBoardContainer}>
+                    <a href={match.general.home.pageUrl} css={scoreBoardTeam} className='third-hover'>
+                        <div>
+                            <img data-team-logo="home"
+                                src={match.general.home.logo}
+                                width="24px" />
+                        </div>
+                        <span>{match.general.home.name}</span>
+                    </a>
+                    {renderScoreBoard()}
+                    <a href={match.general.away.pageUrl} css={scoreBoardTeam} className='third-hover'>
+                        <div>
+                            <img data-team-logo="away"
+                                src={match.general.away.logo}
+                                width="24" />
+                        </div>
+                        <span>{match.general.away.name}</span>
+                    </a>
+                </div>
+                <div css={goalScorersContianer}>
+                    <div css={goalScorersWrapper}>
+                        <GoalScorers team="home" />
+                        <div css={goalscorersBall}>⚽</div>
+                        <GoalScorers team="away" />
+                    </div>
+                </div>
+                {renderNav()}
+            </div>
+            {children}
         </div>
     );
 }

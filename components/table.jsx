@@ -5,7 +5,7 @@ import { css } from '@emotion/react';
 import { useEffect, useState } from 'react';
 import { translationsMap } from '/lib/translations';
 
-export default function ricknigg({ match, leagueTable, id }) {
+export default function Table({ match, leagueTable, id, showTitle }) {
 
     const [theme, setTheme] = useState('theme-light');
     const [language, setLanguage] = useState('es');
@@ -30,7 +30,6 @@ export default function ricknigg({ match, leagueTable, id }) {
     font-weight: 700;
     margin-bottom: .75rem;
     `;
-
 
     const tableTeam = css`
         display: flex;
@@ -69,13 +68,14 @@ export default function ricknigg({ match, leagueTable, id }) {
 
     const RenderTableItems = () => {
         const tableItems = standings.map(t => {
-        const leagueItemBgColor = [match.general.home.id, match.general.away.id].includes(t.teamId) ? '--card-bg-third' : '--card-bg-main'
+        const teamsArr = match ? [match.general.home.id, match.general.away.id] : []
+        const leagueItemBgColor =  teamsArr.includes(t.teamId) ? '--card-bg-third' : '--card-bg-main'
 
         const qualifier = css`
       &::before {
     content: "";
     position: absolute;
-    background-color: var(${t.color});
+    background-color: ${t.color};
     height: 80%;
     top: 2px;
     width: 2px;
@@ -132,7 +132,7 @@ export default function ricknigg({ match, leagueTable, id }) {
     } */
     return (
         <div css={tableWrapper}>
-            <a css={leagueTableHeader} href={"/leagues/" + tableDetails.leagueId + "/overview"} className="primary-hover">{tableDetails.leagueName}</a>
+            {showTitle ? <a css={leagueTableHeader} href={"/leagues/" + tableDetails.leagueId + "/overview"} className="primary-hover">{tableDetails.leagueName}</a> : null}
             <RenderTableHeader />
             <RenderTableItems />
         </div>
