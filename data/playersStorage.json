@@ -1753,14 +1753,14 @@
     "playerId": 107
   },
   {
-    "playername": "Ficticius",
+    "playername": "Gera",
     "isManager": false,
     "isCoManager": false,
     "nation": "mx",
-    "shirtNum": "7",
+    "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 12,
+    "team": 8,
     "playerId": 108
   },
   {
@@ -3710,17 +3710,6 @@
     "playerId": 231
   },
   {
-    "playername": "Julian",
-    "isCoach": false,
-    "isCaptain": false,
-    "nation": "mx",
-    "shirtNum": "",
-    "league": "Exanon Liga",
-    "marketvalue": "$TBD",
-    "team": 9,
-    "playerId": 232
-  },
-  {
     "playername": "NewYulius",
     "isCoach": false,
     "isCaptain": false,
@@ -4269,17 +4258,6 @@
     "marketvalue": "$TBD",
     "team": 3,
     "playerId": 282
-  },
-  {
-    "playername": "Gera",
-    "isManager": false,
-    "isCoManager": false,
-    "nation": "mx",
-    "shirtNum": "",
-    "league": "Exanon Liga",
-    "marketvalue": "$TBD",
-    "team": 8,
-    "playerId": 283
   },
   {
     "playername": "Ferran",
@@ -5224,7 +5202,29 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 2,
     "playerId": 370
+  },
+  {
+    "playername": "Kimi Räikkönen",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "shirtNum": "",
+    "league": "Exanon Liga",
+    "marketvalue": "$TBD",
+    "team": 6,
+    "playerId": 371
+  },
+  {
+    "playername": "Zed",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "us",
+    "shirtNum": "",
+    "league": "Exanon Liga",
+    "marketvalue": "$TBD",
+    "team": 6,
+    "playerId": 372
   }
 ]

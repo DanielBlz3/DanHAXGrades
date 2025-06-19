@@ -45,7 +45,6 @@ export default function LeagueStatsPageClient({ league }) {
             <div css={statsSection}>
                 <TopStats metric="topGoalsRate" data={league.topPlayerStats.topGoalsRate} />
                 <TopStats metric="topShotsOnTarget" data={league.topPlayerStats.topShotsOnTarget} />
-                <TopStats metric="topGa" data={league.topPlayerStats.topGa} />
                 <TopStats metric="topBcm" data={league.topPlayerStats.topBcm} />
             </div>
             <h2 css={statsHeader}>{translationsMap?.["passingAndTouches"]?.[language]}</h2>
