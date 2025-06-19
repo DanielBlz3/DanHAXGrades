@@ -8,20 +8,34 @@ import path from 'path';
 export async function GET(req, { params }) {
     try {
         const matchId = Number(params.id);
-        const [filePath, leagueId] = matchId >= 350
-            ? ['exanonls2.json', 4]
-            : matchId >= 300
-                ? ['exanoncs2.json', 4]
-                : matchId >= 250
-                    ? ['exanonls1.json', 4]
-                    : matchId >= 200
-                        ? ['exanoncs1.json', 4]
-                        : matchId >= 100
-                            ? ['exanoncs3.json', 3]
-                            : matchId >= 35
-                                ? ['exanonls3.json', 2]
-                                : ['exanonpts3.json', 1];
-
+        let filePath
+        let leagueId
+        if (matchId >= 1000) {
+            filePath = 'friendlies.json';
+            leagueId = 8;
+        } else if (matchId >= 450) {
+            filePath = 'exanonls2.json';
+            leagueId = 7;
+        } else if (matchId >= 350) {
+            filePath = 'exanoncs2.json';
+            leagueId = 6;
+        } else if (matchId >= 250) {
+            filePath = 'exanonls1.json';
+            leagueId = 5;
+        } else if (matchId >= 200) {
+            filePath = 'exanoncs1.json';
+            leagueId = 4;
+        } else if (matchId >= 100) {
+            filePath = 'exanoncs3.json';
+            leagueId = 3;
+        } else if (matchId >= 35) {
+            filePath = 'exanonls3.json';
+            leagueId = 2;
+        } else {
+            filePath = 'exanonpts3.json';
+            leagueId = 1;
+        }
+        
         const fullPath = path.join(process.cwd(), 'data', filePath);
         const file = fs.readFileSync(fullPath, 'utf-8');
         const data = JSON.parse(file);

@@ -4,10 +4,7 @@
 import React from "react";
 import { css } from '@emotion/react';
 import { useEffect, useState } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
 import { translationsMap } from '/lib/translations.js';
-import isDark from '/lib/isDark.js';
-import isLight from '/lib/isLight.js';
 import '/styles/global.css';
 import Fixtures from '/components/Fixtures';
 import DefaultArrow from '/components/DefaultArrow';
@@ -31,8 +28,8 @@ export default function LeagueFixturesPageClient({ league }) {
 
     > :first-child {
     border: none;
-  } 
-`;
+    } 
+    `;
 
     const fixturesHeader = css`
     display: flex;
@@ -64,12 +61,14 @@ export default function LeagueFixturesPageClient({ league }) {
     `;
 
     const currentMatchday = league.leagueDetails.currentMatchday
-    const maxMatchday = league.fixtures.sort((a, b) => b.leagueRound - a.leagueRound)?.slice(0, 1)[0].leagueRound;
-    const [matchday, setFixturesMatchday] = useState(currentMatchday); //DEFAULT MATCHDAY IS THE CURRENT ONE
+    const maxMatchday = league.fixtures.sort((a, b) => b.roundNumber - a.roundNumber)?.slice(0, 1)[0]?.roundNumber;
+    const [matchday, setFixturesMatchday] = useState(currentMatchday);
+    const filteredFixtures = league.fixtures.filter(m => m.roundNumber === matchday)
+    const leagueRound = filteredFixtures?.slice(0, 1)[0]?.leagueRound
+    const roundName = filteredFixtures?.slice(0, 1)[0]?.roundName
+    const roundNameH2 = typeof leagueRound === "number" ? `${translationsMap?.["round"]?.[language]} ${roundName}` : `${translationsMap?.[roundName]?.[language]}`
 
     const RenderFixtures = ({ matchday }) => {
-        const filteredFixtures = league.fixtures.filter(m => m.leagueRound === matchday)
-        const item = css`flex: 1; `
 
         const forwardMatchday = maxMatchday > matchday ? matchday + 1 : maxMatchday
         const backwardMatchday = matchday > 1 ? matchday - 1 : 1
@@ -80,7 +79,7 @@ export default function LeagueFixturesPageClient({ league }) {
                     <button css={fixturesButton} onClick={() => setFixturesMatchday(backwardMatchday)}>
                         <DefaultArrow direction="right" bgColor={"var(--primary-arrow-bg)"} strokeBgColor={"var(--primary-arrow-stroke)"} strokeWidth={"2.5"} />
                     </button>
-                    <h2>{`${translationsMap?.["round"]?.[language]} ${matchday}`}</h2>
+                    <h2>{roundNameH2}</h2>
                     <button css={fixturesButton} onClick={() => setFixturesMatchday(forwardMatchday)}>
                         <DefaultArrow direction="left" bgColor={"var(--primary-arrow-bg)"} strokeBgColor={"var(--primary-arrow-stroke)"} strokeWidth={"2.5"} />
                     </button>
@@ -93,7 +92,7 @@ export default function LeagueFixturesPageClient({ league }) {
         <>
             <div css={fixturesCard}>
                 <div css={fixturesHeader}>
-                    <h2 css={fixturesTitle}> {translationsMap?.["fixtures"]?.[language]}</h2>
+                    <h2 css={fixturesTitle}>{translationsMap?.["fixtures"]?.[language]}</h2>
                 </div>
                 <RenderFixtures matchday={matchday} />
             </div>

@@ -46,6 +46,7 @@ export default function Layout({ match, children }) {
   grid-auto-flow: column;
   grid-template-columns: 1fr 0.5fr 1fr;
   padding: 1.5rem 5rem;
+  align-items: start;
 `;
 
     const scoreBoard = css`
@@ -77,7 +78,7 @@ export default function Layout({ match, children }) {
     const leagueLink = css`
   color: var(--primary-font-color);
   text-decoration: none;
-`
+`;
 
     const scoreBoardTeam = css`
   color: var(--primary-font-color);
@@ -94,13 +95,20 @@ export default function Layout({ match, children }) {
   }
 `;
 
-    const matchNav = css`
-  align-items: center;
+    const nav = css`
+  background-color: var(--card-bg-main);
   border-radius: 0 0 1.5rem 1.5rem;
+  height: 2.5rem;
+  padding-left: 2rem;
+  width: 100%;
+`;
+
+    const navWrapper = css`
   display: flex;
   flex-flow: row;
-  height: 7.5vh;
-  width: 100%;
+  height: 100%;
+  width: 75%;
+  align-items: center;
 `;
 
     const goalScorersContianer = css`
@@ -123,16 +131,25 @@ export default function Layout({ match, children }) {
   justify-self: center;
 `;
 
+    const aggregateAndPens = css`
+  color: var(--GLOBAL-FONT-COLOR-GREY);
+  font-size: 14px;
+`;
+
     const renderScoreBoard = () => {
         const scoreline = match.matchStatus.scoreStr
         const statusStart = match.matchStatus.started
         const status = match.matchStatus.statusShort
+        const aggregateEl = match.matchStatus.aggregateScore ? (<div css={aggregateAndPens}> {`${translationsMap?.["aggregate"]?.[language]}: (${match.matchStatus.aggregateScore})`} </div>) : null
+        const pensEl = match.matchStatus.penScore ? (<div css={aggregateAndPens}> {`${translationsMap?.["pen"]?.[language]}: ${match.matchStatus.penScore}`} </div>) : null
 
         if (statusStart) {
             return (
                 <div css={scoreBoard}>
                     <h2>{scoreline}</h2>
                     <div css={matchStatus}>{translationsMap?.[status]?.[language]}</div>
+                    {aggregateEl}
+                    {pensEl}
                 </div>
             )
         } else {
@@ -158,6 +175,7 @@ export default function Layout({ match, children }) {
 color: var(--primary-font-color);
 text-decoration: none;
 `
+
         const goalScorersContent = teamGoals.map(i => {
             const goalScorerText = i.goalType === "ownGoal" ? `${i.goalscorerName} ${i.minute}' (OG)` : `${i.goalscorerName} ${i.minute}'`
             return (
@@ -235,17 +253,20 @@ text-decoration: none;
         ) : null;
 
         return (
-            <nav css={matchNav}>
-                {overviewSection}
-                {statsSection}
-                {lineupSection}
-                {forecastSection}
-                {timelineSection}
-                {standingsSection}
+            <nav css={nav}>
+                <div css={navWrapper}>
+                    {overviewSection}
+                    {statsSection}
+                    {lineupSection}
+                    {forecastSection}
+                    {timelineSection}
+                    {standingsSection}
+                </div>
             </nav>
         );
     }
 
+    const roundName = typeof match.general.round == "number" ? `${match.general.leagueName} ${translationsMap?.["round"]?.[language]} ${match.general.roundName}` : `${match.general.leagueName} ${translationsMap?.[match.general.roundName]?.[language]}`
     return (
         <div className='global-left-grid'>
             <div css={scoreBoardAndNav}>
@@ -253,7 +274,7 @@ text-decoration: none;
                     <div css={leagueWrapper}>
                         <img src={match.general.leagueLogo}
                             width="25px" height="25px" />
-                        <a href={"/leagues/" + match.general.leagueId + "/overview"} css={leagueLink} className='third-hover'>{`${match.general.leagueName} ${translationsMap?.["round"]?.[language]} ${match.general.roundName}`}</a>
+                        <a href={"/leagues/" + match.general.leagueId + "/overview"} css={leagueLink} className='third-hover'>{roundName}</a>
                     </div>
                 </div>
                 <div css={scoreBoardContainer}>

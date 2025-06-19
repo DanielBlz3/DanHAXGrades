@@ -37,7 +37,7 @@ export default function MatchStandingsPageClient({ match, leagueTable }) {
     const groupId = findGroup(leagueTable.table)
     const RenderTables = groupId.map(g => {
         return (
-            <Table match={match} leagueTable={leagueTable} id={g} />
+            <Table match={match} leagueTable={leagueTable} id={g} showTitle={true} key={g}/>
         )
     })
 

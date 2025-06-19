@@ -1,9 +1,801 @@
 {
     "games": [
         {
+            "gameId": 253,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                4,
+                17
+            ],
+            "scoreline": "1-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 1,
+            "roundNumber": 1,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 254,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                18,
+                21
+            ],
+            "scoreline": "0-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 1,
+            "roundNumber": 1,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 255,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                16,
+                20
+            ],
+            "scoreline": "0-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 1,
+            "roundNumber": 1,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 256,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                14,
+                15
+            ],
+            "scoreline": "0-2",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 1,
+            "roundNumber": 1,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 257,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                8,
+                5
+            ],
+            "scoreline": "0-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 1,
+            "roundNumber": 1,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 258,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                22,
+                10
+            ],
+            "scoreline": "2-2",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 1,
+            "roundNumber": 1,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 259,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                8,
+                17
+            ],
+            "scoreline": "0-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 2,
+            "roundNumber": 2,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 260,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                20,
+                5
+            ],
+            "scoreline": "0-2",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 2,
+            "roundNumber": 2,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 261,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                14,
+                4
+            ],
+            "scoreline": "0-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 2,
+            "roundNumber": 2,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 262,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                16,
+                15
+            ],
+            "scoreline": "0-3",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 2,
+            "roundNumber": 2,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 263,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                22,
+                18
+            ],
+            "scoreline": "0-3",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 2,
+            "roundNumber": 2,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 264,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                21,
+                10
+            ],
+            "scoreline": "4-1",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 2,
+            "roundNumber": 2,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 265,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                10,
+                14
+            ],
+            "scoreline": "4-1",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 3,
+            "roundNumber": 3,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 266,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                8,
+                21
+            ],
+            "scoreline": "2-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 3,
+            "roundNumber": 3,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 267,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                5,
+                16
+            ],
+            "scoreline": "0-4",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 3,
+            "roundNumber": 3,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 268,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                15,
+                4
+            ],
+            "scoreline": "0-1",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 3,
+            "roundNumber": 3,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 269,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                20,
+                18
+            ],
+            "scoreline": "0-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 3,
+            "roundNumber": 3,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 270,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                17,
+                22
+            ],
+            "scoreline": "3-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 3,
+            "roundNumber": 3,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 271,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                10,
+                18
+            ],
+            "scoreline": "4-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 4,
+            "roundNumber": 4,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 272,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                15,
+                22
+            ],
+            "scoreline": "3-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 4,
+            "roundNumber": 4,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 273,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                4,
+                8
+            ],
+            "scoreline": "1-1",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 4,
+            "roundNumber": 4,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 274,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                5,
+                21
+            ],
+            "scoreline": "3-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 4,
+            "roundNumber": 4,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 275,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                20,
+                14
+            ],
+            "scoreline": "0-6",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 4,
+            "roundNumber": 4,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 276,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                16,
+                17
+            ],
+            "scoreline": "6-1",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 4,
+            "roundNumber": 4,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 277,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                15,
+                10
+            ],
+            "scoreline": "0-1",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 5,
+            "roundNumber": 5,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
             "gameId": 250,
             "playerslist": {
                 "homeplayers": [
+                    {
+                        "playerId": 41,
+                        "isGoalkeeper": true,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 0,
+                        "duelsLost": 0,
+                        "passesC": 6,
+                        "touches": 14,
+                        "bonus": 0,
+                        "saves": 2,
+                        "goalsConceded": 0,
+                        "gkPunches": 0,
+                        "gkRecovery": 2,
+                        "actedAsSweeper": 0
+                    },
+                    {
+                        "playerId": 113,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 1,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 1,
+                        "duelsLost": 0,
+                        "passesC": 16,
+                        "touches": 45,
+                        "bonus": 0.5
+                    },
+                    {
+                        "playerId": 344,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 3,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 1,
+                        "duelsLost": 1,
+                        "passesC": 12,
+                        "touches": 21,
+                        "bonus": 1.5
+                    },
+                    {
+                        "playerId": 8,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 3,
+                        "errors": 1,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 3,
+                        "duelsLost": 1,
+                        "passesC": 9,
+                        "touches": 20,
+                        "bonus": 1.5
+                    },
+                    {
+                        "playerId": 2,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 1,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 2,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 0,
+                        "duelsLost": 4,
+                        "passesC": 11,
+                        "touches": 25,
+                        "bonus": 1
+                    },
+                    {
+                        "playerId": 6,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 2,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 1,
+                        "defensiveActions": 1,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 2,
+                        "duelsLost": 0,
+                        "passesC": 11,
+                        "touches": 26,
+                        "bonus": 0
+                    },
+                    {
+                        "playerId": 3,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 1,
+                        "assists": 1,
+                        "secondassists": 0,
+                        "keyPasses": 1,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 1,
+                        "duelsLost": 1,
+                        "passesC": 24,
+                        "touches": 38,
+                        "bonus": 0
+                    },
+                    {
+                        "playerId": 5,
+                        "minutes": 20,
+                        "goals": 1,
+                        "shots": 1,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 4,
+                        "duelsLost": 0,
+                        "passesC": 5,
+                        "touches": 25,
+                        "bonus": 0
+                    },
+                    {
+                        "playerId": 1,
+                        "minutes": 20,
+                        "goals": 1,
+                        "shots": 1,
+                        "assists": 1,
+                        "secondassists": 0,
+                        "keyPasses": 0,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 1,
+                        "duelsLost": 1,
+                        "passesC": 8,
+                        "touches": 18,
+                        "bonus": 0
+                    },
+                    {
+                        "playerId": 4,
+                        "minutes": 20,
+                        "goals": 0,
+                        "shots": 0,
+                        "assists": 2,
+                        "secondassists": 0,
+                        "keyPasses": 3,
+                        "defensiveActions": 1,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 0,
+                        "duelsLost": 1,
+                        "passesC": 7,
+                        "touches": 29,
+                        "bonus": 0
+                    },
+                    {
+                        "playerId": 245,
+                        "minutes": 20,
+                        "goals": 3,
+                        "shots": 4,
+                        "assists": 0,
+                        "secondassists": 0,
+                        "keyPasses": 2,
+                        "defensiveActions": 0,
+                        "errors": 0,
+                        "bigErrors": 0,
+                        "ownGoals": 0,
+                        "bcm": 0,
+                        "duelsWon": 1,
+                        "duelsLost": 2,
+                        "passesC": 8,
+                        "touches": 30,
+                        "bonus": 0
+                    }
+                ],
+                "awayplayers": [
                     {
                         "playerId": 162,
                         "isGoalkeeper": true,
@@ -238,234 +1030,17 @@
                         "touches": 11,
                         "bonus": 0
                     }
-                ],
-                "awayplayers": [
-                    {
-                        "playerId": 41,
-                        "isGoalkeeper": true,
-                        "minutes": 20,
-                        "goals": 0,
-                        "shots": 0,
-                        "assists": 0,
-                        "secondassists": 0,
-                        "keyPasses": 0,
-                        "defensiveActions": 0,
-                        "errors": 0,
-                        "bigErrors": 0,
-                        "ownGoals": 0,
-                        "bcm": 0,
-                        "duelsWon": 0,
-                        "duelsLost": 0,
-                        "passesC": 6,
-                        "touches": 14,
-                        "bonus": 0,
-                        "saves": 2,
-                        "goalsConceded": 0,
-                        "gkPunches": 0,
-                        "gkRecovery": 2,
-                        "actedAsSweeper": 0
-                    },
-                    {
-                        "playerId": 113,
-                        "minutes": 20,
-                        "goals": 0,
-                        "shots": 0,
-                        "assists": 0,
-                        "secondassists": 0,
-                        "keyPasses": 0,
-                        "defensiveActions": 1,
-                        "errors": 0,
-                        "bigErrors": 0,
-                        "ownGoals": 0,
-                        "bcm": 0,
-                        "duelsWon": 1,
-                        "duelsLost": 0,
-                        "passesC": 16,
-                        "touches": 45,
-                        "bonus": 0.5
-                    },
-                    {
-                        "playerId": 344,
-                        "minutes": 20,
-                        "goals": 0,
-                        "shots": 0,
-                        "assists": 0,
-                        "secondassists": 0,
-                        "keyPasses": 0,
-                        "defensiveActions": 3,
-                        "errors": 0,
-                        "bigErrors": 0,
-                        "ownGoals": 0,
-                        "bcm": 0,
-                        "duelsWon": 1,
-                        "duelsLost": 1,
-                        "passesC": 12,
-                        "touches": 21,
-                        "bonus": 1.5
-                    },
-                    {
-                        "playerId": 8,
-                        "minutes": 20,
-                        "goals": 0,
-                        "shots": 0,
-                        "assists": 0,
-                        "secondassists": 0,
-                        "keyPasses": 0,
-                        "defensiveActions": 3,
-                        "errors": 1,
-                        "bigErrors": 0,
-                        "ownGoals": 0,
-                        "bcm": 0,
-                        "duelsWon": 3,
-                        "duelsLost": 1,
-                        "passesC": 9,
-                        "touches": 20,
-                        "bonus": 1.5
-                    },
-                    {
-                        "playerId": 2,
-                        "minutes": 20,
-                        "goals": 0,
-                        "shots": 1,
-                        "assists": 0,
-                        "secondassists": 0,
-                        "keyPasses": 0,
-                        "defensiveActions": 2,
-                        "errors": 0,
-                        "bigErrors": 0,
-                        "ownGoals": 0,
-                        "bcm": 0,
-                        "duelsWon": 0,
-                        "duelsLost": 4,
-                        "passesC": 11,
-                        "touches": 25,
-                        "bonus": 1
-                    },
-                    {
-                        "playerId": 6,
-                        "minutes": 20,
-                        "goals": 0,
-                        "shots": 2,
-                        "assists": 0,
-                        "secondassists": 0,
-                        "keyPasses": 1,
-                        "defensiveActions": 1,
-                        "errors": 0,
-                        "bigErrors": 0,
-                        "ownGoals": 0,
-                        "bcm": 0,
-                        "duelsWon": 2,
-                        "duelsLost": 0,
-                        "passesC": 11,
-                        "touches": 26,
-                        "bonus": 0
-                    },
-                    {
-                        "playerId": 3,
-                        "minutes": 20,
-                        "goals": 0,
-                        "shots": 1,
-                        "assists": 1,
-                        "secondassists": 0,
-                        "keyPasses": 1,
-                        "defensiveActions": 0,
-                        "errors": 0,
-                        "bigErrors": 0,
-                        "ownGoals": 0,
-                        "bcm": 0,
-                        "duelsWon": 1,
-                        "duelsLost": 1,
-                        "passesC": 24,
-                        "touches": 38,
-                        "bonus": 0
-                    },
-                    {
-                        "playerId": 5,
-                        "minutes": 20,
-                        "goals": 1,
-                        "shots": 1,
-                        "assists": 0,
-                        "secondassists": 0,
-                        "keyPasses": 0,
-                        "defensiveActions": 0,
-                        "errors": 0,
-                        "bigErrors": 0,
-                        "ownGoals": 0,
-                        "bcm": 0,
-                        "duelsWon": 4,
-                        "duelsLost": 0,
-                        "passesC": 5,
-                        "touches": 25,
-                        "bonus": 0
-                    },
-                    {
-                        "playerId": 1,
-                        "minutes": 20,
-                        "goals": 1,
-                        "shots": 1,
-                        "assists": 1,
-                        "secondassists": 0,
-                        "keyPasses": 0,
-                        "defensiveActions": 0,
-                        "errors": 0,
-                        "bigErrors": 0,
-                        "ownGoals": 0,
-                        "bcm": 0,
-                        "duelsWon": 1,
-                        "duelsLost": 1,
-                        "passesC": 8,
-                        "touches": 18,
-                        "bonus": 0
-                    },
-                    {
-                        "playerId": 4,
-                        "minutes": 20,
-                        "goals": 0,
-                        "shots": 0,
-                        "assists": 2,
-                        "secondassists": 0,
-                        "keyPasses": 3,
-                        "defensiveActions": 1,
-                        "errors": 0,
-                        "bigErrors": 0,
-                        "ownGoals": 0,
-                        "bcm": 0,
-                        "duelsWon": 0,
-                        "duelsLost": 1,
-                        "passesC": 7,
-                        "touches": 29,
-                        "bonus": 0
-                    },
-                    {
-                        "playerId": 245,
-                        "minutes": 20,
-                        "goals": 3,
-                        "shots": 4,
-                        "assists": 0,
-                        "secondassists": 0,
-                        "keyPasses": 2,
-                        "defensiveActions": 0,
-                        "errors": 0,
-                        "bigErrors": 0,
-                        "ownGoals": 0,
-                        "bcm": 0,
-                        "duelsWon": 1,
-                        "duelsLost": 2,
-                        "passesC": 8,
-                        "touches": 30,
-                        "bonus": 0
-                    }
                 ]
             },
-            "scoreline": "0-5",
+            "scoreline": "5-0",
             "teamIds": [
-                18,
-                8
+                8,
+                18
             ],
             "timeline": [
                 {
                     "type": "goal",
-                    "team": "away",
+                    "team": "home",
                     "goalType": "openPlay",
                     "isPen": false,
                     "goalscorerId": 5,
@@ -473,7 +1048,7 @@
                 },
                 {
                     "type": "goal",
-                    "team": "away",
+                    "team": "home",
                     "goalType": "openPlay",
                     "isPen": false,
                     "goalscorerId": 1,
@@ -481,7 +1056,7 @@
                 },
                 {
                     "type": "goal",
-                    "team": "away",
+                    "team": "home",
                     "goalType": "openPlay",
                     "isPen": false,
                     "goalscorerId": 245,
@@ -489,7 +1064,7 @@
                 },
                 {
                     "type": "goal",
-                    "team": "away",
+                    "team": "home",
                     "goalType": "openPlay",
                     "isPen": false,
                     "goalscorerId": 245,
@@ -497,7 +1072,7 @@
                 },
                 {
                     "type": "goal",
-                    "team": "away",
+                    "team": "home",
                     "goalType": "openPlay",
                     "isPen": false,
                     "goalscorerId": 245,
@@ -508,15 +1083,909 @@
                 "fourthreethree",
                 "fourthreethree"
             ],
-            "managers": [
-                "",
-                ""
-            ],
-            "leagueRound": 1,
+            "leagueRound": 5,
+            "roundNumber": 5,
             "started": true,
             "finished": true,
             "cancelled": false,
             "awarded": false
+        },
+        {
+            "gameId": 278,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                4,
+                20
+            ],
+            "scoreline": "3-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 5,
+            "roundNumber": 5,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 279,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                22,
+                16
+            ],
+            "scoreline": "3-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 5,
+            "roundNumber": 5,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 280,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                17,
+                21
+            ],
+            "scoreline": "0-3",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 5,
+            "roundNumber": 5,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 281,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                5,
+                14
+            ],
+            "scoreline": "1-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 5,
+            "roundNumber": 5,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 282,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                15,
+                8
+            ],
+            "scoreline": "0-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 6,
+            "roundNumber": 6,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 283,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                4,
+                5
+            ],
+            "scoreline": "1-2",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 6,
+            "roundNumber": 6,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 284,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                22,
+                21
+            ],
+            "scoreline": "3-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 6,
+            "roundNumber": 6,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 285,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                14,
+                17
+            ],
+            "scoreline": "2-1",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 6,
+            "roundNumber": 6,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 286,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                16,
+                18
+            ],
+            "scoreline": "2-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 6,
+            "roundNumber": 6,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 287,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                10,
+                20
+            ],
+            "scoreline": "5-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 6,
+            "roundNumber": 6,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 288,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                18,
+                14
+            ],
+            "scoreline": "0-1",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 7,
+            "roundNumber": 7,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 289,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                20,
+                8
+            ],
+            "scoreline": "0-3",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 7,
+            "roundNumber": 7,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 290,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                16,
+                21
+            ],
+            "scoreline": "0-3",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 7,
+            "roundNumber": 7,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 291,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                5,
+                15
+            ],
+            "scoreline": "0-5",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 7,
+            "roundNumber": 7,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 292,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                10,
+                17
+            ],
+            "scoreline": "2-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 7,
+            "roundNumber": 7,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 293,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                22,
+                4
+            ],
+            "scoreline": "3-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 7,
+            "roundNumber": 7,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 294,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                18,
+                4
+            ],
+            "scoreline": "0-1",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 8,
+            "roundNumber": 8,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 295,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                21,
+                15
+            ],
+            "scoreline": "0-5",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 8,
+            "roundNumber": 8,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 296,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                22,
+                14
+            ],
+            "scoreline": "0-3",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 8,
+            "roundNumber": 8,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 297,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                17,
+                20
+            ],
+            "scoreline": "4-1",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 8,
+            "roundNumber": 8,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 298,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                8,
+                16
+            ],
+            "scoreline": "3-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 8,
+            "roundNumber": 8,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 299,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                18,
+                5
+            ],
+            "scoreline": "0-1",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 9,
+            "roundNumber": 9,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 300,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                4,
+                10
+            ],
+            "scoreline": "1-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 9,
+            "roundNumber": 9,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 301,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                21,
+                20
+            ],
+            "scoreline": "1-2",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 9,
+            "roundNumber": 9,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 302,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                22,
+                8
+            ],
+            "scoreline": "0-3",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 9,
+            "roundNumber": 9,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 303,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                17,
+                15
+            ],
+            "scoreline": "1-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 9,
+            "roundNumber": 9,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 304,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                14,
+                16
+            ],
+            "scoreline": "3-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 9,
+            "roundNumber": 9,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 305,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                18,
+                17
+            ],
+            "scoreline": "1-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 10,
+            "roundNumber": 10,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 306,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                4,
+                21
+            ],
+            "scoreline": "3-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 10,
+            "roundNumber": 10,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 307,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                5,
+                22
+            ],
+            "scoreline": "3-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 10,
+            "roundNumber": 10,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 308,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                20,
+                15
+            ],
+            "scoreline": "1-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 10,
+            "roundNumber": 10,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 309,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                8,
+                14
+            ],
+            "scoreline": "1-2",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 10,
+            "roundNumber": 10,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 310,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                10,
+                16
+            ],
+            "scoreline": "3-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 10,
+            "roundNumber": 10,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 311,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                18,
+                15
+            ],
+            "scoreline": "3-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 11,
+            "roundNumber": 11,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 312,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                4,
+                16
+            ],
+            "scoreline": "0-3",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 11,
+            "roundNumber": 11,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 313,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                21,
+                14
+            ],
+            "scoreline": "1-2",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 11,
+            "roundNumber": 11,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 314,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                5,
+                17
+            ],
+            "scoreline": "1-1",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 11,
+            "roundNumber": 11,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 315,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                22,
+                20
+            ],
+            "scoreline": "0-3",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 11,
+            "roundNumber": 11,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
+        },
+        {
+            "gameId": 316,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                8,
+                10
+            ],
+            "scoreline": "3-0",
+            "formation": [
+                null,
+                null
+            ],
+            "timeline": [],
+            "leagueRound": 11,
+            "roundNumber": 11,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": true
         },
         {
             "gameId": 251,
@@ -1090,11 +2559,8 @@
                 "fourfourtwo",
                 "fourthreethree"
             ],
-            "managers": [
-                "",
-                ""
-            ],
-            "leagueRound": 1,
+            "leagueRound": 8,
+            "roundNumber": 8,
             "started": true,
             "finished": true,
             "cancelled": false,
@@ -1321,7 +2787,7 @@
                     }
                 ],
                 "awayplayers": [
-                   {
+                    {
                         "playerId": 362,
                         "isGoalkeeper": true,
                         "minutes": 0,
@@ -1563,11 +3029,8 @@
                 "fourfourtwo",
                 "fourthreethree"
             ],
-            "managers": [
-                "",
-                ""
-            ],
             "leagueRound": 1,
+            "roundNumber": 1,
             "started": true,
             "finished": true,
             "cancelled": false,

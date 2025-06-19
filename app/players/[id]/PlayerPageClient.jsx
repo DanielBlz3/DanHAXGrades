@@ -326,11 +326,16 @@ export default function PlayerPageClient({ player }) {
     const competitionStatsContent = css`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    height: 200px;
+    min-height: 200px;
     max-width: 100%;
     padding: 1rem;
     border-radius: 0 0 1.25em 1.25em;
     border-right: none;
+
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
     `;
 
     const matchItem = css`

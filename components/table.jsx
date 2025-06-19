@@ -29,6 +29,21 @@ export default function Table({ match, leagueTable, id, showTitle }) {
     text-align: center;
     font-weight: 700;
     margin-bottom: .75rem;
+
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr 5fr repeat(3, 1fr);
+            > :nth-child(4) {
+            display: none;
+  }
+            > :nth-child(5) {
+            display: none;
+  }
+            > :nth-child(6) {
+            display: none;
+  }
+            > :nth-child(7) {
+            display: none;
+  }
     `;
 
     const tableTeam = css`
@@ -68,10 +83,10 @@ export default function Table({ match, leagueTable, id, showTitle }) {
 
     const RenderTableItems = () => {
         const tableItems = standings.map(t => {
-        const teamsArr = match ? [match.general.home.id, match.general.away.id] : []
-        const leagueItemBgColor =  teamsArr.includes(t.teamId) ? '--card-bg-third' : '--card-bg-main'
+            const teamsArr = match ? [match.general.home.id, match.general.away.id] : []
+            const leagueItemBgColor = teamsArr.includes(t.teamId) ? '--card-bg-third' : '--card-bg-main'
 
-        const qualifier = css`
+            const qualifier = css`
       &::before {
     content: "";
     position: absolute;
@@ -82,7 +97,7 @@ export default function Table({ match, leagueTable, id, showTitle }) {
     border-radius: 1rem
 }`
 
-    const leagueTableItem = css`
+            const leagueTableItem = css`
         position: relative;
     display: grid;
     grid-template-rows: subgrid;
@@ -92,6 +107,21 @@ export default function Table({ match, leagueTable, id, showTitle }) {
     text-decoration: none;
     background-color: var(${leagueItemBgColor});
     color: var(--primary-font-color);
+            @media (max-width: 800px) {
+                    grid-template-columns: 1fr 5fr repeat(3, 1fr);
+            > :nth-child(4) {
+            display: none;
+  }
+            > :nth-child(5) {
+            display: none;
+  }
+            > :nth-child(6) {
+            display: none;
+  }
+            > :nth-child(7) {
+            display: none;
+  }
+        }
     `;
 
             return (

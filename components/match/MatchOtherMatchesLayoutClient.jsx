@@ -117,11 +117,11 @@ background-color: var(--card-bg-main);
   }
 `;
 
-const matchDate = 
-  typeof m.status.statusShort !== "object"
-    ? translationsMap?.[`${m.status.statusShort}_Short`]?.[language] || ""
-    : m.status.statusShort?.date || "";
-const [homeScore, awayScore] = typeof m.status.statusShort !== "object" ? [m.home.score, m.away.score] : ["", ""]
+            const matchDate =
+                typeof m.status.statusShort !== "object"
+                    ? translationsMap?.[`${m.status.statusShort}_Short`]?.[language] || ""
+                    : m.status.statusShort?.date || "";
+            const [homeScore, awayScore] = typeof m.status.statusShort !== "object" ? [m.home.score, m.away.score] : ["", ""]
             return (
                 <a css={matchLink} href={m.pageUrl} className='secondary-hover'>
                     <div css={matchWrapper}>
@@ -152,14 +152,15 @@ const [homeScore, awayScore] = typeof m.status.statusShort !== "object" ? [m.hom
                 </a>
             )
         })
+        const roundName = typeof match.general.round == "number" ? `${translationsMap?.["round"]?.[language]} ${match.general.roundName}` : `${translationsMap?.[match.general.roundName]?.[language]}`
         return (
             <div css={otherMatches}>
-                <a css={otherMatchesHeaderWrapper} className="primary-hover" href={"/leagues/" + match.general.leagueId + "/overview"}>
+                <a css={otherMatchesHeaderWrapper} className="primary-hover" href={"/leagues/" + match.general.leagueId + "/fixtures"}>
                     <header css={otherMatchesHeader}>
                         <img css={leagueLogo} src={match.general.leagueLogo} width={50} height={50} />
                         <div css={leagueText}>
                             <h3>{match.general.leagueName}</h3>
-                            <span css={fixturesRound}>{`${translationsMap?.["round"]?.[language]} ${match.general.roundName}`}</span>
+                            <span css={fixturesRound}>{`${roundName}`}</span>
                         </div>
                     </header>
                 </a>
@@ -172,7 +173,7 @@ const [homeScore, awayScore] = typeof m.status.statusShort !== "object" ? [m.hom
 
     return (
         <div className="global-right-grid">
-            <RenderOtherFixtures/>
+            <RenderOtherFixtures />
         </div>
     )
 }

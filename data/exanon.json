@@ -857,6 +857,7 @@
       "teamId": 16,
       "logo": "/images/teamLogos/16.png",
       "color": "rgb(16, 104, 64)",
+      "colorAlternate": "rgb(0, 0, 0)",
       "teamdescription": {
         "manager": "",
         "colors": "Green, White",
@@ -1135,6 +1136,7 @@
       "teamId": 21,
       "logo": "/images/teamLogos/21.png",
       "color": "rgb(207, 44, 39)",
+      "colorAlternate": "rgb(0, 0, 0)",
       "teamdescription": {
         "manager": "",
         "colors": "Red, Black",
@@ -1188,7 +1190,7 @@
       "teamname": "Bitikler",
       "teamNameShort": "Bitikler",
       "teamId": 22,
-      "logo": "https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/logoless?v=1742054547120",
+      "logo": "/images/teamLogos/22.png",
       "color": "rgb(121, 178, 242)",
       "teamdescription": {
         "manager": "",
@@ -1362,7 +1364,18 @@
           12
         ]
       ],
-      "legend": []
+      "legend": [
+        {
+          "key": "knockouts",
+          "color": "rgb(46, 204, 113)",
+          "indices": [
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ]
     }
   },
   "fixturesCopa3": {
@@ -1375,7 +1388,7 @@
       "leagueId": 3,
       "leagueJSON": "exanoncs3.json",
       "leagueMatchdaysLength": 5,
-      "currentMatchday": 4,
+      "currentMatchday": 11,
       "minforPer20Stats": 25,
       "participants": [
         [
@@ -1414,15 +1427,28 @@
       "leagueStatus": "finished",
       "leagueId": 4,
       "leagueJSON": "exanoncs1.json",
-      "leagueMatchdaysLength": 5,
-      "currentMatchday": 8,
+      "currentMatchday": 1,
       "minforPer20Stats": 0,
       "participants": [
         [
+          5,
+          10,
+          20
+        ],
+        [
+          15,
+          16,
+          17
+        ],
+        [
           4,
           8,
-          10,
-          15
+          21
+        ],
+        [
+          14,
+          18,
+          22
         ]
       ],
       "legend": []
@@ -1438,16 +1464,22 @@
       "leagueId": 5,
       "leagueJSON": "exanonls1.json",
       "leagueMatchdaysLength": 0,
-      "currentMatchday": 0,
+      "currentMatchday": 1,
       "minforPer20Stats": 0,
       "participants": [
         [
+          4,
           5,
           8,
           10,
           14,
+          15,
+          16,
+          17,
           18,
-          19
+          20,
+          21,
+          22
         ]
       ],
       "legend": []
@@ -1462,8 +1494,7 @@
       "leagueStatus": "finished",
       "leagueId": 6,
       "leagueJSON": "exanoncs2.json",
-      "leagueMatchdaysLength": 0,
-      "currentMatchday": 0,
+      "currentMatchday": 1,
       "minforPer20Stats": 0,
       "participants": [
         []
@@ -1480,8 +1511,7 @@
       "leagueStatus": "finished",
       "leagueId": 7,
       "leagueJSON": "exanonls2.json",
-      "leagueMatchdaysLength": 0,
-      "currentMatchday": 0,
+      "currentMatchday": 1,
       "minforPer20Stats": 0,
       "participants": [
         [
@@ -1489,6 +1519,24 @@
           8,
           17,
           23
+        ]
+      ],
+      "legend": []
+    }
+  },
+  "exanonFriendlies": {
+    "leagueDesc": {
+      "leaguename": "Exanon Friendlies",
+      "leagueabbr": "EXL Friendlies",
+      "color": "rgb(100, 200, 100)",
+      "logo": "/images/leagueLogos/8.png",
+      "leagueStatus": "ongoing",
+      "leagueId": 8,
+      "leagueJSON": "friendlies.json",
+      "currentMatchday": 1,
+      "minforPer20Stats": 60,
+      "participants": [
+        [
         ]
       ],
       "legend": []

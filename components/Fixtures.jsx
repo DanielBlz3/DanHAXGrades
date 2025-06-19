@@ -22,7 +22,7 @@ export default function Fixtures({ fixtures, hasResults, nameType}) {
     flex-flow: column;
     justify-content: center;
     border-top: solid 1px var(--primary-divider-bg);
-    height: 4rem;
+    min-height: 4rem;
     text-decoration: none;
     color: var(--primary-font-color);
    `;
@@ -31,6 +31,9 @@ export default function Fixtures({ fixtures, hasResults, nameType}) {
        display: flex;
     flex-flow: row;
     width: 100%;
+            @media (max-width: 800px) {
+            display: none;
+}
    `;
 
     const fixturesItemContent = css`
@@ -40,18 +43,30 @@ export default function Fixtures({ fixtures, hasResults, nameType}) {
     width: 100%;
     justify-items: center;
     align-items: center;
+    @media (max-width: 800px) {
+    grid-template-columns: 3fr 1fr 3fr;
+}
    `
 
-    const date = css`
-       display: flex;
+    const dateCSS = css`
+    display: flex;
     flex: 1;
-    color: var(--GLOBAL-FONT-COLOR-GREY:);
+    padding-left: 1rem;}
    `;
+
+   const timeCSS = css`
+    color: var(--GLOBAL-FONT-COLOR-GREY);
+   `
 
     const fixturesTeam = css`
        display: flex;
-    gap: 10px;
+    gap: 6px;
+
+        @media (max-width: 800px) {
+        flex-flow: column;
+        justify-self: center;
     align-items: center;
+        }
    `;
 
     const homeCSS = css`
@@ -73,15 +88,14 @@ export default function Fixtures({ fixtures, hasResults, nameType}) {
    `;
 
     const fixturesContent = fixtures.map(m => {
-        const { matchDate, matchTime } = formatMatchTimestamp(m.timestamp);
+        const { date, time } = formatMatchTimestamp(m.timestamp);
+                console.log(formatMatchTimestamp(m.timestamp))
+
         let fixturesDetails
         if (m.status.started) {
             fixturesDetails = (<div css={scoreline}>{m.status.scoreStr}</div>)
-        } else if (matchTime) {
-            fixturesDetails = (<div css={date}>{matchTime}</div>)
-            fixtureScorelineOrTime.innerText = matchTime
         } else {
-            fixturesDetails = (<div css={date}>TBD</div>)
+            fixturesDetails = (<div css={timeCSS}>{time}</div>)
         }
 
         return (
@@ -92,7 +106,7 @@ export default function Fixtures({ fixtures, hasResults, nameType}) {
                 className="secondary-hover"
             >
                 <div css={fixturesItemHeader}>
-                    <span css={date}>{matchDate}</span>
+                    <span css={dateCSS}>{date}</span>
                 </div>
                 <div css={fixturesItemContent}>
                     <div css={[fixturesTeam, homeCSS]}>

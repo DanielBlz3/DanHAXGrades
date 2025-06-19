@@ -25,6 +25,7 @@
         "Lata"
       ],
       "leagueRound": 1,
+      "roundNumber": 1,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -516,6 +517,7 @@
         "Nano1109"
       ],
       "leagueRound": 1,
+      "roundNumber": 1,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -546,6 +548,7 @@
         "ImDqvid"
       ],
       "leagueRound": 1,
+      "roundNumber": 1,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -1084,6 +1087,7 @@
         "Dystaloon"
       ],
       "leagueRound": 1,
+      "roundNumber": 1,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -1603,6 +1607,7 @@
         "Goalkeeper"
       ],
       "leagueRound": 1,
+      "roundNumber": 1,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -1633,6 +1638,7 @@
         "Nano1109"
       ],
       "leagueRound": 2,
+      "roundNumber": 2,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -1663,6 +1669,7 @@
         "Davis"
       ],
       "leagueRound": 2,
+      "roundNumber": 2,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -1693,6 +1700,7 @@
         "Bran"
       ],
       "leagueRound": 2,
+      "roundNumber": 2,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -1723,6 +1731,7 @@
         "Mateo"
       ],
       "leagueRound": 2,
+      "roundNumber": 2,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -2186,6 +2195,7 @@
         "Dystaloon"
       ],
       "leagueRound": 2,
+      "roundNumber": 2,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -2650,6 +2660,7 @@
         "K9"
       ],
       "leagueRound": 3,
+      "roundNumber": 3,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -2680,6 +2691,7 @@
         "Kai Havertz"
       ],
       "leagueRound": 3,
+      "roundNumber": 3,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -2710,6 +2722,7 @@
         "Angry"
       ],
       "leagueRound": 3,
+      "roundNumber": 3,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -2740,6 +2753,7 @@
         "Goalkeeper"
       ],
       "leagueRound": 3,
+      "roundNumber": 3,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -2770,6 +2784,7 @@
         "ImDqvid"
       ],
       "leagueRound": 3,
+      "roundNumber": 3,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -3272,6 +3287,7 @@
         "Kai Havertz"
       ],
       "leagueRound": 4,
+      "roundNumber": 4,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -3302,6 +3318,7 @@
         "Bran"
       ],
       "leagueRound": 4,
+      "roundNumber": 4,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -3803,6 +3820,7 @@
         "Dystaloon"
       ],
       "leagueRound": 4,
+      "roundNumber": 4,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -3833,6 +3851,7 @@
         "Mateo"
       ],
       "leagueRound": 4,
+      "roundNumber": 4,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -4390,6 +4409,7 @@
         "Nano1109"
       ],
       "leagueRound": 4,
+      "roundNumber": 4,
       "started": true,
       "finished": true,
       "cancelled": false,
@@ -4882,6 +4902,7 @@
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 5,
+        "roundNumber": 5,
         "started": true,
         "finished": true,
         "cancelled": false,
@@ -5449,6 +5470,7 @@
         "goalscorers": [["Gattuso 20+1' (OG)"], ["Pan 17'"]],
         "managers": [],
         "leagueRound": 5,
+        "roundNumber": 5,
         "started": true,
         "finished": true,
         "cancelled": false,
@@ -5470,6 +5492,7 @@
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 5,
+        "roundNumber": 5,
         "started": true,
         "finished": true,
         "cancelled": false,
@@ -5491,6 +5514,7 @@
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 5,
+        "roundNumber": 5,
         "started": true,
         "finished": true,
         "cancelled": false,
@@ -5512,6 +5536,7 @@
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 5,
+        "roundNumber": 5,
         "started": true,
         "finished": true,
         "cancelled": false,
@@ -5984,6 +6009,7 @@
         "goalscorers": [["Dxngxrz 6', 22'", "Foden 9'", "Dani 18'"], ["Nazario 15'"]],
         "managers": ["", ""],
         "leagueRound": 6,
+        "roundNumber": 6,
         "started": true,
         "finished": true,
         "cancelled": false,
@@ -6497,6 +6523,7 @@
         "goalscorers": [["Fherr 2'", "Berte 6'"], []],
         "managers": ["", ""],
         "leagueRound": 6,
+        "roundNumber": 6,
         "started": true,
         "finished": true,
         "cancelled": false,
@@ -6989,6 +7016,7 @@
         "goalscorers": [[], ["GabbyJesusss 3'", "Xue 19', 20+3' (OG)", "Y1tt 20+1'", "Eldest 20+3'"]],
         "managers": ["", ""],
         "leagueRound": 6,
+        "roundNumber": 6,
         "started": true,
         "finished": true,
         "cancelled": false,
@@ -7010,6 +7038,7 @@
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 6,
+        "roundNumber": 6,
         "started": true,
         "finished": true,
         "cancelled": false,
@@ -7575,6 +7604,7 @@
         ],
         "managers": ["", ""],
         "leagueRound": 6,
+        "roundNumber": 6,
         "started": true,
         "finished": true,
         "cancelled": false,
@@ -7596,6 +7626,7 @@
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 7,
+        "roundNumber": 7,
         "started": true,
         "finished": true,
         "cancelled": false,
@@ -7617,6 +7648,7 @@
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 7,
+        "roundNumber": 7,
         "started": true,
         "finished": true,
         "cancelled": false,
@@ -8081,6 +8113,7 @@
         ],
         "managers": ["", ""],
         "leagueRound": 7,
+        "roundNumber": 7,
         "started": true,
         "finished": true,
         "cancelled": false,
@@ -8102,6 +8135,7 @@
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 7,
+        "roundNumber": 7,
         "started": true,
         "finished": true,
         "cancelled": false,
@@ -8123,6 +8157,7 @@
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 7,
+        "roundNumber": 7,
         "started": true,
         "finished": true,
         "cancelled": false,
@@ -8139,12 +8174,14 @@
           8,
           11
         ],
+        "scoreline": "5-1",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 8,
-        "started": false,
-        "finished": false,
+        "roundNumber": 8,
+        "started": true,
+        "finished": true,
         "cancelled": false,
         "awarded": false
       },
@@ -8154,19 +8191,21 @@
           "homeplayers": [],
           "awayplayers": []
         },
-                "timestamp": "2025-06-08T02:40:00Z",
+        "timestamp": "2025-06-08T02:40:00Z",
         "teamIds": [
           9,
           4
         ],
+        "scoreline": "3-0",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 8,
-        "started": false,
-        "finished": false,
+        "roundNumber": 8,
+        "started": true,
+        "finished": true,
         "cancelled": false,
-        "awarded": false
+        "awarded": true
       },
       {
         "gameId": 72,
@@ -8174,17 +8213,19 @@
           "homeplayers": [],
           "awayplayers": []
         },
-                "timestamp": "2025-06-08T03:20:00Z",
+        "timestamp": "2025-06-08T03:20:00Z",
         "teamIds": [
           6,
           12
         ],
+        "scoreline": "3-1",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 8,
-        "started": false,
-        "finished": false,
+        "roundNumber": 8,
+        "started": true,
+        "finished": true,
         "cancelled": false,
         "awarded": false
       },
@@ -8194,17 +8235,19 @@
           "homeplayers": [],
           "awayplayers": []
         },
-              "timestamp": "2025-06-07T02:00:00Z",
+        "timestamp": "2025-06-07T02:00:00Z",
         "teamIds": [
           2,
           5
         ],
+        "scoreline": "3-3",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 8,
-        "started": false,
-        "finished": false,
+        "roundNumber": 8,
+        "started": true,
+        "finished": true,
         "cancelled": false,
         "awarded": false
       },
@@ -8219,12 +8262,14 @@
           10,
           3
         ],
+        "scoreline": "1-0",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 8,
-        "started": false,
-        "finished": false,
+        "roundNumber": 8,
+        "started": true,
+        "finished": true,
         "cancelled": false,
         "awarded": false
       },
@@ -8238,12 +8283,14 @@
           4,
           8
         ],
+        "scoreline": "5-0",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 9,
-        "started": false,
-        "finished": false,
+        "roundNumber": 9,
+        "started": true,
+        "finished": true,
         "cancelled": false,
         "awarded": false
       },
@@ -8255,14 +8302,16 @@
         },
         "teamIds": [
           11,
-          2
+          6
         ],
+        "scoreline": "0-4",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 9,
-        "started": false,
-        "finished": false,
+        "roundNumber": 9,
+        "started": true,
+        "finished": true,
         "cancelled": false,
         "awarded": false
       },
@@ -8276,12 +8325,14 @@
           5,
           9
         ],
+          "scoreline": "4-0",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 9,
-        "started": false,
-        "finished": false,
+        "roundNumber": 9,
+        "started": true,
+        "finished": true,
         "cancelled": false,
         "awarded": false
       },
@@ -8295,12 +8346,14 @@
           12,
           10
         ],
+        "scoreline": "3-4",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 9,
-        "started": false,
-        "finished": false,
+        "roundNumber": 9,
+        "started": true,
+        "finished": true,
         "cancelled": false,
         "awarded": false
       },
@@ -8314,10 +8367,96 @@
           3,
           2
         ],
+        "scoreline": "0-2",
         "formation": [null, null],
         "goalscorers": [[], []],
         "managers": ["", ""],
         "leagueRound": 9,
+        "roundNumber": 9,
+        "started": true,
+        "finished": true,
+        "cancelled": false,
+        "awarded": false
+      },
+      {
+        "gameId": 80,
+        "playerslist": {
+          "homeplayers": [],
+          "awayplayers": []
+        },
+        "teamIds": [
+          8,
+          4
+        ],
+        "timestamp": "2025-06-19T02:00:00Z",
+        "formation": [null, null],
+        "goalscorers": [[], []],
+        "managers": ["", ""],
+        "leagueRound": "1/2",
+        "roundNumber": 10,
+        "started": false,
+        "finished": false,
+        "cancelled": false,
+        "awarded": false
+      },
+      {
+        "gameId": 81,
+        "playerslist": {
+          "homeplayers": [],
+          "awayplayers": []
+        },
+        "teamIds": [
+          2,
+          5
+        ],
+        "timestamp": "2025-06-19T02:40:00Z",
+        "formation": [null, null],
+        "goalscorers": [[], []],
+        "managers": ["", ""],
+        "leagueRound": "1/2",
+        "roundNumber": 10,
+        "started": false,
+        "finished": false,
+        "cancelled": false,
+        "awarded": false
+      },
+      {
+        "gameId": 82,
+        "playerslist": {
+          "homeplayers": [],
+          "awayplayers": []
+        },
+        "teamIds": [
+          4,
+          8
+        ],
+        "timestamp": "2025-06-21T02:00:00Z",
+        "formation": [null, null],
+        "goalscorers": [[], []],
+        "managers": ["", ""],
+        "leagueRound": "1/2",
+        "roundNumber": 11,
+        "started": false,
+        "finished": false,
+        "cancelled": false,
+        "awarded": false
+      },
+      {
+        "gameId": 83,
+        "playerslist": {
+          "homeplayers": [],
+          "awayplayers": []
+        },
+        "teamIds": [
+          5,
+          2
+        ],
+        "timestamp": "2025-06-21T02:40:00Z",
+        "formation": [null, null],
+        "goalscorers": [[], []],
+        "managers": ["", ""],
+        "leagueRound": "1/2",
+        "roundNumber": 11,
         "started": false,
         "finished": false,
         "cancelled": false,

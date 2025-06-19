@@ -93,37 +93,58 @@ export default function Layout({ league, children }) {
     const cardLogo = css`
     display: inline;
   `;
-    const matchNav = css`
-        align-items: center;
-        border-radius: 0 0 1.5rem 1.5rem;
-        display: flex;
-        flex-flow: row;
-        height: 2.5rem;
-        width: 100%;
+    const nav = css`
+     background-color: var(--card-bg-main);
+    border-radius: 0 0 1.5rem 1.5rem;
+    height: 2.5rem;
+    padding-left: 2rem;
+    width: 100%;
       `;
+
+    const navWrapper = css`
+    display: flex;
+    flex-flow: row;
+    height: 100%;
+    width: 75%;
+    align-items: center;
+    `
 
 
     const renderNav = () => {
         return (
-            <nav css={matchNav}>
-                <button
-                    onClick={() => handleTabClick('overview')}
-                    className={`nav-item ${activeTab === 'overview' ? 'nav-highlight' : ''}`}
-                >
-                    {translationsMap?.["overview"]?.[language]}
-                </button>
-                <button
-                    onClick={() => handleTabClick('standings')}
-                    className={`nav-item ${activeTab === 'standings' ? 'nav-highlight' : ''}`}
-                >
-                    {translationsMap?.["standings"]?.[language]}
-                </button>
-                <button
-                    onClick={() => handleTabClick('fixtures')}
-                    className={`nav-item ${activeTab === 'fixtures' ? 'nav-highlight' : ''}`}
-                >
-                    {translationsMap?.["fixtures"]?.[language]}
-                </button>
+            <nav css={nav}>
+                <div css={navWrapper}>
+                    <button
+                        onClick={() => handleTabClick('overview')}
+                        className={`nav-item ${activeTab === 'overview' ? 'nav-highlight' : ''}`}
+                    >
+                        {translationsMap?.["overview"]?.[language]}
+                    </button>
+                    <button
+                        onClick={() => handleTabClick('standings')}
+                        className={`nav-item ${activeTab === 'standings' ? 'nav-highlight' : ''}`}
+                    >
+                        {translationsMap?.["standings"]?.[language]}
+                    </button>
+                    <button
+                        onClick={() => handleTabClick('stats')}
+                        className={`nav-item ${activeTab === 'stats' ? 'nav-highlight' : ''}`}
+                    >
+                        {translationsMap?.["stats"]?.[language]}
+                    </button>
+                    <button
+                        onClick={() => handleTabClick('fixtures')}
+                        className={`nav-item ${activeTab === 'fixtures' ? 'nav-highlight' : ''}`}
+                    >
+                        {translationsMap?.["fixtures"]?.[language]}
+                    </button>
+                    <button
+                        onClick={() => handleTabClick('transfers')}
+                        className={`nav-item ${activeTab === 'transfers' ? 'nav-highlight' : ''}`}
+                    >
+                        {translationsMap?.["transfers"]?.[language]}
+                    </button>
+                </div>
             </nav>
         )
     }

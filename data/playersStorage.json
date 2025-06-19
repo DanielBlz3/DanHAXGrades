@@ -148,7 +148,7 @@
     "playerId": 4
   },
   {
-    "playername": "Dani",
+    "playername": "Shevchenko",
     "isManager": false,
     "isCoManager": false,
     "nation": "co",
@@ -208,7 +208,7 @@
     "playerId": 6
   },
   {
-    "playername": "Zero",
+    "playername": "Berlin",
     "isManager": false,
     "isCoManager": false,
     "nation": "mx",
@@ -5215,5 +5215,16 @@
     "marketvalue": "$TBD",
     "team": 0,
     "playerId": 369
+  },
+  {
+    "playername": "ly",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "shirtNum": "",
+    "league": "Exanon Liga",
+    "marketvalue": "$TBD",
+    "team": 0,
+    "playerId": 370
   }
 ]
