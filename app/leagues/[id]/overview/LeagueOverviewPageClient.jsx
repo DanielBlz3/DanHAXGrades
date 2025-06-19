@@ -3,10 +3,8 @@
 import React, { useEffect, useState } from "react";
 import { css } from '@emotion/react';
 import { translationsMap } from '/lib/translations.js';
-import isDark from '/lib/isDark.js';
-import isLight from '/lib/isLight.js';
 import '/styles/global.css';
-import Table from '/components/Table';
+import Table from '/components/Table.jsx';
 import TopStats from '/components/TopStats';
 
 export default function LeagueOverviewPageClient({ league }) {
