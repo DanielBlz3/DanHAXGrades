@@ -6,7 +6,8 @@ import { useEffect, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import '/styles/global.css';
 import positionCoords from '/lib/posCoordsPlayerPosMap';
-import SoccerField from '/components/pitchSVGHorizontal';
+import HorizontalPitch from '/components/pitchSVGHorizontal';
+import VerticalPitch from '/components/pitchSVGVertical';
 import Player from '/components/Player';
 import SubstituteEl from '/components/Substitutes.jsx';
 
@@ -67,11 +68,23 @@ const renderLineupContent = ({ match, hasSubs, hasLineupInfo }) => {
     `;
 
     const soccerFieldWrapper = css`
-      height: 600px;
       overflow-x: hidden;
       overflow-y: hidden;
       position: relative;
     `;
+
+    const [width, setWidth] = useState(window.innerWidth);
+    const [height, setHeight] = useState(window.innerHeight);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWidth(window.innerWidth);
+            setHeight(window.innerHeight);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);;
 
     //===============================| FUNCTION |===============================
     if (["FT", "Live", "AET"].includes(match.matchStatus.statusShort)) {
@@ -135,7 +148,7 @@ const renderLineupContent = ({ match, hasSubs, hasLineupInfo }) => {
             };
 
             // LineupField maps players and passes Player component imported from elsewhere
-            const LineupField = ({ team }) => {
+            const LineupField = ({ team, isVertical }) => {
                 const players = Object.values(lineup[team].players)
                     .filter((p) => p.playerNumber <= 10)
                     .sort((a, b) => a.playerNumber - b.playerNumber);
@@ -145,11 +158,39 @@ const renderLineupContent = ({ match, hasSubs, hasLineupInfo }) => {
                         key={player.id}
                         player={player}
                         team={team}
-                        // Pass PlayerEvent component if Player needs it (if not, ignore)
+                         isVertical={isVertical}
                         PlayerEvent={PlayerEvent}
                     />
                 ));
             };
+
+
+            const MatchPitch = () => {
+                const [isVertical, setIsVertical] = useState(false);
+
+                useEffect(() => {
+                    const checkOrientation = () => {
+                        setIsVertical(window.innerWidth < 1280);
+                    };
+
+                    checkOrientation(); // Initial check
+                    window.addEventListener('resize', checkOrientation);
+
+                    return () => {
+                        window.removeEventListener('resize', checkOrientation);
+                    };
+                }, []);
+
+                return (
+                    <>
+                        {isVertical ? <VerticalPitch width={width} height={1000} fillColor={"var(--soccer-field-bg-color-primary)"} strokeColor={"var(--soccer-field-stroke)"} />
+                            : <HorizontalPitch width={960} height={600} fillColor={"var(--soccer-field-bg-color-primary)"} strokeColor={"var(--soccer-field-stroke)"} />}
+
+                        <LineupField team="home" isVertical={isVertical} />
+                        <LineupField team="away" isVertical={isVertical} />
+                    </>
+                );
+            }
 
             const RenderSubs = () => {
                 if (hasSubs) {
@@ -185,21 +226,12 @@ const renderLineupContent = ({ match, hasSubs, hasLineupInfo }) => {
                     return null
                 }
             }
-
-
             return (
                 <div>
                     <div css={soccerFieldWrapper}>
-                        <SoccerField
-                            width={960}
-                            height={600}
-                            fillColor={"var(--soccer-field-bg-color-primary)"}
-                            strokeColor={"var(--soccer-field-stroke)"}
-                        />
-                        <LineupField team="home" />
-                        <LineupField team="away" />
+                        <MatchPitch />
                     </div>
-                    <RenderSubs/>
+                    <RenderSubs />
                 </div>
             );
         };

@@ -53,7 +53,7 @@ const startingPlayerName = css`
   color: var(--GLOBAL-FONT-COLOR-WHITE);
 `;
 
-const Player = ({ player, team }) => {
+const Player = ({ player, team, isVertical }) => {
   const PlayerEvent = ({ icon, count, leftOrRight, initialX, y, metric }) => {
     return [...Array(count)].map((_, i) => {
       const style = {
@@ -105,8 +105,8 @@ const Player = ({ player, team }) => {
       css={playerContainer}
       className="primary-hover player"
       style={{
-        top: `${coords.y}%`,
-        left: `${coords.x}%`,
+        top: `${isVertical ? coords.x : coords.y}%`,
+        left: `${isVertical ? 100 - coords.y : coords.x}%`,
         position: "absolute",
       }}
     >

@@ -5226,5 +5226,16 @@
     "marketvalue": "$TBD",
     "team": 6,
     "playerId": 372
+  },
+  {
+    "playername": "Zeijxk",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "shirtNum": "",
+    "league": "Exanon Liga",
+    "marketvalue": "$TBD",
+    "team": 9,
+    "playerId": 373
   }
 ]
