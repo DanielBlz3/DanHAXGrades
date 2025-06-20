@@ -391,7 +391,7 @@ export default function PlayerPageClient({ player }) {
             return (
                 <div css={competitionStatsCard}>
                     <div className="primary-hover" css={competitionStatsTitleWrapper}>
-                        <a css={competitionStatsLink} href="leagues/2">
+                        <a css={competitionStatsLink} href="/leagues/2/overview">
                             <h2 css={competitionStatsTitle}>
                                 Exanon T3 (Copa + Liga)
                             </h2>

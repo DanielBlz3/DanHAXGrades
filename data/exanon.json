@@ -1308,7 +1308,7 @@
       "leagueJSON": "exanonpts3.json",
       "leagueMatchdaysLength": 5,
       "currentMatchday": 8,
-      "minforPer20Stats": 59,
+      "minforPer20Stats": 60,
       "participants": [
         [
           9,
@@ -1349,7 +1349,7 @@
       "leagueJSON": "exanonls3.json",
       "leagueMatchdaysLength": 9,
       "currentMatchday": 9,
-      "minforPer20Stats": 5,
+      "minforPer20Stats": 60,
       "participants": [
         [
           2,
@@ -1389,7 +1389,7 @@
       "leagueJSON": "exanoncs3.json",
       "leagueMatchdaysLength": 5,
       "currentMatchday": 11,
-      "minforPer20Stats": 25,
+      "minforPer20Stats": 50,
       "participants": [
         [
           9,
