@@ -125,7 +125,11 @@ export default function Table({ match, leagueTable, id, showTitle }) {
     `;
 
             return (
-                <a css={[leagueTableItem, qualifier]} className="secondary-hover" href={"/teams/" + t.teamId + "/overview"}>
+                <a 
+                key={t.teamId}
+                css={[leagueTableItem, qualifier]} 
+                className="secondary-hover" 
+                href={"/teams/" + t.teamId + "/overview"}>
                     <span>{t.idx}</span>
                     <div css={tableTeam}>
                         <img src={t.teamLogo} width={20} height={20} />

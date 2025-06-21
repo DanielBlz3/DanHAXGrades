@@ -30,7 +30,7 @@
     --card-bg-second: #ebebeb;
     --card-bg-third: #e1e1e1;
     --soccer-field-bg: #e6e6e6;
-    --soccer-field-stroke: #fafafa;
+    --soccer-field-stroke: #0d9f68;
     --primary-divider-bg: #ebebeb;
     --secondary-divider-bg: #dcdcdc;
     --third-divider-bg: #d2d2d2;
@@ -110,6 +110,7 @@ h3 {
     grid-template-columns: 3fr 1fr;
     grid-gap: 1rem;
     overflow-x: hidden;
+    overflow-Y: hidden;
 }
 
 @media (max-width: 1200px) {
