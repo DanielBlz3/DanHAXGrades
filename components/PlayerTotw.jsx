@@ -74,7 +74,7 @@ const PlayerTotw = ({ player }) => {
 
   return (
     <a
-      href= {'/player/' + player?.playerId}
+      href= {'/players/' + player?.playerId}
       css={playerContainer}
       className="primary-hover player"
       style={{
