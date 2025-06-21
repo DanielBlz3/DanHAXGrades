@@ -100,6 +100,10 @@ export default function LeagueOverviewPageClient({ league }) {
       > * {
     border-right: 1px solid var(--primary-divider-bg);
     border-radius: 0;
+
+        @media (max-width: 800px) {
+            flex-flow: column;
+}
     }
     
     @media (max-width: 800px) {
@@ -115,12 +119,21 @@ export default function LeagueOverviewPageClient({ league }) {
   `;
 
   const totwHeader = css`
-   display: grid;
-   grid-template-columns: 1fr 3fr 1fr;
+   display: flex;
+   flex-flow: column;
+    height: 5rem;
     background-color: var(--card-bg-main);
     border-radius: 1.25rem 1.25rem 0 0;
-    height: 4rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%
+  `;
+
+  const totwBar = css`
+   display: grid;
+   grid-template-columns: 1fr 3fr 1fr;
     place-items: center;
+    width: 100%;
   `;
 
   const bigBox = css`
@@ -132,7 +145,7 @@ export default function LeagueOverviewPageClient({ league }) {
 
   const totwField = css`
       border-radius: 0 0 1.25rem 1.25rem;
-      background-color: var(--soccer-field-bg-color-primary);
+      background-color: var(--primary-soccer-field-bg);
       min-width: 400px;
       height: 500px;
       position: relative;
@@ -189,7 +202,7 @@ export default function LeagueOverviewPageClient({ league }) {
   };
 
   const [matchday, setTotwMatchday] = useState(league.topPlayerStats.totw.length);
-  const towPlayers = league.topPlayerStats.totw[matchday-1]
+  const towPlayers = league.topPlayerStats.totw[matchday - 1]
   var backwardMatchday = matchday > 1 ? matchday - 1 : 1
   var forwardMatchday = matchday < league.topPlayerStats.totw.length ? matchday + 1 : league.topPlayerStats.totw.length
 
@@ -213,17 +226,20 @@ export default function LeagueOverviewPageClient({ league }) {
     return (
       <div>
         <div css={totwHeader}>
-          <button css={totwButton} onClick={() => setTotwMatchday(backwardMatchday)}>
-            <DefaultArrow direction="right" bgColor={"var(--primary-arrow-bg)"} strokeBgColor={"var(--primary-arrow-stroke)"} strokeWidth={"2.5"} />
-          </button>
-          <h2>{`${translationsMap?.["round"]?.[language]} ${matchday}`}</h2>
-          <button css={totwButton} onClick={() => setTotwMatchday(forwardMatchday)}>
-            <DefaultArrow direction="left" bgColor={"var(--primary-arrow-bg)"} strokeBgColor={"var(--primary-arrow-stroke)"} strokeWidth={"2.5"} />
-          </button>
+          <h2>{translationsMap?.["teamOfTheWeek"]?.[language]}</h2>
+          <div css={totwBar}>
+            <button css={totwButton} onClick={() => setTotwMatchday(backwardMatchday)}>
+              <DefaultArrow direction="left" bgColor={"var(--primary-arrow-bg)"} strokeBgColor={"var(--primary-arrow-stroke)"} strokeWidth={"2.5"} />
+            </button>
+            <h4>{`${translationsMap?.["round"]?.[language]} ${matchday}`}</h4>
+            <button css={totwButton} onClick={() => setTotwMatchday(forwardMatchday)}>
+              <DefaultArrow direction="right" bgColor={"var(--primary-arrow-bg)"} strokeBgColor={"var(--primary-arrow-stroke)"} strokeWidth={"2.5"} />
+            </button>
+          </div>
         </div>
         <div css={totwField}>
           <div css={bigBox}>
-            <PenaltyBox width={267} height={133} strokeColor={'var(--soccer-field-stroke)'} lineWidth={4} />
+            <PenaltyBox width={267} height={133} strokeColor={'var(--primary-soccer-field-stroke)'} lineWidth={4} />
           </div>
           <RenderTOTW players={towPlayers} />
         </div>

@@ -28,8 +28,18 @@ export default function LeagueStatsPageClient({ league }) {
 
     const statsSection = css`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    > * {
+        border-radius: 1.25rem;
+    }
+    @media (max-width: 960px) {
+    grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 640px) {
+    grid-template-columns: repeat(1, 1fr);
+    }
+
     `
 
     return (

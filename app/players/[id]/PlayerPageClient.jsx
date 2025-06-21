@@ -1060,7 +1060,7 @@ export default function PlayerPageClient({ player }) {
                                 </div>
                             </div>
                             <div css={positionMapImgWrapper}>
-                                <SoccerField width={169} height={230} fillColor={'var(--soccer-field-bg)'} strokeColor={'var(--soccer-field-stroke)'} />
+                                <SoccerField width={169} height={230} fillColor={'var(--secondary-soccer-field-bg)'} strokeColor={'var(--secondary-soccer-field-stroke)'} />
                                 {mainPosOnPosMap}
                                 {otherPosOnPosMap}
                             </div>

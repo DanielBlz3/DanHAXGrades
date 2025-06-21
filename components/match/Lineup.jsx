@@ -183,8 +183,8 @@ const renderLineupContent = ({ match, hasSubs, hasLineupInfo }) => {
 
                 return (
                     <>
-                        {isVertical ? <VerticalPitch width={width} height={1000} fillColor={"var(--soccer-field-bg-color-primary)"} strokeColor={"var(--soccer-field-stroke)"} />
-                            : <HorizontalPitch width={960} height={600} fillColor={"var(--soccer-field-bg-color-primary)"} strokeColor={"var(--soccer-field-stroke)"} />}
+                        {isVertical ? <VerticalPitch width={width} height={1000} fillColor={"var(--primary-soccer-field-bg)"} strokeColor={"var(--primary-soccer-field-stroke)"} />
+                            : <HorizontalPitch width={960} height={600} fillColor={"var(--primary-soccer-field-bg)"} strokeColor={"var(--primary-soccer-field-stroke)"} />}
 
                         <LineupField team="home" isVertical={isVertical} />
                         <LineupField team="away" isVertical={isVertical} />

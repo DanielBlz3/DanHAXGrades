@@ -29,8 +29,10 @@
     --card-bg-main: #fafafa;
     --card-bg-second: #ebebeb;
     --card-bg-third: #e1e1e1;
-    --soccer-field-bg: #e6e6e6;
-    --soccer-field-stroke: #0d9f68;
+    --primary-soccer-field-bg: #0a965a;
+    --secondary-soccer-field-bg: #e6e6e6;
+    --primary-soccer-field-stroke: #0d9f68;
+    --secondary-soccer-field-stroke: rgb(255, 255, 255);
     --primary-divider-bg: #ebebeb;
     --secondary-divider-bg: #dcdcdc;
     --third-divider-bg: #d2d2d2;
@@ -48,7 +50,6 @@
     --team-formation-info--bg-color: #0aa069;
     --team-formation-info-font-color: #fff;
     --primary-player-bg-color: #e6e6e6;
-    --soccer-field-bg-color-primary: #0a965a;
     --player-event-bg-color: #fff;
     --player-event-outline-color: #fff;
     --player-ui-bg-color: #fff
@@ -59,8 +60,10 @@
     --card-bg-main: #1d1d1d;
     --card-bg-second: #313131;
     --card-bg-third: #414141;
-    --soccer-field-bg: #313131;
-    --soccer-field-stroke: #454545;
+    --primary-soccer-field-bg: #2c2c2c;
+    --secondary-soccer-field-bg: #313131;
+    --primary-soccer-field-stroke: #454545;
+    --secondary-soccer-field-stroke: #454545;
     --primary-divider-bg: #323232;
     --secondary-divider-bg: #414141;
     --third-divider-bg: #4b4b4b;
@@ -77,7 +80,6 @@
     --nav-item-font-color: grey;
     --team-formation-info--bg-color: #313131;
     --team-formation-info-font-color: #fff;
-    --soccer-field-bg-color-primary: #2c2c2c;
     --primary-player-bg-color: #4a4a4a;
     --player-event-bg-color: #2c2c2c;
     --player-event-outline-color: grey;

@@ -1,8 +1,8 @@
 'use client';
 export default function DefaultArrow({direction="left", bgColor = "rgb(128, 128, 128)", strokeBgColor = "rgb(0, 0, 0)", strokeWidth }) {
     const arrowCords = {
-        "left": ["8", "22"],
-        "right": ["22", "8"],
+        "left": ["22", "8"],
+        "right": ["8", "22"],
     }
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" fill="none" stroke={strokeBgColor} strokeWidth={strokeWidth}

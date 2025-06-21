@@ -62,10 +62,11 @@ export default function Transfers({ data }) {
        display: flex;
     flex-flow: column;
     gap: 3px;
-    place-items: center;
+    place-items: start;
 
         @media (max-width: 800px) {
         flex-flow: row;
+        place-items: center;
         gap: 10px;
         }
    `;
@@ -108,7 +109,7 @@ export default function Transfers({ data }) {
                     <div css={transfersItemDetails}>
                         <a href={t.pageUrl} css={playername} className="third-hover" >{t.playerName}</a>
                         <a href={t.currentTeamUrl} css={signingTeam} className="third-hover">
-                            <DefaultArrow direction="left" bgColor={"var(--GLOBAL-DANHAXGRADES-SCHEME)"} strokeBgColor={"black"} strokeWidth={"2.5"} />
+                            <DefaultArrow direction="right" bgColor={"var(--GLOBAL-DANHAXGRADES-SCHEME)"} strokeBgColor={"#fff"} strokeWidth={"2.5"} />
                             <img src={t.currentTeamLogo} alt={t.currentTeamName} width={20} height={20} />
                             <span>{t.currentTeamName}</span>
                         </a>

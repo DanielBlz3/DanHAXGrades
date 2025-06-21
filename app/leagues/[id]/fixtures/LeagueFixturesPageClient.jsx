@@ -77,11 +77,11 @@ export default function LeagueFixturesPageClient({ league }) {
             <>
                 <div css={fixturesContentHeader}>
                     <button css={fixturesButton} onClick={() => setFixturesMatchday(backwardMatchday)}>
-                        <DefaultArrow direction="right" bgColor={"var(--primary-arrow-bg)"} strokeBgColor={"var(--primary-arrow-stroke)"} strokeWidth={"2.5"} />
+                        <DefaultArrow direction="left" bgColor={"var(--primary-arrow-bg)"} strokeBgColor={"var(--primary-arrow-stroke)"} strokeWidth={"2.5"} />
                     </button>
                     <h2>{roundNameH2}</h2>
                     <button css={fixturesButton} onClick={() => setFixturesMatchday(forwardMatchday)}>
-                        <DefaultArrow direction="left" bgColor={"var(--primary-arrow-bg)"} strokeBgColor={"var(--primary-arrow-stroke)"} strokeWidth={"2.5"} />
+                        <DefaultArrow direction="right" bgColor={"var(--primary-arrow-bg)"} strokeBgColor={"var(--primary-arrow-stroke)"} strokeWidth={"2.5"} />
                     </button>
                 </div>
                 <Fixtures fixtures={filteredFixtures} hasResults={false} nameType={'teamName'} />

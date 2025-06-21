@@ -23,7 +23,6 @@ export default function TopStats({ metric, data }) {
     align-items: start;
     justify-content: start;
     flex: 1;
-    border-radius: 1.25rem;
   `;
 
   const sectionHeader = css`
