@@ -30,17 +30,17 @@ export default function Transfers({ data }) {
     padding: 1rem 2rem;
     color: grey;
     justify-items: start;
-@media (max-width: 800px) {
+@media (max-width: 900px) {
         display: none;
 }
    `;
 
    const transfersContent = css`
-   @media (max-width: 800px) {
+   @media (max-width: 900px) {
     > :first-child {
         border: none;
     }
-}
+
    `
 
     const transfersItem = css`
@@ -51,7 +51,7 @@ export default function Transfers({ data }) {
     justify-items: start;
     align-items: center;
 
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
         grid-template-columns: 1fr;
         justify-items: center;
         gap: 10px;
@@ -64,7 +64,7 @@ export default function Transfers({ data }) {
     gap: 3px;
     place-items: start;
 
-        @media (max-width: 800px) {
+        @media (max-width: 900px) {
         flex-flow: row;
         place-items: center;
         gap: 10px;
@@ -87,7 +87,7 @@ export default function Transfers({ data }) {
    `
 
     const oldTeam = css`
-   @media (max-width: 800px) {
+   @media (max-width: 900px) {
         display: none;
 }
    `;

@@ -95,7 +95,7 @@ export default function Layout({ league, children }) {
   `;
     const nav = css`
      background-color: var(--card-bg-main);
-    border-radius: 0 0 1.5rem 1.5rem;
+    border-radius: 0 0 1.25rem 1.25rem;
     height: 2.5rem;
     padding-left: 2rem;
     width: 100%;
