@@ -74,7 +74,7 @@ export default function RootLayout({ children }) {
     padding: 1rem;
     position: fixed;
     top: 0%;
-    background-color: var(--card-bg-main);
+    background-color: var(--primary-card-bg);
     border-bottom: 1px solid var(--divider-bg-primary);
     z-index: 10;
         `;
@@ -116,7 +116,7 @@ export default function RootLayout({ children }) {
     const settingsMenu = css`
     width: 20%;
     display: ${settingsOpen ? 'block' : 'none'};;
-    background-color: var(--card-bg-main);
+    background-color: var(--primary-card-bg);
     border-radius: .5rem;
     position: fixed;
     top: 100px;
@@ -160,12 +160,13 @@ export default function RootLayout({ children }) {
     width: 100%;
     `;
     return (
-        <html lang="en">
+        <html lang={savedLang}>
             <head>
-                <meta charSet="UTF-8" />
                 <meta name="author" content="Danielblz" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"></meta>
+                <link rel="manifest" href="/manifest.json" />
                 <link rel="icon" href="/DanHAXGradeFavicon.ico" type="image/x-icon" />
-                <link rel="stylesheet" href="/players.css" type="text/css" />
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
             </head>
             <body className={pageTheme}>
                 <header>
@@ -195,7 +196,7 @@ export default function RootLayout({ children }) {
                 </header>
                 <main css={main}>
                     <aside css={aside}></aside>
-                        {children}
+                    {children}
                     <aside css={aside}></aside>
                 </main>
             </body>

@@ -54,7 +54,7 @@ export default function MatchOverviewPageClient({ match, teamStats }) {
 
     const playerUiHeader = css`
       align-items: center;
-      background-color: var(--card-bg-main);
+      background-color: var(--primary-card-bg);
       border-radius: 1rem 1rem 0 0;
       display: flex;
       flex-direction: column;
@@ -99,7 +99,7 @@ export default function MatchOverviewPageClient({ match, teamStats }) {
     `;
 
     const headerMetric = css`
-      background-color: var(--card-bg-main);
+      background-color: var(--primary-card-bg);
       border-bottom: solid 0.25px rgb(75, 75, 75);
       display: flex;
       flex-direction: row;
@@ -134,7 +134,7 @@ export default function MatchOverviewPageClient({ match, teamStats }) {
        const teamTraitsCard = css`
         display: flex;
         flex-flow: column;
-          background-color: var(--card-bg-main);
+          background-color: var(--primary-card-bg);
       border-radius: 1.25rem;
       justify-content: center;
       align-items: center;

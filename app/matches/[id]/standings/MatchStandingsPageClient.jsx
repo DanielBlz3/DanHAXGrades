@@ -20,7 +20,7 @@ export default function MatchStandingsPageClient({ match, leagueTable }) {
     const tableCard = css`
         border-radius: 1.5rem;
     justify-self: center;
-        background-color: var(--card-bg-main);
+        background-color: var(--primary-card-bg);
     ` ;
 
     function findGroup(table) {

@@ -78,7 +78,7 @@ export default function PlayerPageClient({ player }) {
     display: flex;
     flex-flow: row;
     width: 100%;
-    background-color: var(--card-bg-main);
+    background-color: var(--primary-card-bg);
     border-radius: 0 0 1.25rem 1.25rem;
 
     @media (max-width: 800px) {
@@ -297,7 +297,7 @@ export default function PlayerPageClient({ player }) {
     //
     //
     const competitionStatsCard = css`
-            background-color: var(--card-bg-main);
+            background-color: var(--primary-card-bg);
             border-radius: 1.25rem;
     `
 
@@ -508,7 +508,7 @@ export default function PlayerPageClient({ player }) {
     padding-top: 1rem;
     border-radius: 1.25rem;
     padding-inline: 2rem;
-    background-color: var(--card-bg-main);
+    background-color: var(--primary-card-bg);
     `;
 
     const playerMatchesHeader = css`
@@ -537,7 +537,7 @@ export default function PlayerPageClient({ player }) {
     `;
 
     const pMSelect = css`
-    background-color: var(--card-bg-main);
+    background-color: var(--primary-card-bg);
     border: none;
     color: var(--primary-font-color);
     outline: var(--primary-font-color);
@@ -551,7 +551,7 @@ export default function PlayerPageClient({ player }) {
     font-weight: bold;
     border-radius: 2rem;
     padding-top: 1rem;
-    background-color: var(--card-bg-main);
+    background-color: var(--primary-card-bg);
     `;
 
     const pSHeader = css`
@@ -738,7 +738,7 @@ export default function PlayerPageClient({ player }) {
     width: 100%;
                 font-size: 0.8rem;
                 border-radius: 1.25rem;
-                background-color: var(--card-bg-main);
+                background-color: var(--primary-card-bg);
                 display: flex;
                 flex-flow: column;
                 max-height: 500px;

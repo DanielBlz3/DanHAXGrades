@@ -70,7 +70,7 @@ export default function MatchLineupPageClient({ match }) {
 
     const playerUiHeader = css`
   align-items: center;
-  background-color: var(--card-bg-main);
+  background-color: var(--primary-card-bg);
   border-radius: 1rem 1rem 0 0;
   display: flex;
   flex-direction: column;
@@ -115,7 +115,7 @@ align-items: center;
 `;
 
     const headerMetric = css`
-  background-color: var(--card-bg-main);
+  background-color: var(--primary-card-bg);
   border-bottom: solid 0.25px rgb(75, 75, 75);
   display: flex;
   flex-direction: row;

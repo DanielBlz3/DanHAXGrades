@@ -1,13 +1,15 @@
-export default function Home() {
-  return (
-    <main>
-      <h1>Soon...</h1>
-      <p>links</p>
-      <a href="https://danhaxgrades.vercel.app/leagues/2/overview">League</a>
-      <div></div>
-      <a href="https://danhaxgrades.vercel.app/leagues/3/overview">Copa</a>
-      <div></div>
-      <a href="https://danhaxgrades.vercel.app/matches/34/overview">Pre-Temp Final</a>
-    </main>
-  );
+// app/page.jsx
+import HomePageClient from './HomePageClient';
+import { translationsMap } from '/lib/translations.js';
+  const storedLang = typeof window !== 'undefined' ? localStorage.getItem('language') : 'es';
+export async function generateMetadata({ params }) {
+  return {
+    title: `DanHAXGrades - ${translationsMap?.["theBestHaxballX11App"]?.[storedLang]}`,
+    description: `${translationsMap?.["danhaxgradesPara1"]?.[storedLang]}`
+  };
 }
+
+export default async function Home({ params }) {
+  return <HomePageClient />;
+}
+

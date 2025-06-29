@@ -19,7 +19,7 @@ export default function TopStats({ metric, data }) {
     display: flex;
     flex-flow: column;
     padding: 1rem 1.5rem;
-    background-color: var(--card-bg-main);
+    background-color: var(--primary-card-bg);
     align-items: start;
     justify-content: start;
     flex: 1;

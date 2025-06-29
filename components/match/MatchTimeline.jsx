@@ -44,7 +44,7 @@ const MatchTimeline = ({ match }) => {
     const timelineCard = css`
         display: flex;
         flex-flow: column;
-        background-color: var(--card-bg-main);
+        background-color: var(--primary-card-bg);
         border-radius: 1.25rem;
         padding-inline: 2rem;
         justify-content: center;
@@ -79,7 +79,7 @@ const MatchTimeline = ({ match }) => {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--card-bg-second);
+        background-color: var(--secondary-card-bg);
         border-radius: 50%;
         width: 3rem;
         height: 3rem;
@@ -91,7 +91,7 @@ const MatchTimeline = ({ match }) => {
         justify-content: center;
         align-items: center;
         min-height: 4rem;
-        background-color: var(--card-bg-second);
+        background-color: var(--secondary-card-bg);
         border-radius: 0 0 1.25rem 1.25rem;
     `;
 

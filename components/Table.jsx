@@ -80,7 +80,7 @@ export default function Table({ match, leagueTable, id, showTitle, showLegend = 
       const teamsArr = match ? [match.general.home.id, match.general.away.id] : [];
       const leagueItemBgColor = teamsArr.includes(t.teamId)
         ? '--card-bg-third'
-        : '--card-bg-main';
+        : '--primary-card-bg';
 
       const qualifier = css`
         &::before {

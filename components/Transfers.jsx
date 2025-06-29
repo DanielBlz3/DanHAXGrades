@@ -21,7 +21,7 @@ export default function Transfers({ data }) {
     display: flex;
     flex-flow: column;
     border-radius: 1.25rem;
-    background-color: var(--card-bg-main);
+    background-color: var(--primary-card-bg);
     `;
 
     const transfersLegend = css`
@@ -92,7 +92,7 @@ export default function Transfers({ data }) {
 }
    `;
    const position = css`
-       background-color: var(--card-bg-second);
+       background-color: var(--secondary-card-bg);
     padding: .3em .5rem;
     border-radius: 1rem;
     display: flex;

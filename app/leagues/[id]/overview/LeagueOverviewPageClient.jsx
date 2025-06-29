@@ -24,14 +24,14 @@ export default function LeagueOverviewPageClient({ league }) {
   const tableCard = css`
     border-radius: 1.5rem;
     justify-self: center;
-    background-color: var(--card-bg-main);
+    background-color: var(--primary-card-bg);
   `;
 
   const fixturesCard = css`
     display: flex;
     flex-flow: column;
     border-radius: 1.25rem;
-    background-color: var(--card-bg-main);
+    background-color: var(--primary-card-bg);
   `;
 
   const fixturesContent = css`
@@ -89,7 +89,7 @@ export default function LeagueOverviewPageClient({ league }) {
   `;
 
   const statsCard = css`
-    background-color: var(--card-bg-main);
+    background-color: var(--primary-card-bg);
     border-radius: 1.25rem;
     padding: 1rem;
   `;
@@ -122,7 +122,7 @@ export default function LeagueOverviewPageClient({ league }) {
    display: flex;
    flex-flow: column;
     height: 5rem;
-    background-color: var(--card-bg-main);
+    background-color: var(--primary-card-bg);
     border-radius: 1.25rem 1.25rem 0 0;
     justify-content: center;
     align-items: center;

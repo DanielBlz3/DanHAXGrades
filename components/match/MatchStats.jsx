@@ -44,7 +44,7 @@ const RenderMatchStats = ({ match, visible, acceptedStats }) => {
 
 
     const topStatsCard = css`
-    background-color: var(--card-bg-main);
+    background-color: var(--primary-card-bg);
   border-radius: 1.25rem;
   padding-inline: 2rem;
     `

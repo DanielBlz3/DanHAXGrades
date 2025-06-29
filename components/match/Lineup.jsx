@@ -47,7 +47,7 @@ const renderLineupContent = ({ match, hasSubs, hasLineupInfo }) => {
     `;
 
     const substitutesContainer = css`
-      background-color: var(--card-bg-main);
+      background-color: var(--primary-card-bg);
       border-radius: 0 0 1.5rem 1.5rem;
       text-align: center;
     `;

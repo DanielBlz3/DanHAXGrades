@@ -35,7 +35,7 @@ export default function Layout({ match, children }) {
     }, [match]);
 
     const scoreBoardAndNav = css`
-  background-color: var(--card-bg-main);
+  background-color: var(--primary-card-bg);
   border-radius: 1.25rem;
   width: 100%;
 `;
@@ -96,7 +96,7 @@ export default function Layout({ match, children }) {
 `;
 
     const nav = css`
-  background-color: var(--card-bg-main);
+  background-color: var(--primary-card-bg);
   border-radius: 0 0 1.5rem 1.5rem;
   height: 2.5rem;
   padding-left: 2rem;

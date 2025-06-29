@@ -23,7 +23,7 @@ export default function MatchLineupPageClient({ match, teamStats }) {
     const teamTraitsCard = css`
     display: flex;
     flex-flow: column;
-      background-color: var(--card-bg-main);
+      background-color: var(--primary-card-bg);
   border-radius: 1.25rem;
   justify-content: center;
   align-items: center;

@@ -63,5 +63,10 @@
         "name": "Domican Repiblic",
         "flag": "/images/nationFlags/dr.png",
         "continent": "South America"
+    },
+    "pe": {
+        "name": "Peru",
+        "flag": "/images/nationFlags/pe.png",
+        "continent": "South America"
     }
 }

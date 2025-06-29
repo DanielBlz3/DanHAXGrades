@@ -23,7 +23,7 @@ export default function LeagueFixturesPageClient({ league }) {
     const fixturesCard = css`
     display: flex;
     flex-flow: column;
-    background-color: var(--card-bg-main);
+    background-color: var(--primary-card-bg);
     border-radius: 1.25rem;
 
     > :first-child {
@@ -44,7 +44,7 @@ export default function LeagueFixturesPageClient({ league }) {
     justify-content: center;
     place-items: center;
     width: 100%;
-    border-bottom: solid 1px var(--secondary-divider-bg);
+    border-bottom: solid 1px var(--secondary-card-bg);
     `
     const fixturesContentHeader = css`
     display: grid;

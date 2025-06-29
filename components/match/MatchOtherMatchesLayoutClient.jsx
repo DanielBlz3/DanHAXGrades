@@ -17,7 +17,7 @@ export default function Layout({ otherFixtures, match, children }) {
 
     const otherMatches = css`
     text-decoration: none;
-      background-color: var(--card-bg-main);
+      background-color: var(--primary-card-bg);
       border-radius: 1.25rem;
       padding: 1rem;
     `;
@@ -35,12 +35,12 @@ export default function Layout({ otherFixtures, match, children }) {
     `;
 
     const matchLink = css`
-background-color: var(--card-bg-main);
+background-color: var(--primary-card-bg);
 color: var(--primary-font-color);
 text-decoration: none;
 
 &:hover {
-    background-color: var(--card-bg-second);
+    background-color: var(--secondary-card-bg);
   }
 `;
 
@@ -108,11 +108,11 @@ flex-flow: row;
 place-items: center;
 height: 7rem;
 margin-block: .5rem;
-background-color: var(--card-bg-main);
+background-color: var(--primary-card-bg);
      border-top: 1px solid var(--primary-divider-bg);
 
      &:hover {
-    background-color: var(--card-bg-second);
+    background-color: var(--secondary-card-bg);
     border-radius: 1rem;
   }
 `;

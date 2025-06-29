@@ -1,5 +1,5 @@
 :root {
-    --GLOBAL-DANHAXGRADES-SCHEME: rgb(46, 204, 113);
+    --GLOBAL-DANHAXGRADES-SCHEME: rgb(35, 180, 95);
     --DIVIDE: .25px;
     --GLOBAL-FONT-COLOR-GREY: grey;
     --GLOBAL-FONT-COLOR-WHITE: #fff;
@@ -26,8 +26,8 @@
 
 .theme-light {
     --page-background-color: #f0f0f0;
-    --card-bg-main: #fafafa;
-    --card-bg-second: #ebebeb;
+    --primary-card-bg: #fafafa;
+    --secondary-card-bg: #ebebeb;
     --card-bg-third: #e1e1e1;
     --primary-soccer-field-bg: #0a965a;
     --secondary-soccer-field-bg: #e6e6e6;
@@ -57,8 +57,8 @@
 
 .theme-dark {
     --page-background-color: #000;
-    --card-bg-main: #1d1d1d;
-    --card-bg-second: #313131;
+    --primary-card-bg: #1d1d1d;
+    --secondary-card-bg: #313131;
     --card-bg-third: #414141;
     --primary-soccer-field-bg: #2c2c2c;
     --secondary-soccer-field-bg: #313131;
@@ -115,8 +115,18 @@ h3 {
     overflow-Y: hidden;
 }
 
+.global-content-wrapper-reversed {
+    display: grid;
+    width: 1280px;
+    width: 100%;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 1rem;
+    overflow-x: hidden;
+    overflow-Y: hidden;
+}
+
 @media (max-width: 1200px) {
-    .global-content-wrapper {
+    .global-content-wrapper, .global-content-wrapper-reversed {
         grid-template-columns: 1fr;
     }
 }
@@ -133,7 +143,7 @@ h3 {
 }
 
 .secondary-hover:hover {
-    background-color: var(--card-bg-second)
+    background-color: var(--secondary-card-bg);
 }
 
 .third-hover:hover {
@@ -160,7 +170,7 @@ h3 {
 
 .nav-item {
     flex: 1;
-    background-color: var(--card-bg-main);
+    background-color: var(--primary-card-bg);
     color: var(--nav-item-font-color);
     border: none;
     font-weight: 600;
