@@ -3,5 +3,4 @@ There is the following
 - Match Ratings
 - Team Pages
 - Player Stats
-- Leauge Pages
-TS is js some filler don't mind
+- League Pages
