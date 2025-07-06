@@ -19,12 +19,18 @@ export default function TeamCreatorPageClient({ players }) {
     const [teamName, setTeamName] = useState("");
     const [formationTextDisplay, setFormationTextDisplay] = useState("none");
 
+    function sleep(time) {
+        return new Promise((resolve) => setTimeout(resolve, time));
+    }
+
     useEffect(() => {
         const storedLanguage = localStorage.getItem('language') || 'es';
         const storedTheme = localStorage.getItem('theme') || 'theme-light';
         setLanguage(storedLanguage);
         setTheme(storedTheme);
     }, [players]);
+    const [downloadButtonText, setDownloadButtonText] = useState(translationsMap?.["downloadFormation"]?.[language]);
+
 
     useEffect(() => {
         const handleClickOutside = (e) => {
@@ -69,7 +75,6 @@ export default function TeamCreatorPageClient({ players }) {
     };
 
     const TeamNameChange = () => {
-
         const handleChange = (e) => {
             setTeamName(e.target.value);
         };
@@ -88,21 +93,16 @@ export default function TeamCreatorPageClient({ players }) {
         )
     }
 
-
     // ===============================|  SEARCH BAR  | ===============================
 
-    let recentPlayers = JSON?.parse(localStorage.getItem('teamCreator')) || []
-
-    const SearchBar = ({ players }) => {
+    let recentPlayers = JSON?.parse(localStorage.getItem('teamCreator')) || [] //RECENTLY SEARCHED PLAYERS
+    const SearchBar = ({ players }) => { //PLAYER LOOKUP
         const [query, setQuery] = useState("");
 
         const filteredPlayers = players.filter(player => {
             if (!query) {
-                let hasPlayerId = recentPlayers.map(i => {
-                    return i.id == player.id
-                })
-                hasPlayerId = hasPlayerId.includes(true) ? true : false
-                return hasPlayerId
+                //IF THE PLAYER HASN'T SEARCHED ANYTHING YET, USE RECENTLY SEARCHED PLAYERS
+                return recentPlayers.some(i => i.id === player.id);
             }
             else {
                 if (player.name.toLowerCase().includes(query.toLowerCase())) {
@@ -111,20 +111,20 @@ export default function TeamCreatorPageClient({ players }) {
             }
         });
 
-        function UpdateSelectedPlayers(id, player) { // WHEN USE CLICKS ON A SEARCH RESULT 
+        function UpdateSelectedPlayers(id, player) { //WHEN USER CLICKS ON A SEARCH RESULT 
             const team = selectedPlayers
 
             if (team.includes(player)) {
-                team[team.indexOf(player)] = team[id]
+                team[team.indexOf(player)] = team[id] //SWAPS THE PLAYER IF IT ALREAYD EXISTS IN THE LINEUP
             }
             team[id] = player
             setSelectedPlayers(team)
 
-            if (!recentPlayers.includes(player)) {
-                recentPlayers.push(player);
+            if (!recentPlayers.some(i => i.id === player.id)) { // PREVENTS DUPLICATES IN LOCAL STORAGE
+                recentPlayers.unshift(player);
             }
             localStorage.setItem("teamCreator", JSON.stringify(recentPlayers))
-            setFocusedPlayer(null);
+            setFocusedPlayer(null); //CLOSE THE PLAYER SEARCH UI
         }
 
         return (
@@ -233,7 +233,7 @@ export default function TeamCreatorPageClient({ players }) {
             <button
                 css={playerContainer}
                 className="primary-hover player"
-                onClick={() => setFocusedPlayer(playerNumber)}
+                onClick={() => [setFocusedPlayer(playerNumber), setLoadSavedTeams(false)]}
             >
                 <div css={playerWrapper}>
                     {modeEl}
@@ -271,7 +271,7 @@ export default function TeamCreatorPageClient({ players }) {
 
     function saveFormation() {
         const savedFormations = JSON.parse(localStorage.getItem("teamCreatorXI")) || []
-        savedFormations.push(
+        savedFormations.unshift(
             {
                 id: crypto.randomUUID(),
                 name: teamName,
@@ -283,7 +283,7 @@ export default function TeamCreatorPageClient({ players }) {
         localStorage.setItem("teamCreatorXI", JSON.stringify(savedFormations))
     }
 
-    const RenderSavedTeams = () => loadSavedTeams !== false ? <LoadSavedTeams /> : null;
+    const RenderSavedTeams = () => loadSavedTeams !== false ? <LoadSavedTeams /> : null; //SHOW OR HIDE UI
 
     const LoadSavedTeams = () => {
         useEffect(() => {
@@ -309,7 +309,8 @@ export default function TeamCreatorPageClient({ players }) {
             background-color: var(--primary-card-bg);
             overflow-y: auto;
             box-shadow: 3px 6px 10px rgba(0, 0, 0, .25);
-            `
+        `;
+
         const savedTeamItem = css`
             display: grid;
             grid-template-columns: 9fr 1fr;
@@ -321,7 +322,7 @@ export default function TeamCreatorPageClient({ players }) {
             > :first-child {
             border: none;
             }
-            `
+        `;
         const savedTeamButton = css`
             display: flex;
             flex-flow: column;
@@ -333,10 +334,12 @@ export default function TeamCreatorPageClient({ players }) {
             outline: none;
             cursor: pointer;
             width: 100%;
-        `
+        `;
+
         const formation = css`
             color: var(--GLOBAL-DANHAXGRADES-SCHEME);
-            `
+        `;
+
         const deleteButton = css`
             background-color: rgba(0, 0, 0, 0);
             border: none;
@@ -346,9 +349,7 @@ export default function TeamCreatorPageClient({ players }) {
             &:hover {
             opacity: 0.7;
             }
-        `
-
-
+        `;
         const savedLineupsArr = JSON.parse(localStorage.getItem("teamCreatorXI")) || []
         const content = savedLineupsArr.map((team, key) => {
             return (
@@ -358,7 +359,6 @@ export default function TeamCreatorPageClient({ players }) {
                     <button
                         css={savedTeamButton}
                         onClick={() => [setSelectedPlayers(team.players), setTeamName(team.name), setLineupMode(team.mode, setSelectedFormation(team.formation)), setLoadSavedTeams(false)]}
-
                     >
                         <h3>{team.name || translationsMap?.["noname"]?.[language]}</h3>
                         <span css={formation}>{formations[team.formation]?.formationTitle}</span>
@@ -377,9 +377,8 @@ export default function TeamCreatorPageClient({ players }) {
     }
 
     const deleteTeam = (id) => {
-        console.log(id)
         const savedFormations = JSON.parse(localStorage.getItem("teamCreatorXI")) || []
-        const unDeletedFormations = savedFormations.filter(team => team.id !== id)
+        const unDeletedFormations = savedFormations.filter(team => team.id !== id) //DELETES THE TEAM WIT THE MATCHING ID
         localStorage.setItem("teamCreatorXI", JSON.stringify(unDeletedFormations))
     }
 
@@ -391,14 +390,9 @@ export default function TeamCreatorPageClient({ players }) {
     };
 
     const handleCapture = async () => {
-
-        setFormationTextDisplay("flex")
-
-        function sleep(time) {
-            return new Promise((resolve) => setTimeout(resolve, time));
-        }
-
-        await sleep(200)
+        setDownloadButtonText(translationsMap?.["downloading..."]?.[language]) //SET DOWNLOAD BUTTON TO "LOADING"
+        setFormationTextDisplay("flex") //SHOW THE FORMATION ON THE VERY BOTTOM TO OPTIMIZE IMAGE
+        await sleep(200) //DELAY
 
         const [canvas1, canvas2, canvas3] = await Promise.all([
             captureElement('capturename'),
@@ -426,6 +420,7 @@ export default function TeamCreatorPageClient({ players }) {
         link.download = `${translationsMap?.["dream_team"]?.[language]}.png`;
         link.click();
         setFormationTextDisplay("none")
+        setDownloadButtonText(translationsMap?.["downloadFormation"]?.[language])
     };
 
     return (
@@ -439,7 +434,7 @@ export default function TeamCreatorPageClient({ players }) {
                     <p>{translationsMap?.["teamCreatorPara2"]?.[language]}</p>
                 </div>
                 <div css={loadFormationWrapper}>
-                    <button css={teamCreatorButton} onClick={() => setLoadSavedTeams(true)}>{translationsMap?.["loadFormation"]?.[language]}</button>
+                    <button css={teamCreatorButton} onClick={() => [setLoadSavedTeams(true), setFocusedPlayer(null)]}>{translationsMap?.["loadFormation"]?.[language]}</button>
                 </div>
             </div>
             <div className="global-right-grid" css={searchUIContainer}>
@@ -477,7 +472,7 @@ export default function TeamCreatorPageClient({ players }) {
                     <div css={teamConfiguration}>
                         <button css={teamCreatorButton} onClick={() => saveFormation()}>{translationsMap?.["saveFormation"]?.[language]}</button>
                         {TeamNameChange()}
-                        <button css={teamCreatorButton} onClick={() => handleCapture()}>{translationsMap?.["downloadFormation"]?.[language]}</button>
+                        <button css={teamCreatorButton} onClick={() => handleCapture()}>{downloadButtonText}</button>
                     </div>
                 </div>
                 <RenderSearchBar players={players} />
@@ -597,14 +592,14 @@ background-color: var(--secondary-card-bg);
 margin: 1rem;
 border: none;
 place-items: center;
-gap: 10px
+gap: 10px;
 `
 
 const searchResults = css`
-  display: flex;
-  flex-flow: column;
-max-height: 14rem;
-overflow-y: scroll;
+display: flex;
+flex-flow: column;
+height: 14rem;
+overflow-y: auto;
 `;
 
 const searchResult = css`
@@ -691,8 +686,5 @@ cursor: pointer;
 
 &:hover {
 opacity: 0.7;
-}
-&:active { 
-color: red
 }
 `

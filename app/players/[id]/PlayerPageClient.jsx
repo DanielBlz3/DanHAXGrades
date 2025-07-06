@@ -207,8 +207,8 @@ export default function PlayerPageClient({ player }) {
     gap: 5px;
     align-items: center
   `
-  function getRatingColor(rating) {
-      //COLOR DEPENDS ON RATING, RETURNS A CSS
+    function getRatingColor(rating) {
+        //COLOR DEPENDS ON RATING, RETURNS A CSS
         let ratingColor;
         if (rating >= 90) ratingColor = "var(--RATING-BLUE)";
         else if (rating >= 80) ratingColor = "var(--RATING-GREEN)";
@@ -776,14 +776,13 @@ export default function PlayerPageClient({ player }) {
     `;
 
     const ratingsChartHeader = css`
-                min-width: 100%;
                 display: flex;
                 flex-flow: column;
-                align-items: start;
+                width: 100%;
                 margin-top: 1rem;
                 margin-left: 1rem;
                 padding-bottom: .2rem;
-                text-align: center;
+                text-align: start;
                 border-bottom: solid 1px var(--primary-divider-bg);
     `;
 
@@ -791,27 +790,18 @@ export default function PlayerPageClient({ player }) {
      display: flex;
     flex-flow: row;
     width: 100%;
+    place-items: center;
+    align-items: center;
+    gap: 2.5%;
     `;
 
-    const percentileStatComparisonContent = css`
-    display: flex;
-    flex-flow: row;
-    width: 100%;
-    `;
-
-    const percentileStatComparisonImg = css`
-    margin-bottom: -3px;
-    align-self: center;
-    `;
-
-    const percentileStatComparisonButton = css`
+    const percentileStatInfoBtn = css`
     background-color: var(--invisible);
     filter: brightness(var(--settings-button-color));
     border: none;
     cursor: pointer;
-    z-index: 1000;
     &:hover {
-     transform: scale(1.3);
+    transform: scale(1.3);
     transform-origin: center;
     transition: transform 150ms ease-in-out;
     }
@@ -896,6 +886,12 @@ export default function PlayerPageClient({ player }) {
     `;
 
     function generateHexPaths(ratings) {
+
+        const pathHover = css`
+            &:hover {
+            filter: brightness(120%);
+            }
+        `
         const center = { x: 96, y: 96 };
         const radius = 91;
         const angleStep = (2 * Math.PI) / ratings.length;
@@ -913,6 +909,7 @@ export default function PlayerPageClient({ player }) {
 
             return (
                 <path
+                    css={pathHover}
                     key={i}
                     fillRule="evenodd"
                     clipRule="evenodd"
@@ -985,13 +982,15 @@ export default function PlayerPageClient({ player }) {
                     <div css={ratingsChartHeader}>
                         <h2>{translationsMap?.["playerRatings"]?.[language]}</h2>
                         <div css={percentileStatComparison}>
-                            <span css={percentileStatComparisonContent}>{ratingsComparison}</span>
-                            <div css={percentileStatComparisonImg}>
-                                <button css={percentileStatComparisonButton}>
-                                    <img src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/question-butotn?v=1743878872340"
-                                        width="14px" height="14px"></img>
-                                </button>
-                            </div>
+                            <span>{ratingsComparison}</span>
+                            <button css={percentileStatInfoBtn}>
+                                <img
+                                    src="/images/QuestionMark.svg"
+                                    className=''
+                                    width={20}
+                                    height={20}></img>
+                                <span class="material-symbols-outlined"></span>
+                            </button>
                         </div>
                     </div>
                     <div css={ratingContent}>
@@ -1032,7 +1031,7 @@ export default function PlayerPageClient({ player }) {
                     <div css={playerCard}>
                         <div css={cardWrapper}>
                             <div css={cardContent}>
-                                <img css={avatar} src={player.avatar} width={50} height={50}/>
+                                <img css={avatar} src={player.avatar} width={50} height={50} />
                                 <div css={cardText}>
                                     <div css={cardName}>
                                         <h1>{player.playername}</h1>
@@ -1082,7 +1081,7 @@ export default function PlayerPageClient({ player }) {
                             </div>
                             <div css={bioItem}>
                                 <div css={[bioValue, getRatingColor(player.rating)]} >{player.rating}</div>
-                                <div css={bioMetric}>{translationsMap?.["rating"]?.[language]}</div>
+                                <div css={bioMetric}>{translationsMap?.["axon_rating"]?.[language]}</div>
                             </div>
                         </section>
                         <section css={positionSection}>
