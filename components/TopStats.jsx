@@ -34,8 +34,6 @@ export default function TopStats({ metric, data }) {
   `;
 
   const playerDetails = css`
-    flex: 3;
-
     @media (max-width: 800px) {
       display: flex;
       flex-flow: row;
@@ -44,16 +42,16 @@ export default function TopStats({ metric, data }) {
   `;
 
   const player = css`
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
     align-items: center;
     text-decoration: none;
     color: var(--primary-font-color);
     min-height: 4rem;
     border-top: solid 1px var(--primary-divider-bg);
-        > :first-child {
+    > :first-child {
     border: none;
     } 
-
   `;
 
   const team = css`
@@ -67,6 +65,10 @@ export default function TopStats({ metric, data }) {
 
   const teamName = css`
     color: var(--GLOBAL-FONT-COLOR-GREY);
+  `;
+
+  const avatar = css`
+  border-radius: 50%;
   `;
 
   const RenderPlayers = () => {
@@ -88,6 +90,7 @@ export default function TopStats({ metric, data }) {
 
           return (
             <a key={idx} href={p.pageUrl} css={player} className="primary-hover">
+              <img css={avatar} src={p.avatar} width={30} height={30} />
               <div css={playerDetails}>
                 <span>{p.playerName}</span>
                 <div css={team}>

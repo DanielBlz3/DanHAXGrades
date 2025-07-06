@@ -43,7 +43,7 @@ export default function PlayerPageClient({ player }) {
 
     const teamColor = theme === "theme-light" ? player?.teamColors?.teamColorMain : player?.teamColors?.teamColorAlternate;
     const mainPosition = player?.playerPositions?.positions.find(p => p.isMainPos === true) || null;
-    const otherPositions =  player?.playerPositions?.positions.filter(p => !p.isMainPos && (p.ratio >= 0.166 || p.occurences >= 2)) || []; 
+    const otherPositions = player?.playerPositions?.positions.filter(p => !p.isMainPos && (p.ratio >= 0.166 || p.occurences >= 2)) || [];
     const otherPositionsStr = otherPositions.length ? otherPositions.map(p => translationsMap?.[p.id]?.[language]).reduce((acc, curr) => acc + ", " + curr) : ""
     const minutes = player.totalStats.minutes
 
@@ -105,6 +105,17 @@ export default function PlayerPageClient({ player }) {
 
     const cardContent = css`
     display: flex;
+    flex-flow: row;
+    gap: .5rem;
+    align-items: center;
+    `;
+
+    const avatar = css`
+    border-radius: 50%;
+    `;
+
+    const cardText = css`
+    display: flex;
     flex-direction: column;
   `;
 
@@ -117,7 +128,8 @@ export default function PlayerPageClient({ player }) {
     flex-direction: row;
     justify-content: left;
     color: var(--team-font-color);
-    gap: 8px;
+    gap: 5px;
+    place-items: center;
   `;
 
     const cardLogo = css`
@@ -195,6 +207,25 @@ export default function PlayerPageClient({ player }) {
     gap: 5px;
     align-items: center
   `
+  function getRatingColor(rating) {
+      //COLOR DEPENDS ON RATING, RETURNS A CSS
+        let ratingColor;
+        if (rating >= 90) ratingColor = "var(--RATING-BLUE)";
+        else if (rating >= 80) ratingColor = "var(--RATING-GREEN)";
+        else if (rating >= 65) ratingColor = "var(--RATING-ORANGE)";
+        else ratingColor = "var(--RATING-RED)";
+
+        return css`
+        display: flex;
+        place-items: center;
+        justify-content: center;
+        background-color: ${ratingColor};
+        color: white;
+        border-radius: .5rem;
+        cursor: default;
+        width: 30px;
+        `;
+    }
 
     //===============================|  POSITIONS  | ===============================
 
@@ -359,7 +390,7 @@ export default function PlayerPageClient({ player }) {
     justify-self: start;
     `
 
-    const RenderCompetitionStats = ({stats, minutes}) => {
+    const RenderCompetitionStats = ({ stats, minutes }) => {
         if (minutes > 0) {
             const competitionItems = stats.map((i, index) => {
                 const isMatchRatingEl = (i.id === 'matchRating')
@@ -411,7 +442,7 @@ export default function PlayerPageClient({ player }) {
     //===============================|  PLAYER MATCHES  | ===============================
     //
     //
-    const RenderPlayerRecentMatches = ({matches}) => {
+    const RenderPlayerRecentMatches = ({ matches }) => {
         if (matches.length) {
             const RenderPlayerRecentMatchesContent = matches.map((match, index) => (
                 <a key={index} href={match.pageUrl} className="secondary-hover" css={matchItem}>
@@ -894,7 +925,7 @@ export default function PlayerPageClient({ player }) {
         });
     }
 
-    const RenderRatings= ({ratings, minutes}) => {
+    const RenderRatings = ({ ratings, minutes }) => {
         if (minutes >= 25) {
             function ratingLegend(side) {
                 const [min, max, css] = side === "left" ? [3, 6, ratingLegendLeft] : [0, 3, ratingLegendRight]
@@ -954,7 +985,7 @@ export default function PlayerPageClient({ player }) {
                     <div css={ratingsChartHeader}>
                         <h2>{translationsMap?.["playerRatings"]?.[language]}</h2>
                         <div css={percentileStatComparison}>
-                            <span  css={percentileStatComparisonContent}>{ratingsComparison}</span>
+                            <span css={percentileStatComparisonContent}>{ratingsComparison}</span>
                             <div css={percentileStatComparisonImg}>
                                 <button css={percentileStatComparisonButton}>
                                     <img src="https://cdn.glitch.global/ba398850-471f-4a9e-9227-3021efac2da7/question-butotn?v=1743878872340"
@@ -1001,20 +1032,23 @@ export default function PlayerPageClient({ player }) {
                     <div css={playerCard}>
                         <div css={cardWrapper}>
                             <div css={cardContent}>
-                                <div css={cardName}>
-                                    <h1>{player.playername}</h1>
-                                </div>
-                                <div css={cardTeam}>
-                                    <img
-                                        css={cardLogo}
-                                        src={player.teamLogo || 'https://cdn.glitch.global/placeholder.png'}
-                                        alt={player.teamName || 'Free Agent'}
-                                        width="20"
-                                        height="20"
-                                    />
-                                    <a css={teamLinkHeader} href={`/teams/${player.teamId || ''}`}>
-                                        <span>{player.teamName || 'Free Agent'}</span>
-                                    </a>
+                                <img css={avatar} src={player.avatar} width={50} height={50}/>
+                                <div css={cardText}>
+                                    <div css={cardName}>
+                                        <h1>{player.playername}</h1>
+                                    </div>
+                                    <div css={cardTeam}>
+                                        <img
+                                            css={cardLogo}
+                                            src={player.teamLogo || 'https://cdn.glitch.global/placeholder.png'}
+                                            alt={player.teamName || 'Free Agent'}
+                                            width="20"
+                                            height="20"
+                                        />
+                                        <a css={teamLinkHeader} href={`/teams/${player.teamId || ''}`}>
+                                            <span>{player.teamName || 'Free Agent'}</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1026,8 +1060,8 @@ export default function PlayerPageClient({ player }) {
                                 <div css={bioMetric}>{translationsMap?.["continent"]?.[language]}</div>
                             </div>
                             <div css={bioItem}>
-                                <div css={bioValue} >{player.shirtNum}</div>
-                                <div css={bioMetric}>{translationsMap?.["shirtNum"]?.[language]}</div>
+                                <div css={bioValue} >{player.username || "N/A"}</div>
+                                <div css={bioMetric}>{translationsMap?.["username"]?.[language]}</div>
                             </div>
                             <div css={bioItem}>
                                 <div css={bioNation}>
@@ -1045,6 +1079,10 @@ export default function PlayerPageClient({ player }) {
                             <div css={bioItem}>
                                 <div css={bioValue} >{player.marketvalue}</div>
                                 <div css={bioMetric}>{translationsMap?.["marketValue"]?.[language]}</div>
+                            </div>
+                            <div css={bioItem}>
+                                <div css={[bioValue, getRatingColor(player.rating)]} >{player.rating}</div>
+                                <div css={bioMetric}>{translationsMap?.["rating"]?.[language]}</div>
                             </div>
                         </section>
                         <section css={positionSection}>
@@ -1072,7 +1110,7 @@ export default function PlayerPageClient({ player }) {
                 {RenderPercentileStats(player.percentileStats, minutes)}
             </div>
             <div className='right-grid' css={playerContentItem}>
-                <RenderRatings ratings={player.ratings} minutes={minutes}/>
+                <RenderRatings ratings={player.ratings} minutes={minutes} />
             </div>
         </div>
     );

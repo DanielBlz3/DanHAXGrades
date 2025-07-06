@@ -30,18 +30,17 @@ export default function Transfers({ data }) {
     padding: 1rem 2rem;
     color: grey;
     justify-items: start;
-@media (max-width: 900px) {
+    @media (max-width: 900px) {
         display: none;
-}
+    }
    `;
 
-   const transfersContent = css`
+    const transfersContent = css`
    @media (max-width: 900px) {
     > :first-child {
         border: none;
     }
-
-   `
+   `;
 
     const transfersItem = css`
     display: grid;
@@ -59,60 +58,76 @@ export default function Transfers({ data }) {
    `;
 
     const transfersItemDetails = css`
-       display: flex;
-    flex-flow: column;
-    gap: 3px;
-    place-items: start;
+    display: flex;
+    flex-flow: row;
+    gap: 10px;
+    place-items: center;
 
-        @media (max-width: 900px) {
+    @media (max-width: 900px) {
         flex-flow: row;
-        place-items: center;
+        place-items: end;
         gap: 10px;
-        }
-   `;
+    }
+    `;
 
     const playername = css`
-       color: var(--primary-font-color);
-        font-weight: bold;
-                   text-decoration: none;
+    color: var(--primary-font-color);
+    font-weight: bold;
+    text-decoration: none;
+
+    @media (max-width: 900px) {
+    display: none;
+    }
+   `;
+
+   const transferText = css`
+   display: flex;
+   flex-flow: column;
+   gap: 4px;
    `;
 
     const signingTeam = css`
-       display: flex;
+    display: flex;
     flex-flow: row;
     gap: 10px;
     align-items: center;
-           color: var(--primary-font-color);
-           text-decoration: none;
-   `
+    color: var(--primary-font-color);
+    text-decoration: none;
+    `;
 
     const oldTeam = css`
-   @media (max-width: 900px) {
+    @media (max-width: 900px) {
         display: none;
-}
+    }
    `;
-   const position = css`
-       background-color: var(--secondary-card-bg);
+    const position = css`
+    background-color: var(--secondary-card-bg);
     padding: .3em .5rem;
     border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     color: grey;
+   `;
 
-   `
+   const avatar = css`
+   border-radius: 1.25rem;
+   `;
 
     const RenderTransfersItems = () => {
         const items = data.map(t => {
             return (
                 <div css={transfersItem} className="fourth-hover">
                     <div css={transfersItemDetails}>
-                        <a href={t.pageUrl} css={playername} className="third-hover" >{t.playerName}</a>
-                        <a href={t.currentTeamUrl} css={signingTeam} className="third-hover">
-                            <DefaultArrow direction="right" bgColor={"var(--GLOBAL-DANHAXGRADES-SCHEME)"} strokeBgColor={"#fff"} strokeWidth={"2.5"} />
-                            <img src={t.currentTeamLogo} alt={t.currentTeamName} width={20} height={20} />
-                            <span>{t.currentTeamName}</span>
-                        </a>
+                        <img css={avatar} src={t.avatar} width={40} height={40} />
+                        <div css={transferText}>
+                            <a href={t.pageUrl} css={playername} className="third-hover" >{t.playerName}</a>
+                            <a href={t.currentTeamUrl} css={signingTeam} className="third-hover">
+                                <DefaultArrow direction="right" bgColor={"var(--GLOBAL-DANHAXGRADES-SCHEME)"} strokeBgColor={"#fff"} strokeWidth={"2.5"} />
+                                <img src={t.currentTeamLogo} alt={t.currentTeamName} width={20} height={20} />
+                                <span>{t.currentTeamName}</span>
+                            </a>
+                        </div>
                     </div>
                     <a href={t.formerTeamUrl} css={[signingTeam, oldTeam]} className="third-hover">
                         <img src={t.formerTeamLogo} alt={t.formerTeamLogo} width={20} height={20} />

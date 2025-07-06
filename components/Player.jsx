@@ -53,6 +53,10 @@ const startingPlayerName = css`
   color: var(--GLOBAL-FONT-COLOR-WHITE);
 `;
 
+const avatar = css`
+border-radius: 1.25rem;
+`
+
 const Player = ({ player, team, isVertical }) => {
   const PlayerEvent = ({ icon, count, leftOrRight, initialX, y, metric }) => {
     return [...Array(count)].map((_, i) => {
@@ -111,10 +115,10 @@ const Player = ({ player, team, isVertical }) => {
       }}
     >
       <div css={playerWrapper}>
-        <img
-          src="/images/defaulticon.png"
-          width={30}
-          height={30}
+        <img css={avatar}
+          src={player.avatar}
+          width={40}
+          height={40}
         />
         <span css={matchRatingOnPlayer}>{player.matchRatingRounded}</span>
         <div data-events-player={player.id}>

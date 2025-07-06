@@ -12,7 +12,7 @@ export default function TeamCreatorPageClient({ players }) {
     const [theme, setTheme] = useState('theme-light');
     const [language, setLanguage] = useState('es');
     const [selectedFormation, setSelectedFormation] = useState('fourthreethree');
-    const [lineupMode, setLineupMode] = useState('country');
+    const [lineupMode, setLineupMode] = useState('icon');
     const [selectedPlayers, setSelectedPlayers] = useState(Array(11).fill(null));
     const [focusedPlayer, setFocusedPlayer] = useState(null);
     const [loadSavedTeams, setLoadSavedTeams] = useState(false);
@@ -167,59 +167,66 @@ export default function TeamCreatorPageClient({ players }) {
 
     const TeamCreatorPlayer = ({ player, coords, playerNumber, position, lineupMode }) => {
         const playerContainer = css`
-  display: flex;
-  flex-direction: column;
-    position: relative;
-  position: absolute;
-    justify-content: center;
-    align-items: center;
-  gap: 5px;
-  height: 65px;
-  width: 65px;
-  transform: translate(-50%, -50%);
-  text-decoration: none;
-  color: var(--primary-font-color);
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  top: ${100 - coords?.y * 2}%;
-left: ${coords?.x}%;
-`;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        height: 65px;
+        width: 65px;
+        transform: translate(-50%, -50%);
+        text-decoration: none;
+        color: var(--primary-font-color);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        top: ${100 - coords?.y * 2}%;
+        left: ${coords?.x}%;
+        `;
 
         const playerWrapper = css`
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  background-color: var(--primary-player-bg-color);
-`;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        background-color: var(--primary-player-bg-color);
+        `;
 
         const playerName = css`
-  width: 300%;
-  text-align: center;
-  cursor: default;
-  font-size: 0.8rem;
-  font-weight: bold;
-  text-decoration: none;
-`;
+        width: 300%;
+        text-align: center;
+        cursor: default;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-decoration: none;
+        `;
 
         const startingPlayerName = css`
-  color: var(--GLOBAL-FONT-COLOR-WHITE);
-`;
+        color: var(--GLOBAL-FONT-COLOR-WHITE);
+        `;
 
         const teamLogo = css`
-position: absolute;
-bottom: 25%;
-right: 10%;
-`
+        position: absolute;
+        bottom: 25%;
+        right: 10%;
+        `;
+
         const positionCSS = css`
         font-weight: bold;
         `;
 
-        const modeEl = lineupMode === "icon" ? (<img src={player?.icon || "/images/teamLogos/0.png"} alt={player?.teamName} width={17} height={17} css={teamLogo} />) :
+        const playerAvatar = css`
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        `;
+
+        const modeEl = lineupMode === "icon" ? (<img src={player?.avatar || "/images/teamLogos/0.png"} alt={player?.teamName} width={34} height={34} css={playerAvatar} />) :
             lineupMode === "country" ? (<img src={player?.nationFlag || "/images/teamLogos/0.png"} alt={player?.nationName} width={40} height={40} />) :
                 (<div css={positionCSS}>{translationsMap?.[`${position}_Short`]?.[language]}</div>)
         return (
@@ -253,12 +260,12 @@ right: 10%;
         ));
 
     const captureFormation = css`
-display: ${formationTextDisplay};
-height: 3rem;
-justify-content: center;
-align-items: center;
-color: var(--GLOBAL-DANHAXGRADES-SCHEME);
-`
+    display: ${formationTextDisplay};
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--GLOBAL-DANHAXGRADES-SCHEME);
+    `;
 
     // ===============================|  LOADING AND SAVING FORMATIONS  | ===============================
 
@@ -266,6 +273,7 @@ color: var(--GLOBAL-DANHAXGRADES-SCHEME);
         const savedFormations = JSON.parse(localStorage.getItem("teamCreatorXI")) || []
         savedFormations.push(
             {
+                id: crypto.randomUUID(),
                 name: teamName,
                 formation: selectedFormation,
                 mode: lineupMode,
@@ -303,40 +311,62 @@ color: var(--GLOBAL-DANHAXGRADES-SCHEME);
             box-shadow: 3px 6px 10px rgba(0, 0, 0, .25);
             `
         const savedTeamItem = css`
+            display: grid;
+            grid-template-columns: 9fr 1fr;
+            align-items: center;
+            justify-items: center;
+            min-height: 4rem;
+            border-top: solid 1px var(--secondary-divider-bg);
+
+            > :first-child {
+            border: none;
+            }
+            `
+        const savedTeamButton = css`
             display: flex;
             flex-flow: column;
             align-items: center;
             justify-content: center;
-            width: 100%;
-            min-height: 4rem;
             background-color: rgba(0, 0, 0, 0);
             color: var(--primary-font-color);
             border: none;
             outline: none;
             cursor: pointer;
-            border-top: solid 1px var(--secondary-divider-bg);
-
-                > :first-child {
-  border: none;
-    }
-            `
+            width: 100%;
+        `
         const formation = css`
             color: var(--GLOBAL-DANHAXGRADES-SCHEME);
             `
+        const deleteButton = css`
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            outline: none;
+            cursor: pointer;        
+
+            &:hover {
+            opacity: 0.7;
+            }
+        `
+
 
         const savedLineupsArr = JSON.parse(localStorage.getItem("teamCreatorXI")) || []
         const content = savedLineupsArr.map((team, key) => {
             return (
-                <button
-                    css={savedTeamItem}
+                <div css={savedTeamItem}
                     className='primary-hover'
-                    key={key}
-                    onClick={() => [setSelectedPlayers(team.players), setTeamName(team.name), setLineupMode(team.mode, setSelectedFormation(team.formation)), setLoadSavedTeams(false)]}
+                    key={key}>
+                    <button
+                        css={savedTeamButton}
+                        onClick={() => [setSelectedPlayers(team.players), setTeamName(team.name), setLineupMode(team.mode, setSelectedFormation(team.formation)), setLoadSavedTeams(false)]}
 
-                >
-                    <h3>{team.name || translationsMap?.["noname"]?.[language]}</h3>
-                    <span css={formation}>{formations[team.formation]?.formationTitle}</span>
-                </button>
+                    >
+                        <h3>{team.name || translationsMap?.["noname"]?.[language]}</h3>
+                        <span css={formation}>{formations[team.formation]?.formationTitle}</span>
+                    </button>
+                    <button css={deleteButton} onClick={() => [deleteTeam(team.id), setSelectedPlayers((Array(11).fill(null))), setTeamName(""), setLoadSavedTeams(false)]}>
+                        <img src="/images/delete.svg" alt="delete" />
+                    </button>
+                </div>
             )
         })
         return (
@@ -344,6 +374,13 @@ color: var(--GLOBAL-DANHAXGRADES-SCHEME);
                 {content}
             </div>
         )
+    }
+
+    const deleteTeam = (id) => {
+        console.log(id)
+        const savedFormations = JSON.parse(localStorage.getItem("teamCreatorXI")) || []
+        const unDeletedFormations = savedFormations.filter(team => team.id !== id)
+        localStorage.setItem("teamCreatorXI", JSON.stringify(unDeletedFormations))
     }
 
     const captureElement = async (id) => {
@@ -386,7 +423,7 @@ color: var(--GLOBAL-DANHAXGRADES-SCHEME);
         const dataURL = finalCanvas.toDataURL('image/png');
         const link = document.createElement('a');
         link.href = dataURL;
-        link.download = 'combined.png';
+        link.download = `${translationsMap?.["dream_team"]?.[language]}.png`;
         link.click();
         setFormationTextDisplay("none")
     };
@@ -651,4 +688,11 @@ color: white;
 border-radius: 0.75rem;
 font-size: 1rem;
 cursor: pointer;
+
+&:hover {
+opacity: 0.7;
+}
+&:active { 
+color: red
+}
 `

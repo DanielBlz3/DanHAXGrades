@@ -11,8 +11,27 @@ import Lineup from '/components/match/Lineup.jsx';
 import MatchStats from '/components/match/MatchStats.jsx';
 import RenderTeamStrengths from '/components/match/RenderTeamStrengths';
 import RenderTeamWeaknesses from '/components/match/RenderTeamWeaknesses';
+import RenderPlayerStatsUi from '/components/match/PlayerStatsUI.jsx';
+
 
 export default function MatchOverviewPageClient({ match, teamStats }) {
+
+     const router = useRouter();
+    const searchParams = useSearchParams();
+    const defaultTab = searchParams.get('tab') || 'lineup';
+    const [theme, setTheme] = useState('theme-light');
+    const [language, setLanguage] = useState('es');
+    const [visible, setVisible] = useState(false);
+    const [playerData, setPlayerData] = useState(null);
+    const [playerStats, setPlayerStats] = useState(null);
+
+
+    useEffect(() => {
+        const storedTheme = localStorage.getItem('theme') || 'theme-light';
+        setTheme(storedTheme);
+        const storedLanguage = localStorage.getItem('language') || 'theme-light';
+        setLanguage(storedLanguage);
+    })
 
     const matchContent = css`
       display: grid;
@@ -131,7 +150,7 @@ export default function MatchOverviewPageClient({ match, teamStats }) {
       line-height: 2;
     `;
 
-       const teamTraitsCard = css`
+    const teamTraitsCard = css`
         display: flex;
         flex-flow: column;
           background-color: var(--primary-card-bg);
@@ -140,117 +159,33 @@ export default function MatchOverviewPageClient({ match, teamStats }) {
       align-items: center;
       padding-bottom: 1rem;
         `;
-        const teamTraitsHeader = css`
+    const teamTraitsHeader = css`
         display: flex;
           justify-content: center;
       align-items: center;
       height: 4rem;
         `;
-    
-        const teamTraitsWrapper = css`
+
+    const teamTraitsWrapper = css`
         width: 100%;
         padding: 1rem;
         `;
-    
-        const teamTraitsContent = css`
+
+    const teamTraitsContent = css`
         display: grid;
         grid-template-columns: 1fr 1fr;
             grid-gap: 2rem
         `;
-    
-        const forecastContent = css`
+
+    const forecastContent = css`
         display: flex;
         flex-flow: column;
         width: 100%;
         padding: .5rem;
         `
 
-    const router = useRouter();
-    const searchParams = useSearchParams();
-    const defaultTab = searchParams.get('tab') || 'lineup';
-    const [theme, setTheme] = useState('theme-light');
-    const [language, setLanguage] = useState('es');
-
-    useEffect(() => {
-        console.log("useEffect running");
-        const storedTheme = localStorage.getItem('theme') || 'theme-light';
-        setTheme(storedTheme);
-        const storedLanguage = localStorage.getItem('language') || 'theme-light';
-        setLanguage(storedLanguage);
-    })
-
-
-    function getRatingClass(rating, isMvp) {
-        let ratingColor;
-        if (isMvp === true) ratingColor = "var(--RATING-BLUE)";
-        else if (rating < 5.5) ratingColor = "var(--RATING-RED)";
-        else if (rating < 6.949) ratingColor = "var(--RATING-ORANGE)";
-        else ratingColor = "var(--RATING-GREEN)";
-
-        return css`
-                background-color: ${ratingColor};
-                color: white;
-                font-weight: bold;
-                border-radius: 1rem;
-                padding: 0.025rem 0.3rem;
-                cursor: default;
-              `;
-    }
-
-    const PlayerStatsDisplay = ({ groupedStats }) => {
-        return (
-            visible && playerData ? (
-                <>
-                    <div css={playerUiOverlay} className="player-ui-overlay" style={{ display: 'flex' }}></div>
-                    <div css={playerUi} className="player-ui" style={{ display: 'flex' }}>
-                        <div css={playerUiHeader}>
-                            <a css={playerUiName} href={`/players/${playerData.id}`}> {playerData.name} </a>
-                            <div css={headerMetric}>
-                                <div css={headerMetricItem}>
-                                    <span>{playerData.position}</span>
-                                    <span css={playerUiBioMetric}>{translationsMap?.["position"]?.[language]}</span>
-                                </div>
-                                <div css={headerMetricItem}>
-                                    <span css={getRatingClass(playerStats?.["1"].matchRating, playerStats?.["1"].isMvp)}> {playerStats?.["1"].matchRatingRounded} </span>
-                                    <span css={playerUiBioMetric}>{translationsMap?.["matchRating"]?.[language]}</span>
-                                </div>
-                                <div css={headerMetricItem}>
-                                    <div css={playerUiNationality}>
-                                        <img height="17" width="17" src={playerData.nationFlag} />
-                                        <span >{playerData.nationName}</span>
-                                    </div>
-                                    <span css={playerUiBioMetric}>{translationsMap?.["country"]?.[language]}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div css={playerUiMain}>
-                            <div css={playerUiStats}>
-                                {Object.entries(groupedStats).map(([section, stats]) => (
-                                    <div key={section} css={statGroup}>
-                                        <h3 css={statGroupTitle}>
-                                            {translationsMap?.[section]?.[language]}
-                                        </h3>
-                                        {stats.map(([label, value], i) => (
-                                            <span key={i} css={statLine}>
-                                                {label}: {value}
-                                            </span>
-                                        ))}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </>
-            ) : null
-
-        );
-    };
-
     const playersInMatch = [...Object.entries(match.lineup.home.players), ...Object.entries(match.lineup.away.players)]
 
-    const [visible, setVisible] = useState(false);
-    const [playerData, setPlayerData] = useState(null);
-    const [playerStats, setPlayerStats] = useState(null);
     useEffect(() => {
         const handleHashChange = async () => {
             const hash = window.location.hash;
@@ -305,8 +240,9 @@ export default function MatchOverviewPageClient({ match, teamStats }) {
             <div css={matchContent}>
                 <div css={matchContentWrapper}>
                     <MatchStats match={match} visible={match.matchStatus.started && !match.matchStatus.awarded} acceptedStats={['shots', 'keyPasses', 'possession', 'touches']} />
-                    <MatchTimeline match={match}/>
+                    <MatchTimeline match={match} />
                     <Lineup match={match} hasSubs={false} hasLineupInfo={true} />
+                    <RenderPlayerStatsUi groupedStats={getPlayerUiStats(playerStats)} visible={visible} playerData={playerData} playerStats={playerStats} />
                     <div css={teamTraitsCard}>
                         <div css={teamTraitsWrapper}>
                             <div css={teamTraitsHeader}>
@@ -322,7 +258,7 @@ export default function MatchOverviewPageClient({ match, teamStats }) {
                     </div>
                 </div>
             </div>
-            <PlayerStatsDisplay groupedStats={getPlayerUiStats(playerStats)} />
+            <RenderPlayerStatsUi groupedStats={getPlayerUiStats(playerStats)} visible={visible} playerData={playerData} playerInfo={playerStats} />
         </div>
     );
 }

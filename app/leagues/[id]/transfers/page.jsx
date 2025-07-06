@@ -7,8 +7,17 @@ async function getLeagueData(id) {
     cache: 'no-store',
   });
 
-if (!res.ok) throw new Error('Failed to fetch league');
-return res.json();
+  if (!res.ok) throw new Error('Failed to fetch league');
+  return res.json();
+}
+
+async function getTransferData(id) {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/transfers`, {
+    cache: 'no-store',
+  });
+
+  if (!res.ok) throw new Error('Failed to fetch transfers');
+  return res.json();
 }
 
 export async function generateMetadata({ params }) {
@@ -23,5 +32,6 @@ export async function generateMetadata({ params }) {
 
 export default async function MatchPage({ params }) {
   const league = await getLeagueData(params.id);
-  return <LeagueTransfersPageClient league={league}/>;
+  const transfers = await getTransferData(params.id);
+  return <LeagueTransfersPageClient league={league} transfers={transfers} />;
 }

@@ -49,6 +49,10 @@ right: 8px;
 bottom: 22px;
 `
 
+const avatar = css`
+border-radius: 50%;
+`
+
 const PlayerTotw = ({ player }) => {
   const coords = { x: player?.coords.x, y: player?.coords.y };
 
@@ -84,10 +88,10 @@ const PlayerTotw = ({ player }) => {
       }}
     >
       <div css={playerWrapper}>
-        <img
-          src="/images/defaulticon.png"
-          width={30}
-          height={30}
+        <img css={avatar}
+          src={player.avatar}
+          width={40}
+          height={40}
         />
         <span css={matchRatingOnPlayer}>{player?.matchRating.toFixed(1)}</span>
         <img src={player?.teamLogo} width={15} height={15} css={playerClub}/>

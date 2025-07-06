@@ -8,10 +8,13 @@ import playersStorage from '/data/playersStorage.json';
 import getPlayerStats from '/lib/getPlayerStats.js';
 import getPlayerPositions from '/lib/getPlayerPositions.js';
 import basicPlayerData from '/lib/basicPlayerData';
-import nationsJSON from '/data/nations.json';
+import nations from '/data/nations.json';
 
 export async function GET(req) {
     try {
+        const res = await fetch('http://140.84.180.81:3000/api/teams/full'); //RUDIGER'S API
+		const rsmData = await res.json();
+
         const combinedLeagues = [
             ...exanonPreTempS3?.games || [],
             ...exanonLeagueS3?.games || [],
@@ -23,11 +26,11 @@ export async function GET(req) {
             (player) => player && player.playerId && player.playerId !== 0
         );
         const allPlayers = await Promise.all(
-            validPlayers .map(async (player) => {
+            validPlayers.map(async (player) => {
                 if (player) {
                     if (player.playerId) {
                         const positionData = await getPlayerPositions(stats, playersStorage);
-                        const response = await basicPlayerData(positionData, player, nationsJSON, player.playerId, exanonData.teams);
+                        const response = await basicPlayerData(positionData, player, nations, player.playerId, exanonData.teams, rsmData);
                         return response
                     }
                 } else {

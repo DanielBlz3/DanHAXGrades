@@ -26,40 +26,6 @@
           "/colors blue 0 FEF000 FFFFFF 1F3089"
         ]
       },
-      "trophieswon": {
-        "EXL Liga": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "Copa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "SuperCopa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "EXL Pretemporada": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        }
-      },
       "previoustablefinishes": [
         null,
         null,
@@ -86,40 +52,6 @@
           "None"
         ]
       },
-      "trophieswon": {
-        "EXL Liga": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "Copa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "SuperCopa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "EXL Pretemporada": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        }
-      },
       "previoustablefinishes": [
         null,
         4,
@@ -130,6 +62,7 @@
       "teamname": "Arsenal",
       "teamNameShort": "Arsenal",
       "teamId": 3,
+      "rsmId": "1387184910422376458",
       "currentLeagues": [
         2,
         3
@@ -146,40 +79,6 @@
           "/colors blue 220 162040 C5E4F0 BBCBF0 B1AFF0"
         ]
       },
-      "trophieswon": {
-        "EXL Liga": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "Copa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "SuperCopa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "EXL Pretemporada": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        }
-      },
       "previoustablefinishes": [
         null,
         null,
@@ -190,6 +89,7 @@
       "teamname": "Atletico Madrid",
       "teamNameShort": "Atletico",
       "teamId": 4,
+      "rsmId": "1387159971518615763",
       "currentLeagues": [
         2,
         3
@@ -274,40 +174,6 @@
           "/colors blue 180 004D98 FFCD78 CF002D FFCD78"
         ]
       },
-      "trophieswon": {
-        "EXL Liga": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "Copa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "SuperCopa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "EXL Pretemporada": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        }
-      },
       "previoustablefinishes": [
         5,
         5,
@@ -334,40 +200,6 @@
           "None"
         ]
       },
-      "trophieswon": {
-        "EXL Liga": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "Copa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "SuperCopa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "EXL Pretemporada": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        }
-      },
       "previoustablefinishes": [
         null,
         null,
@@ -389,40 +221,6 @@
           "None",
           "None"
         ]
-      },
-      "trophieswon": {
-        "EXL Liga": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "Copa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "SuperCopa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "EXL Pretemporada": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        }
       },
       "previoustablefinishes": [
         null,
@@ -500,6 +298,7 @@
       "teamname": "Liverpool FC",
       "teamNameShort": "Liverpool",
       "teamId": 9,
+      "rsmId": "1386842598584487997",
       "currentLeagues": [
         2,
         3
@@ -515,40 +314,6 @@
           "None",
           "None"
         ]
-      },
-      "trophieswon": {
-        "EXL Liga": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "Copa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "SuperCopa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "EXL Pretemporada": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        }
       },
       "previoustablefinishes": [
         null,
@@ -636,40 +401,6 @@
           "/colors red 55 000000 DE9C00 FFBB00 DE9C00"
         ]
       },
-      "trophieswon": {
-        "EXL Liga": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "Copa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "SuperCopa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "EXL Pretemporada": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        }
-      },
       "previoustablefinishes": [
         null,
         null,
@@ -696,40 +427,6 @@
           null
         ]
       },
-      "trophieswon": {
-        "EXL Liga": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "Copa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "SuperCopa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "EXL Pretemporada": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        }
-      },
       "previoustablefinishes": [
         null,
         null,
@@ -740,6 +437,7 @@
       "teamname": "Real Madrid",
       "teamNameShort": "Madrid",
       "teamId": 14,
+      "rsmId": "1389364869463277638",
       "logo": "/images/teamLogos/14.png",
       "color": "rgb(1, 66, 106)",
       "teamdescription": {
@@ -750,40 +448,6 @@
           null,
           null
         ]
-      },
-      "trophieswon": {
-        "EXL Liga": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "Copa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "SuperCopa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "EXL Pretemporada": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        }
       },
       "previoustablefinishes": [
         3,
@@ -867,40 +531,6 @@
           null
         ]
       },
-      "trophieswon": {
-        "EXL Liga": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "Copa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "SuperCopa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "EXL Pretemporada": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        }
-      },
       "previoustablefinishes": [
         7,
         null,
@@ -923,40 +553,6 @@
           null
         ]
       },
-      "trophieswon": {
-        "EXL Liga": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "Copa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "SuperCopa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "EXL Pretemporada": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        }
-      },
       "previoustablefinishes": [
         8,
         3,
@@ -977,40 +573,6 @@
           null,
           null
         ]
-      },
-      "trophieswon": {
-        "EXL Liga": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "Copa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "SuperCopa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "EXL Pretemporada": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        }
       },
       "previoustablefinishes": [
         9,
@@ -1090,40 +652,6 @@
           null
         ]
       },
-      "trophieswon": {
-        "EXL Liga": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "Copa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "SuperCopa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "EXL Pretemporada": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        }
-      },
       "previoustablefinishes": [
         10,
         null,
@@ -1146,40 +674,6 @@
           null
         ]
       },
-      "trophieswon": {
-        "EXL Liga": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "Copa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "SuperCopa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "EXL Pretemporada": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        }
-      },
       "previoustablefinishes": [
         11,
         null,
@@ -1200,40 +694,6 @@
           null,
           null
         ]
-      },
-      "trophieswon": {
-        "EXL Liga": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "Copa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "SuperCopa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "EXL Pretemporada": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        }
       },
       "previoustablefinishes": [
         12,
@@ -1256,39 +716,143 @@
           null
         ]
       },
-      "trophieswon": {
-        "EXL Liga": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "Copa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "SuperCopa EXL": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        },
-        "EXL Pretemporada": {
-          "first": {
-            "seasonswon": []
-          },
-          "second": {
-            "seasonswon": []
-          }
-        }
+      "previoustablefinishes": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Palmerias",
+      "teamNameShort": "Palmerias",
+      "teamId": 24,
+      "rsmId": "1386123876668276766",
+      "logo": "/images/teamLogos/24.png",
+      "color": "rgb(0, 100, 55)",
+      "colorAlternate": "rgb(255, 255, 255)",
+      "teamdescription": {
+        "manager": "",
+        "colors": "Green",
+        "jerseys": [
+          null,
+          null,
+          null
+        ]
+      },
+      "previoustablefinishes": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Juventus",
+      "teamNameShort": "Juventus",
+      "teamId": 25,
+      "rsmId": "1386123872360861848",
+      "logo": "/images/teamLogos/25.png",
+      "color": "rgb(39, 39, 39)",
+      "colorAlternate": "rgb(198 237 244)",
+      "teamdescription": {
+        "manager": "",
+        "colors": "Black, White",
+        "jerseys": [
+          null,
+          null,
+          null
+        ]
+      },
+      "previoustablefinishes": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Bayern Munich",
+      "teamNameShort": "Bayern",
+      "teamId": 26,
+      "rsmId": "1386123870917886115",
+      "logo": "/images/teamLogos/26.png",
+      "color": "rgb(220, 5, 45)",
+      "colorAlternate": "rgb(0, 102, 178)",
+      "teamdescription": {
+        "manager": "",
+        "colors": "Red, Ble",
+        "jerseys": [
+          null,
+          null,
+          null
+        ]
+      },
+      "previoustablefinishes": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Nuova Speranza",
+      "teamNameShort": "Speranza",
+      "teamId": 27,
+      "rsmId": "1386554265664749608",
+      "logo": "/images/teamLogos/27.png",
+      "color": "rgb(10, 72, 47)",
+      "colorAlternate": "rgb(255, 255, 255)",
+      "teamdescription": {
+        "manager": "",
+        "colors": "",
+        "jerseys": [
+          null,
+          null,
+          null
+        ]
+      },
+      "previoustablefinishes": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Paris Saint-Germain",
+      "teamNameShort": "PSG",
+      "teamId": 28,
+      "rsmId": "1386123871609946285",
+      "logo": "/images/teamLogos/28.png",
+      "color": "rgb(1, 66, 106)",
+      "colorAlternate": "rgb(209, 16, 67)",
+      "teamdescription": {
+        "manager": "",
+        "colors": "",
+        "jerseys": [
+          null,
+          null,
+          null
+        ]
+      },
+      "previoustablefinishes": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "teamname": "Orense",
+      "teamNameShort": "Orense",
+      "teamId": 29,
+      "rsmId": "1387603295157358826",
+      "logo": "/images/teamLogos/29.png",
+      "color": "rgb(22, 71, 55)",
+      "colorAlternate": "rgb(22, 22, 22)",
+      "teamdescription": {
+        "manager": "",
+        "colors": "",
+        "jerseys": [
+          null,
+          null,
+          null
+        ]
       },
       "previoustablefinishes": [
         null,
@@ -1546,8 +1110,7 @@
       "currentMatchday": 1,
       "minforPer20Stats": 60,
       "participants": [
-        [
-        ]
+        []
       ],
       "legend": []
     }

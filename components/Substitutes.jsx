@@ -65,34 +65,38 @@ const benchPlayerName = css`
   text-decoration: none;
 `;
 
+const avatar = css`
+border-radius: 1.25rem;
+`
+
 // Component
 const Substitute = ({ player }) => {
-    const PlayerEvent = ({ icon, count, leftOrRight, initialX, y, metric }) => {
-        return [...Array(count)].map((_, i) => {
-            const style = {
-                bottom: `${y}%`,
-                [leftOrRight]: `${initialX + -10 * i}px`,
-                zIndex: 8 - i,
-            };
+  const PlayerEvent = ({ icon, count, leftOrRight, initialX, y, metric }) => {
+    return [...Array(count)].map((_, i) => {
+      const style = {
+        bottom: `${y}%`,
+        [leftOrRight]: `${initialX + -10 * i}px`,
+        zIndex: 8 - i,
+      };
 
-            if (metric === "ownGoals") {
-                style.filter = "hue-rotate(110deg) saturate(1)";
-            }
+      if (metric === "ownGoals") {
+        style.filter = "hue-rotate(110deg) saturate(1)";
+      }
 
-            return (
-                <div key={i} css={playerEvent} style={style}>
-                    {icon}
-                </div>
-            );
-        });
-    };
-    let ratingColor;
-    if (player.isMvp) ratingColor = "var(--RATING-BLUE)";
-    else if (player.matchRating < 5.5) ratingColor = "var(--RATING-RED)";
-    else if (player.matchRating < 6.949) ratingColor = "var(--RATING-ORANGE)";
-    else ratingColor = "var(--RATING-GREEN)";
+      return (
+        <div key={i} css={playerEvent} style={style}>
+          {icon}
+        </div>
+      );
+    });
+  };
+  let ratingColor;
+  if (player.isMvp) ratingColor = "var(--RATING-BLUE)";
+  else if (player.matchRating < 5.5) ratingColor = "var(--RATING-RED)";
+  else if (player.matchRating < 6.949) ratingColor = "var(--RATING-ORANGE)";
+  else ratingColor = "var(--RATING-GREEN)";
 
-    const matchRatingOnPlayer = css`
+  const matchRatingOnPlayer = css`
     position: absolute;
     top: 0%;
     right: 25%;
@@ -106,27 +110,26 @@ const Substitute = ({ player }) => {
     cursor: default;
   `;
 
-    return (
-        <li css={benchListItem}>
-            <a href={`#player=${player.id}`} css={playerContainer} className="primary-hover">
-                <div css={playerWrapper}>
-                    <img
-                        src="/images/defaulticon.png"
-                        width={30}
-                        height={30}
-                        alt="player"
-                    />
-                    <span css={matchRatingOnPlayer}>{player.matchRatingRounded}</span>
-                    <div data-events-player={player.id}>
-                        <PlayerEvent icon="⚽" count={player.stats.goals} leftOrRight="right" initialX={5} y={27.5} metric="goals" />
-                        <PlayerEvent icon="🅰️" count={player.stats.assists} leftOrRight="left" initialX={5} y={27.5} metric="assists" />
-                        <PlayerEvent icon="⚽" count={player.stats.ownGoals} leftOrRight="right" initialX={5} y={27.5} metric="ownGoals" />
-                    </div>
-                </div>
-                <span css={[benchPlayerName, playerName]}>{player.name}</span>
-            </a>
-        </li>
-    );
+  return (
+    <li css={benchListItem}>
+      <a href={`#player=${player.id}`} css={playerContainer} className="primary-hover">
+        <div css={playerWrapper}>
+          <img css={avatar}
+            src={player.avatar}
+            width={40}
+            height={40}
+          />
+          <span css={matchRatingOnPlayer}>{player.matchRatingRounded}</span>
+          <div data-events-player={player.id}>
+            <PlayerEvent icon="⚽" count={player.stats.goals} leftOrRight="right" initialX={5} y={27.5} metric="goals" />
+            <PlayerEvent icon="🅰️" count={player.stats.assists} leftOrRight="left" initialX={5} y={27.5} metric="assists" />
+            <PlayerEvent icon="⚽" count={player.stats.ownGoals} leftOrRight="right" initialX={5} y={27.5} metric="ownGoals" />
+          </div>
+        </div>
+        <span css={[benchPlayerName, playerName]}>{player.name}</span>
+      </a>
+    </li>
+  );
 };
 
 export default Substitute;

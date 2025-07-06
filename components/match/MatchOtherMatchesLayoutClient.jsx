@@ -123,7 +123,11 @@ background-color: var(--primary-card-bg);
                     : m.status.statusShort?.date || "";
             const [homeScore, awayScore] = typeof m.status.statusShort !== "object" ? [m.home.score, m.away.score] : ["", ""]
             return (
-                <a css={matchLink} href={m.pageUrl} className='secondary-hover'>
+                <a 
+                key = {m.id}
+                css={matchLink} 
+                href={m.pageUrl} 
+                className='secondary-hover'>
                     <div css={matchWrapper}>
                         <div css={matchInfo}>
                             <div css={matchTeam}>

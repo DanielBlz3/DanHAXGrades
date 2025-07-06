@@ -3,9 +3,7 @@
 import React from "react";
 import { css } from '@emotion/react';
 import { useEffect, useState } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
 import '/styles/global.css';
-import positionCoords from '/lib/posCoordsPlayerPosMap';
 import HorizontalPitch from '/components/pitchSVGHorizontal';
 import VerticalPitch from '/components/pitchSVGVertical';
 import Player from '/components/Player';
@@ -158,7 +156,7 @@ const renderLineupContent = ({ match, hasSubs, hasLineupInfo }) => {
                         key={player.id}
                         player={player}
                         team={team}
-                         isVertical={isVertical}
+                        isVertical={isVertical}
                         PlayerEvent={PlayerEvent}
                     />
                 ));

@@ -190,7 +190,7 @@
     "shirtNum": "5",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 8,
     "trophies": {
       "team1": {
         "teamId": 8,
@@ -284,7 +284,7 @@
     "shirtNum": "19",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 2,
     "career": [
       {
         "team": 2,
@@ -346,7 +346,7 @@
     "shirtNum": "18",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "career": [
       {
         "team": 15,
@@ -394,7 +394,7 @@
     "shirtNum": "8",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 2,
     "playerId": 15
   },
   {
@@ -405,7 +405,7 @@
     "shirtNum": "7",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 2,
     "career": [
       {
         "team": 14,
@@ -425,7 +425,7 @@
     "shirtNum": "8",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "career": [
       {
         "team": 13,
@@ -445,7 +445,7 @@
     "shirtNum": "4",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 2,
     "playerId": 18
   },
   {
@@ -531,7 +531,7 @@
     "shirtNum": "4",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 1,
     "playerId": 23
   },
   {
@@ -542,7 +542,7 @@
     "shirtNum": "6",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 1,
     "playerId": 24
   },
   {
@@ -553,7 +553,7 @@
     "shirtNum": "8",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 1,
     "playerId": 25
   },
   {
@@ -608,7 +608,7 @@
     "shirtNum": "1",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 6,
     "career": [
       {
         "team": 14,
@@ -628,7 +628,7 @@
     "shirtNum": "2",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 6,
     "playerId": 30
   },
   {
@@ -651,7 +651,7 @@
     "shirtNum": "5",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 6,
     "playerId": 32
   },
   {
@@ -686,7 +686,7 @@
     "shirtNum": "10",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 6,
     "playerId": 35
   },
   {
@@ -745,7 +745,7 @@
     "shirtNum": "😺",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "career": [
       {
         "team": 19,
@@ -765,7 +765,7 @@
     "shirtNum": "🦅",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 8,
     "trophies": {
       "team1": {
         "teamId": 8,
@@ -795,7 +795,7 @@
     "shirtNum": "1",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 42
   },
   {
@@ -855,7 +855,7 @@
     "shirtNum": "8",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 1,
     "playerId": 45
   },
   {
@@ -866,7 +866,7 @@
     "shirtNum": "19",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 1,
     "career": [
       {
         "team": 14,
@@ -893,7 +893,7 @@
     "shirtNum": "29",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 1,
     "playerId": 47
   },
   {
@@ -915,7 +915,7 @@
     "shirtNum": "16",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "playerId": 49
   },
   {
@@ -926,7 +926,7 @@
     "shirtNum": "24",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 1,
     "playerId": 50
   },
   {
@@ -937,7 +937,7 @@
     "shirtNum": "34",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 1,
     "playerId": 51
   },
   {
@@ -948,7 +948,7 @@
     "shirtNum": "28",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 1,
     "playerId": 52
   },
   {
@@ -959,7 +959,7 @@
     "shirtNum": "33",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 6,
     "playerId": 53
   },
   {
@@ -970,7 +970,7 @@
     "shirtNum": "55",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 12,
     "career": [
       {
         "team": 15,
@@ -1037,7 +1037,7 @@
     "shirtNum": ":",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 2,
     "playerId": 57
   },
   {
@@ -1048,7 +1048,7 @@
     "shirtNum": "99",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 2,
     "career": [
       {
         "team": 15,
@@ -1089,7 +1089,7 @@
     "shirtNum": "😹",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 2,
     "playerId": 60
   },
   {
@@ -1112,7 +1112,7 @@
     "shirtNum": "28",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 2,
     "playerId": 62
   },
   {
@@ -1172,7 +1172,7 @@
     "shirtNum": "11",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 2,
     "playerId": 65
   },
   {
@@ -1341,7 +1341,7 @@
     "shirtNum": "5",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "trophies": {
       "team1": {
         "teamId": 4,
@@ -1361,7 +1361,7 @@
     "shirtNum": "6",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "trophies": {
       "team1": {
         "teamId": 4,
@@ -1397,7 +1397,7 @@
     "shirtNum": "28",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "playerId": 80
   },
   {
@@ -1408,7 +1408,7 @@
     "shirtNum": "18",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "playerId": 81
   },
   {
@@ -1449,7 +1449,7 @@
     "shirtNum": "9",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "trophies": {
       "team1": {
         "teamId": 4,
@@ -1485,7 +1485,7 @@
     "shirtNum": "7",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "playerId": 84
   },
   {
@@ -1508,7 +1508,7 @@
     "shirtNum": "23",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "career": [
       {
         "team": 4,
@@ -1528,7 +1528,7 @@
     "shirtNum": "19",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "career": [
       {
         "team": 4,
@@ -1569,7 +1569,7 @@
     "shirtNum": "38",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "career": [
       {
         "team": 16,
@@ -1608,7 +1608,7 @@
     "shirtNum": "3",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 91
   },
   {
@@ -1619,7 +1619,7 @@
     "shirtNum": "5",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 92
   },
   {
@@ -1642,7 +1642,7 @@
     "shirtNum": "36",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 3,
     "playerId": 94
   },
   {
@@ -1665,7 +1665,7 @@
     "shirtNum": "6",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 96
   },
   {
@@ -1676,7 +1676,7 @@
     "shirtNum": "8",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 97
   },
   {
@@ -1687,7 +1687,7 @@
     "shirtNum": "7",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "career": [
       {
         "team": 5,
@@ -1707,7 +1707,7 @@
     "shirtNum": "🌊",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 99
   },
   {
@@ -1742,7 +1742,7 @@
     "shirtNum": "17",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 102
   },
   {
@@ -1765,7 +1765,7 @@
     "shirtNum": "5",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 6,
     "playerId": 104
   },
   {
@@ -1776,7 +1776,7 @@
     "shirtNum": "5",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 105
   },
   {
@@ -1799,7 +1799,7 @@
     "shirtNum": "7",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "playerId": 107
   },
   {
@@ -1884,7 +1884,7 @@
     "shirtNum": "💀",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 8,
     "trophies": {
       "team1": {
         "teamId": 8,
@@ -1997,7 +1997,7 @@
     "shirtNum": "27",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 8,
     "trophies": {
       "team1": {
         "teamId": 8,
@@ -2027,7 +2027,7 @@
     "shirtNum": "27",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 8,
     "trophies": {
       "team1": {
         "teamId": 8,
@@ -2083,7 +2083,7 @@
     "shirtNum": "99",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 8,
     "playerId": 117
   },
   {
@@ -2127,7 +2127,7 @@
     "shirtNum": "9",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "playerId": 120
   },
   {
@@ -2166,7 +2166,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "playerId": 122
   },
   {
@@ -2189,7 +2189,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "career": [
       {
         "team": 17,
@@ -2209,7 +2209,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "playerId": 125
   },
   {
@@ -2220,7 +2220,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "playerId": 126
   },
   {
@@ -2231,7 +2231,7 @@
     "shirtNum": "🐼",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "playerId": 127
   },
   {
@@ -2254,7 +2254,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "playerId": 129
   },
   {
@@ -2265,7 +2265,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "career": [
       {
         "team": 13,
@@ -2306,7 +2306,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "playerId": 132
   },
   {
@@ -2338,15 +2338,14 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "playerId": 134
   },
   {
     "playername": "null",
     "isManager": false,
     "isCoManagerin": false,
-    "playerId": 135,
-    "team": 0
+    "playerId": 135
   },
   {
     "playername": "Yeager",
@@ -2356,7 +2355,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "playerId": 136
   },
   {
@@ -2379,7 +2378,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "playerId": 138
   },
   {
@@ -2390,7 +2389,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "career": [
       {
         "team": 15,
@@ -2410,7 +2409,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "playerId": 140
   },
   {
@@ -2421,7 +2420,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "playerId": 141
   },
   {
@@ -2432,7 +2431,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "playerId": 142
   },
   {
@@ -2443,7 +2442,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "playerId": 143
   },
   {
@@ -2454,7 +2453,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 3,
     "playerId": 144
   },
   {
@@ -2465,7 +2464,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 145
   },
   {
@@ -2476,7 +2475,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 146
   },
   {
@@ -2487,7 +2486,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 147
   },
   {
@@ -2498,7 +2497,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 148
   },
   {
@@ -2509,7 +2508,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 149
   },
   {
@@ -2520,7 +2519,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 150
   },
   {
@@ -2531,7 +2530,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 151
   },
   {
@@ -2542,7 +2541,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 152
   },
   {
@@ -2553,7 +2552,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 6,
     "career": [
       {
         "team": 21,
@@ -2580,7 +2579,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "career": [
       {
         "team": 19,
@@ -2600,7 +2599,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "career": [
       {
         "team": 13,
@@ -2620,7 +2619,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "playerId": 156
   },
   {
@@ -2659,7 +2658,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "trophies": {
       "team1": {
         "teamId": 4,
@@ -2679,7 +2678,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 159
   },
   {
@@ -2721,7 +2720,7 @@
     "shirtNum": "🌴",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 2,
     "career": [
       {
         "team": 4,
@@ -2741,7 +2740,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 2,
     "career": [
       {
         "team": 18,
@@ -2783,7 +2782,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 165
   },
   {
@@ -2805,7 +2804,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 167
   },
   {
@@ -2816,7 +2815,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 6,
     "playerId": 168
   },
   {
@@ -2861,7 +2860,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 1,
     "career": [
       {
         "team": 4,
@@ -2903,7 +2902,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 8,
     "career": [
       {
         "team": 20,
@@ -2956,7 +2955,7 @@
     "shirtNum": "._",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "trophies": {
       "team1": {
         "teamId": 10,
@@ -3027,7 +3026,7 @@
     "shirtNum": "3",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 2,
     "career": [
       {
         "team": 16,
@@ -3047,7 +3046,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "career": [
       {
         "team": 4,
@@ -3087,7 +3086,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 24,
+    "team": 9,
     "career": [
       {
         "team": 13,
@@ -3215,7 +3214,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 6,
     "career": [
       {
         "team": 13,
@@ -3316,7 +3315,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "career": [
       {
         "team": 17,
@@ -3384,7 +3383,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "career": [
       {
         "team": 2,
@@ -3506,7 +3505,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "playerId": 206
   },
   {
@@ -3517,7 +3516,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "playerId": 207
   },
   {
@@ -3528,7 +3527,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "playerId": 208
   },
   {
@@ -3539,7 +3538,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 209
   },
   {
@@ -3550,7 +3549,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 210
   },
   {
@@ -3561,7 +3560,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 211
   },
   {
@@ -3572,7 +3571,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 212
   },
   {
@@ -3583,7 +3582,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 1,
     "playerId": 213
   },
   {
@@ -3594,7 +3593,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 1,
     "playerId": 214
   },
   {
@@ -3617,7 +3616,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 216
   },
   {
@@ -3628,7 +3627,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 217
   },
   {
@@ -3639,7 +3638,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 218
   },
   {
@@ -3650,7 +3649,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 219
   },
   {
@@ -3661,7 +3660,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 220
   },
   {
@@ -3672,7 +3671,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 2,
     "playerId": 221
   },
   {
@@ -3683,7 +3682,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 222
   },
   {
@@ -3694,7 +3693,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 223
   },
   {
@@ -3705,7 +3704,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 224
   },
   {
@@ -3716,7 +3715,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 225
   },
   {
@@ -3751,7 +3750,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "playerId": 228
   },
   {
@@ -3762,7 +3761,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 3,
     "playerId": 229
   },
   {
@@ -3773,7 +3772,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 230
   },
   {
@@ -3796,7 +3795,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 12,
     "playerId": 233
   },
   {
@@ -3819,7 +3818,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 12,
     "playerId": 235
   },
   {
@@ -3854,7 +3853,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 12,
     "playerId": 238
   },
   {
@@ -3889,7 +3888,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 12,
     "playerId": 241
   },
   {
@@ -3900,7 +3899,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 12,
     "playerId": 242
   },
   {
@@ -3911,7 +3910,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 243
   },
   {
@@ -3922,7 +3921,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "playerId": 244
   },
   {
@@ -3945,7 +3944,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "playerId": 246
   },
   {
@@ -3956,7 +3955,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "playerId": 247
   },
   {
@@ -4003,7 +4002,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 251
   },
   {
@@ -4038,7 +4037,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 254
   },
   {
@@ -4061,7 +4060,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 256
   },
   {
@@ -4084,7 +4083,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 3,
     "playerId": 258
   },
   {
@@ -4131,7 +4130,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 3,
     "playerId": 262
   },
   {
@@ -4166,7 +4165,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 12,
     "playerId": 265
   },
   {
@@ -4177,7 +4176,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 3,
     "playerId": 266
   },
   {
@@ -4200,7 +4199,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 12,
     "playerId": 268
   },
   {
@@ -4211,7 +4210,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 12,
     "playerId": 269
   },
   {
@@ -4246,7 +4245,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 9,
+    "team": 29,
     "playerId": 272,
     "rsmId": "764286707612516394"
   },
@@ -4258,7 +4257,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "playerId": 273
   },
   {
@@ -4281,7 +4280,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "playerId": 275
   },
   {
@@ -4304,7 +4303,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "playerId": 277
   },
   {
@@ -4315,7 +4314,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "playerId": 278
   },
   {
@@ -4326,7 +4325,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 1,
     "playerId": 279
   },
   {
@@ -4337,7 +4336,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 280
   },
   {
@@ -4348,7 +4347,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 281
   },
   {
@@ -4359,7 +4358,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 3,
     "playerId": 282
   },
   {
@@ -4394,7 +4393,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 5,
     "playerId": 286
   },
   {
@@ -4405,7 +4404,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 1,
     "playerId": 288
   },
   {
@@ -4416,7 +4415,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "playerId": 289
   },
   {
@@ -4427,7 +4426,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 1,
     "playerId": 290
   },
   {
@@ -4438,7 +4437,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 3,
     "playerId": 291
   },
   {
@@ -4449,7 +4448,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 3,
     "playerId": 292
   },
   {
@@ -4460,7 +4459,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 12,
     "playerId": 293
   },
   {
@@ -4473,7 +4472,7 @@
     "marketvalue": "$TBD",
     "team": 3,
     "playerId": 294,
-    "rsmId": "1256702662020432028"
+    "rsmId": "1302294281868017665"
   },
   {
     "playername": "Arda Guler",
@@ -4495,7 +4494,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "playerId": 296
   },
   {
@@ -4506,7 +4505,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 297
   },
   {
@@ -4517,7 +4516,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 298
   },
   {
@@ -4528,7 +4527,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 299
   },
   {
@@ -4551,7 +4550,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 12,
     "playerId": 301
   },
   {
@@ -4562,7 +4561,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "playerId": 302
   },
   {
@@ -4573,7 +4572,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "playerId": 303
   },
   {
@@ -4596,7 +4595,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 6,
     "playerId": 305
   },
   {
@@ -4619,7 +4618,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 6,
     "playerId": 307
   },
   {
@@ -4642,7 +4641,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 11,
     "playerId": 309
   },
   {
@@ -4689,7 +4688,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 4,
     "playerId": 313
   },
   {
@@ -4700,7 +4699,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "playerId": 314
   },
   {
@@ -4711,7 +4710,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "playerId": 315
   },
   {
@@ -4722,7 +4721,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "playerId": 316
   },
   {
@@ -4733,7 +4732,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "playerId": 317
   },
   {
@@ -4744,7 +4743,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "playerId": 318
   },
   {
@@ -4755,7 +4754,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 10,
     "playerId": 319
   },
   {
@@ -4766,7 +4765,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "playerId": 320
   },
   {
@@ -5331,7 +5330,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 6,
     "playerId": 371
   },
   {
@@ -5342,7 +5341,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 6,
     "playerId": 372
   },
   {
@@ -5353,7 +5352,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 9,
     "playerId": 373
   },
   {
@@ -6135,6 +6134,18 @@
     "team": 14,
     "playerId": 438,
     "rsmId": "555588574171627520"
+  },
+  {
+    "playername": "Cilin",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "shirtNum": "",
+    "league": "RSM X11",
+    "marketvalue": "$TBD",
+    "team": 14,
+    "playerId": 439,
+    "rsmId": "1152460316966395934"
   },
   {
     "playername": "Cilin",

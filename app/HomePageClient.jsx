@@ -53,7 +53,7 @@ export default function HomePageClient() {
     justify-content: center;
     `;
 
-      const teamCreatorField = css`
+    const teamCreatorField = css`
     background-color: var(--primary-soccer-field-bg);
     position: relative;
     width: 100%;
@@ -68,7 +68,7 @@ export default function HomePageClient() {
     `;
 
     const TeamCreatorPlayer = ({ x, y }) => {
-
+        
     const playerContainer = css`
     display: flex;
     flex-direction: column;
@@ -110,12 +110,12 @@ export default function HomePageClient() {
                     <h3>{translationsMap?.["teamCreator"]?.[language]}</h3>
                 </div>
                 <div css={teamCreatorField}>
-                    <TeamCreatorPlayer x={73} y={30}/>
-                    <TeamCreatorPlayer x={50} y={30}/>
-                    <TeamCreatorPlayer x={27} y={30}/>
-                    <TeamCreatorPlayer x={73} y={80}/>
-                    <TeamCreatorPlayer x={50} y={80}/>
-                    <TeamCreatorPlayer x={27} y={80}/>
+                    <TeamCreatorPlayer x={73} y={30} />
+                    <TeamCreatorPlayer x={50} y={30} />
+                    <TeamCreatorPlayer x={27} y={30} />
+                    <TeamCreatorPlayer x={73} y={80} />
+                    <TeamCreatorPlayer x={50} y={80} />
+                    <TeamCreatorPlayer x={27} y={80} />
                 </div>
             </a>
         </main>

@@ -8,7 +8,7 @@ import { translationsMap } from '/lib/translations.js';
 import Transfers from '/components/Transfers';
 import '/styles/global.css';
 
-export default function LeagueTransfersPageClient({ league }) {
+export default function LeagueTransfersPageClient({ league, transfers }) {
 
     const [theme, setTheme] = useState('theme-light');
     const [language, setLanguage] = useState('es');
@@ -20,6 +20,6 @@ export default function LeagueTransfersPageClient({ league }) {
     }, [league]);
 
     return (
-        <Transfers data={league.transfers}/>
+        <Transfers data={transfers}/>
     );
 }
