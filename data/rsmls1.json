@@ -1,0 +1,110 @@
+{
+    "games": [
+        {
+            "gameId": 550,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                25,
+                14
+            ],
+            "timestamp": "2025-07-10T01:00:00Z",
+            "scoreline": "0-1",
+            "formation": [
+                null,
+                null
+            ],
+            "goalscorers": [
+                [],
+                []
+            ],
+            "leagueRound": "1",
+            "roundNumber": 1,
+            "started": true,
+            "finished": true,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 551,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                26,
+                29
+            ],
+            "timestamp": "2025-07-10T01:45:00Z",
+            "scoreline": "0-0",
+            "formation": [
+                null,
+                null
+            ],
+            "goalscorers": [
+                [],
+                []
+            ],
+            "leagueRound": "1",
+            "roundNumber": 1,
+            "started": true,
+            "finished": false,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 552,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                9,
+                27
+            ],
+            "timestamp": "2025-07-11T02:00:00Z",
+            "formation": [
+                null,
+                null
+            ],
+            "goalscorers": [
+                [],
+                []
+            ],
+            "leagueRound": "1",
+            "roundNumber": 1,
+            "started": false,
+            "finished": false,
+            "cancelled": false,
+            "awarded": false
+        },
+        {
+            "gameId": 553,
+            "playerslist": {
+                "homeplayers": [],
+                "awayplayers": []
+            },
+            "teamIds": [
+                24,
+                3
+            ],
+            "timestamp": "2025-07-11T02:45:00Z",
+            "formation": [
+                null,
+                null
+            ],
+            "goalscorers": [
+                [],
+                []
+            ],
+            "leagueRound": "1",
+            "roundNumber": 1,
+            "started": false,
+            "finished": false,
+            "cancelled": false,
+            "awarded": false
+        }
+    ]
+}

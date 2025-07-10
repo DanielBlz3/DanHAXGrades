@@ -1114,5 +1114,32 @@
       ],
       "legend": []
     }
+  },
+  "rsmx11": {
+    "leagueDesc": {
+      "leaguename": "Real Soccer Mexico X11",
+      "leagueabbr": "RSM X11",
+      "color": "rgb(12, 13, 71)",
+      "logo": "/images/leagueLogos/9.png",
+      "leagueStatus": "ongoing",
+      "leagueId": 9,
+      "leagueJSON": "rsmls1.json",
+      "currentMatchday": 1,
+      "minforPer20Stats": 20,
+      "participants": [
+        [
+          3,
+          9,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      ],
+      "legend": []
+    }
   }
 }

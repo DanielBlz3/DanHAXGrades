@@ -26,13 +26,13 @@ const RenderPlayerStatsUi = ({ groupedStats, visible, playerData, playerInfo }) 
         else ratingColor = "var(--RATING-GREEN)";
 
         return css`
-                background-color: ${ratingColor};
-                color: white;
-                font-weight: bold;
-                border-radius: 1rem;
-                padding: 0.025rem 0.3rem;
-                cursor: default;
-              `;
+        background-color: ${ratingColor};
+        color: white;
+        font-weight: bold;
+        border-radius: 1rem;
+        padding: 0.025rem 0.3rem;
+        cursor: default;
+        `;
     }
 
     const playerUi = css`

@@ -260,11 +260,11 @@ export default function TeamCreatorPageClient({ players }) {
         ));
 
     const captureFormation = css`
-    display: ${formationTextDisplay};
-    height: 3rem;
-    justify-content: center;
-    align-items: center;
-    color: var(--GLOBAL-DANHAXGRADES-SCHEME);
+        display: ${formationTextDisplay};
+        height: 3rem;
+        justify-content: center;
+        align-items: center;
+        color: var(--GLOBAL-DANHAXGRADES-SCHEME);
     `;
 
     // ===============================|  LOADING AND SAVING FORMATIONS  | ===============================
@@ -284,7 +284,6 @@ export default function TeamCreatorPageClient({ players }) {
     }
 
     const RenderSavedTeams = () => loadSavedTeams !== false ? <LoadSavedTeams /> : null; //SHOW OR HIDE UI
-
     const LoadSavedTeams = () => {
         useEffect(() => {
             const handleClickOutside = (e) => {
@@ -295,7 +294,7 @@ export default function TeamCreatorPageClient({ players }) {
             return () => document.removeEventListener('click', handleClickOutside);
         }, []);
 
-        const continaer = css`
+        const savedFormationsContainer = css`
             display: flex;
             flex-flow: column;
             justify-content: center;
@@ -304,11 +303,18 @@ export default function TeamCreatorPageClient({ players }) {
             top: 20%;
             left: 50%;
             transform: translate(-50%, -50%);
-            max-height: 20rem;
+            max-height: 15rem;
             width: 30rem;
             background-color: var(--primary-card-bg);
-            overflow-y: auto;
             box-shadow: 3px 6px 10px rgba(0, 0, 0, .25);
+        `;
+
+        const savedFormationsWrapper = css`
+        max-height: 15rem;
+        overflow-y: auto;
+         > :first-child {
+            border: none;
+        }
         `;
 
         const savedTeamItem = css`
@@ -318,11 +324,8 @@ export default function TeamCreatorPageClient({ players }) {
             justify-items: center;
             min-height: 4rem;
             border-top: solid 1px var(--secondary-divider-bg);
-
-            > :first-child {
-            border: none;
-            }
         `;
+
         const savedTeamButton = css`
             display: flex;
             flex-flow: column;
@@ -347,9 +350,12 @@ export default function TeamCreatorPageClient({ players }) {
             cursor: pointer;        
 
             &:hover {
-            opacity: 0.7;
+            transform: scale(1.3);
+            transform-origin: center;
+            transition: transform 150ms ease-in-out;
             }
         `;
+
         const savedLineupsArr = JSON.parse(localStorage.getItem("teamCreatorXI")) || []
         const content = savedLineupsArr.map((team, key) => {
             return (
@@ -364,14 +370,16 @@ export default function TeamCreatorPageClient({ players }) {
                         <span css={formation}>{formations[team.formation]?.formationTitle}</span>
                     </button>
                     <button css={deleteButton} onClick={() => [deleteTeam(team.id), setSelectedPlayers((Array(11).fill(null))), setTeamName(""), setLoadSavedTeams(false)]}>
-                        <img src="/images/delete.svg" alt="delete" />
+                        <img src="/images/Delete.svg" alt="Delete" />
                     </button>
                 </div>
             )
         })
         return (
-            <div css={continaer} className='saved-formations'>
-                {content}
+            <div css={savedFormationsContainer} className='saved-formations'>
+                <div css={savedFormationsWrapper}>
+                    {content}
+                </div>
             </div>
         )
     }
@@ -483,7 +491,7 @@ export default function TeamCreatorPageClient({ players }) {
     );
 }
 
-// 💅 STYLES
+// STYLES
 const creatorInfo = css`
   display: flex;
   flex-flow: column;
@@ -526,11 +534,11 @@ const title = css`
 
 const titleLogo = css`
 border-radius: 50%;
-`
+`;
 
 const titleText = css`
 color: var(--GLOBAL-DANHAXGRADES-SCHEME);
-`
+`;
 
 const select = css`
   display: flex;
@@ -571,7 +579,7 @@ const searchCard = css`
   border-radius: 1.25rem;
   width: 30rem;
   height: 20rem;
-                  box-shadow: 3px 6px 10px rgba(0, 0, 0, .25);
+box-shadow: 3px 6px 10px rgba(0, 0, 0, .25);
 `;
 
 const searchBarCSS = css`
@@ -593,7 +601,7 @@ margin: 1rem;
 border: none;
 place-items: center;
 gap: 10px;
-`
+`;
 
 const searchResults = css`
 display: flex;
@@ -615,11 +623,11 @@ const searchResult = css`
 const searchedPlayerContent = css`
     display: flex;
     flex-flow: column;
-`
+`;
 
 const searchedPlayerName = css`
-    font-weight: bold;
-`
+font-weight: bold;
+`;
 
 const selectCSS = css`
 font-weight: bold;
@@ -628,11 +636,11 @@ padding: .5rem;
 border: 1px solid var(--secondary-divider-bg);
 background-color:  var(--primary-bg-color);
 color: grey;
-`
+`;
 
 const searchUIContainer = css`
 position: relative;
-`
+`;
 
 const resetTeam = css`
 background-color: rgba(0, 0, 0, 0);
@@ -640,7 +648,7 @@ border: none;
 color: var(--GLOBAL-DANHAXGRADES-SCHEME);
 cursor: pointer;
 width: 300px;
-`
+`;
 
 const teamConfiguration = css`
 display: flex;
@@ -649,8 +657,8 @@ align-items: center;
 background-color:  var(--primary-bg-color);
 border-radius: 1.25rem;
 height: 5rem;
-    gap: 10%;
-`
+gap: 10%;
+`;
 
 const inputCSS = css`
 width: 300px;
@@ -660,7 +668,8 @@ border: none;
 border-radius: 1.25rem;
 height: 3rem;
 padding: 1rem;
-`
+`;
+
 const loadFormationWrapper = css`
 display: flex;
 align-items: center;
@@ -670,7 +679,7 @@ border-radius: 1.25rem;
     >  * {
     width: 100%;
 }
-`
+`;
 
 const teamCreatorButton = css`
 display: flex;
@@ -687,4 +696,4 @@ cursor: pointer;
 &:hover {
 opacity: 0.7;
 }
-`
+`;
