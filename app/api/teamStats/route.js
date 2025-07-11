@@ -1,12 +1,11 @@
 import { NextResponse } from 'next/server';
 import getTeamStats from '/lib/getTeamStats.js';
 import exanonData from '/data/exanon.json';
-import exanonLeagueS3 from '/data/exanonls3.json';
-import exanonCopaS3 from '/data/exanoncs3.json';
+import rsm11LeagueS1 from '/data/rsmls1.json';
 
 export async function GET(req) {
     try {
-        const activeLeagues = [...exanonLeagueS3.games, ...exanonCopaS3.games]
+        const activeLeagues = [...rsm11LeagueS1?.games]
         const acceptedMatches  = activeLeagues.filter(m => m.started)
         const response = await getTeamStats(acceptedMatches, exanonData.teams)
         return NextResponse.json(response);

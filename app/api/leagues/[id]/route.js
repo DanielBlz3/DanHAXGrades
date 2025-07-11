@@ -5,7 +5,7 @@ import path from 'path';
 import playersStorage from '/data/playersStorage.json';
 import exanonData from '/data/exanon.json';
 import nations from '/data/nations.json';
-import exanonPreTempS3 from '/data/exanonpts3.json';
+import rsm11LeagueS1 from '/data/rsmls1.json';
 import exanonLeagueS3 from '/data/exanonls3.json';
 import exanonCopaS3 from '/data/exanoncs3.json';
 
@@ -32,9 +32,9 @@ export async function GET(req, { params }) {
         const file = fs.readFileSync(fullPath, 'utf-8');
         const data = JSON.parse(file);
 
-        const combinedLeagues = [...exanonPreTempS3?.games, ...exanonLeagueS3?.games, ...exanonCopaS3?.games]
+        const acceptedLeagues = [...exanonLeagueS3?.games, ...exanonCopaS3?.games, ...rsm11LeagueS1?.games]
 
-        const acceptedStats = await getPlayerStats(combinedLeagues)
+        const acceptedStats = await getPlayerStats(acceptedLeagues)
         const activeStats = await getPlayerStats(data?.games)
 
         const positions = await getPlayerPositions(acceptedStats, playersStorage)

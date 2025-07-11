@@ -7,7 +7,7 @@ async function getMatchData(id) {
     cache: 'no-store',
   });
 
-if (!res.ok) throw new Error('Failed to fetch player');
+if (!res.ok) throw new Error('Failed to fetch match');
 return res.json();
 }
 

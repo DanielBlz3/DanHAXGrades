@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server';
 import playersStorage from '/data/playersStorage.json';
 import exanonData from '/data/exanon.json';
-import exanonPreTempS3 from '/data/exanonpts3.json';
 import exanonLeagueS3 from '/data/exanonls3.json';
 import exanonCopaS3 from '/data/exanoncs3.json';
+import rsm11LeagueS1 from '/data/rsmls1.json';
 import nationsJSON from '/data/nations.json';
 import getPlayerInfo from '/lib/getPlayerInfo.js';
 import getPlayerStats from '/lib/getPlayerStats.js';
@@ -23,9 +23,10 @@ export async function GET(req, { params }) {
 
 		exanonLeagueS3.games.forEach(game => game.leagueId = 2);
 		exanonCopaS3.games.forEach(game => game.leagueId = 3);
+		rsm11LeagueS1.games.forEach(game => game.leagueId = 9);
 
-		const activeLeagues = [...exanonLeagueS3?.games, ...exanonCopaS3?.games];
-		const acceptedLeagues = [...exanonPreTempS3?.games, ...exanonLeagueS3?.games, ...exanonCopaS3?.games];
+		const activeLeagues = [...rsm11LeagueS1?.games];
+		const acceptedLeagues = [...exanonLeagueS3?.games, ...exanonCopaS3?.games, ...rsm11LeagueS1?.games];
 
 		const activeStats = await getPlayerStats(activeLeagues);
 		const acceptedStats = await getPlayerStats(acceptedLeagues);

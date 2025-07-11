@@ -68,5 +68,10 @@
         "name": "Peru",
         "flag": "/images/nationFlags/pe.png",
         "continent": "South America"
+    },
+    "br": {
+        "name": "Brazil",
+        "flag": "/images/nationFlags/br.png",
+        "continent": "South America"
     }
 }

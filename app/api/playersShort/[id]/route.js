@@ -1,6 +1,6 @@
 
 import { NextResponse } from 'next/server';
-import exanonPreTempS3 from '/data/exanonpts3.json';
+import rsm11LeagueS1 from '/data/rsmls1.json';
 import exanonLeagueS3 from '/data/exanonls3.json';
 import exanonCopaS3 from '/data/exanoncs3.json';
 import exanonData from '/data/exanon.json';
@@ -16,8 +16,8 @@ export async function GET(req, { params }) {
         const playerId = Number(params.id)
         const playerData = playersStorage.find(p => p.playerId === playerId)
 
-        const combinedLeagues = [...exanonPreTempS3?.games, ...exanonLeagueS3?.games, ...exanonCopaS3?.games]
-        const stats = await getPlayerStats(combinedLeagues)
+        const acceptedLeagues = [...exanonLeagueS3?.games, ...exanonCopaS3?.games, ...rsm11LeagueS1?.games]
+        const stats = await getPlayerStats(acceptedLeagues)
         const positionData = await getPlayerPositions(stats, playersStorage)
         
         const response = await basicPlayerData(positionData, playerData, nationsJSON, playerId, exanonData.teams)

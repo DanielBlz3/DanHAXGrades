@@ -1,6 +1,6 @@
 
 import { NextResponse } from 'next/server';
-import exanonPreTempS3 from '/data/exanonpts3.json';
+import rsm11LeagueS1 from '/data/rsmls1.json';
 import exanonLeagueS3 from '/data/exanonls3.json';
 import exanonCopaS3 from '/data/exanoncs3.json';
 import exanonData from '/data/exanon.json';
@@ -15,12 +15,12 @@ export async function GET(req) {
         const res = await fetch('http://140.84.180.81:3000/api/teams/full'); //RUDIGER'S API
 		const rsmData = await res.json();
 
-        const combinedLeagues = [
-            ...exanonPreTempS3?.games || [],
+        const acceptedLeagues = [
             ...exanonLeagueS3?.games || [],
-            ...exanonCopaS3?.games || []
+            ...exanonCopaS3?.games || [],
+            ...rsm11LeagueS1?.games || []
         ];
-        const stats = await getPlayerStats(combinedLeagues); // you may need to pass ID
+        const stats = await getPlayerStats(acceptedLeagues); // you may need to pass ID
 
         const validPlayers = playersStorage.filter(
             (player) => player && player.playerId && player.playerId !== 0

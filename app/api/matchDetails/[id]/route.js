@@ -1,6 +1,6 @@
 // app/api/matchdetails/[id]/route.js
 import { NextResponse } from 'next/server';
-import exanonPreTempS3 from '/data/exanonpts3.json';
+import rsm11LeagueS1 from '/data/rsmls1.json';
 import exanonLeagueS3 from '/data/exanonls3.json';
 import exanonCopaS3 from '/data/exanoncs3.json';
 import exanonData from '/data/exanon.json';
@@ -21,7 +21,7 @@ export async function GET(req, { params }) {
         const rsmData = await res.json();
 
         const acceptedLeagues = [
-            ...exanonPreTempS3?.games || [],
+            ...rsm11LeagueS1?.games || [],
             ...exanonLeagueS3?.games || [],
             ...exanonCopaS3?.games || []
         ];

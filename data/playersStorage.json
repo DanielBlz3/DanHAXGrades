@@ -1726,7 +1726,7 @@
     "playername": "Motasinho",
     "isManager": false,
     "isCoManager": false,
-    "nation": "mx",
+    "nation": "br",
     "shirtNum": "33",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
@@ -1818,7 +1818,7 @@
     "playername": "Y1tt",
     "isManager": false,
     "isCoManager": false,
-    "nation": "mx",
+    "nation": "co",
     "shirtNum": "7",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
@@ -4285,7 +4285,7 @@
     "playerId": 275
   },
   {
-    "playername": "Al3jandro",
+    "playername": "Shadow",
     "isManager": false,
     "isCoManager": false,
     "nation": "mx",
@@ -6327,5 +6327,17 @@
     "team": 29,
     "playerId": 454,
     "rsmId": "1112999674996064357"
+  },
+  {
+    "playername": "Ficho",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "shirtNum": "",
+    "league": "RSM X11",
+    "marketvalue": "$TBD",
+    "team": 25,
+    "playerId": 455,
+    "rsmId": "1120169664643866654"
   }
 ]

@@ -1,14 +1,13 @@
 import { NextResponse } from 'next/server';
-import exanonLeagueS3 from '/data/exanonls3.json';
-import exanonCopaS3 from '/data/exanoncs3.json';
+import rsm11LeagueS1 from '/data/rsmls1.json';
 import getPlayerStats from '/lib/getPlayerStats.js';
 
 
 export async function GET(req) {
     try {
-        exanonLeagueS3.games.forEach(game => { game.leagueId = 2 }); exanonCopaS3.games.forEach(game => { game.leagueId = 3 });
-        const individualPlayerData = [...exanonLeagueS3.games, ...exanonCopaS3.games]    
-        const stats = await getPlayerStats(individualPlayerData)      
+        rsm11LeagueS1.games.forEach(game => { game.leagueId = 9 });
+        const activeLeagues = [...rsm11LeagueS1.games]    
+        const stats = await getPlayerStats(activeLeagues)      
           
         return NextResponse.json(stats);
     } catch (err) {

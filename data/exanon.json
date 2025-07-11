@@ -440,6 +440,7 @@
       "rsmId": "1389364869463277638",
       "logo": "/images/teamLogos/14.png",
       "color": "rgb(1, 66, 106)",
+      "colorAlternate": "rgb(70, 70, 70)",
       "teamdescription": {
         "manager": "",
         "colors": "White, Blue",
@@ -1130,7 +1131,7 @@
         [
           3,
           9,
-          23,
+          14,
           24,
           25,
           26,
