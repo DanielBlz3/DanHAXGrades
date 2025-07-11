@@ -405,7 +405,7 @@
     "shirtNum": "7",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 14,
     "career": [
       {
         "team": 14,
@@ -415,7 +415,8 @@
         "assists": "0"
       }
     ],
-    "playerId": 16
+    "playerId": 16,
+    "rsmId": "752351062316417165"
   },
   {
     "playername": "Guns",
@@ -1310,7 +1311,7 @@
       }
     ],
     "playerId": 76,
-    "rsmId": "1240524482016317472"
+    "rsmId": "804783290086457346"
   },
   {
     "playername": "Uriel",
@@ -3576,7 +3577,7 @@
     "playerId": 212
   },
   {
-    "playername": " Citlallicue",
+    "playername": "Citlallicue",
     "isCoach": false,
     "isCaptain": false,
     "nation": "mx",
@@ -3654,7 +3655,7 @@
     "playerId": 219
   },
   {
-    "playername": " Lesiones",
+    "playername": "Lesiones",
     "isCoach": false,
     "isCaptain": false,
     "nation": "co",
@@ -3665,7 +3666,7 @@
     "playerId": 220
   },
   {
-    "playername": " Buzz",
+    "playername": "Buzz",
     "isCoach": false,
     "isCaptain": false,
     "nation": "co",
@@ -3683,7 +3684,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 26,
     "playerId": 222
   },
   {
@@ -3796,8 +3797,9 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
-    "playerId": 233
+    "team": 26,
+    "playerId": 233,
+    "rsmId": "716760729671434241"
   },
   {
     "playername": "Nazario",
@@ -4026,7 +4028,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 14,
     "playerId": 253,
     "rsmId": "798958689096433705"
   },
@@ -6339,5 +6341,80 @@
     "team": 25,
     "playerId": 455,
     "rsmId": "1120169664643866654"
+  },
+  {
+    "playername": "Ball",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "us",
+    "league": "RSM X11",
+    "marketvalue": "$TBD",
+    "team": 3,
+    "playerId": 456,
+    "rsmId": "1157047586423832616"
+  },
+  {
+    "playername": "Givenchy",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "us",
+    "league": "RSM X11",
+    "marketvalue": "$TBD",
+    "team": 3,
+    "playerId": 457,
+    "rsmId": "408761550673805312"
+  },
+  {
+    "playername": "Droid",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "us",
+    "league": "RSM X11",
+    "marketvalue": "$TBD",
+    "team": 3,
+    "playerId": 458,
+    "rsmId": "1133771282584961094"
+  },
+  {
+    "playername": "Araguato",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "co",
+    "league": "RSM X11",
+    "marketvalue": "$TBD",
+    "team": 3,
+    "playerId": 459,
+    "rsmId": "501570688490930178"
+  },
+  {
+    "playername": "Ender",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "gu",
+    "league": "RSM X11",
+    "marketvalue": "$TBD",
+    "team": 29,
+    "playerId": 460,
+    "rsmId": "1240524482016317472"
+  },
+  {
+    "playername": "Benirou",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "league": "RSM X11",
+    "marketvalue": "$TBD",
+    "team": 29,
+    "playerId": 461
+  },
+  {
+    "playername": "Euatzz++",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "league": "RSM X11",
+    "marketvalue": "$TBD",
+    "team": 29,
+    "playerId": 462
   }
 ]
