@@ -424,7 +424,7 @@ export default function PlayerPageClient({ player }) {
                     <div className="primary-hover" css={competitionStatsTitleWrapper}>
                         <a css={competitionStatsLink} href="/leagues/2/overview">
                             <h2 css={competitionStatsTitle}>
-                                Exanon T3 (Copa + Liga)
+                                 Real Soccer Mexico X11
                             </h2>
                         </a>
                     </div>
@@ -437,7 +437,6 @@ export default function PlayerPageClient({ player }) {
             return null
         }
     }
-
 
     //===============================|  PLAYER MATCHES  | ===============================
     //

@@ -971,7 +971,7 @@
     "shirtNum": "55",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 27,
     "career": [
       {
         "team": 15,
@@ -988,7 +988,8 @@
         "assists": null
       }
     ],
-    "playerId": 54
+    "playerId": 54,
+    "rsmId": "768539735102324756"
   },
   {
     "playername": "U. Antuna",
@@ -1117,7 +1118,7 @@
     "playerId": 62
   },
   {
-    "playername": "Hzz",
+    "playername": "Achezeta",
     "isManager": false,
     "isCoManager": false,
     "nation": "ec",
@@ -3385,7 +3386,7 @@
     "shirtNum": "",
     "league": "Exanon Liga",
     "marketvalue": "$TBD",
-    "team": 0,
+    "team": 29,
     "career": [
       {
         "team": 2,
@@ -3395,7 +3396,8 @@
         "assists": "0"
       }
     ],
-    "playerId": 199
+    "playerId": 199,
+    "rsmId": "1181412941199855689"
   },
   {
     "playername": "Buzzinho",
@@ -5587,18 +5589,6 @@
     "rsmId": "689548560265642053"
   },
   {
-    "playername": "Lego",
-    "isManager": false,
-    "isCoManager": false,
-    "nation": "mx",
-    "shirtNum": "",
-    "league": "RSM X11",
-    "marketvalue": "$TBD",
-    "team": 27,
-    "playerId": 393,
-    "rsmId": "768539735102324756"
-  },
-  {
     "playername": "Sumire",
     "isManager": false,
     "isCoManager": false,
@@ -5755,7 +5745,7 @@
     "rsmId": "1286681891990278227"
   },
   {
-    "playername": "Abner",
+    "playername": "Meena",
     "isManager": false,
     "isCoManager": false,
     "nation": "mx",
@@ -5842,7 +5832,7 @@
     "playername": "R10",
     "isManager": false,
     "isCoManager": false,
-    "nation": "mx",
+    "nation": "co",
     "shirtNum": "",
     "league": "RSM X11",
     "marketvalue": "$TBD",
@@ -5899,7 +5889,7 @@
     "rsmId": "938606242736254976"
   },
   {
-    "playername": "Rackdor616",
+    "playername": "Alice Mustaine",
     "isManager": false,
     "isCoManager": false,
     "nation": "mx",
@@ -6175,18 +6165,6 @@
     "rsmId": "750482451624755263"
   },
   {
-    "playername": "Arshathebest",
-    "isManager": false,
-    "isCoManager": false,
-    "nation": "mx",
-    "shirtNum": "",
-    "league": "RSM X11",
-    "marketvalue": "$TBD",
-    "team": 29,
-    "playerId": 442,
-    "rsmId": "1181412941199855689"
-  },
-  {
     "playername": "Cebbou",
     "isManager": false,
     "isCoManager": false,
@@ -6416,5 +6394,59 @@
     "marketvalue": "$TBD",
     "team": 29,
     "playerId": 462
+  },
+  {
+    "playername": "Jimenez",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "league": "RSM X11",
+    "marketvalue": "$TBD",
+    "team": 9,
+    "playerId": 463,
+    "rsmId": "875103948065869886"
+  },
+  {
+    "playername": "Pessi",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "league": "RSM X11",
+    "marketvalue": "$TBD",
+    "team": 9,
+    "playerId": 464,
+    "rsmId": "604791514870317078"
+  },
+  {
+    "playername": "AexsZK",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "league": "RSM X11",
+    "marketvalue": "$TBD",
+    "team": 27,
+    "playerId": 465,
+    "rsmId": "1291408930844704773"
+  },
+  {
+    "playername": "Rey",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "league": "RSM X11",
+    "marketvalue": "$TBD",
+    "team": 27,
+    "playerId": 466
+  },
+  {
+    "playername": "Perrinho",
+    "isManager": false,
+    "isCoManager": false,
+    "nation": "mx",
+    "league": "RSM X11",
+    "marketvalue": "$TBD",
+    "team": 27,
+    "playerId": 467,
+    "rsmId": "1219024605247832134"
   }
 ]
